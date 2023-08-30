@@ -59,7 +59,6 @@ import ArrowUp from "../../assets/arrowUp.png";
 
 const HomePage = () => {
     const [moveToBack, setMoveToBack] = React.useState(false);
-    const [backToTop, setBackToTop] = React.useState(false);
     const [isScrolled, setIsScrolled] = React.useState(false);
 
     const handleScroll = () => {
@@ -84,8 +83,6 @@ const HomePage = () => {
         };
     }, []);
 
-    console.log('isScrolled', isScrolled)
-
     return (
         <div>
 
@@ -104,10 +101,10 @@ const HomePage = () => {
                         <h5>SOLDIER NFTs</h5>
                         <p>These are the most important collectibles in our ecosystem and where the most value will accrue. These are your hero characters. Play with them, bet with them and stake them for rewards.</p>
                         <div className="FirstEditionContainer-btn">
-                            <div class="GetWhiteListedBtn FirstEditionBTN">
-                                <a href="#"><span>GET WHITELISTED</span></a>
+                            <div className="GetWhiteListedBtn FirstEditionBTN">
+                                <button><span>GET WHITELISTED</span></button>
                             </div>
-                            <a href="#">MORE INFO</a>
+                            <button>MORE INFO</button>
                         </div>
                         <div className="FirstEditionTrance-text">
                             <h4>Tranche #1 </h4>
@@ -378,17 +375,17 @@ const HomePage = () => {
                 <h2>ROADMAP</h2>
                 <div className='RoadmapSectionContainer-flex'>
                     <div className="RoadmaplineContainer">
-                        <div class="circle">
-                            <div class="line top-line"></div>
-                            <div class="line bottom-line"></div>
+                        <div className="circle">
+                            <div className="line top-line"></div>
+                            <div className="line bottom-line"></div>
                         </div>
-                        <div class="circle">
-                            <div class="line top-line"></div>
-                            <div class="line bottom-line"></div>
+                        <div className="circle">
+                            <div className="line top-line"></div>
+                            <div className="line bottom-line"></div>
                         </div>
-                        <div class="circle">
-                            <div class="line top-line"></div>
-                            <div class="line bottom-line"></div>
+                        <div className="circle">
+                            <div className="line top-line"></div>
+                            <div className="line bottom-line"></div>
                         </div>
                     </div>
 

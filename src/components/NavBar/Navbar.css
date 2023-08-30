@@ -88,7 +88,8 @@
   font-weight: 800;
 }
 
-.GetWhiteListedBtn a {
+.GetWhiteListedBtn a,
+.GetWhiteListedBtn button {
   display: block;
   background-color: #FFF970;
   padding: 20px 20px;
@@ -102,12 +103,31 @@
   transition: all .35s;
 }
 
-.GetWhiteListedBtn a span {
+.GetWhiteListedBtn button {
+  all: unset;
+
+  display: block;
+  background-color: #FFF970;
+  padding: 20px 20px;
+  font-size: 14px;
+  font-family: var(--font-poppins);
+  text-decoration: none;
+  color: var(--color-black);
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  cursor: pointer;
+}
+
+.GetWhiteListedBtn a span,
+.GetWhiteListedBtn button span {
   position: relative;
   z-index: 2;
 }
 
-.GetWhiteListedBtn a:after {
+.GetWhiteListedBtn a:after,
+.GetWhiteListedBtn button:after {
   position: absolute;
   content: "";
   top: 0;
@@ -119,11 +139,13 @@
   transition: all .35s;
 }
 
-.GetWhiteListedBtn a:hover {
+.GetWhiteListedBtn a:hover,
+.GetWhiteListedBtn button:hover {
   color: #fff;
 }
 
-.GetWhiteListedBtn a:hover:after {
+.GetWhiteListedBtn a:hover:after,
+.GetWhiteListedBtn button:hover:after {
   width: 100%;
 }
 

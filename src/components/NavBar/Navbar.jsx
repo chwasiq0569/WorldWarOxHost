@@ -23,13 +23,11 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                 setIsMenuOpen(false)
             }
         }
-
         document.addEventListener('mousedown', handleClickOutside);
-
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, []);
+    }, [setMoveToBack, moveToBack]);
 
     React.useEffect(() => {
         isMenuOpen ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto'
@@ -41,7 +39,7 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
             setMoveToBack(isMenuOpen)
         }
 
-    }, [isMenuOpen])
+    }, [isMenuOpen, setMoveToBack, moveToBack])
 
     return (
         <div>
@@ -63,15 +61,15 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                 <div className="HeaderRightSideContainer">
                     <div className="HeaderSocialIconContainer">
                         <ul>
-                            <li><a href="https://discord.gg/worldwar0x" target="_blank"><img className="image-1156-icon" alt="" src={headDiscord} /></a></li>
-                            <li><a href="https://twitter.com/WorldWar0x" target="_blank"><img className="image-1156-icon" alt="" src={headTwitter} /></a></li>
-                            <li><a href="https://www.youtube.com/channel/UC4mQ9cT7wDV6aqOuoMaX3vA" target="_blank"><img className="image-1156-icon" alt="" src={headYoutube} /></a></li>
-                            <li><a href="https://instagram.com/worldwar0x" target="_blank"><img className="image-1156-icon" alt="" src={headSoo} /></a></li>
-                            <li><a href="https://www.tiktok.com/@worldwar0x" target="_blank"><img className="image-1156-icon" alt="" src={tikTok} /></a></li>
+                            <li><a href="https://discord.gg/worldwar0x" target="_blank" rel="noreferrer"><img className="image-1156-icon" alt="" src={headDiscord} /></a></li>
+                            <li><a href="https://twitter.com/WorldWar0x" target="_blank" rel="noreferrer"><img className="image-1156-icon" alt="" src={headTwitter} /></a></li>
+                            <li><a href="https://www.youtube.com/channel/UC4mQ9cT7wDV6aqOuoMaX3vA" target="_blank" rel="noreferrer"><img className="image-1156-icon" alt="" src={headYoutube} /></a></li>
+                            <li><a href="https://instagram.com/worldwar0x" target="_blank" rel="noreferrer"><img className="image-1156-icon" alt="" src={headSoo} /></a></li>
+                            <li><a href="https://www.tiktok.com/@worldwar0x" target="_blank" rel="noreferrer"><img className="image-1156-icon" alt="" src={tikTok} /></a></li>
                         </ul>
                         {/* <button className="GetWhiteListedBtn">GET WHITELISTED</button> */}
-                        <div class="GetWhiteListedBtn">
-                            <a href="#"><span>GET WHITELISTED</span></a>
+                        <div className="GetWhiteListedBtn">
+                            <button><span>GET WHITELISTED</span></button>
                         </div>
 
                     </div>
@@ -95,8 +93,8 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                             <li onClick={toggleMenu}><a href="#WARXECOSYSTEM">ECOSYSTEM</a></li>
                             <li onClick={toggleMenu}><button>WHITEPAPER</button></li>
                         </ul>
-                        <div class="GetWhiteListedBtn small-btn">
-                            <a href="#"><span>GET WHITELISTED</span></a>
+                        <div className="GetWhiteListedBtn small-btn">
+                            <button><span>GET WHITELISTED</span></button>
                         </div>
                     </div>
                 </div>

@@ -17,28 +17,28 @@ const Footer = () => {
                         <img src={bitmap} alt="" />
                         <div className="footer-ul">
                             <ul>
-                                <li><a href="#">FEEDBACK</a></li>
+                                <li><button>FEEDBACK</button></li>
                                 <li><a href="#FAQ">FAQ</a></li>
-                                <li><a href="#">PATCH NOTES</a></li>
-                                <li><a href="#">WHITEPAPER</a></li>
-                                <li><a href="#">MERCH</a></li>
+                                <li><button>PATCH NOTES</button></li>
+                                <li><button>WHITEPAPER</button></li>
+                                <li><button>MERCH</button></li>
                             </ul>
 
                             <ul className="footer-ul2">
-                                <li className="footer-li2"><a className="footer-a2" href="#">Curfluffle Games</a></li>
-                                <li className="footer-li2"><a className="footer-a2 footer_link" href="#">Terms of Service</a></li>
-                                <li className="footer-li2 "><a className="footer-a2 footer_link" href="#">Privacy Policy</a></li>
+                                <li className="footer-li2"><button className="footer-a2">Curfluffle Games</button></li>
+                                <li className="footer-li2"><button className="footer-a2 footer_link">Terms of Service</button></li>
+                                <li className="footer-li2 "><button className="footer-a2 footer_link">Privacy Policy</button></li>
                             </ul>
 
                         </div>
                     </div>
                     <div className="HeaderSocialIconContainer">
                         <ul>
-                            <li><a href="https://discord.gg/worldwar0x" target="_blank"><img className="image-1156-icon" alt="" src={headDiscord} /></a></li>
-                            <li><a href="https://twitter.com/WorldWar0x" target="_blank"><img className="image-1156-icon" alt="" src={headTwitter} /></a></li>
-                            <li><a href="https://www.youtube.com/channel/UC4mQ9cT7wDV6aqOuoMaX3vA" target="_blank"><img className="image-1156-icon" alt="" src={headYoutube} /></a></li>
-                            <li><a href="https://instagram.com/worldwar0x" target="_blank"><img className="image-1156-icon" alt="" src={headSoo} /></a></li>
-                            <li><a href="https://www.tiktok.com/@worldwar0x" target="_blank"><img className="image-1156-icon" alt="" src={tikTok} /></a></li>
+                            <li><a href="https://discord.gg/worldwar0x" target="_blank" rel="noreferrer"><img className="image-1156-icon" alt="" src={headDiscord} /></a></li>
+                            <li><a href="https://twitter.com/WorldWar0x" target="_blank" rel="noreferrer"><img className="image-1156-icon" alt="" src={headTwitter} /></a></li>
+                            <li><a href="https://www.youtube.com/channel/UC4mQ9cT7wDV6aqOuoMaX3vA" target="_blank" rel="noreferrer"><img className="image-1156-icon" alt="" src={headYoutube} /></a></li>
+                            <li><a href="https://instagram.com/worldwar0x" target="_blank" rel="noreferrer"><img className="image-1156-icon" alt="" src={headSoo} /></a></li>
+                            <li><a href="https://www.tiktok.com/@worldwar0x" target="_blank" rel="noreferrer"><img className="image-1156-icon" alt="" src={tikTok} /></a></li>
                         </ul>
                     </div>
                 </div>

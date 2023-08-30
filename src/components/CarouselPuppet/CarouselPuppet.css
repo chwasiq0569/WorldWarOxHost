@@ -6,6 +6,20 @@
     padding: 50px 0px;
 }
 
+.scrolling-text {
+    /* animation: scrollText 15s ease infinite; */
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 .custom-button {
     background-color: transparent;
     color: #fff;

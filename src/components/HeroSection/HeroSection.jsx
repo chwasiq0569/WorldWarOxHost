@@ -15,8 +15,8 @@ const HeroSection = ({ moveToBack }) => {
                     <h2>LOW POLY WORLD WAR 3 HAS ARRIVED</h2>
                     <h3>BROWSER-BASED MULTIPLAYER FPS WITH VEHICLES</h3>
                     <div className="HeroSectionBtns">
-                        <div class="svg-clip-1">PLAY TRAILER</div>
-                        <div class="svg-clip-2">PLAY ALPHA</div>
+                        <div className="svg-clip-1">PLAY TRAILER</div>
+                        <div className="svg-clip-2">PLAY ALPHA</div>
                     </div>
                 </div>
             </div>
