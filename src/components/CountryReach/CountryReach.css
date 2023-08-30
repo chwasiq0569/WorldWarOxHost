@@ -1,0 +1,58 @@
+/* CountryReach Start */
+.CountryReachConatiner {}
+
+.CountryReachConatiner-Flag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.CountryReachConatiner-Flag img:nth-child(2) {
+  margin: 0px 30px;
+}
+
+.CountryReachConatiner h2 {
+  color: #FFF;
+  text-align: center;
+  font-family: var(--font-pink-and-crimson);
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 5px;
+  padding: 70px 0px;
+}
+
+.CountryReachConatiner-img {
+  display: flex;
+  width: 100%;
+}
+
+.CountryReachConatiner-img-last {
+  padding: 0px 0px 0px 0px;
+}
+
+.CountryReachConatiner-img img {
+  width: 100%;
+}
+
+.multipleLine {
+  width: 100%;
+}
+
+/* CountryReach End */
+
+
+
+/* Responsiveness */
+@media only screen and (max-width: 850px) {
+  .CountryReachConatiner h2 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .CountryReachConatiner h2 {
+    font-size: 30px;
+  }
+}

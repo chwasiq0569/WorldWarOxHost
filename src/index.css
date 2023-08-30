@@ -1,0 +1,120 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots:wght@400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Pink and Crimson";
+  src: local("Pink and Crimson"),
+    url("./fonts/Pink\ and\ Crimson.otf") format("woff");
+}
+
+@font-face {
+  font-family: "Murisa Alexandra";
+  src: local("Murisa Alexandra"),
+    url("./fonts/alexandra\ regular.otf") format("woff");
+}
+
+@font-face {
+  font-family: "Transducer Test";
+  src: local("Transducer Test"),
+    url("./fonts/TransducerTest-Hairline.otf") format("woff");
+}
+
+@font-face {
+  font-family: "Transducer Test Bold";
+  src: local("Transducer Test Bold"),
+    url("./fonts/TransducerTest-Black.otf") format("woff");
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy"),
+    url("./fonts/Gilroy-ExtraBold.otf") format("woff");
+}
+
+@font-face {
+  font-family: "PRIMETIME";
+  src: local("PRIMETIME"),
+    url("./fonts/PRIMETIME\ +\ PERSONAL\ USE\ ONLY.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "WILD WORLD";
+  src: local("WILD WORLD"),
+    url("./fonts/wild-world.otf") format("woff");
+}
+
+@font-face {
+  font-family: "Median";
+  src: local("Median"),
+    url("./fonts/Median-Regular.otf") format("woff");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-black);
+  color: #fff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  /* fonts */
+  /* google fonts */
+  --font-zen-dots: "Zen Dots";
+  --font-poppins: "Poppins";
+  --font-marcellus: "Marcellus";
+  --font-marcellus-sc: "Marcellus SC";
+  --font-josefin-sans: "Josefin Sans";
+
+  /* custom fonts */
+  --font-murisa-alexandra: "Murisa Alexandra";
+  --font-transducer-test: "Transducer Test";
+  --font-transducer-test-bold: "Transducer Test Bold";
+  --font-gilroy: "Gilroy";
+  --font-pink-and-crimson: "Pink and Crimson";
+  --font-primetime: "PRIMETIME";
+  --font-wild-world: "WILD WORLD";
+  --font-median: "Median";
+
+  /* Colors */
+  --color-black: #000;
+  --color-lightcoral-100: #ff9393;
+  --color-crimson-100: #ff4d59;
+  --color-crimson-200: #ed1c27;
+  --color-salmon: #ff6868;
+  --color-white: #fff;
+  --color-orangered: #ff4b24;
+  --color-palegoldenrod: #fff4bc;
+  --color-red: #ff0000;
+  --color-gray-100: rgba(255, 255, 255, 0.8);
+  --color-darkgray: #989898;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}

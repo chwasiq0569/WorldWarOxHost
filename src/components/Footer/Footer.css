@@ -1,0 +1,129 @@
+/* Footer Start */
+.Footer {
+    padding: 30px 20px;
+}
+
+.FooterCentered {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.FooterLeftContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-ul ul {
+    display: flex;
+    padding-left: 40px;
+}
+
+.footer-ul ul li {
+    padding-right: 20px;
+}
+
+.footer-ul ul li a {
+    color: #FFF4BC;
+    font-family: var(--font-pink-and-crimson);
+    font-size: 16px;
+    font-style: norma;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.footer-ul .footer-ul2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 40px;
+}
+
+.footer-ul .footer-ul2 .footer-li2 .footer-a2 {
+    color: #FFFF90;
+    font-family: Josefin Sans;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 46px;
+    letter-spacing: 0.13px;
+}
+
+.footer-ul .footer-ul2 .footer-li2 .footer_link {
+    color: white;
+    font-family: var(--font-poppins);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 46px;
+    letter-spacing: 0.13px;
+    transition: all 0.5s ease;
+    opacity: 0.7;
+}
+
+.footer-ul .footer-ul2 .footer-li2 .footer_link:hover {
+    opacity: 1;
+}
+
+.FooterRightContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.FooterRightContainer img {
+    margin-left: 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.FooterRightContainer img:hover {
+    transform: scale(1.2);
+}
+
+.FooterRightContainer img:nth-child(2) {
+    margin-left: 12px;
+}
+
+/* Footer End */
+
+
+@media only screen and (max-width: 1050px) {
+    .FooterCentered {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .FooterLeftContainer {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .FooterCentered {
+        flex-direction: column;
+    }
+
+    .footer-ul ul {
+        flex-wrap: wrap;
+    }
+
+    .footer-ul ul li {
+        padding-bottom: 20px;
+
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .FooterLeftContainer {
+        flex-direction: column;
+    }
+
+    .footer-ul ul {
+        padding-left: 0px;
+    }
+
+}

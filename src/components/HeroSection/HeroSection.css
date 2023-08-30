@@ -1,0 +1,198 @@
+.HeroSectionContainer {
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: brightness(0.6);
+    object-fit: cover;
+    z-index: -2;
+    margin-top: -4rem;
+}
+
+.no-controls::-webkit-media-controls {
+    display: none !important;
+}
+
+.no-controls::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+
+.moveToBack {
+    z-index: -1;
+}
+
+.HeroCenteredContent {
+    /* position: absolute; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.HeroCenteredContent img {}
+
+.HeroCenteredContent h2 {
+    color: #FFF4BC;
+    text-align: center;
+    font-family: var(--font-pink-and-crimson);
+    font-size: 46px;
+    font-weight: 400;
+    margin-top: 30px;
+    /* letter-spacing: 2px; */
+}
+
+.HeroCenteredContent h3 {
+    color: #ff0000;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 30px 0px;
+    font-family: var(--font-median);
+}
+
+.HeroSectionBtns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+}
+
+.svg-clip-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--color-white);
+    clip-path: polygon(0 0, 320.5px 4.5px, 320.5px 72px, 8px 80px, 0 0);
+    color: var(--color-black);
+    text-align: center;
+    font-family: var(--font-pink-and-crimson);
+    font-size: 22px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    transition: 0.5s ease-in-out;
+}
+
+.svg-clip-1:hover {
+    transform: scale(1.1);
+    background-color: var(--color-black);
+    color: var(--color-white);
+    cursor: pointer;
+
+}
+
+.svg-clip-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 40px;
+    margin-top: 7px;
+    background-color: #FF0000;
+    clip-path: polygon(100% 0, 0 5.625%, 0 90%, 96.948% 100%, 100% 0);
+    color: var(--color-white);
+    text-align: center;
+    font-family: var(--font-pink-and-crimson);
+    font-size: 22px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+
+}
+
+.svg-clip-2:hover {
+    transform: scale(1.05);
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+
+
+/* Responsiveness Start */
+@media only screen and (max-width: 1050px) {
+
+
+    .HeroSectionContainer {
+        /* border: 1px solid red; */
+    }
+
+    .HeroCenteredContent img {
+        width: 50%;
+    }
+
+    .HeroCenteredContent h2 {
+        font-size: 28px;
+    }
+
+    .HeroCenteredContent h3 {
+        font-size: 18px;
+        margin: 10px 0px;
+    }
+
+    .HeroSectionBtns {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 580px) {
+    .svg-clip-1 {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .svg-clip-2 {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    .HeroSectionBtns {
+        width: 70%;
+    }
+
+    .HeroCenteredContent h2 {
+        font-size: 5vw;
+        font-weight: 100;
+        letter-spacing: 1px;
+    }
+
+    .HeroCenteredContent h3 {
+        font-size: 3.5vw;
+        text-align: center;
+    }
+}
+
+
+@media only screen and (max-width: 425px) {
+    .HeroCenteredContent {
+        margin-top: -100px;
+    }
+
+    .HeroCenteredContent img {
+        width: 70%;
+    }
+
+    .svg-clip-1 {
+        font-size: 3.5vw;
+        padding: 10px 20px;
+    }
+
+    .svg-clip-2 {
+        font-size: 3.6vw;
+        padding: 12px 20px;
+    }
+
+    .HeroSectionBtns {
+        width: 80%;
+    }
+}

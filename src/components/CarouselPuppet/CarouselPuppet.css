@@ -1,0 +1,164 @@
+/* Default styling for the div */
+
+/* Styling for the buttons */
+.maindivcustom {
+    position: relative;
+    padding: 50px 0px;
+}
+
+.custom-button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    border: 3px solid #ED1C27;
+    transform: rotate(45deg);
+    margin: 0 0.5rem;
+}
+
+.custom-button img {
+    height: 20px;
+    width: 20px;
+    transform: rotate(-45deg);
+}
+
+.custom-div {
+    transform: rotate(45deg);
+    border: 3px solid #ED1C27;
+    width: 4rem;
+    height: 4rem;
+    margin: 0 1.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+
+.custom-div:hover {
+    /* width: 4.5rem;
+    height: 4.5rem; */
+    transform: rotate(45deg) scale(1.1);
+}
+
+/* Styling for the selected div */
+.custom-div .selected {
+    width: 4rem !important;
+    height: 4rem !important;
+    border: 3px solid blue;
+}
+
+/* Styling for the image */
+.custom-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    width: 20px;
+    height: 50px;
+    transform: rotate(-45deg);
+}
+
+/* 
+.puppetImage {
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+} */
+
+.fade_in_animation {
+    animation: fadeIn 1s ease-out;
+    opacity: 1;
+    /* Apply the fade-in animation */
+}
+
+.fade_up_animation {
+    animation: fadeUp 1s ease-out;
+    opacity: 1;
+    /* Apply the fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        /* Start from opacity 0 */
+    }
+
+    to {
+        opacity: 1;
+        /* End with opacity 1 */
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(250px);
+        /* Start from opacity 0 */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        /* End with opacity 1 */
+    }
+}
+
+
+@media only screen and (max-width: 1090px) {
+    .HelmetSectionContainerIMG img {
+        width: 170px;
+        height: 273px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .HelmetSectionContainerIMG img {
+        /* width: 170px; */
+        margin-top: -200px;
+        /* height: 200px; */
+    }
+}
+
+@media only screen and (max-width: 790px) {
+    .maindivcustom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 50px 0px 100px 0px;
+        overflow: hidden;
+    }
+
+    .custom-div {
+        padding: 1rem;
+    }
+
+    .custom-button {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .custom-button:nth-child(1) {
+        left: 35%;
+        bottom: 10px;
+        margin: 0px 100px 0px 0px;
+    }
+
+    .custom-button {
+        left: 55%;
+        margin-top: 100px !important;
+        bottom: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 560px) {
+    .HelmetSectionContainerIMG img {
+        margin-top: -120px;
+        width: 100px;
+        height: 173px;
+    }
+
+}

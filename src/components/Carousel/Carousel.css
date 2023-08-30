@@ -1,0 +1,266 @@
+.carousel-container {
+  position: relative;
+  width: 80%;
+}
+
+.carousel-item {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+
+
+.carousel__wrap {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  position: relative;
+  width: 90%;
+  margin: auto;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+}
+
+.carousel__inner {
+  height: 50rem;
+  position: relative;
+  /* width: calc(100rem); */
+  width: 100%;
+  /* border: 1px solid red; */
+}
+
+.carousel__container {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.carousel__slide-list {
+  height: 100%;
+  /* left: 50%; */
+  /* border: 1px solid red; */
+
+  list-style-type: none;
+  /* margin: 0; */
+  /* padding: 0; */
+  /* position: absolute; */
+  transform: translateX(-50%);
+  /* width: calc(330rem); */
+  width: 242rem;
+}
+
+.carousel__slide-item {
+  display: inline-block;
+  height: 40rem;
+  margin: 0;
+  padding: 1rem;
+  position: absolute;
+  transition: all 0.3s;
+  width: 20rem;
+  /* border: 1px solid red; */
+}
+.carousel__slide-item:nth-child(2) {
+  margin-top: 35px;
+}
+.carousel__slide-item:nth-child(1) {
+  margin-top: 60px;
+}
+.carousel__slide-item:nth-child(3) {
+  margin-top: 90px;
+}
+.carousel__slide-item:nth-child(4) {
+  margin-top: 0px;
+
+}
+.carousel__slide-item:nth-child(5) {
+  margin-top: 0px;
+
+}
+.carousel__slide-item:nth-child(6) {
+  margin-top: 50px;
+}
+.carousel__slide-item:nth-child(7) {
+  margin-top: 100px;
+}
+.carousel__slide-item:nth-child(9) {
+  margin-top: 50px;
+}
+
+.carousel__slide-item:nth-child(10) {
+  margin-top: 100px;
+}
+.carousel__slide-item-img-link {
+  cursor: zoom-in;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.carousel__slide-item-img-link img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease;
+}
+
+.carousel__slide-item-img-link::after {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  width: 100%;
+}
+
+.carousel__slide-item-img-link:hover::after {
+  opacity: 1;
+}
+
+.carousel__slide-item-img-link:hover img {
+  transform: scale(1.3);
+}
+
+.carousel-slide-item__body {
+  /* bottom: -2.5rem; */
+  height: 10%;
+  position: absolute;
+  font-family: var(--font-gilroy);
+}
+
+.carousel-slide-item__body h4 {
+  margin: 0.7rem 0 0;
+  text-transform: uppercase;
+  font-size: 42px;
+}
+
+.carousel-slide-item__body p {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  margin: 0.7rem 0 0;
+}
+
+.carousel__btn {
+  align-items: center;
+  background: 0;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel__btn--prev {
+  left: -10rem;
+}
+
+.carousel__btn--next {
+  right: -10rem;
+}
+
+.carousel__btn-arrow {
+  border: solid black;
+  border-width: 0 0.4rem 0.4rem 0;
+  height: 6rem;
+  padding: 3px;
+  width: 6rem;
+  z-index: 10;
+}
+
+.carousel__btn-arrow--left {
+  transform: rotate(135deg);
+}
+
+.carousel__btn-arrow--right {
+  transform: rotate(-45deg);
+}
+
+.carousel__dots {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 50%;
+  margin-top: 2rem;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.carousel__dots .dot {
+  background: transparent;
+  border: 5px solid #ed1c27;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 2rem;
+  margin: 0 0.3rem;
+  outline: none;
+  transform: scale(0.5);
+  width: 2rem;
+}
+
+/* .carousel__dots .dot.active {
+  border: 5px solid #ccc;
+  background: #ccc;
+} */
+
+
+.carousel__dots .dot:nth-child(2){
+  border: 5px solid #ccc;
+  background: #ccc;
+  margin-left: 60px;
+}
+
+.carousel__dots .dot:nth-child(6){
+  margin-right: 60px;
+}
+
+.carousel__dots .dot:nth-child(3){
+  display: none;
+}
+.carousel__dots .dot:nth-child(4){
+  display: none;
+}
+.carousel__dots .dot:nth-child(5){
+  display: none;
+}
+
+.carousel_btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

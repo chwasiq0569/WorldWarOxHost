@@ -1,0 +1,91 @@
+/* ThreeTypeSectionContainer Start */
+.ThreeTypeSectionContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+    min-height: 80vh;
+}
+
+.ThreeTypeSectionContainerCentered {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 40px;
+    width: 65%;
+    margin: auto;
+}
+
+.ThreeTypeSectionBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.ThreeTypeSectionBox img {
+    width: 75px;
+    height: 75px;
+}
+
+.ThreeTypeSectionBox h5 {
+    color: var(--color-white);
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    /* font-weight: 900; */
+    margin-top: 20px;
+    font-family: var(--font-transducer-test-bold);
+    /* font-weight: 700; */
+    /* line-height: 36px; */
+    /* letter-spacing: -0.058px; */
+}
+
+.dollar-span {
+    color: #F00;
+    font-family: var(--font-poppins);
+    font-size: 16px;
+    font-weight: 400;
+    /* letter-spacing: -0.058px; */
+}
+
+.warx-span {
+    color: #FFA282;
+    font-family: var(--font-poppins);
+    font-size: 16px;
+    font-weight: 400;
+    /* letter-spacing: -0.058px; */
+}
+
+.ThreeTypeSectionBox p {
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font-poppins);
+    font-size: 15px;
+    font-weight: 300;
+    /* letter-spacing: 1px; */
+    margin-top: 20px;
+}
+
+/* ThreeTypeSectionContainer End */
+
+/* Responsiveness */
+@media only screen and (max-width: 1050px) {
+    .ThreeTypeSectionContainerCentered {
+        /* border: 1px solid red; */
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .ThreeTypeSectionContainerCentered {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 40px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .ThreeTypeSectionContainerCentered {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
