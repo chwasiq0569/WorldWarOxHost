@@ -356,7 +356,7 @@ a {
 
 .HelmetSectionContainerIMG marquee {}
 
-.HelmetSectionContainerIMG h1 {
+.HelmetSectionContainerIMG marquee h1 {
   color: #ED1C27;
   font-family: var(--font-pink-and-crimson);
   font-size: 8vw;
