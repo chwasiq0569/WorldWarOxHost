@@ -89,11 +89,11 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                             <img className="image-1156-icon" alt="" src={logo} />
                         </div>
                         <ul>
-                            <li><a href="#">PLAY</a></li>
-                            <li><a href="#">NFTS</a></li>
-                            <li><a href="#">GAMEPLAY</a></li>
-                            <li><a href="#">ECOSYSTEM</a></li>
-                            <li><a href="#">WHITEPAPER</a></li>
+                            <li onClick={toggleMenu}><a href="https://worldwar0x.io">PLAY</a></li>
+                            <li onClick={toggleMenu}><a href="#FirstEdition">NFTS</a></li>
+                            <li onClick={toggleMenu}><a href="#NEWERA">GAMEPLAY</a></li>
+                            <li onClick={toggleMenu}><a href="#WARXECOSYSTEM">ECOSYSTEM</a></li>
+                            <li onClick={toggleMenu}><a href="#">WHITEPAPER</a></li>
                         </ul>
                         <div class="GetWhiteListedBtn small-btn">
                             <a href="#"><span>GET WHITELISTED</span></a>

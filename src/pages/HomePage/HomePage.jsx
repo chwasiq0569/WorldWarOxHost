@@ -402,46 +402,23 @@ const HomePage = () => {
                 <div className='FaqsSectionCentered'>
                     <Accordion
                         title="WHEN IS THE MINT?"
-                        content="There are many variations of passages of Lorem Ipsum available,
-          but the majority have suffered alteration in some form, by
-          injected humour, or randomised words which don't look even
-          slightly believable."
+                        content="Coming Soon..."
                     />
                     <Accordion
                         title="IS THE GAME FREE?"
-                        content="Yes! Generic Viagra contains the same active ingredient as
-          brand-name Viagra and is just as effective in treating ED. In
-          fact, the only difference is the price. Five Corners Rx's
-          U.S.-based pharmacy ensures that our generic Viagra meets the
-          same quality, safety, and efficacy standards as the brand-name
-          version."
+                        content="Coming Soon..."
                     />
                     <Accordion
                         title="DO YOU HAVE AN APP?"
-                        content="Yes! Generic Viagra contains the same active ingredient as
-          brand-name Viagra and is just as effective in treating ED. In
-          fact, the only difference is the price. Five Corners Rx's
-          U.S.-based pharmacy ensures that our generic Viagra meets the
-          same quality, safety, and efficacy standards as the brand-name
-          version."
+                        content="Coming Soon..."
                     />
                     <Accordion
                         title="HOW TO WHISTLIST?"
-                        content="Yes! Generic Viagra contains the same active ingredient as
-          brand-name Viagra and is just as effective in treating ED. In
-          fact, the only difference is the price. Five Corners Rx's
-          U.S.-based pharmacy ensures that our generic Viagra meets the
-          same quality, safety, and efficacy standards as the brand-name
-          version."
+                        content="Coming Soon..."
                     />
                     <Accordion
                         title="IS THE $WARX TOKEN LIVE?"
-                        content="Yes! Generic Viagra contains the same active ingredient as
-          brand-name Viagra and is just as effective in treating ED. In
-          fact, the only difference is the price. Five Corners Rx's
-          U.S.-based pharmacy ensures that our generic Viagra meets the
-          same quality, safety, and efficacy standards as the brand-name
-          version."
+                        content="Coming Soon..."
                     />
                 </div>
 
