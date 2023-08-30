@@ -93,8 +93,8 @@ const MyCarousel = () => {
                 <h2>LEGENDARY <span className="level-span">1/1</span>  SOLDIERS</h2>
                 <p>A select number of Soldier NFTs will feature one-of-one (1/1) characters with completely unique outfits. Explore a rich history of famous historical figures from all parts of the world – from Julius Caesar, Cleopatra to Genghis Khan and more.</p>
                 <div className='HelmetSectionContainerIMG scrolling-text-container'>
-                    {/* <h1 className={isAnimating ? 'fade_in_animation' : 'scrolling-text'}>{imageTextsh3[selectedItem]}</h1> */}
-                    <marquee className={isAnimating ? 'fade_in_animation' : 'scrolling-text'}><h1>{imageTextsh3[selectedItem]}</h1></marquee>
+                    <h1 className={isAnimating ? 'fade_in_animation' : 'scrolling-text'}>{imageTextsh3[selectedItem]}</h1>
+                    {/* <marquee className={isAnimating ? 'fade_in_animation' : 'scrolling-text'}><h1>{imageTextsh3[selectedItem]}</h1></marquee> */}
                     <div className={isAnimating ? 'fade_up_animation' : 'puppetImage'}>
                         <img src={imagePuppets[selectedItem]} alt="" />
                     </div>
