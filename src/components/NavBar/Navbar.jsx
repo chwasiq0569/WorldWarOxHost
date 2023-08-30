@@ -9,11 +9,27 @@ import tikTok from "../../assets/37.png";
 import './Navbar.css';
 
 const Navbar = ({ setMoveToBack, moveToBack }) => {
+    const menuRef = React.useRef();
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+
+    React.useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setIsMenuOpen(false)
+            }
+        }
+
+        document.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
 
     React.useEffect(() => {
         isMenuOpen ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'auto'
@@ -64,7 +80,7 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                         <div className='humburgerLine'></div>
                         <div className='humburgerLine'></div>
                     </div>
-                    <div className={`SideMenu ${isMenuOpen ? 'menu-open' : ''}`}>
+                    <div ref={menuRef} className={`SideMenu ${isMenuOpen ? 'menu-open' : ''}`}>
                         <div className="CloseButton" onClick={toggleMenu}>
                             <div className="CloseIcon"></div>
                             <div className="CloseIcon"></div>

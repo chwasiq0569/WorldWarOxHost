@@ -36,9 +36,12 @@
 }
 
 .HeaderMenuContainer ul li a {
+  /* all: unset; */
+
   color: var(--color-white);
   font-weight: 100;
   transition: 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .HeaderMenuContainer ul li a:hover {

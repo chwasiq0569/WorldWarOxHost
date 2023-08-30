@@ -27,7 +27,7 @@
 .custom-div {
     transform: rotate(45deg);
     border: 3px solid #ED1C27;
-    width: 4rem;
+    min-width: 4rem;
     height: 4rem;
     margin: 0 1.7rem;
     display: flex;
