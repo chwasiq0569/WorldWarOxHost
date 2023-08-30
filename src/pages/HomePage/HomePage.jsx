@@ -55,12 +55,44 @@ import BattleItOut from '../../components/BattleItOut/BattleItOut';
 import CountryReach from '../../components/CountryReach/CountryReach';
 import Carousel from '../../components/Carousel/Carousel';
 import CarouselPuppet from '../../components/CarouselPuppet/CarouselPuppet';
+import ArrowUp from "../../assets/arrowUp.png";
 
 const HomePage = () => {
     const [moveToBack, setMoveToBack] = React.useState(false);
+    const [backToTop, setBackToTop] = React.useState(false);
+    const [isScrolled, setIsScrolled] = React.useState(false);
+
+    const handleScroll = () => {
+        if (window.scrollY > 0) {
+            setIsScrolled(true);
+        } else {
+            setIsScrolled(false);
+        }
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    React.useEffect(() => {
+        // Attach event listener when the component mounts
+        window.addEventListener('scroll', handleScroll);
+
+        // Clean up the event listener when the component unmounts
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    console.log('isScrolled', isScrolled)
 
     return (
         <div>
+
+            {isScrolled && <div onClick={scrollToTop} className='backToTop'>
+                <img src={ArrowUp} alt='arrow_up' />
+            </div>}
+
             <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} />
 
             <HeroSection moveToBack={moveToBack} />

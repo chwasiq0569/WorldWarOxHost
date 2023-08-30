@@ -56,7 +56,7 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                             <li><a href="#FirstEdition">NFTS</a></li>
                             <li><a href="#NEWERA">GAMEPLAY</a></li>
                             <li><a href="#WARXECOSYSTEM">ECOSYSTEM</a></li>
-                            <li><a href="#">WHITEPAPER</a></li>
+                            <li><button>WHITEPAPER</button></li>
                         </ul>
                     </div>
                 </div>
@@ -93,7 +93,7 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                             <li onClick={toggleMenu}><a href="#FirstEdition">NFTS</a></li>
                             <li onClick={toggleMenu}><a href="#NEWERA">GAMEPLAY</a></li>
                             <li onClick={toggleMenu}><a href="#WARXECOSYSTEM">ECOSYSTEM</a></li>
-                            <li onClick={toggleMenu}><a href="#">WHITEPAPER</a></li>
+                            <li onClick={toggleMenu}><button>WHITEPAPER</button></li>
                         </ul>
                         <div class="GetWhiteListedBtn small-btn">
                             <a href="#"><span>GET WHITELISTED</span></a>

@@ -35,7 +35,8 @@
   letter-spacing: 1.5px;
 }
 
-.HeaderMenuContainer ul li a {
+.HeaderMenuContainer ul li a,
+.HeaderMenuContainer ul li button {
   /* all: unset; */
 
   color: var(--color-white);
@@ -44,7 +45,15 @@
   cursor: pointer;
 }
 
-.HeaderMenuContainer ul li a:hover {
+.HeaderMenuContainer ul li button {
+  all: unset;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+
+}
+
+.HeaderMenuContainer ul li a:hover,
+.HeaderMenuContainer ul li button:hover {
   color: #ff4b24;
 }
 
@@ -237,6 +246,11 @@
 
 .SideMenu ul li a {
   color: #fff;
+  font-family: var(--font-pink-and-crimson);
+}
+
+.SideMenu ul li button {
+  all: unset;
   font-family: var(--font-pink-and-crimson);
 }
 

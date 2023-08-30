@@ -110,8 +110,31 @@ a {
 }
 
 
+.backToTop {
+  width: 4rem;
+  height: 4rem;
+  background-color: black;
+  border-radius: 2rem;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 
+  transition: all 0.5s ease;
+}
 
+.backToTop img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.backToTop:hover {
+  background-color: #272727;
+}
 
 /* FirstEditionContainer Start */
 .FirstEditionContainer {
