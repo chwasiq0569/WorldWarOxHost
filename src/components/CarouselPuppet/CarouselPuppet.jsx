@@ -19,9 +19,9 @@ import ChinaflagLowPolyFlag from "../../assets/ChinaflagLowPoly.png"
 import BelarusFlagLowPolyFlag from "../../assets/BelarusFlagLowPoly.png"
 
 const imageData = [
-    { id: 1, src: kim, alt: 'Image 1' },
-    { id: 2, src: kims, alt: 'Image 2' },
-    { id: 3, src: kimss, alt: 'Image 3' },
+    { id: 1, src: KinJongVideo, alt: 'Image 1' },
+    { id: 2, src: PresidentOfChinaVideo, alt: 'Image 2' },
+    { id: 3, src: USASoldierVideo, alt: 'Image 3' },
     // { id: 4, src: kimsss, alt: 'Image 4' },
     // { id: 5, src: kimssss, alt: 'Image 5' },
 ];
@@ -56,8 +56,8 @@ const backgroundImg = [
 
 const MyCarousel = () => {
     const [items, setItems] = React.useState(imageData);
-    const [selectedItem, setSelectedItem] = React.useState(Math.floor(items.length / 2));
-    const [selectedItemImg, setSelectedItemImg] = React.useState(Math.floor(items.length / 2));
+    const [selectedItem, setSelectedItem] = React.useState(Math.ceil(items.length / 2));
+    const [selectedItemImg, setSelectedItemImg] = React.useState(Math.ceil(items.length / 2));
     const [isAnimating, setIsAnimating] = React.useState(false);
     const [itemNumber, setItemNumber] = React.useState(1)
 
@@ -118,13 +118,9 @@ const MyCarousel = () => {
                 <div style={{ display: 'flex', alignItems: 'center' }} className='maindivcustom'>
                     <button disabled={isAnimating} onClick={shiftPrev} className="custom-button"><img src={arrow8} alt="" /></button>
                     {items.map((item, index) => (
-                        <div
-                            key={item.id}
-                            className='custom-div'
-                        // style={{ width: index == 2 && '5rem', height: index == 2 && '5rem', border: index === 2 && '5px solid #ED1C27' }}
-                        >
+                        <div key={item.id} className='custom-div'>
                             <img
-                                src={item.src}
+                                src={items[index].src}
                                 alt={item.alt}
                                 className="custom-img"
                             />
