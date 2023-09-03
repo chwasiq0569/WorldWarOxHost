@@ -9,39 +9,50 @@ import kims from '../../assets/photo_2023-08-14_15-43-51 2.png';
 import kimss from '../../assets/kim-removebg-preview 7.png';
 import kimsss from '../../assets/low-poly-solderssss.png';
 import kimssss from '../../assets/image 1174.png';
+import KinJongVideo from '../../assets/KimJongUn-unscreen.gif';
+import USASoldierVideo from '../../assets/USA-soldier-unscreen.gif';
+import PresidentOfChinaVideo from '../../assets/PresidentOfChina-unscreen.gif';
 import arrow8 from '../../assets/Arrow 8.png'
 import arrow7 from '../../assets/Arrow 7.png'
-
+import USALowPolygonFlag from "../../assets/USAflagLowPoly.png"
+import ChinaflagLowPolyFlag from "../../assets/ChinaflagLowPoly.png"
+import BelarusFlagLowPolyFlag from "../../assets/BelarusFlagLowPoly.png"
 
 const imageData = [
     { id: 1, src: kim, alt: 'Image 1' },
     { id: 2, src: kims, alt: 'Image 2' },
     { id: 3, src: kimss, alt: 'Image 3' },
-    { id: 4, src: kimsss, alt: 'Image 4' },
-    { id: 5, src: kimssss, alt: 'Image 5' },
+    // { id: 4, src: kimsss, alt: 'Image 4' },
+    // { id: 5, src: kimssss, alt: 'Image 5' },
 ];
 const imageTexts = [
     "The days are gone forever when our enemies could blackmail us with nuclear bombs",
     "Custom text for image 2 when our enemies could blackmail us with nuclear bombs",
     "Custom text for image 3 when our enemies could blackmail us with nuclear bombs",
-    "Custom text for image 4 when our enemies could blackmail us with nuclear bombs",
-    "Custom text for image 5 when our enemies could blackmail us with nuclear bombs",
+    // "Custom text for image 4 when our enemies could blackmail us with nuclear bombs",
+    // "Custom text for image 5 when our enemies could blackmail us with nuclear bombs",
 ];
 
 const imageTextsh3 = [
     "FUPREME LEADER OF NORTH KOREA",
     "RUPREME LEADER OF NORTH KOREA",
     "SUPREME LEADER OF NORTH KOREA",
-    "GUPREME LEADER OF NORTH KOREA",
-    "RUPREME LEADER OF NORTH KOREA",
+    // "GUPREME LEADER OF NORTH KOREA",
+    // "RUPREME LEADER OF NORTH KOREA",
 ];
 const imagePuppets = [
-    kimssss,
-    kimsss,
-    kimss,
-    kims,
-    northPuppet,
+    KinJongVideo,
+    USASoldierVideo,
+    PresidentOfChinaVideo,
+    // kims,
+    // northPuppet,
 ];
+
+const backgroundImg = [
+    BelarusFlagLowPolyFlag,
+    USALowPolygonFlag,
+    ChinaflagLowPolyFlag
+]
 
 const MyCarousel = () => {
     const [items, setItems] = React.useState(imageData);
@@ -59,7 +70,7 @@ const MyCarousel = () => {
     };
 
     console.log('selectedItem', imageData[selectedItem])
-
+    console.log('imagePuppets', imagePuppets)
     const shiftNext = () => {
         setItems(prevItems => {
             const copy = [...prevItems];
@@ -94,9 +105,13 @@ const MyCarousel = () => {
                 <p>A select number of Soldier NFTs will feature one-of-one (1/1) characters with completely unique outfits. Explore a rich history of famous historical figures from all parts of the world – from Julius Caesar, Cleopatra to Genghis Khan and more.</p>
                 <div className='HelmetSectionContainerIMG scrolling-text-container'>
                     {/* <h1 className={isAnimating ? 'fade_in_animation' : 'scrolling-text'}>{imageTextsh3[selectedItem]}</h1> */}
-                    <marquee className={isAnimating ? 'fade_in_animation' : 'scrolling-text'}><h1>{imageTextsh3[selectedItem]}</h1></marquee>
+                    <marquee className={isAnimating ? 'fade_in_animation' : 'scrolling-text'}><h1 style={{ backgroundImage: `url(${backgroundImg[selectedItem]})` }}>{imageTextsh3[selectedItem]}</h1></marquee>
                     <div className={isAnimating ? 'fade_up_animation' : 'puppetImage'}>
+                        {/* <img src={imagePuppets[selectedItem]} alt="" /> */}
                         <img src={imagePuppets[selectedItem]} alt="" />
+                        {/* <video autoplay="autoplay">
+                            <source src={imagePuppets[selectedItem]} type="video/mp4" />
+                        </video> */}
                     </div>
                 </div>
                 <h5 className={isAnimating ? 'fade_in_animation' : ''}><span className="quotation">”</span>{imageTexts[selectedItem]}<span className="quotation">”</span></h5>

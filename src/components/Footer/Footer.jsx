@@ -17,15 +17,14 @@ const Footer = () => {
                         <img src={bitmap} alt="" />
                         <div className="footer-ul">
                             <ul>
-                                <li><button>FEEDBACK</button></li>
-                                <li><a href="#FAQ">FAQ</a></li>
-                                <li><button>PATCH NOTES</button></li>
-                                <li><button>WHITEPAPER</button></li>
-                                <li><button>MERCH</button></li>
+                                <li><a href="https://worldwar0x.io" rel="noreferrer" target='_blank'>PLAY</a></li>
+                                <li><a href="#FirstEdition">NFTS</a></li>
+                                <li><a href="#NEWERA">GAMEPLAY</a></li>
+                                <li><a href="#WARXECOSYSTEM">ECOSYSTEM</a></li>
+                                <li><a href='https://world-war-0x.gitbook.io/white-paper/'>WHITEPAPER</a></li>
                             </ul>
-
                             <ul className="footer-ul2">
-                                <li className="footer-li2"><button className="footer-a2">Curfluffle Games</button></li>
+                                <li className="footer-li2"><button className="footer-a2">Curfluffle</button></li>
                                 <li className="footer-li2"><button className="footer-a2 footer_link">Terms of Service</button></li>
                                 <li className="footer-li2 "><button className="footer-a2 footer_link">Privacy Policy</button></li>
                             </ul>

@@ -72,9 +72,10 @@
     justify-content: center;
     align-items: center;
     padding: 20px 40px;
-    background-color: var(--color-white);
+    background-color: #FF0000;
+    color: var(--color-white);
+
     clip-path: polygon(0 0, 320.5px 4.5px, 320.5px 72px, 8px 80px, 0 0);
-    color: var(--color-black);
     text-align: center;
     font-family: var(--font-pink-and-crimson);
     font-size: 22px;
@@ -97,9 +98,10 @@
     align-items: center;
     padding: 25px 40px;
     margin-top: 7px;
-    background-color: #FF0000;
+    background-color: var(--color-white);
     clip-path: polygon(100% 0, 0 5.625%, 0 90%, 96.948% 100%, 100% 0);
-    color: var(--color-white);
+    color: var(--color-black);
+
     text-align: center;
     font-family: var(--font-pink-and-crimson);
     font-size: 22px;

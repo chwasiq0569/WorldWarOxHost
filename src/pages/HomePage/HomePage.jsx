@@ -1,7 +1,8 @@
 import React from 'react'
 import './HomePage.css';
 import Accordion from '../../components/Accordion/Accordion'
-import NftSoldier from "../../assets/low-poly-solder.png";
+// import NftSoldier from "../../assets/PolishjSodliercom--unscreen.gif";
+import NftSoldier from "../../assets/ezgif.com-video-to-gif.gif";
 import line from "../../assets/image 1153.png";
 import cloud1 from "../../assets/image 1118.png";
 import cloudW from "../../assets/image 11251212.png";
@@ -14,6 +15,7 @@ import land2 from "../../assets/image 1064.png";
 import land3 from "../../assets/image 1065.png";
 import land4 from "../../assets/image 1066.png";
 import land5 from "../../assets/image 1069.png";
+import land6 from "../../assets/image 1070.png";
 import landsmall1 from "../../assets/Group4.png";
 import landsmall3 from "../../assets/land3.png";
 import landsmall2 from "../../assets/land2.png";
@@ -27,11 +29,13 @@ import taiwan from "../../assets/Taiwan 2.png";
 import taiwanSectionBigImg from "../../assets/image 1062.png";
 import russia from "../../assets/Russia 3.png";
 import ukraine from "../../assets/Ukraine 3.png";
-import ukraineSectionBigImg from "../../assets/image 1036.png";
+// import ukraineSectionBigImg from "../../assets/image 1036.png";
+import ukraineSectionBigImg from "../../assets/Bakhmut.png";
 import ukraine2SectionBigImg from "../../assets/image 1088.png";
 import multipleLine from "../../assets/Group 3.png";
 import ClassicsIcon from "../../assets/noun-colosseum-1473758 (1) 1.png";
-import squadsPuppet from "../../assets/Group 4.png";
+// import squadsPuppet from "../../assets/Group 4.png";
+import squadsPuppet from "../../assets/N6MEYn3.png";
 import squadsLine from "../../assets/Rectangle 53.png";
 import mobileVersionImg from "../../assets/Group 5.png";
 import appStore from "../../assets/Group 6.png";
@@ -40,7 +44,8 @@ import ecosystemImg from "../../assets/Auto-Tranny-Header-122.png";
 import ecosystemflower from "../../assets/Group8.png";
 import hand from "../../assets/hand.png";
 import group65 from "../../assets/Group 65.png";
-import thesoldiersNFT from "../../assets/photo_2023-08-14_15-43-51 1.png";
+// import thesoldiersNFT from "../../assets/photo_2023-08-14_15-43-51 1.png";
+import thesoldiersNFT from "../../assets/usasolidergif.gif";
 import warx from "../../assets/Group 62.png";
 import bugs from "../../assets/bug.png";
 import blueFlower from "../../assets/blueFlowers.png";
@@ -162,7 +167,7 @@ const HomePage = () => {
                     <BattleItOut img={land3} icon={landsmall2} title="TANKS" />
                     <BattleItOut img={land4} icon={landsmall4} title="NAVAL TRANSPORTS" />
                     <BattleItOut img={land5} icon={landsmall5} title="FIGHTER JETS" />
-                    <BattleItOut img={land4} icon={landsmall1} title="TURRETS" />
+                    <BattleItOut img={land6} icon={landsmall1} invisible={true} title="TURRETS" />
                 </div>
             </div>
 
@@ -252,7 +257,7 @@ const HomePage = () => {
                     <div className="SquadsSectionContainer-InnerBox">
                         <h3>SQUADS</h3>
                         <img src={squadsLine} alt="" />
-                        <p>Team up with friends in squads of up to eight players.</p>
+                        <p>Team up with friends in squads of up to five players.</p>
                     </div>
 
                     <div className="SquadsSectionContainer-InnerBox">
@@ -297,7 +302,7 @@ const HomePage = () => {
                         <li>Gaming</li>
                         <li>Ownership</li>
                     </ul>
-                    <p className="EcoSystem-p"><a href="WorldWar0x.io">World War 0x</a> is both free-to-play and play-to-earn. Anyone can play for free at WorldWar0x.io; however to access the play-to-earn competitive betting ecosystem players must have a Soldier NFT in their wallet —  either by owning or renting it.</p>
+                    <p className="EcoSystem-p"><a href="https://worldwar0x.io" target="_blank" rel="noreferrer">World War 0x</a> is both free-to-play and play-to-earn. Anyone can play for free at WorldWar0x.io; however to access the play-to-earn competitive betting ecosystem players must have a Soldier NFT in their wallet —  either by owning or renting it.</p>
                     <div className="EcoSystem-textIcon">
                         <p>WARX will offer a robust renting system to allow owners to rent their NFTs out by the hour, day or week.</p>
                         <img src={hand} alt="" />
@@ -399,17 +404,17 @@ const HomePage = () => {
                                 </ul>
                             </div>
                             <div className="RoadMapTextInnerBox">
-                                <h4>Q4 <span className="orange-span">2023</span></h4>
+                                <h4>Q1 <span className="orange-span">2024</span></h4>
                                 <ul>
-                                    <li>Soldier NFT Sale</li>
-                                    <li>IOs & Android App</li>
+                                    <li>Mumbai Testnet Beta Launch</li>
+                                    <li>Audit</li>
                                 </ul>
                             </div>
                             <div className="RoadMapTextInnerBox">
-                                <h4>Q4 <span className="orange-span">2023</span></h4>
+                                <h4>Q2 <span className="orange-span">2024</span></h4>
                                 <ul>
-                                    <li>Soldier NFT Sale</li>
-                                    <li>IOs & Android App</li>
+                                    <li>Token Generation Event</li>
+                                    <li>World War 0x Championships</li>
                                 </ul>
                             </div>
                         </div>

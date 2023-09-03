@@ -50,11 +50,11 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                     </div>
                     <div className="HeaderMenuContainer">
                         <ul>
-                            <li><a href="https://worldwar0x.io">PLAY</a></li>
+                            <li><a href="https://worldwar0x.io" rel="noreferrer" target='_blank'>PLAY</a></li>
                             <li><a href="#FirstEdition">NFTS</a></li>
                             <li><a href="#NEWERA">GAMEPLAY</a></li>
                             <li><a href="#WARXECOSYSTEM">ECOSYSTEM</a></li>
-                            <li><button>WHITEPAPER</button></li>
+                            <li><a href='https://world-war-0x.gitbook.io/white-paper/'>WHITEPAPER</a></li>
                         </ul>
                     </div>
                 </div>
@@ -87,11 +87,11 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                             <img className="image-1156-icon" alt="" src={logo} />
                         </div>
                         <ul>
-                            <li onClick={toggleMenu}><a href="https://worldwar0x.io">PLAY</a></li>
+                            <li onClick={toggleMenu}><a href="https://worldwar0x.io" rel="noreferrer" target='_blank'>PLAY</a></li>
                             <li onClick={toggleMenu}><a href="#FirstEdition">NFTS</a></li>
                             <li onClick={toggleMenu}><a href="#NEWERA">GAMEPLAY</a></li>
                             <li onClick={toggleMenu}><a href="#WARXECOSYSTEM">ECOSYSTEM</a></li>
-                            <li onClick={toggleMenu}><button>WHITEPAPER</button></li>
+                            <li><a href='https://world-war-0x.gitbook.io/white-paper/'>WHITEPAPER</a></li>
                         </ul>
                         <div className="GetWhiteListedBtn small-btn">
                             <button><span>GET WHITELISTED</span></button>
