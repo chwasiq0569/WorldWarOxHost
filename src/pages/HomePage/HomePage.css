@@ -1579,10 +1579,17 @@ a {
   .SquadsSectionContainer-Box {
     flex-direction: row;
     gap: 30px;
+    overflow: hidden;
   }
 
   .SquadsSectionContainer-InnerBox {
     /* border: 1px solid red; */
+  }
+
+  .SquadsSectionContainer-Box .squadsPuppet {
+    /* display: flex; */
+    /* width: 100%; */
+    margin-right: -12%;
   }
 
   .SquadsSectionContainer-InnerBox p {
@@ -1903,13 +1910,13 @@ a {
   }
 
   .ABCDE-ContainerBox {
-    margin-left: 20px;
+    /* margin-left: 20px; */
     margin-bottom: 40px;
   }
 
   .ABCDE-ContainerBox-dots {
     margin-bottom: 40px;
-    margin-left: 20px;
+    /* margin-left: 20px; */
   }
 
   .ClassicsSectionContainer h2 {
@@ -2128,6 +2135,8 @@ a {
 
   .EcoSystem-textIcon img {
     padding-bottom: 20px;
+    margin-left: 0;
+
   }
 
 
