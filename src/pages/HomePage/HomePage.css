@@ -2059,6 +2059,7 @@ a {
     width: 50px;
     height: 200px;
     margin-bottom: 20px;
+    margin-left: 0;
   }
 
   .FlagBox h5 {
