@@ -21,7 +21,7 @@ const Footer = () => {
                                 <li><a href="#FirstEdition">NFTS</a></li>
                                 <li><a href="#NEWERA">GAMEPLAY</a></li>
                                 <li><a href="#WARXECOSYSTEM">ECOSYSTEM</a></li>
-                                <li><a href='https://world-war-0x.gitbook.io/white-paper/'>WHITEPAPER</a></li>
+                                <li><a href='https://world-war-0x.gitbook.io/white-paper/' rel="noreferrer" target="_blank">WHITEPAPER</a></li>
                             </ul>
                             <ul className="footer-ul2">
                                 <li className="footer-li2"><button className="footer-a2">Curfluffle</button></li>

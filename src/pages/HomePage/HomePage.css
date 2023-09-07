@@ -149,7 +149,7 @@ a {
 .FirstEditionContainerCentered {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 65%;
+  width: 70%;
   margin: auto;
 }
 
@@ -220,14 +220,20 @@ a {
   letter-spacing: 1px;
 }
 
+.mintsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .FirstEditionContainer-btn a:nth-child(2),
 .FirstEditionBTN button:nth-child(2),
-.FirstEditionContainer-btn button:nth-child(2) {
-  color: white;
+.FirstEditionContainer-btn button:nth-child(2),
+.mintsContainer button {
+  color: #FFEAE0;
   text-align: center;
   font-family: var(--font-poppins);
-  font-size: 14px;
+  font-size: 21px;
   font-weight: 300;
   letter-spacing: 1px;
   transition: 0.5s ease-in-out;
@@ -235,7 +241,8 @@ a {
 
 .FirstEditionContainer-btn a:nth-child(2):hover,
 .FirstEditionBTN button:nth-child(2):hover,
-.FirstEditionContainer-btn button:nth-child(2):hover {
+.FirstEditionContainer-btn button:nth-child(2):hover,
+.mintsContainer button:hover {
   color: #ff4b24;
 }
 

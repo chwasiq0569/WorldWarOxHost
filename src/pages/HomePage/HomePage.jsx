@@ -102,14 +102,17 @@ const HomePage = () => {
             <div className="FirstEditionContainer" id='FirstEdition'>
                 <div className="FirstEditionContainerCentered">
                     <div className="FirstEditionContainer-Text">
-                        <h4>FIRST EDITION</h4>
+                        <h4>TRANCH #1</h4>
                         <h5>SOLDIER NFTs</h5>
                         <p>These are the most important collectibles in our ecosystem and where the most value will accrue. These are your hero characters. Play with them, bet with them and stake them for rewards.</p>
                         <div className="FirstEditionContainer-btn">
                             <div className="GetWhiteListedBtn FirstEditionBTN">
-                                <button><span>GET WHITELISTED</span></button>
+                                <a href='https://docs.google.com/forms/d/e/1FAIpQLSc7c1H_PDroVkPz5AztS6pLKLWjDTFerMNgHQiCO7nn1oL2Kg/viewform' target="_blank" rel="noreferrer"><span>GET WHITELISTED</span></a>
                             </div>
-                            <button>MORE INFO</button>
+                            <div className='mintsContainer'>
+                                <button>MINTS OCTOBER</button>
+                                <img src={line} alt="" />
+                            </div>
                         </div>
                         <div className="FirstEditionTrance-text">
                             <h4>Tranche #1 </h4>

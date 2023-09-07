@@ -27,16 +27,16 @@ const imageData = [
 ];
 const imageTexts = [
     "The days are gone forever when our enemies could blackmail us with nuclear bombs",
-    "Custom text for image 2 when our enemies could blackmail us with nuclear bombs",
-    "Custom text for image 3 when our enemies could blackmail us with nuclear bombs",
+    "",
+    "",
     // "Custom text for image 4 when our enemies could blackmail us with nuclear bombs",
     // "Custom text for image 5 when our enemies could blackmail us with nuclear bombs",
 ];
 
 const imageTextsh3 = [
-    "FUPREME LEADER OF NORTH KOREA",
-    "RUPREME LEADER OF NORTH KOREA",
     "SUPREME LEADER OF NORTH KOREA",
+    "United States Marine Corps Soldier",
+    "President of China",
     // "GUPREME LEADER OF NORTH KOREA",
     // "RUPREME LEADER OF NORTH KOREA",
 ];
@@ -114,7 +114,10 @@ const MyCarousel = () => {
                         </video> */}
                     </div>
                 </div>
-                <h5 className={isAnimating ? 'fade_in_animation' : ''}><span className="quotation">”</span>{imageTexts[selectedItem]}<span className="quotation">”</span></h5>
+                {
+                    imageTexts[selectedItem].length > 0 && <h5 className={isAnimating ? 'fade_in_animation' : ''}><span className="quotation">”</span>{imageTexts[selectedItem]}<span className="quotation">”</span></h5>
+                }
+
                 <div style={{ display: 'flex', alignItems: 'center' }} className='maindivcustom'>
                     <button disabled={isAnimating} onClick={shiftPrev} className="custom-button"><img src={arrow8} alt="" /></button>
                     {items.map((item, index) => (
