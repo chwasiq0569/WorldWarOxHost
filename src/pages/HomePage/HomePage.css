@@ -2041,6 +2041,12 @@ a {
   .RoadmapSectionContainer h2 {
     font-size: 50px;
   }
+
+  .HelmetSectionContainerIMG marquee {
+    height: auto;
+    margin-bottom: -1.5rem;
+
+  }
 }
 
 @media only screen and (max-width: 520px) {
