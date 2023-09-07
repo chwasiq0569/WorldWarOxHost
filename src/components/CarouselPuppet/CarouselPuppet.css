@@ -7,6 +7,8 @@
 }
 
 .scrolling-text {
+    width: 100%;
+    height: fit-content;
     /* animation: scrollText 15s ease infinite; */
 }
 

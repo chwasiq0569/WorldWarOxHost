@@ -364,7 +364,13 @@ a {
   }
 } */
 
-.HelmetSectionContainerIMG marquee {}
+.HelmetSectionContainerIMG marquee {
+  /* border: 2px solid red; */
+  /* width: 50%; */
+  height: auto;
+  margin-bottom: -3rem;
+
+}
 
 .HelmetSectionContainerIMG marquee h1 {
   color: #ED1C27;
@@ -607,10 +613,12 @@ a {
 .ANewEra-img {
   display: flex;
   width: 100%;
+  margin-top: 82px;
 }
 
 .ANewEra-img img {
   width: 100%;
+
 }
 
 .red-span {
@@ -623,7 +631,7 @@ a {
 .TwoTypeSectionContainer {}
 
 .bold-line {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   width: 100%;
   height: 25px;
   background: #FF4D59;

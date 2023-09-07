@@ -46,6 +46,10 @@
     margin: auto;
 }
 
+.yellowLink {
+    color: yellow;
+}
+
 @media only screen and (max-width: 880px) {
     .FaqsSectionCentered {
         width: 95%;

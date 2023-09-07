@@ -33,13 +33,7 @@ const imageTexts = [
     // "Custom text for image 5 when our enemies could blackmail us with nuclear bombs",
 ];
 
-const imageTextsh3 = [
-    "SUPREME LEADER OF NORTH KOREA",
-    "United States Marine Corps Soldier",
-    "President of China",
-    // "GUPREME LEADER OF NORTH KOREA",
-    // "RUPREME LEADER OF NORTH KOREA",
-];
+
 const imagePuppets = [
     KinJongVideo,
     USASoldierVideo,
@@ -97,6 +91,12 @@ const MyCarousel = () => {
         setItemNumber(itemNumber => itemNumber > 1 ? itemNumber - 1 : items.length)
     };
 
+    const imageTextsh3 = [
+        <h1 style={{ backgroundImage: `url(${backgroundImg[selectedItem]})` }}>SUPREME LEADER OF <br /> NORTH KOREA</h1>,
+        <h1 style={{ backgroundImage: `url(${backgroundImg[selectedItem]})` }}>United States Marine<br /> Corps Soldier</h1>,
+        <h1 style={{ backgroundImage: `url(${backgroundImg[selectedItem]})` }}>President of <br />China</h1>,
+    ];
+
     return (
         <div className="HelmetSectionContainer">
             <div className="HelmetSectionContainerCentered">
@@ -105,7 +105,7 @@ const MyCarousel = () => {
                 <p>A select number of Soldier NFTs will feature one-of-one (1/1) characters with completely unique outfits. Explore a rich history of famous historical figures from all parts of the world – from Julius Caesar, Cleopatra to Genghis Khan and more.</p>
                 <div className='HelmetSectionContainerIMG scrolling-text-container'>
                     {/* <h1 className={isAnimating ? 'fade_in_animation' : 'scrolling-text'}>{imageTextsh3[selectedItem]}</h1> */}
-                    <marquee className={isAnimating ? 'fade_in_animation' : 'scrolling-text'}><h1 style={{ backgroundImage: `url(${backgroundImg[selectedItem]})` }}>{imageTextsh3[selectedItem]}</h1></marquee>
+                    <marquee className={isAnimating ? 'fade_in_animation' : 'scrolling-text'}>{imageTextsh3[selectedItem]}</marquee>
                     <div className={isAnimating ? 'fade_up_animation' : 'puppetImage'}>
                         {/* <img src={imagePuppets[selectedItem]} alt="" /> */}
                         <img src={imagePuppets[selectedItem]} alt="" />

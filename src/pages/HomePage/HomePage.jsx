@@ -8,7 +8,8 @@ import cloud1 from "../../assets/image 1118.png";
 import cloudW from "../../assets/image 11251212.png";
 import helicopter from "../../assets/helicopter.png";
 import cloud2 from "../../assets/image 1119.png";
-import soldiers from "../../assets/war-nobg 1.png";
+// import soldiers from "../../assets/war-nobg 1.png";
+import soldiers2 from "../../assets/war-nobg2.png";
 import worldLine from "../../assets/Group 1.png";
 import land1 from "../../assets/image 1063.png";
 import land2 from "../../assets/image 1064.png";
@@ -144,7 +145,7 @@ const HomePage = () => {
                     <p>World War 0x brings a <span className="red-span">fully-featured</span> FPS to the <span className="red-span">browser</span>, allowing anyone to play completely free.</p>
                 </div>
                 <div className="ANewEra-img">
-                    <img src={soldiers} alt="" />
+                    <img src={soldiers2} alt="" />
                 </div>
             </div>
 
@@ -438,24 +439,20 @@ const HomePage = () => {
                 <h2>FAQ</h2>
                 <div className='FaqsSectionCentered'>
                     <Accordion
-                        title="WHEN IS THE MINT?"
-                        content="Coming Soon..."
+                        title="Is the game free?"
+                        content="Yes, World War 0x is completely free and can be played at WorldWar0x.io!"
                     />
                     <Accordion
-                        title="IS THE GAME FREE?"
-                        content="Coming Soon..."
+                        title="Do you have an app?"
+                        content="We don’t currently have an app however we anticipate the launch of an iOS and Android app in Q1 2024!"
                     />
                     <Accordion
-                        title="DO YOU HAVE AN APP?"
-                        content="Coming Soon..."
+                        title="How To Whitelist?"
+                        content={<p>To whitelist please sign up here: <a href='https://forms.gle/LuqgvZu8H6iu34KA7' className='yellowLink' rel="noreferrer" target="_blank">https://forms.gle/LuqgvZu8H6iu34KA7</a></p>}
                     />
                     <Accordion
-                        title="HOW TO WHISTLIST?"
-                        content="Coming Soon..."
-                    />
-                    <Accordion
-                        title="IS THE $WARX TOKEN LIVE?"
-                        content="Coming Soon..."
+                        title="Is the World War 0x token live?"
+                        content="The World War 0x token generation event will be Q1/Q2 2024."
                     />
                 </div>
 
