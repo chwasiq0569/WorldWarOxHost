@@ -2,13 +2,13 @@ import React from 'react';
 import './CarouselPuppet.css';
 
 import helmat from "../../assets/helmat.png";
-import northPuppet from '../../assets/kim-removebg-preview 7.png';
+// import northPuppet from '../../assets/kim-removebg-preview 7.png';
 
-import kim from '../../assets/kim-removebg-preview 6.png';
-import kims from '../../assets/photo_2023-08-14_15-43-51 2.png';
-import kimss from '../../assets/kim-removebg-preview 7.png';
-import kimsss from '../../assets/low-poly-solderssss.png';
-import kimssss from '../../assets/image 1174.png';
+// import kim from '../../assets/kim-removebg-preview 6.png';
+// import kims from '../../assets/photo_2023-08-14_15-43-51 2.png';
+// import kimss from '../../assets/kim-removebg-preview 7.png';
+// import kimsss from '../../assets/low-poly-solderssss.png';
+// import kimssss from '../../assets/image 1174.png';
 import KinJongVideo from '../../assets/KimJongUn-unscreen.gif';
 import USASoldierVideo from '../../assets/USA-soldier-unscreen.gif';
 import PresidentOfChinaVideo from '../../assets/PresidentOfChina-unscreen.gif';
