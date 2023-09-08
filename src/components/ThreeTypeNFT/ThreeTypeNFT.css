@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 40px;
-    width: 65%;
+    width: 67%;
     margin: auto;
 }
 

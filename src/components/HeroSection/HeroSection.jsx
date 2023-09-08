@@ -16,7 +16,7 @@ const HeroSection = ({ moveToBack }) => {
                     <h3>BROWSER-BASED MULTIPLAYER FPS WITH VEHICLES</h3>
                     <div className="HeroSectionBtns">
                         <div className="svg-clip-1">PLAY ALPHA</div>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7c1H_PDroVkPz5AztS6pLKLWjDTFerMNgHQiCO7nn1oL2Kg/viewform" className="svg-clip-2">WHITELIST NOW</a>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7c1H_PDroVkPz5AztS6pLKLWjDTFerMNgHQiCO7nn1oL2Kg/viewform" className="svg-clip-2" target="_blank" rel="noreferrer">WHITELIST NOW</a>
                     </div>
                 </div>
             </div>

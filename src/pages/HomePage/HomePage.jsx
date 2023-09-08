@@ -91,15 +91,11 @@ const HomePage = () => {
 
     return (
         <div>
-
             {isScrolled && <div onClick={scrollToTop} className='backToTop'>
                 <img src={ArrowUp} alt='arrow_up' />
             </div>}
-
             <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} />
-
             <HeroSection moveToBack={moveToBack} />
-
             <div className="FirstEditionContainer" id='FirstEdition'>
                 <div className="FirstEditionContainerCentered">
                     <div className="FirstEditionContainer-Text">
@@ -115,11 +111,11 @@ const HomePage = () => {
                                 <img src={line} alt="" />
                             </div>
                         </div>
-                        <div className="FirstEditionTrance-text">
+                        {/* <div className="FirstEditionTrance-text">
                             <h4>Tranche #1 </h4>
                             <h5>Mints September 26</h5>
                             <img src={line} alt="" />
-                        </div>
+                        </div> */}
                     </div>
                     <div className="FirstEditionContainer-Img">
                         <img src={NftSoldier} alt="" />

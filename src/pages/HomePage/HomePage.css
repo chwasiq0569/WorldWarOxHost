@@ -149,7 +149,7 @@ a {
 .FirstEditionContainerCentered {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 70%;
+  width: 75%;
   margin: auto;
 }
 
@@ -194,6 +194,11 @@ a {
   align-items: center;
 }
 
+/* .FirstEditionContainer-btn .FirstEditionBTN {
+  width: max-content;
+  border: 5px solid red;
+} */
+
 .FirstEditionContainer-btn button {
   all: unset;
   cursor: pointer;
@@ -202,7 +207,7 @@ a {
 
 .FirstEditionBTN {
   margin-left: 0px !important;
-  margin-right: 30px;
+  width: max-content;
 }
 
 .FirstEditionBTN button {
@@ -224,6 +229,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 30px;
 }
 
 .FirstEditionContainer-btn a:nth-child(2),
@@ -241,8 +247,7 @@ a {
 
 .FirstEditionContainer-btn a:nth-child(2):hover,
 .FirstEditionBTN button:nth-child(2):hover,
-.FirstEditionContainer-btn button:nth-child(2):hover,
-.mintsContainer button:hover {
+.FirstEditionContainer-btn button:nth-child(2):hover {
   color: #ff4b24;
 }
 
@@ -1882,6 +1887,14 @@ a {
     padding-right: 20px;
   }
 
+  .FirstEditionContainer-Img {
+    margin-top: 2rem;
+  }
+
+  .FirstEditionContainer-Img img {
+    margin: 0 auto;
+  }
+
   .HelmetSectionContainerCentered {
     width: 90%;
   }
@@ -2120,6 +2133,10 @@ a {
     align-items: flex-start;
   }
 
+  .mintsContainer {
+    margin-left: 0;
+  }
+
   .FirstEditionBTN {
     margin-bottom: 20px;
   }
@@ -2131,6 +2148,8 @@ a {
   .FirstEditionTrance-text h5 {
     font-size: 5vw;
   }
+
+
 
   .FirstEditionContainer-Img img {
     width: 100%;
