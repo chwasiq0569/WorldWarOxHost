@@ -1090,6 +1090,15 @@ a {
   display: flex;
 }
 
+.appstoreimg-box img {
+  width: 195px;
+  height: 65px;
+  object-fit: contain;
+  border: 2px solid white;
+  /* padding: 5px; */
+  border-radius: 8px;
+}
+
 .appstoreimg-box img:nth-child(1) {
   margin-right: 20px;
 }
@@ -1150,7 +1159,7 @@ a {
 }
 
 .EcoSystemContainerBox ul li {
-  margin-left: 35px;
+  margin-left: 10px;
   color: #FF6868;
   text-align: right;
   font-family: var(--font-marcellus);
@@ -1161,7 +1170,11 @@ a {
   letter-spacing: 1px;
 }
 
-.EcoSystemContainerBox ul li:nth-child(2):before,
+.EcoSystemContainerBox ul .bulletItem {
+  color: #CCCCCC;
+}
+
+/* .EcoSystemContainerBox ul li:nth-child(2):before,
 .EcoSystemContainerBox ul li:nth-child(3):before {
   content: "\2022";
   color: #CCCCCC;
@@ -1169,7 +1182,7 @@ a {
   display: inline-block;
   width: 1em;
   margin-left: -1em;
-}
+} */
 
 .EcoSystem-p {
   color: #FFF;
@@ -1589,33 +1602,6 @@ a {
     width: 80%;
   }
 
-  .SquadsSectionContainer {
-    padding: 150px 20px 0px 20px;
-    grid-template-columns: repeat(1, 1fr);
-    width: 80%;
-    margin: auto;
-  }
-
-  .SquadsSectionContainer-Box {
-    flex-direction: row;
-    gap: 30px;
-    overflow: hidden;
-  }
-
-  .SquadsSectionContainer-InnerBox {
-    /* border: 1px solid red; */
-  }
-
-  .SquadsSectionContainer-Box .squadsPuppet {
-    /* display: flex; */
-    /* width: 100%; */
-    margin-right: -12%;
-  }
-
-  .SquadsSectionContainer-InnerBox p {
-    width: 100%;
-  }
-
   .appstoreimg-box {
     flex-direction: column;
   }
@@ -1696,6 +1682,36 @@ a {
   .HelmetSectionContainerCentered h5 {
     font-size: 3vw;
     width: 90%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .SquadsSectionContainer {
+    padding: 150px 20px 0px 20px;
+    grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+  }
+
+  .SquadsSectionContainer-Box {
+    flex-direction: row;
+    gap: 30px;
+    overflow: hidden;
+  }
+
+  .SquadsSectionContainer-InnerBox {
+    /* border: 1px solid red; */
+  }
+
+  .SquadsSectionContainer-Box .squadsPuppet {
+    /* display: flex; */
+    /* width: 100%; */
+    margin-right: -12%;
+  }
+
+  .SquadsSectionContainer-InnerBox p {
+    width: 100%;
   }
 }
 

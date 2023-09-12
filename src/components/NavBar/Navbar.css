@@ -16,10 +16,14 @@
 
 .HeaderLogo {}
 
-.HeaderLogo img {}
+.HeaderLogo img {
+  width: 100px;
+  height: 60px;
+  object-fit: contain;
+}
 
 .HeaderMenuContainer {
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 .HeaderMenuContainer ul {

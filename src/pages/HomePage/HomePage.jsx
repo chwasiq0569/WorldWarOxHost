@@ -9,7 +9,7 @@ import cloudW from "../../assets/image 11251212.png";
 import helicopter from "../../assets/helicopter.png";
 import cloud2 from "../../assets/image 1119.png";
 // import soldiers from "../../assets/war-nobg 1.png";
-import soldiers2 from "../../assets/war-nobg2.png";
+import soldiers2 from "../../assets/war-nobg 1.png";
 import worldLine from "../../assets/Group 1.png";
 import land1 from "../../assets/image 1063.png";
 import land2 from "../../assets/image 1064.png";
@@ -34,14 +34,15 @@ import ukraine from "../../assets/Ukraine 3.png";
 import ukraineSectionBigImg from "../../assets/Bakhmut.png";
 // import ukraine2SectionBigImg from "../../assets/image 1088.png";
 import ukraine2SectionBigImg from "../../assets/image47.png";
+import PenghuIsland from "../../assets/penghuisland.png";
 import multipleLine from "../../assets/Group 3.png";
 import ClassicsIcon from "../../assets/noun-colosseum-1473758 (1) 1.png";
 // import squadsPuppet from "../../assets/Group 4.png";
 import squadsPuppet from "../../assets/N6MEYn3.png";
 import squadsLine from "../../assets/Rectangle 53.png";
 import mobileVersionImg from "../../assets/Group 5.png";
-import appStore from "../../assets/Group 6.png";
-import googlePlay from "../../assets/Group 7.png";
+import appStore from "../../assets/ComingSoonAppStore.png";
+import googlePlay from "../../assets/ComingSoonGooglePlay.png";
 import ecosystemImg from "../../assets/Auto-Tranny-Header-122.png";
 import ecosystemflower from "../../assets/Group8.png";
 import hand from "../../assets/hand.png";
@@ -236,7 +237,8 @@ const HomePage = () => {
             <div className="CountryReachConatiner">
                 <CountryReach img1={china} img2={sword} img3={taiwan} img4={taiwanSectionBigImg} title="TAIWAN BEACH INVASION" />
                 <CountryReach img1={russia} img2={sword} img3={ukraine} img4={ukraineSectionBigImg} title="BATTLE OF BAKHMUT" />
-                <CountryReach img1={china} img2={sword} img3={ukraine} img4={ukraine2SectionBigImg} title="ODESA PORT" />
+                <CountryReach img1={china} img2={sword} img3={taiwan} img4={PenghuIsland} title="PENGHU ISLANDS" />
+                <CountryReach img1={russia} img2={sword} img3={ukraine} img4={ukraine2SectionBigImg} title="ODESA PORT" />
                 <img src={multipleLine} className="multipleLine" alt="" />
             </div>
 
@@ -300,7 +302,9 @@ const HomePage = () => {
                     <h2>THE WARX<br /> ECOSYSTEM</h2>
                     <ul>
                         <li>Community</li>
+                        <li className='bulletItem'>•</li>
                         <li>Gaming</li>
+                        <li className='bulletItem'>•</li>
                         <li>Ownership</li>
                     </ul>
                     <p className="EcoSystem-p"><a href="https://worldwar0x.io" target="_blank" rel="noreferrer">World War 0x</a> is both free-to-play and play-to-earn. Anyone can play for free at WorldWar0x.io; however to access the play-to-earn competitive betting ecosystem players must have a Soldier NFT in their wallet —  either by owning or renting it.</p>

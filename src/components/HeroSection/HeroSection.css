@@ -40,7 +40,11 @@
 
 }
 
-.HeroCenteredContent img {}
+.HeroCenteredContent img {
+    width: 220px;
+    height: 203px;
+    object-fit: contain;
+}
 
 .HeroCenteredContent h2 {
     color: #FFF4BC;
