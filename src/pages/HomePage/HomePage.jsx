@@ -3,7 +3,7 @@ import './HomePage.css';
 import Accordion from '../../components/Accordion/Accordion'
 // import NftSoldier from "../../assets/PolishjSodliercom--unscreen.gif";
 // import NftSoldier from "../../assets/ezgif.com-video-to-gif.gif";
-import NftSoldier from "../../assets/UkraineNFTGIFF.gif";
+import NftSoldier from "../../assets/UkraineNFTGIFF-unscreen.gif";
 import line from "../../assets/image 1153.png";
 import cloud1 from "../../assets/image 1118.png";
 import cloudW from "../../assets/image 11251212.png";
