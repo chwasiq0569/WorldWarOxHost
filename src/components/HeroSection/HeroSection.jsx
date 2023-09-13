@@ -1,6 +1,6 @@
 import React from 'react';
-import herologo from "../../assets/herologo.png";
-import gamePlay from '../../assets/Gameplay.mp4';
+import herologo from "../../assets/herologo.webp";
+// import gamePlay from '../../assets/Gameplay.mp4';
 import './HeroSection.css';
 
 const HeroSection = ({ moveToBack }) => {

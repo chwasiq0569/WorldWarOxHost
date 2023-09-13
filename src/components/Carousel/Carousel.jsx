@@ -1,6 +1,6 @@
 import React from "react";
-import ClassicsImg1 from '../../assets/Containers 7.png';
-import ClassicsImg2 from '../../assets/Dusted.jpg';
+import ClassicsImg1 from '../../assets/Containers.webp';
+import ClassicsImg2 from '../../assets/Dusted.webp';
 // import ClassicsImg3 from '../../assets/Containers 7.png';
 import './Carousel.css'
 

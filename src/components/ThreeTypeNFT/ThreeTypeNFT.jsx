@@ -1,7 +1,7 @@
 import React from 'react'
-import NFTDriven from "../../assets/noun-nft-4935073 1.png";
-import CryptoPowered from "../../assets/Group.png";
-import PlayEarnBet from "../../assets/noun-betting-5754753 1.png";
+import NFTDriven from "../../assets/nftdrivenicon.webp";
+import CryptoPowered from "../../assets/grenadeicon.webp";
+import PlayEarnBet from "../../assets/playearnbeticon.webp";
 
 import './ThreeTypeNFT.css';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import './CarouselPuppet.css';
 
-import helmat from "../../assets/helmat.png";
+import helmat from "../../assets/helmat.webp";
 // import northPuppet from '../../assets/kim-removebg-preview 7.png';
 
 // import kim from '../../assets/kim-removebg-preview 6.png';
