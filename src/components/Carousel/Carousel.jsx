@@ -1,11 +1,11 @@
 import React from "react";
 import ClassicsImg1 from '../../assets/Containers 7.png';
-import ClassicsImg2 from '../../assets/Dusted 6.png';
-import ClassicsImg3 from '../../assets/Containers 7.png';
+import ClassicsImg2 from '../../assets/Dusted.jpg';
+// import ClassicsImg3 from '../../assets/Containers 7.png';
 import './Carousel.css'
 
 
-const slideWidth = 30;
+const slideWidth = 24.2;
 
 const _items = [
   {
@@ -24,9 +24,16 @@ const _items = [
   },
   {
     player: {
-      title: 'POOL PARTY',
-      desc: 'The "South Dakota Kid" is hearing-impaired and uses a hearing aid, but it has not limited his ability.',
-      image: ClassicsImg3,
+      title: 'CONTAINERS',
+      desc: 'Mike Sigel or "Captain Hook" as many like to call him is an American professional pool player with over 108 tournament wins.',
+      image: ClassicsImg1,
+    },
+  },
+  {
+    player: {
+      title: "DUSTED",
+      desc: "Ronald Antonio O'Sullivan is a six-time world champion and is the most successful player in the history of snooker.",
+      image: ClassicsImg2,
     },
   },
   {
@@ -38,11 +45,11 @@ const _items = [
   },
   {
     player: {
-      title: 'POOL PARTY',
-      desc: 'Nicknamed "Mr. Pocket Billiards," Willie Mosconi was among the first Billiard Congress of America Hall of Fame inductees.',
+      title: "DUSTED",
+      desc: "Ronald Antonio O'Sullivan is a six-time world champion and is the most successful player in the history of snooker.",
       image: ClassicsImg2,
     },
-  },
+  }
 ];
 
 const length = _items.length;
@@ -153,7 +160,7 @@ const Carousel = () => {
               <path d="M0 43.5L59.25 0.631744L59.25 86.3683L0 43.5Z" fill="#9F9F9F" />
             </svg>
           </button>
-          {items.slice(0, length).map((pos, i) => (
+          {items.slice(0, length - 1).map((pos, i) => (
             <button
               key={i}
               onClick={() => handleDotClick(i)}

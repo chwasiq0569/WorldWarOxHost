@@ -1289,6 +1289,10 @@ a {
 
 .WarxContainerBox img {
   /* width: 100%; */
+  width: 604px;
+  height: auto;
+  object-fit: contain;
+  margin-left: -8rem;
 }
 
 .WarxContainerBox-2 {
@@ -2057,6 +2061,7 @@ a {
 
   .WarxContainerBox img {
     width: 100%;
+    margin-left: -5rem;
   }
 
   .WarxContainerInnerBox p {
