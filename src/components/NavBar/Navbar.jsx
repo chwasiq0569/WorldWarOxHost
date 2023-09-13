@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import logo from "../../assets/logo.png";
-import headTwitter from "../../assets/twitter.png";
-import headYoutube from "../../assets/youtube.png";
-import headSoo from "../../assets/so.png";
-import headDiscord from "../../assets/discord.png";
-import tikTok from "../../assets/37.png";
+import logo from "../../assets/logo.webp";
+import headTwitter from "../../assets/twitter.webp";
+import headYoutube from "../../assets/youtube.webp";
+import headSoo from "../../assets/so.webp";
+import headDiscord from "../../assets/discord.webp";
+import tikTok from "../../assets/tiktok.webp";
 
 import './Navbar.css';
 

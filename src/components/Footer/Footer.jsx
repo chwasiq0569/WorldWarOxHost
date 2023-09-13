@@ -1,10 +1,10 @@
 import React from 'react'
-import headTwitter from "../../assets/twitter.png";
-import headYoutube from "../../assets/youtube.png";
-import headSoo from "../../assets/so.png";
-import headDiscord from "../../assets/discord.png";
-import bitmap from "../../assets/Bitmap Copy 5.png";
-import tikTok from "../../assets/37.png";
+import headTwitter from "../../assets/twitter.webp";
+import headYoutube from "../../assets/youtube.webp";
+import headSoo from "../../assets/so.webp";
+import headDiscord from "../../assets/discord.webp";
+import bitmap from "../../assets/Bitmap Copy 5.webp";
+import tikTok from "../../assets/tiktok.webp";
 
 import './Footer.css';
 
