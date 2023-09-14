@@ -167,6 +167,7 @@ a {
   font-weight: 300;
   margin-top: 20px;
   /* letter-spacing: -0.058px; */
+  visibility: hidden;
 }
 
 .FirstEditionContainer-Text h5 {

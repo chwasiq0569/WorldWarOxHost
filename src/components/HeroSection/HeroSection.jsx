@@ -1,15 +1,15 @@
 import React from 'react';
 import herologo from "../../assets/herologo.webp";
-// import gamePlay from '../../assets/Gameplay.mp4';
+import gamePlay from '../../assets/Gameplay.mp4';
 import './HeroSection.css';
 
 const HeroSection = ({ moveToBack }) => {
     return (
         <div>
             <div className={moveToBack ? "HeroSectionContainer moveToBack" : "HeroSectionContainer"}>
-                {/* <video controls muted autoPlay loop className="video-container no-controls">
+                <video controls muted autoPlay loop className="video-container no-controls">
                     <source src={gamePlay} type="video/mp4" />
-                </video> */}
+                </video>
                 {/* <div style={{ padding: "56.25% 0 0 0", position: "relative" }}><iframe src="yer.vimeo.com/video/863883476?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} title="World War 0x Gameplay"></iframe></div> */}
                 {/* <iframe className="video-container no-controls" src="https://player.vimeo.com/video/863883476?autoplay=1&background=1"
                     allow="autoplay; fullscreen;"
@@ -17,6 +17,7 @@ const HeroSection = ({ moveToBack }) => {
                     title="World War 0x Gameplay"
                     loading="lazy" frameBorder="0"
                 ></iframe> */}
+                {/* https://www.youtube.com/embed/g_jLmSOyeDM */}
                 <div className="video-background">
                     <div className="video-foreground">
                         <iframe

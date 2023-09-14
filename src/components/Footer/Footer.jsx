@@ -14,7 +14,7 @@ const Footer = () => {
             <footer className="Footer">
                 <div className="FooterCentered">
                     <div className="FooterLeftContainer">
-                        <img src={bitmap} alt="" />
+                        <img loading="lazy" src={bitmap} alt="" />
                         <div className="footer-ul">
                             <ul>
                                 <li><a href="https://worldwar0x.io" rel="noreferrer" target='_blank'>PLAY</a></li>

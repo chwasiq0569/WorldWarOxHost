@@ -108,7 +108,7 @@ const MyCarousel = () => {
                     <marquee className={isAnimating ? 'fade_in_animation' : 'scrolling-text'}>{imageTextsh3[selectedItem]}</marquee>
                     <div className={isAnimating ? 'fade_up_animation' : 'puppetImage'}>
                         {/* <img src={imagePuppets[selectedItem]} alt="" /> */}
-                        <img src={imagePuppets[selectedItem]} alt="" />
+                        <img loading="lazy" src={imagePuppets[selectedItem]} alt="" />
                         {/* <video autoplay="autoplay">
                             <source src={imagePuppets[selectedItem]} type="video/mp4" />
                         </video> */}
@@ -122,8 +122,7 @@ const MyCarousel = () => {
                     <button disabled={isAnimating} onClick={shiftPrev} className="custom-button"><img src={arrow8} alt="" /></button>
                     {items.map((item, index) => (
                         <div key={item.id} className='custom-div'>
-                            <img
-                                src={items[index].src}
+                            <img loading="lazy" src={items[index].src}
                                 alt={item.alt}
                                 className="custom-img"
                             />

@@ -111,7 +111,7 @@ const HomePage = () => {
                             </div>
                             <div className='mintsContainer'>
                                 <button>MINTS OCTOBER</button>
-                                <img src={line} alt="" />
+                                <img loading="lazy" src={line} alt="" />
                             </div>
                         </div>
                         {/* <div className="FirstEditionTrance-text">
@@ -121,7 +121,7 @@ const HomePage = () => {
                         </div> */}
                     </div>
                     <div className="FirstEditionContainer-Img">
-                        <img src={NftSoldier} alt="" />
+                        <img loading="lazy" src={NftSoldier} alt="" />
                     </div>
                 </div>
             </div>
@@ -133,18 +133,18 @@ const HomePage = () => {
             <div className="ANewEraContainer" id='NEWERA'>
                 <div className="ANewEraContainerCentered">
                     <div className="ANewEraContainer-img">
-                        <img src={cloud1} alt="" />
-                        <img src={cloudW} alt="" />
-                        <img src={helicopter} alt="" />
+                        <img loading="lazy" src={cloud1} alt="" />
+                        <img loading="lazy" src={cloudW} alt="" />
+                        <img loading="lazy" src={helicopter} alt="" />
                     </div>
                     <div className="ANewEra-txt">
                         <h2>A NEW ERA</h2>
-                        <img src={cloud2} alt="" />
+                        <img loading="lazy" src={cloud2} alt="" />
                     </div>
                     <p>World War 0x brings a <span className="red-span">fully-featured</span> FPS to the <span className="red-span">browser</span>, allowing anyone to play completely free.</p>
                 </div>
                 <div className="ANewEra-img">
-                    <img src={soldiers2} alt="" />
+                    <img loading="lazy" src={soldiers2} alt="" />
                 </div>
             </div>
 
@@ -157,7 +157,7 @@ const HomePage = () => {
                     <div className="TwoTypeSectionBox1">
                         <h4>A new era for <span className='boldText'>gaming, community & ownership. Earn</span> and <span className='boldText'>bet</span> WARX TOKENS while playing <span className='boldText'>competitive matches.</span> Build maps to earn extra <span className='boldText'>$WARX</span>.</h4>
                     </div>
-                    <img src={worldLine} className="worldLine" alt="" />
+                    <img loading="lazy" src={worldLine} className="worldLine" alt="" />
                 </div>
             </div>
 
@@ -230,7 +230,7 @@ const HomePage = () => {
                         </div>
                     </div>
                     <div className="flogSecureBox">
-                        <img src={flagSecureImg} alt="" />
+                        <img loading="lazy" src={flagSecureImg} alt="" />
                     </div>
                 </div>
             </div>
@@ -244,7 +244,7 @@ const HomePage = () => {
             </div>
 
             <div className="ClassicsSectionContainer">
-                <img src={ClassicsIcon} alt="" />
+                <img loading="lazy" src={ClassicsIcon} alt="" />
                 <h2>CLASSICS</h2>
                 <p>Nostalgia, fan favorites — fast-paced beloved maps. After our Token Generation maps will be voted on by the DAO.</p>
                 {/* <div className='classicsImgGridContainer'>
@@ -260,14 +260,14 @@ const HomePage = () => {
                 <div className="SquadsSectionContainer-Box">
                     <div className="SquadsSectionContainer-InnerBox">
                         <h3>SQUADS</h3>
-                        <img src={squadsLine} alt="" />
+                        <img loading="lazy" src={squadsLine} alt="" />
                         <p>Team up with friends in squads of up to five players.</p>
                     </div>
 
                     <div className="SquadsSectionContainer-InnerBox">
                         <h4>SQUAD & PROXIMITY</h4>
                         <h3>VOICE CHAT</h3>
-                        <img src={squadsLine} alt="" />
+                        <img loading="lazy" src={squadsLine} alt="" />
                         <p>Only members of your squad can listen and talk in Squad chat.</p>
                         <br />
                         <p>Proximity Voice Chat allows anyone to hear you based on your distance in-game to them.</p>
@@ -275,22 +275,22 @@ const HomePage = () => {
 
                 </div>
                 <div className="SquadsSectionContainer-Box">
-                    <img src={squadsPuppet} className="squadsPuppet" alt="" />
+                    <img loading="lazy" src={squadsPuppet} className="squadsPuppet" alt="" />
                 </div>
             </div>
 
             <div className="MobileVersionContainer">
 
                 <div className="MobileVersionContainerBox">
-                    <img src={mobileVersionImg} className="mobileVersionImg" alt="" />
+                    <img loading="lazy" src={mobileVersionImg} className="mobileVersionImg" alt="" />
                 </div>
 
                 <div className="MobileVersionContainerBox">
                     <h2>MOBILE VERSIONS</h2>
                     <p>World War 0x will soon be available on the go on iOS and Android devices.</p>
                     <div className="appstoreimg-box">
-                        <img src={appStore} alt="" />
-                        <img src={googlePlay} alt="" />
+                        <img loading="lazy" src={appStore} alt="" />
+                        <img loading="lazy" src={googlePlay} alt="" />
                     </div>
                 </div>
 
@@ -299,7 +299,7 @@ const HomePage = () => {
             <div className="EcoSystemContainer" id='WARXECOSYSTEM'>
 
                 <div className="EcoSystemContainerBox">
-                    <img src={ecosystemflower} alt="" />
+                    <img loading="lazy" src={ecosystemflower} alt="" />
                     <h2>THE WARX<br /> ECOSYSTEM</h2>
                     <ul>
                         <li>Community</li>
@@ -311,17 +311,17 @@ const HomePage = () => {
                     <p className="EcoSystem-p"><a href="https://worldwar0x.io" target="_blank" rel="noreferrer">World War 0x</a> is both free-to-play and play-to-earn. Anyone can play for free at WorldWar0x.io; however to access the play-to-earn competitive betting ecosystem players must have a Soldier NFT in their wallet —  either by owning or renting it.</p>
                     <div className="EcoSystem-textIcon">
                         <p>WARX will offer a robust renting system to allow owners to rent their NFTs out by the hour, day or week.</p>
-                        <img src={hand} alt="" />
+                        <img loading="lazy" src={hand} alt="" />
                     </div>
                     <div className="EcoSystem-textIcon">
                         <p>Tokens have a variety of utilities:  exclusive NFTs, skins, betting, staking, DAO governance and more.</p>
-                        <img src={group65} alt="" />
+                        <img loading="lazy" src={group65} alt="" />
                     </div>
 
                 </div>
 
                 <div className="EcoSystemContainerBox">
-                    <img src={ecosystemImg} alt="" />
+                    <img loading="lazy" src={ecosystemImg} alt="" />
                 </div>
 
             </div>
@@ -335,7 +335,7 @@ const HomePage = () => {
                     </div>
 
                     <div className="thesoldiersNFTBox">
-                        <img src={thesoldiersNFT} alt="" />
+                        <img loading="lazy" src={thesoldiersNFT} alt="" />
                     </div>
                 </div>
 
@@ -344,7 +344,7 @@ const HomePage = () => {
             <div className="WarxContainer">
 
                 <div className="WarxContainerBox">
-                    <img src={warx} alt="" />
+                    <img loading="lazy" src={warx} alt="" />
                 </div>
                 <div className="WarxContainerBox-2">
                     <div className="WarxContainerInnerBox">
@@ -353,9 +353,9 @@ const HomePage = () => {
                     </div>
                     <div className="WarxContainerInnerBox">
                         <div className="WarxContainerInnerBox-img-bugs">
-                            <img src={bugs} alt="" />
-                            <img src={bugs} alt="" />
-                            <img src={bugs} alt="" />
+                            <img loading="lazy" src={bugs} alt="" />
+                            <img loading="lazy" src={bugs} alt="" />
+                            <img loading="lazy" src={bugs} alt="" />
                         </div>
                         <p>There is a wide variety of ways that gamers, collectors and community members will be able to use and receive $WARX in the ecosystem. Through engagement in competitive gameplay, social activities, community rewards and through contribution to the creator economy.</p>
                     </div>
@@ -371,7 +371,7 @@ const HomePage = () => {
                         <div className="BettingSectionInnerBox">ESPORTS  BETTING </div>
                         <div className="BettingSectionInnerBox">PVP BETTING</div>
                         <div className="BettingSectionInnerBox">SKINS BETTING</div>
-                        <img src={blueFlower} alt="" />
+                        <img loading="lazy" src={blueFlower} alt="" />
                     </div>
                     <div className="BettingSectionContainerBox">
                         <h3>BETTING</h3>
@@ -431,9 +431,9 @@ const HomePage = () => {
             <div className="PartnersSectionContainer">
                 <h2>PARTNERS</h2>
                 <div className="PartnersSectionContainerCentered">
-                    <img src={fractal} alt="" />
-                    <img src={Odyn} alt="" />
-                    <img src={blumint} alt="" />
+                    <img loading="lazy" src={fractal} alt="" />
+                    <img loading="lazy" src={Odyn} alt="" />
+                    <img loading="lazy" src={blumint} alt="" />
                 </div>
             </div>
 
