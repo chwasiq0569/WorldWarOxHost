@@ -337,7 +337,7 @@ const HomePage = () => {
                 <div className="TheSoldiersNFTContainerCentered">
                     <div className="thesoldiersNFTBox">
                         <h2>THE SOLDIERS</h2>
-                        <p>Tranche #1 of the Soldier NFTs will be minted September 30. These OG collectibles kick off the World War 0x ecosystem - boosting 3D files, in-game accessibility and integration into our betting protocol and  map creator tools.</p>
+                        <p>Tranche #1 of the Soldier NFTs will be minted November 25. These OG collectibles kick off the World War 0x ecosystem - boosting 3D files, in-game accessibility and integration into our betting protocol and  map creator tools.</p>
                     </div>
 
                     <div className="thesoldiersNFTBox">
