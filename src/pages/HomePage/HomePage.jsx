@@ -3,7 +3,8 @@ import './HomePage.css';
 import Accordion from '../../components/Accordion/Accordion'
 // import NftSoldier from "../../assets/PolishjSodliercom--unscreen.gif";
 // import NftSoldier from "../../assets/ezgif.com-video-to-gif.gif";
-import NftSoldier from "../../assets/UkraineNFTGIFF-unscreen.gif";
+// import NftSoldier from "../../assets/UkraineNFTGIFF-unscreen.gif";
+import NftSoldier from "../../assets/POL-UK.png";
 import line from "../../assets/image 1153.png";
 import cloud1 from "../../assets/cloud1.webp";
 import cloudW from "../../assets/WCloud.webp";
@@ -28,18 +29,22 @@ import flagSecureImg from "../../assets/jet2.webp";
 import china from "../../assets/China.webp";
 import sword from "../../assets/sword.webp";
 import taiwan from "../../assets/Taiwan.webp";
-import taiwanSectionBigImg from "../../assets/image 1062.webp";
+// import taiwanSectionBigImg from "../../assets/image 1062.webp";
+import taiwanSectionBigImg from "../../assets/TaiwanBeach.jpg";
 import russia from "../../assets/Russia 3.png";
 import ukraine from "../../assets/Ukraine 3.png";
 // import ukraineSectionBigImg from "../../assets/image 1036.png";
-import ukraineSectionBigImg from "../../assets/Bakhmut.webp";
+import ukraineSectionBigImg from "../../assets/Bakhmut.jpg";
 // import ukraine2SectionBigImg from "../../assets/image 1088.png";
-import ukraine2SectionBigImg from "../../assets/Odesa.webp";
-import PenghuIsland from "../../assets/Penghu.webp";
+// import ukraine2SectionBigImg from "../../assets/Odesa.webp";
+import ukraine2SectionBigImg from "../../assets/OdesaPort.jpg";
+// import PenghuIsland from "../../assets/Penghu.webp";
+import PenghuIsland from "../../assets/PenguIslands.jpg";
 import multipleLine from "../../assets/Group 3.png";
 import ClassicsIcon from "../../assets/classicicon.webp";
 // import squadsPuppet from "../../assets/Group 4.png";
-import squadsPuppet from "../../assets/squadpuppet.webp";
+// import squadsPuppet from "../../assets/squadpuppet.webp";
+import squadsPuppet from "../../assets/GER.png";
 import squadsLine from "../../assets/Rectangle 53.png";
 import mobileVersionImg from "../../assets/mobile.webp";
 import appStore from "../../assets/ComingSoonAppStore.png";
@@ -49,7 +54,8 @@ import ecosystemflower from "../../assets/ecosystemflower.webp";
 import hand from "../../assets/hand.webp";
 import group65 from "../../assets/coins.webp";
 // import thesoldiersNFT from "../../assets/photo_2023-08-14_15-43-51 1.png";
-import thesoldiersNFT from "../../assets/usasolidergif.gif";
+// import thesoldiersNFT from "../../assets/usasolidergif.gif";
+import thesoldiersNFT from "../../assets/GrayBeard-US.png";
 import warx from "../../assets/WARXcoin.webp";
 import bugs from "../../assets/bug.png";
 import blueFlower from "../../assets/blueFlowers.webp";
@@ -110,7 +116,7 @@ const HomePage = () => {
                                 <a href='https://docs.google.com/forms/d/e/1FAIpQLSc7c1H_PDroVkPz5AztS6pLKLWjDTFerMNgHQiCO7nn1oL2Kg/viewform' target="_blank" rel="noreferrer"><span>GET WHITELISTED</span></a>
                             </div>
                             <div className='mintsContainer'>
-                                <button>MINTS OCTOBER</button>
+                                <button>MINTS NOVEMBER</button>
                                 <img loading="lazy" src={line} alt="" />
                             </div>
                         </div>
@@ -128,7 +134,7 @@ const HomePage = () => {
 
             <ThreeTypeNFT />
 
-            <CarouselPuppet />
+            {/* <CarouselPuppet /> */}
 
             <div className="ANewEraContainer" id='NEWERA'>
                 <div className="ANewEraContainerCentered">
@@ -237,7 +243,7 @@ const HomePage = () => {
 
             <div className="CountryReachConatiner">
                 <CountryReach img1={china} img2={sword} img3={taiwan} img4={taiwanSectionBigImg} title="TAIWAN BEACH INVASION" />
-                <CountryReach img1={russia} img2={sword} img3={ukraine} img4={ukraineSectionBigImg} title="BATTLE OF BAKHMUT" />
+                <CountryReach img1={russia} img2={sword} img3={ukraine} img4={ukraineSectionBigImg} title="BAKHMUT" />
                 <CountryReach img1={china} img2={sword} img3={taiwan} img4={PenghuIsland} title="PENGHU ISLANDS" />
                 <CountryReach img1={russia} img2={sword} img3={ukraine} img4={ukraine2SectionBigImg} title="ODESA PORT" />
                 <img src={multipleLine} className="multipleLine" alt="" />
