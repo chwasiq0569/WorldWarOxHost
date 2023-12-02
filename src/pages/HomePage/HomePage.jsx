@@ -116,7 +116,7 @@ const HomePage = () => {
                                 <a href='https://docs.google.com/forms/d/e/1FAIpQLSc7c1H_PDroVkPz5AztS6pLKLWjDTFerMNgHQiCO7nn1oL2Kg/viewform' target="_blank" rel="noreferrer"><span>GET WHITELISTED</span></a>
                             </div>
                             <div className='mintsContainer'>
-                                <button>MINTS NOVEMBER</button>
+                                <button>MINTS DECEMBER</button>
                                 <img loading="lazy" src={line} alt="" />
                             </div>
                         </div>
@@ -337,7 +337,7 @@ const HomePage = () => {
                 <div className="TheSoldiersNFTContainerCentered">
                     <div className="thesoldiersNFTBox">
                         <h2>THE SOLDIERS</h2>
-                        <p>Tranche #1 of the Soldier NFTs will be minted November 25. These OG collectibles kick off the World War 0x ecosystem - boosting 3D files, in-game accessibility and integration into our betting protocol and  map creator tools.</p>
+                        <p>Tranche #1 of the Soldier NFTs will be minted December. These OG collectibles kick off the World War 0x ecosystem - boosting 3D files, in-game accessibility and integration into our betting protocol and  map creator tools.</p>
                     </div>
 
                     <div className="thesoldiersNFTBox">
