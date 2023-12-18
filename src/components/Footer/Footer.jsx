@@ -5,8 +5,8 @@ import headSoo from "../../assets/so.webp";
 import headDiscord from "../../assets/discord.webp";
 import bitmap from "../../assets/Bitmap Copy 5.webp";
 import tikTok from "../../assets/tiktok.webp";
-
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -25,8 +25,8 @@ const Footer = () => {
                             </ul>
                             <ul className="footer-ul2">
                                 <li className="footer-li2"><button className="footer-a2">Curfluffle</button></li>
-                                <li className="footer-li2"><button className="footer-a2 footer_link">Terms of Service</button></li>
-                                <li className="footer-li2 "><button className="footer-a2 footer_link">Privacy Policy</button></li>
+                                <li className="footer-li2"><button className="footer-a2 footer_link"><Link style={{ all: "unset" }} to="/terms">Terms of Service</Link></button></li>
+                                <li className="footer-li2 "><button className="footer-a2 footer_link"><Link style={{ all: "unset" }} to="/privacy">Privacy </Link>Policy</button></li>
                             </ul>
 
                         </div>

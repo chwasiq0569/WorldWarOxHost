@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    color: white !important;
+    font-size: 1rem;
+    text-align: left;
+}
+
+
+
+.header {
+    background-color: black;
+    color: white !important;
+}
+
+.mainContent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 8rem;
+    background-color: black;
+}
+
+.mainContent .Privacy_contentContainer {
+    width: 80%;
+    padding-top: 1rem;
+}
+
+.mainContent .Privacy_Secondary_contentContainer ul,
+.mainContent .Privacy_contentContainer ul {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+}
+
+.mainContent .Privacy_Secondary_contentContainer ul li,
+.mainContent .Privacy_contentContainer ul li {
+    list-style-type: disc;
+    color: white !important;
+    font-size: 1rem;
+    font-family: var(--font-poppins);
+    text-align: left;
+}
+
+.mainContent .Privacy_Secondary_contentContainer p,
+.mainContent .Privacy_contentContainer p {
+    font-family: var(--font-poppins);
+}
+
+.mainContent .Privacy_Secondary_contentContainer p a,
+.mainContent .Privacy_contentContainer p a {
+    color: #0b966d;
+}
+
+.mainContent .Privacy_contentContainer .pageHead {
+    text-align: center;
+    font-size: 2rem;
+    /* font-weight: 600; */
+    font-family: var(--font-poppins);
+    color: white;
+}
+
+.mainContent .Privacy_contentContainer .mainHead {
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid white;
+    font-family: var(--font-poppins);
+}
+
+.mainHEAD .details {
+    padding-top: 2rem;
+}
+
+.alignLeft {
+    text-align: left !important;
+    color: white;
+}
+
+.mainContent .Privacy_contentContainer p span {
+    text-decoration: underline;
+    font-family: var(--font-poppins);
+}
+
+.mainContent .Privacy_Secondary_contentContainer {
+    width: 80%;
+}
+
+.mainContent .Privacy_Secondary_contentContainer .head {
+    font-size: 1.5rem;
+    font-family: var(--font-poppins);
+}
+
+@media only screen and (max-width: 600px) {
+    .mainContent .Privacy_contentContainer .pageHead {
+        font-size: 2rem;
+    }
+
+    .mainContent .Privacy_contentContainer .mainHead {
+        font-size: 2.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .mainContent .Privacy_Secondary_contentContainer .head {
+        font-size: 1.5rem;
+        font-family: "Montserrat", Times, serif;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .mainContent .Privacy_contentContainer .pageHead {
+        font-size: 1.5rem;
+    }
+
+    .mainContent .Privacy_contentContainer .mainHead {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    .mainContent .Privacy_Secondary_contentContainer .head {
+        font-size: 1.25rem;
+        font-family: "Montserrat", Times, serif;
+    }
+}
+
+.col-md-6 p {
+    color: #444;
+    font-family: var(--font-poppins);
+    font-weight: 500;
+    font-size: 13.5px !important;
+}

@@ -5,6 +5,7 @@ import headYoutube from "../../assets/youtube.webp";
 import headSoo from "../../assets/so.webp";
 import headDiscord from "../../assets/discord.webp";
 import tikTok from "../../assets/tiktok.webp";
+import { Link } from 'react-router-dom';
 
 import './Navbar.css';
 
@@ -46,7 +47,9 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
             <div className={`HeaderContainer ${isMenuOpen ? 'menu-open' : ''}`}>
                 <div className='HeaderLeftSideContainer'>
                     <div className="HeaderLogo">
-                        <img className="image-1156-icon" alt="" src={logo} />
+                        <Link style={{ all: "unset" }} to="/">
+                            <img className="image-1156-icon" alt="" src={logo} />
+                        </Link>
                     </div>
                     <div className="HeaderMenuContainer">
                         <ul>
@@ -84,7 +87,9 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                             <div className="CloseIcon"></div>
                         </div>
                         <div className="HeaderLogo">
-                            <img className="image-1156-icon" alt="" src={logo} />
+                            <Link style={{ all: "unset" }} to="/">
+                                <img className="image-1156-icon" alt="" src={logo} />
+                            </Link>
                         </div>
                         <ul>
                             <li onClick={toggleMenu}><a href="https://worldwar0x.io" rel="noreferrer" target='_blank'>PLAY</a></li>
