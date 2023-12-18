@@ -10,8 +10,8 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<HomePage />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/terms" element={<Terms />} />
+          <Route exact path="/privacy" element={<Privacy />} />
+          <Route exact path="/terms" element={<Terms />} />
         </Routes>
       </Router>
       {/* <HomePage /> */}
