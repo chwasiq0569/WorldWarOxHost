@@ -25,8 +25,11 @@ const Footer = () => {
                             </ul>
                             <ul className="footer-ul2">
                                 <li className="footer-li2"><button className="footer-a2">Curfluffle</button></li>
-                                <li className="footer-li2"><button className="footer-a2 footer_link"><Link style={{ all: "unset" }} to="/terms">Terms of Service</Link></button></li>
-                                <li className="footer-li2 "><button className="footer-a2 footer_link"><Link style={{ all: "unset" }} to="/privacy">Privacy </Link>Policy</button></li>
+                                <li className="footer-li2"><Link style={{ all: "unset" }} to="/terms"><button className="footer-a2 footer_link">Terms of Service</button></Link></li>
+                                <li className="footer-li2 ">
+                                    <Link style={{ all: "unset" }} to="/privacy"><button className="footer-a2 footer_link">Privacy Policy
+                                    </button></Link>
+                                </li>
                             </ul>
 
                         </div>
