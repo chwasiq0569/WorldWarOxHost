@@ -58,6 +58,8 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                             <li><a href="#NEWERA">GAMEPLAY</a></li>
                             <li><a href="#WARXECOSYSTEM">ECOSYSTEM</a></li>
                             <li><a href='https://world-war-0x.gitbook.io/white-paper/' rel="noreferrer" target="_blank">WHITEPAPER</a></li>
+                            <Link style={{ all: "unset" }} to="/download"><li><a>DOWNLOAD</a></li> </Link>
+                            {/* <li><a href='https://world-war-0x.gitbook.io/white-paper/' rel="noreferrer" target="_blank">DOWNLOAD</a></li> */}
                         </ul>
                     </div>
                 </div>
@@ -97,6 +99,8 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                             <li onClick={toggleMenu}><a href="#NEWERA">GAMEPLAY</a></li>
                             <li onClick={toggleMenu}><a href="#WARXECOSYSTEM">ECOSYSTEM</a></li>
                             <li><a href='https://world-war-0x.gitbook.io/white-paper/' rel="noreferrer" target="_blank">WHITEPAPER</a></li>
+                            <Link style={{ all: "unset" }} to="/download"><li><a>DOWNLOAD</a></li></Link>
+
                         </ul>
                         <div className="GetWhiteListedBtn small-btn">
                             <a href='https://docs.google.com/forms/d/e/1FAIpQLSc7c1H_PDroVkPz5AztS6pLKLWjDTFerMNgHQiCO7nn1oL2Kg/viewform' target="_blank" rel="noreferrer"><span>GET WHITELISTED</span></a>
