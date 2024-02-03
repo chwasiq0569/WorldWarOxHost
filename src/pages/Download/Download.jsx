@@ -23,10 +23,12 @@ const Download = () => {
         <div className='main_content'>
             <p className='page_head'>DOWNLOADABLE PC VERSION</p>
             <div className='download_btns_container'>
-                <button className='white_btn'>
-                    <img src={Windows} alt="windows_icon" />
-                    <p>WINDOWS DOWNLOAD</p>
-                </button>
+                <a href="https://worldwar0x.io/patchsystem/ww0x01patchl1.zip">
+                    <button className='white_btn'>
+                        <img src={Windows} alt="windows_icon" />
+                        <p>WINDOWS DOWNLOAD</p>
+                    </button>
+                </a>
                 <button className='black_btn'>
                     <img src={Apple} alt="windows_icon" />
                     <p>MAC COMING SOON</p>
@@ -34,8 +36,8 @@ const Download = () => {
             </div>
             <p className='primary_text'>MORE WAYS TO PLAY</p>
             <div className='download_btns_container'>
-                <img className='landscape_images' src={WebBrowser} alt="play_in_web_browser" />
-                <img className='landscape_images' src={GooglePlayIcon} alt="google_play" />
+                <a href="https://www.worldwar0x.io/" target='_blank'><img className='landscape_images' src={WebBrowser} alt="play_in_web_browser" /></a>
+                <a href="https://play.google.com/store/apps/details?id=com.CurfluffleGames.WorldWar0x&hl=en&gl=US" target='_blank'><img className='landscape_images' src={GooglePlayIcon} alt="google_play" /></a>
                 <img className='landscape_images' src={IosComingSoonIcon} alt="iso_coming_soon" />
             </div>
 

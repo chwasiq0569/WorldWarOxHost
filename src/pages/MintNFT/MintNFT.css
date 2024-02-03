@@ -1,0 +1,219 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots:wght@400&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: "Pink and Crimson";
+    src: local("Pink and Crimson"),
+        url("../../fonts/Pink\ and\ Crimson.otf") format("woff");
+}
+
+@font-face {
+    font-family: "Murisa Alexandra";
+    src: local("Murisa Alexandra"),
+        url("../../fonts/alexandra\ regular.otf") format("woff");
+}
+
+@font-face {
+    font-family: "Transducer Test";
+    src: local("Transducer Test"),
+        url("../../fonts/TransducerTest-Regular.otf") format("woff");
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: local("Gilroy"),
+        url("../../fonts/Gilroy-ExtraBold.otf") format("woff");
+}
+
+@font-face {
+    font-family: "PRIMETIME";
+    src: local("PRIMETIME"),
+        url("../../fonts/PRIMETIME\ +\ PERSONAL\ USE\ ONLY.ttf") format("woff");
+}
+
+@font-face {
+    font-family: "WILD WORLD";
+    src: local("WILD WORLD"),
+        url("../../fonts/wild-world.otf") format("woff");
+}
+
+@font-face {
+    font-family: "Median";
+    src: local("Median"),
+        url("../../fonts/Median-Regular.otf") format("woff");
+}
+
+
+.mintnfts_container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.mintnfts_container .screen_cover {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+
+.mintnfts_container .screen_cover .nft_cover_image {
+    width: 100%;
+    object-fit: contain;
+}
+
+.mintnfts_container .screen_cover .nftprofile_pic {
+    position: absolute;
+    bottom: -45%;
+    left: 38%;
+    border: 20px solid black
+}
+
+.main_head {
+    width: 30%;
+    font-family: Poppins;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.primarytext {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.nft_details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins;
+}
+
+.nft_details .left {
+    width: 150px;
+    height: 150px;
+}
+
+.nft_details .left img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.nft_details .right {
+    margin-left: 2rem;
+}
+
+.basic_text {
+    font-family: Poppins;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.connect_waller_btn {
+    width: auto;
+    height: auto;
+    background-color: #FFF970;
+    color: black;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0 auto;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.counter_and_btn {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+.counter_and_btn .counter {
+    display: flex;
+    align-items: center;
+}
+
+.counter_and_btn .counter span {
+    margin: 0rem 1rem;
+
+}
+
+.counter_and_btn .counter .btns {
+    background-color: white;
+    color: black;
+    font-size: 1.75rem;
+    width: 45px;
+    height: 45px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.myNfts {
+    width: 100%;
+}
+
+.myNfts .nfts_container {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.myNfts .nfts_container .nft_container {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin: 1.5rem 2rem;
+}
+
+.myNfts .nfts_container .nft_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media only screen and (max-width: 800px) {
+    .mintnfts_container .screen_cover .nftprofile_pic {
+        width: 100px;
+        height: 100px;
+        border: 10px solid black
+    }
+
+    .main_head {
+        width: 90%;
+        font-size: 32px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .mintnfts_container .screen_cover .nftprofile_pic {
+        width: 75px;
+        height: 75px;
+        left: 35%;
+    }
+}
