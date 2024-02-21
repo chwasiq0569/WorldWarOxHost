@@ -1,0 +1,205 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots:wght@400&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: "Pink and Crimson";
+    src: local("Pink and Crimson"),
+        url("../../fonts/Pink\ and\ Crimson.otf") format("woff");
+}
+
+@font-face {
+    font-family: "Murisa Alexandra";
+    src: local("Murisa Alexandra"),
+        url("../../fonts/alexandra\ regular.otf") format("woff");
+}
+
+@font-face {
+    font-family: "Transducer Test";
+    src: local("Transducer Test"),
+        url("../../fonts/TransducerTest-Regular.otf") format("woff");
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: local("Gilroy"),
+        url("../../fonts/Gilroy-ExtraBold.otf") format("woff");
+}
+
+@font-face {
+    font-family: "PRIMETIME";
+    src: local("PRIMETIME"),
+        url("../../fonts/PRIMETIME\ +\ PERSONAL\ USE\ ONLY.ttf") format("woff");
+}
+
+@font-face {
+    font-family: "WILD WORLD";
+    src: local("WILD WORLD"),
+        url("../../fonts/wild-world.otf") format("woff");
+}
+
+@font-face {
+    font-family: "Median";
+    src: local("Median"),
+        url("../../fonts/Median-Regular.otf") format("woff");
+}
+
+
+.main_content {
+    width: 100%;
+    height: auto;
+    min-height: 60vh;
+}
+
+.main_content .page_head {
+    font-family: "Pink and Crimson";
+    font-size: 46px;
+    font-weight: 400;
+    text-align: center;
+    color: #FF4B24 !important;
+
+    margin-top: 4rem;
+}
+
+
+.main_content .primary_text {
+    text-align: center;
+    font-family: "Transducer Test";
+    margin-top: 4rem;
+
+}
+
+.main_content .download_btns_container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.main_content .download_btns_container button {
+    width: auto;
+    height: 68px;
+    border-radius: 10px;
+    border: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+    margin: 0 1rem;
+
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.main_content .download_btns_container button img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+
+}
+
+.main_content .download_btns_container button p {
+    margin-left: 1rem;
+
+}
+
+.main_content .download_btns_container .black_btn {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.main_content .download_btns_container .white_btn p {
+    color: black !important;
+}
+
+.download_btns_container .landscape_images {
+    height: 68px;
+    object-fit: contain;
+    margin: 0rem 1rem;
+
+    cursor: pointer;
+
+}
+
+.specs_table {
+    max-width: 711px;
+    height: auto;
+    border: 1px solid #FF0000;
+    color: #FF0000;
+    margin: 6rem auto;
+    border-radius: 12px;
+
+}
+
+.specs_table .table_header,
+.specs_table .table_row {
+    width: 100%;
+    height: 75px;
+    border-bottom: 1px solid #FF0000;
+    display: flex;
+    justify-content: center;
+}
+
+.specs_table .table_header .table_col,
+.specs_table .table_row .table_col {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.specs_table .table_row:last-child {
+    border: none;
+}
+
+.specs_table .table_header .table_col {
+
+    color: white;
+}
+
+.specs_table .table_row .table_col {
+    font-weight: 700;
+    font-family: Inter;
+
+}
+
+.specs_table .table_header .table_col:nth-child(1),
+.specs_table .table_row .table_col:nth-child(1) {
+    justify-content: center;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 800px) {
+    .download_btns_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main_content .download_btns_container button {
+        width: 300px;
+        margin: 1rem 0;
+    }
+
+    .main_content .download_btns_container .landscape_images {
+        width: 300px;
+        /* height: ; */
+        height: auto;
+        margin: 1rem 0;
+    }
+
+}

@@ -5,6 +5,7 @@ import Terms from "./pages/Terms/Terms";
 import Download from "./pages/Download/Download";
 import MintNFT from "./pages/MintNFT/MintNFT";
 import TestMintNFTs from "./pages/MintNFT/TestMintNFTs";
+import Support from "./pages/Support/Support";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/download" element={<Download />} />
           <Route exact path="/mintnfts" element={<MintNFT />} />
           <Route exact path="/testmintnfts" element={<TestMintNFTs />} />
+          <Route exact path="/support" element={<Support />} />
         </Routes>
       </Router>
       {/* <HomePage /> */}
