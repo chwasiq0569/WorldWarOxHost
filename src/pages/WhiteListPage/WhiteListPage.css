@@ -1,0 +1,1428 @@
+ @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Marcellus+SC:wght@400&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Marcellus:wght@400&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Zen+Dots:wght@400&display=swap");
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ @font-face {
+     font-family: "Pink and Crimson";
+     src: local("Pink and Crimson"),
+         url("../../fonts/Pink\ and\ Crimson.otf") format("woff");
+ }
+
+ @font-face {
+     font-family: "Murisa Alexandra";
+     src: local("Murisa Alexandra"),
+         url("../../fonts/alexandra\ regular.otf") format("woff");
+ }
+
+ @font-face {
+     font-family: "Transducer Test";
+     src: local("Transducer Test"),
+         url("../../fonts/TransducerTest-Regular.otf") format("woff");
+ }
+
+ @font-face {
+     font-family: "Gilroy";
+     src: local("Gilroy"),
+         url("../../fonts/Gilroy-ExtraBold.otf") format("woff");
+ }
+
+ @font-face {
+     font-family: "PRIMETIME";
+     src: local("PRIMETIME"),
+         url("../../fonts/PRIMETIME\ +\ PERSONAL\ USE\ ONLY.ttf") format("woff");
+ }
+
+ @font-face {
+     font-family: "WILD WORLD";
+     src: local("WILD WORLD"),
+         url("../../fonts/wild-world.otf") format("woff");
+ }
+
+ @font-face {
+     font-family: "Median";
+     src: local("Median"),
+         url("../../fonts/Median-Regular.otf") format("woff");
+ }
+
+ @font-face {
+     font-family: "Graphik";
+     src: local("Graphik"),
+         url("../../fonts/Graphik\ Cond\ Semibold\ Trial.ttf") format("woff");
+ }
+
+ @font-face {
+     font-family: "Graphik-Main";
+     src: local("Graphik-Main"),
+         url("../../fonts/graphik-ba-compact-light.woff.ttf") format("woff");
+ }
+
+ body {
+
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+         sans-serif;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     background-color: var(--color-black);
+     color: #fff;
+ }
+
+ code {
+     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+         monospace;
+ }
+
+ :root {
+     --font-zen-dots: "Zen Dots";
+     --font-poppins: "Poppins";
+     --font-marcellus: "Marcellus";
+     --font-marcellus-sc: "Marcellus SC";
+     --font-josefin-sans: "Josefin Sans";
+     --font-graphik-sans: "Graphik";
+     --font-graphik-main: "Graphik-Main";
+
+     --font-murisa-alexandra: "Murisa Alexandra";
+     --font-transducer-test: "Transducer Test";
+     --font-gilroy: "Gilroy";
+     --font-pink-and-crimson: "Pink and Crimson";
+     --font-primetime: "PRIMETIME";
+     --font-wild-world: "WILD WORLD";
+     --font-median: "Median";
+
+     --color-black: #000;
+     --color-lightcoral-100: #ff9393;
+     --color-crimson-100: #ff4d59;
+     --color-crimson-200: #ed1c27;
+     --color-salmon: #ff6868;
+     --color-white: #fff;
+     --color-orangered: #ff4b24;
+     --color-palegoldenrod: #fff4bc;
+     --color-red: #ff0000;
+     --color-gray-100: rgba(255, 255, 255, 0.8);
+     --color-darkgray: #989898;
+ }
+
+ ul {
+     list-style-type: none;
+ }
+
+ a {
+     text-decoration: none;
+ }
+
+
+ .backToTop {
+     width: 4rem;
+     height: 4rem;
+     background-color: black;
+     border-radius: 2rem;
+     position: fixed;
+     bottom: 2%;
+     right: 2%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
+     z-index: 1000;
+     transition: all 0.5s ease;
+ }
+
+ .backToTop img {
+     width: 60%;
+     height: 60%;
+     object-fit: contain;
+
+ }
+
+ .backToTop:hover {
+     background-color: #272727;
+ }
+
+ .herocontainer {
+     width: 100%;
+     height: auto;
+
+     position: relative;
+ }
+
+ .herocontainer .whitelistbg {
+     width: 100%;
+     object-fit: contain;
+ }
+
+ .herocontainer .nftprofilepic {
+     position: absolute;
+     bottom: -20%;
+     left: 45%;
+ }
+
+ .nftprofilepic {
+     width: 130px;
+     height: 130px;
+     object-fit: contain;
+
+     border: 8px solid black;
+
+     position: absolute;
+     bottom: 0;
+     left: 0;
+ }
+
+ .whitelistpagehead {
+     width: 100%;
+     min-height: 360px;
+     position: relative;
+     margin-top: 7rem;
+ }
+
+ .whitelistpagehead p {
+     width: 50%;
+     font-family: var(--font-pink-and-crimson);
+     text-align: center;
+     color: #FFF4BC;
+     font-size: 32px;
+     font-weight: 400;
+     margin: 0 auto;
+     letter-spacing: 1px;
+ }
+
+ .whitelistpagehead img {
+     height: 360px;
+     object-fit: contain;
+     position: absolute;
+     top: -7.4rem;
+     right: 0;
+ }
+
+ .nftholderssection {
+     width: 100%;
+     height: auto;
+     display: flex;
+     padding: 0px 200px;
+     margin-top: -7rem;
+
+ }
+
+ .nftholderssection .leftside {
+     width: 40%;
+ }
+
+ .nftholderssection .rightside {
+     width: 60%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+ }
+
+ .nftholderssection .leftside p {
+     color: #FFF;
+     font-family: var(--font-transducer-test);
+     font-size: 16px;
+     font-weight: 300;
+     line-height: 30px;
+     padding: 1rem;
+ }
+
+ .nftholderssection .leftside .nftholderreceiverbox {
+     border-left: 2px solid #CE4F4F;
+     border-top: 2px solid #CE4F4F;
+     border-right: 2px solid #CE4F4F;
+     border-bottom: 8px solid #CE4F4F;
+     padding: 1rem;
+ }
+
+ .nftholderssection .leftside .nftholderreceiverbox .nftholdersreceiver {
+     font-family: var(--font-transducer-test);
+     font-weight: 600;
+     font-size: 22px;
+     margin-bottom: 1rem;
+     color: #CE4F4F !important;
+     text-align: left;
+     padding: 0;
+ }
+
+ .nftholderssection .leftside .nftholderreceiverbox .nftholders {
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .nftholderssection .leftside .nftholderreceiverbox .nftholders .nftholder {
+     text-align: center;
+ }
+
+ .nftholderssection .leftside .nftholderreceiverbox .nftholders .nftholder p {
+     margin: 0;
+     text-align: center;
+     font-size: 12px;
+     line-height: 1.5;
+     font-weight: 600;
+ }
+
+ .nftholderssection .leftside .nftholderreceiverbox .nftholders .nftholder img {
+     height: 75px;
+     object-fit: contain;
+ }
+
+ .whitelistBtnContainer {
+     display: flex;
+     margin-left: -28px;
+     justify-content: center;
+ }
+
+ .whitelistsectionhead {
+     width: 100%;
+     font-family: var(--font-transducer-test);
+     text-align: center;
+
+     margin-top: 6rem;
+     margin-bottom: 2rem;
+ }
+
+ .platformsoutercontainer {
+     padding: 0px 100px;
+ }
+
+ .platformsoutercontainer .platformscontainer {
+     width: auto;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     margin: 0 auto;
+ }
+
+
+ .platformsoutercontainer .platformscontainer img {
+     height: 60px;
+     object-fit: contain;
+     cursor: pointer;
+     /* margin: 0 0.5rem; */
+ }
+
+ .platformsoutercontainer .platformscontainersites {
+     display: flex;
+     justify-content: space-between;
+     margin: 0 auto;
+ }
+
+ .nfttypes,
+ .doubleTabsContainer,
+ .innerTabsContainer {
+     padding: 0 200px;
+ }
+
+ .nfttypes .nfttypeshead,
+ .lowheadline {
+     color: #FFF;
+     font-family: var(--font-pink-and-crimson);
+     font-size: 28px;
+     font-weight: 400;
+     text-align: center;
+     margin: 0 auto;
+
+ }
+
+ .lowheadline {
+     margin-top: 5rem;
+     line-height: 1.5;
+     width: 45%;
+ }
+
+ .lowheadline span {
+     color: #FF0000;
+ }
+
+ .nfttypes .nftscontainer {
+     width: 50%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     text-align: center !important;
+
+     margin: 0 auto;
+
+ }
+
+ .nfttypes .nftscontainer .nft {
+     width: 75px;
+     height: 75px;
+
+     text-align: center !important;
+
+ }
+
+ .nfttypes .nftscontainer .nft img {
+     width: 100%;
+     height: 100%;
+     object-fit: contain;
+ }
+
+ .nfttypes .nftscontainer .nft p {
+     font-family: var(--font-transducer-test);
+     font-weight: 600;
+     text-align: center !important;
+     color: #DD646A !important;
+
+     line-height: 1.5;
+
+     margin: 1rem 0;
+ }
+
+ .nfttypes .nfttypesdetail {
+     width: 55%;
+
+     font-family: var(--font-transducer-test);
+     text-align: center;
+
+     margin: 0 auto;
+
+     margin: 5rem auto;
+     line-height: 2.5;
+ }
+
+
+ .nftAttributesSection {
+     width: 100%;
+     height: auto;
+     padding: 0 200px;
+ }
+
+ .nftAttributesSection .nftAttributesHead,
+ .doubleTabsContainer .doubleTabs,
+ .innerTabsContainer .innerTabs {
+     display: flex;
+     width: 100%;
+     height: 70px;
+ }
+
+ .innerTabsContainer .innerTabs {
+     margin-bottom: 1.5rem;
+ }
+
+ .nftAttributesSection .nftAttributesHead .tab,
+ .doubleTabsContainer .doubleTabs .tab,
+ .innerTabsContainer .innerTabs .tab {
+     flex: 1;
+     margin: 0 auto;
+     text-align: center;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     background-color: #A41B1B;
+
+     color: #FFF;
+     font-family: var(--font-pink-and-crimson);
+     font-size: 28px;
+     font-weight: 300;
+     text-align: center;
+
+     cursor: pointer;
+ }
+
+ .nftAttributesSection .nftAttributesHead .clickedTab,
+ .doubleTabsContainer .doubleTabs .clickedTab,
+ .innerTabsContainer .innerTabs .clickedTab {
+     background-color: white;
+     color: black;
+ }
+
+ .innerTabsContainer .innerTabs .tab:first-child {
+     border-top-left-radius: 8px;
+     border-bottom-left-radius: 8px;
+ }
+
+ .innerTabsContainer .innerTabs .tab:last-child {
+     border-top-right-radius: 8px;
+     border-bottom-right-radius: 8px;
+ }
+
+ .nftAttributesSection .tabContentContainer,
+ .doubleTabsContainer .doubleTabContentContainer,
+ .doubleTabsContainer .innerTabsContainer .innerTabContentContainer {
+     width: 100%;
+     height: auto;
+
+     padding: 1rem 3rem;
+     background-color: #383838;
+ }
+
+ .doubleTabsContainer .doubleTabContentContainer {
+     background-color: black;
+
+     border-bottom-left-radius: 15px;
+     border-bottom-right-radius: 15px;
+
+     min-height: 700px;
+
+     border-left: 8px solid #A41B1B;
+     border-right: 8px solid #A41B1B;
+     border-bottom: 8px solid #A41B1B;
+ }
+
+ .countryTabText {
+     width: 50%;
+     text-align: center;
+     font-family: var(--font-poppins);
+
+     margin: 2rem auto;
+ }
+
+ .doubleTabsContainer .innerTabsContainer .innerTabContentContainer {
+     padding: 0;
+     background-color: #000;
+ }
+
+ .doubleTabsContainer .innerTabsContainer .innerTabContentContainer img {
+     width: 100%;
+     object-fit: contain;
+ }
+
+ .doubleTabsContainer .doubleTabContentContainer p {
+     padding: 0 120px;
+     font-family: var(--font-poppins);
+     font-size: 16px;
+     margin: 2rem 0;
+
+     line-height: 2;
+     text-align: center;
+ }
+
+ .nftAttributesSection .tabContentContainer .countryTabContent {
+     width: 100%;
+     height: auto;
+
+ }
+
+ .nftAttributesSection .tabContentContainer .countryTabContent .countryTabUpper {
+     display: flex;
+ }
+
+ .nftAttributesSection .tabContentContainer .countryTabContent .countryTabUpper .countryTabContentLeftSide,
+ .nftAttributesSection .tabContentContainer .countryTabContent .countryTabUpper .countryTabContentRightSide {
+     width: 50%;
+ }
+
+ .nftAttributesSection .tabContentContainer .countryTabContent .countryTabUpper .countryTabContentLeftSide h1 {
+     font-family: var(--font-poppins);
+     width: 50%;
+     line-height: 1.2;
+     font-size: 52px;
+     font-weight: 800;
+     /* margin-top: 2rem; */
+ }
+
+
+ .nftAttributesSection .tabContentContainer .countryTabContent .countryTabUpper .countryTabContentLeftSide p {
+     font-family: var(--font-poppins);
+     font-size: 18px;
+     margin-top: 1rem;
+     width: 80%;
+ }
+
+ .countryTabContentRightSide img {
+     width: 100%;
+     object-fit: contain;
+ }
+
+ .nftAttributesSection .tabContentContainer .countryTabContent .countryTabLower {
+     width: 100%;
+ }
+
+ .nftAttributesSection .tabContentContainer .countryTabContent .countryTabLower img {
+     width: 100%;
+     object-fit: contain;
+ }
+
+ .headsSectionContainer {
+     width: 100%;
+     padding: 0 200px;
+ }
+
+ .headsSectionContainer .headsSectionHead {
+     width: 100%;
+     height: auto;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+     padding: 30px 200px;
+ }
+
+ .headsSectionContainer .headsSectionHead h1 {
+     font-family: var(--font-median);
+     font-family: 800;
+ }
+
+ .headsSectionContainer .headsSectionHead p {
+     font-family: var(--font-graphik-main);
+
+     margin-left: 4rem;
+
+     line-height: 1.5;
+ }
+
+ .headsSectionContainer .headsSlider {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+
+ .headsSectionContainer .headsSlider .sliderContent {
+     width: auto;
+     padding: 0 1rem;
+ }
+
+ .headsSectionContainer .headsSlider .sliderContent img {
+     width: 100%;
+     object-fit: contain;
+ }
+
+ .headsSectionContainer .headsSlider .arrow:last-child {
+     transform: rotate(180deg);
+ }
+
+ @media only screen and (max-width: 1100px) {
+     .BettingSectionContainerCentered {
+         width: 80%;
+     }
+
+     .nftholderssection {
+         padding: 0px 100px;
+     }
+
+     .nftAttributesSection {
+         padding: 0 100px;
+     }
+
+     .headsSectionContainer {
+         padding: 0 100px;
+     }
+
+
+     .nfttypes,
+     .doubleTabsContainer,
+     .innerTabsContainer {
+         padding: 0 100px;
+     }
+
+
+ }
+
+ @media only screen and (max-width: 1050px) {
+     .HeroCenteredContent img {
+         width: 40%;
+     }
+
+     .HeroCenteredContent h2 {
+         font-size: 32px;
+     }
+
+     .FirstEditionContainerCentered {
+         width: 90%;
+     }
+
+     .ANewEraContainerCentered {
+         width: 80%;
+     }
+
+     .ABCDE-ContainerCentered {
+         width: 80%;
+     }
+
+     .appstoreimg-box {
+         flex-direction: column;
+     }
+
+     .appstoreimg-box img {
+         margin-bottom: 20px;
+         padding-right: 20px;
+         width: 100%;
+     }
+
+     .MobileVersionContainerBox p {
+         width: 95%;
+     }
+
+     .WarxContainer {
+         justify-content: flex-start;
+         align-items: flex-start;
+         flex-direction: column-reverse;
+     }
+
+     .PartnersSectionContainer {
+         padding: 50px;
+     }
+
+     .PartnersSectionContainerCentered {
+         width: 90%;
+     }
+
+ }
+
+ @media only screen and (max-width: 950px) {
+     .TwoTypeSectionContainerCentered {
+         width: 90%;
+     }
+
+     .FlagCentered {
+         width: 80%;
+     }
+
+     .flogSecureBoxInner {
+         width: 90%;
+     }
+
+     .EcoSystemContainer {
+         flex-direction: column;
+     }
+
+     .EcoSystemContainerBox {
+         width: 80%;
+         margin: auto;
+     }
+
+     .EcoSystemContainerBox img {
+         margin-top: 50px;
+     }
+
+     .EcoSystem-p {
+         width: 100%;
+     }
+
+     .EcoSystem-textIcon {
+         width: 100%;
+     }
+
+     .EcoSystemContainer {
+         display: flex;
+         padding: 60px 0px 0px 0px;
+     }
+
+     .TheSoldiersNFTContainerCentered {
+         width: 90%;
+     }
+
+     .BettingSectionContainerCentered {
+         width: 90%;
+     }
+
+     .HelmetSectionContainerCentered h5 {
+         font-size: 3vw;
+         width: 90%;
+     }
+
+
+     .platformsoutercontainer {
+         padding: 0px 50px;
+     }
+
+     .platformsoutercontainer .platformscontainersites {
+         display: none;
+     }
+
+     .headsSectionContainer {
+         padding: 0 100px;
+     }
+
+     .headsSectionContainer .headsSectionHead {
+         padding: 30px 100px;
+     }
+ }
+
+ @media only screen and (max-width: 900px) {
+     .SquadsSectionContainer {
+         padding: 150px 20px 0px 20px;
+         grid-template-columns: repeat(1, 1fr);
+         width: 80%;
+         margin: auto;
+         margin-top: 50px;
+     }
+
+     .SquadsSectionContainer-Box {
+         flex-direction: row;
+         gap: 30px;
+         overflow: hidden;
+     }
+
+     .SquadsSectionContainer-InnerBox {}
+
+     .SquadsSectionContainer-Box .squadsPuppet {
+         margin-right: -12%;
+     }
+
+     .SquadsSectionContainer-InnerBox p {
+         width: 100%;
+     }
+
+     .nfttypes .nfttypeshead,
+     .lowheadline {
+         font-size: 22px;
+         font-weight: 400;
+     }
+
+     .lowheadline {
+         width: 75%;
+     }
+ }
+
+ @media only screen and (max-width: 870px) {
+     .HelmetSectionContainerCentered {
+         width: 80%;
+         text-align: center;
+     }
+
+     .classicsImgGridContainer {
+         grid-template-columns: repeat(2, 1fr);
+     }
+
+     .classicsImgGridBox:nth-child(2) {
+         margin-top: 0px;
+     }
+
+     .classicsImgGridBox:nth-child(3) {
+         margin-top: 50px;
+     }
+
+     .thesoldiersNFTBox h2 {
+         font-size: 52px;
+     }
+
+     .thesoldiersNFTBox p {
+         font-size: 18px;
+     }
+ }
+
+ @media only screen and (max-width: 840px) {
+     .ClassicsSectionContainer p {
+         width: 90%;
+     }
+
+     .RoadMapTextInnerBox {
+         padding-top: 90px;
+     }
+ }
+
+ @media only screen and (max-width: 830px) {
+     .RoadMapTextConatinerCentered {
+         flex-wrap: wrap;
+     }
+
+     .RoadmapSectionContainer-flex {}
+
+     .RoadmaplineContainer {}
+
+     .RoadmapSectionContainer-flex {}
+
+     .RoadmaplineContainer {}
+
+     .RoadMapTextConatinerCentered {}
+
+ }
+
+ @media only screen and (max-width: 800px) {
+     .MobileVersionContainer {
+         flex-direction: column;
+     }
+
+     .MobileVersionContainerBox {
+         width: 90%;
+     }
+
+     .MobileVersionContainerBox:nth-child(2) {
+         padding-left: 0px;
+         padding-top: 30px;
+     }
+
+     .BettingSectionContainerCentered {
+         flex-direction: column;
+     }
+
+     .BettingSectionContainerBox {
+         width: 90%;
+     }
+
+     .BettingSectionInnerBox {
+         text-align: center;
+     }
+
+     .HelmetSectionContainerCentered h5 span.quotation {
+         font-size: 40px;
+     }
+
+     .HelmetSectionContainerCentered h5 {
+         padding: 0px 40px;
+     }
+
+     .HelmetSectionContainerCentered h5 span.quotation:nth-child(1) {
+         top: 30px;
+     }
+
+     .HelmetSectionContainerCentered h5 span.quotation:nth-child(2) {
+         top: 30px;
+     }
+
+     .nftholderssection {
+         display: flex;
+         flex-direction: column;
+         padding: 0px 20px;
+
+     }
+
+     .nftholderssection .leftside,
+     .nftholderssection .rightside {
+         width: 100%;
+         margin-top: 2rem;
+     }
+
+
+     .nfttypes {
+         padding: 0 20px;
+         padding: 0px 50px;
+     }
+
+     .nfttypes .nfttypeshead {
+         font-size: 22px;
+         margin: 0 auto;
+     }
+
+
+     .nfttypes .nftscontainer {
+         width: 100%;
+     }
+
+     .nfttypes .nftscontainer .nft {
+         width: 75px;
+         height: 75px;
+         text-align: center !important;
+     }
+
+     .nfttypes .nftscontainer .nft img {
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+     }
+
+     .nfttypes .nftscontainer .nft p {
+         line-height: 1.5;
+     }
+
+     .nfttypes .nfttypesdetail {
+         width: 100%;
+         line-height: 1.75;
+     }
+
+     .nftAttributesSection {
+         padding: 0 20px;
+     }
+
+     .nftAttributesSection .nftAttributesHead .tab,
+     .doubleTabsContainer .doubleTabs .tab,
+     .innerTabsContainer .innerTabs .tab {
+         font-size: 20px;
+         /* font-weight: 300; */
+     }
+
+     .nftAttributesSection .tabContentContainer .countryTabContent .countryTabUpper .countryTabContentLeftSide h1 {
+         font-size: 32px;
+         font-weight: 800;
+     }
+
+
+     .nftAttributesSection .tabContentContainer .countryTabContent .countryTabUpper .countryTabContentLeftSide p {
+         font-size: 10px;
+         margin-top: 1rem;
+     }
+
+     .nftAttributesSection .tabContentContainer,
+     .doubleTabsContainer .doubleTabContentContainer,
+     .doubleTabsContainer .innerTabsContainer .innerTabContentContainer {
+         padding: 1rem 1rem;
+     }
+
+     .headsSectionContainer {
+         padding: 0 20px;
+     }
+
+     .headsSectionContainer .headsSectionHead {
+         padding: 30px 20px;
+     }
+
+     .nfttypes,
+     .doubleTabsContainer,
+     .innerTabsContainer {
+         padding: 0 20px;
+     }
+
+     .doubleTabsContainer .doubleTabContentContainer p {
+         padding: 0 20px;
+     }
+
+     .whitelistpagehead img {
+         display: none;
+     }
+
+     .whitelistpagehead p {
+         width: 75%;
+     }
+
+ }
+
+ @media only screen and (max-width: 770px) {
+     .ANewEraContainerCentered {
+         width: 90%;
+     }
+
+     .ANewEraContainer-img {}
+
+     .ANewEraContainer-img img {
+         width: 100px;
+         height: 100px;
+     }
+
+     .ANewEraContainer-img :nth-child(2) {
+         margin-left: 3vw;
+     }
+
+     .ANewEraContainer {
+         margin-top: -8rem;
+     }
+
+ }
+
+ @media only screen and (max-width: 720px) {
+     .FlagCentered {
+         flex-direction: column;
+     }
+
+     .FlagBox {
+         justify-content: space-between;
+         padding-bottom: 40px;
+     }
+
+     .FlagBox img {
+         order: 1;
+     }
+
+     .FlagBox h2 {
+         order: 2;
+     }
+
+     .flogSecureContainer {
+         flex-direction: column-reverse;
+
+     }
+
+     .flogSecureBoxInner p {
+         text-align: center;
+     }
+
+     .flogSecureBox img {
+         margin-bottom: 30px;
+     }
+
+     .FlagContainer {
+         padding: 20px 0px;
+     }
+
+     .SquadsSectionContainer {
+         width: 95%;
+     }
+ }
+
+ @media only screen and (max-width: 700px) {
+     .FirstEditionContainerCentered {
+         grid-template-columns: repeat(1, 1fr);
+         width: 80%;
+     }
+
+     .FirstEditionContainer-Text {
+         padding-right: 20px;
+     }
+
+     .FirstEditionContainer-Img {
+         margin-top: 2rem;
+     }
+
+     .FirstEditionContainer-Img img {
+         margin: 0 auto;
+     }
+
+     .HelmetSectionContainerCentered {
+         width: 90%;
+     }
+
+     .HelmetSectionContainerCentered p {
+         width: 100%;
+     }
+
+     .TwoTypeSectionBox h4 {
+         font-size: 24px;
+     }
+
+     .TwoTypeSectionBox1 h4 {
+         font-size: 18px;
+         line-height: 40px;
+     }
+
+     .worldLine {
+         height: 80%;
+     }
+
+     .ABCDE-ContainerCentered {
+         width: 90%;
+     }
+
+     .PartnersSectionContainer h2 {
+         font-size: 45px;
+     }
+
+     .PartnersSectionContainerCentered img {
+         margin-bottom: 30px;
+     }
+
+
+ }
+
+ @media only screen and (max-width: 600px) {
+     .ABCDE-ContainerCentered {
+         flex-direction: column;
+         width: 50%;
+     }
+
+     .ABCDE-ContainerBox {
+         margin-bottom: 40px;
+     }
+
+     .ABCDE-ContainerBox-dots {
+         margin-bottom: 40px;
+     }
+
+     .ClassicsSectionContainer h2 {
+         font-size: 60px;
+     }
+
+     .SquadsSectionContainer-Box {
+         flex-direction: column;
+     }
+
+     .TheSoldiersNFTContainer {
+         padding: 100px 0px 50px 0px;
+     }
+
+     .TheSoldiersNFTContainerCentered {
+         flex-direction: column;
+     }
+
+     .thesoldiersNFTBox {
+         width: 100%;
+     }
+
+     .thesoldiersNFTBox:nth-child(1) {
+         padding-right: 0px;
+     }
+
+     .WarxContainerBox-2 {
+         flex-direction: column;
+     }
+
+     .WarxContainerInnerBox:nth-child(2) {
+         margin-top: 40px;
+     }
+
+     .platformsoutercontainer {
+         padding: 0px 20px;
+     }
+
+     .platformsoutercontainer .platformscontainer {
+         flex-direction: column;
+     }
+
+     .platformsoutercontainer .platformscontainer img {
+         height: auto;
+         width: 100%;
+         max-height: 60px;
+         margin: 0.25rem 0;
+     }
+
+     /* .nfttypes .nftscontainer .nft {
+         width: 75px;
+         height: 55px;
+     } */
+
+     .nftAttributesSection .nftAttributesHead .tab,
+     .doubleTabsContainer .doubleTabs .tab,
+     .innerTabsContainer .innerTabs .tab {
+         font-size: 14px;
+     }
+
+     .nftAttributesSection .tabContentContainer .countryTabContent .countryTabUpper .countryTabContentLeftSide h1 {
+         font-size: 22px;
+     }
+
+
+     .nftAttributesSection .tabContentContainer .countryTabContent .countryTabUpper .countryTabContentLeftSide p {
+         font-size: 10px;
+     }
+
+     .nftAttributesSection .tabContentContainer,
+     .doubleTabsContainer .doubleTabContentContainer,
+     .doubleTabsContainer .innerTabsContainer .innerTabContentContainer {
+         padding: 1rem 1rem;
+     }
+
+     .herocontainer .nftprofilepic {
+         left: 40%;
+         bottom: -40%;
+     }
+ }
+
+ @media only screen and (max-width: 550px) {
+     .ANewEraContainerCentered p {
+         width: 100%;
+     }
+
+     .TwoTypeSectionContainerCentered {
+         text-align: right;
+         grid-template-columns: repeat(1, 1fr);
+         grid-column-gap: 20px;
+     }
+
+     .TwoTypeSectionBox1 h4 {
+         text-align: right;
+
+     }
+
+     .TwoTypeSectionBox {
+         padding: 20px 0px;
+     }
+
+     .TwoTypeSectionBox1 {
+         padding: 20px 0px;
+
+     }
+
+     .worldLine {
+         top: 0;
+         left: 0px;
+     }
+
+     .worldLine {
+         height: 100%;
+     }
+
+     .FlagCentered {
+         width: 90%;
+     }
+
+     .classicsImgGridContainer {
+         grid-template-columns: repeat(1, 1fr);
+         grid-row-gap: 50px;
+     }
+
+     .classicsImgGridBox h5 {
+         text-align: center;
+     }
+
+     .MobileVersionContainerBox h2 {
+         font-size: 40px;
+     }
+
+     .EcoSystemContainerBox {
+         width: 95%;
+     }
+
+     .EcoSystemContainerBox ul {
+         flex-wrap: wrap;
+     }
+
+     .WarxContainerBox img {
+         width: 100%;
+         margin-left: -5rem;
+     }
+
+     .WarxContainerInnerBox p {
+         font-size: 14px;
+     }
+
+     .RoadmapSectionContainer {
+         padding: 50px 0px;
+     }
+
+     .RoadmapSectionContainer h2 {
+         font-size: 50px;
+     }
+
+     .HelmetSectionContainerIMG marquee {
+         height: auto;
+         margin-bottom: -1.5rem;
+
+     }
+
+     .nftprofilepic {
+         width: 90px;
+         height: 90px;
+         border: 5px solid black;
+     }
+ }
+
+ @media only screen and (max-width: 520px) {
+     .BettingSectionContainerBox img {
+         top: 0;
+         transform: translate(-50%, -80%);
+     }
+
+     .BettingSectionContainerBox:nth-child(1) {
+         grid-template-columns: repeat(1, 1fr);
+     }
+
+     .BettingSectionInnerBox {
+         font-size: 25px;
+     }
+
+     .blue-line-BETTING {
+         width: 220px;
+     }
+ }
+
+ @media only screen and (max-width: 440px) {
+     .FlagBox {
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+     }
+
+     .FlagBox img {
+         width: 50px;
+         height: 200px;
+         margin-bottom: 20px;
+         margin-left: 0;
+     }
+
+     .FlagBox h5 {
+         text-align: center;
+         margin-left: 0px;
+     }
+
+     .flogSecureBoxInner {
+         padding-right: 0px;
+     }
+
+     .flogSecureBox {
+         justify-content: center;
+     }
+
+     .SquadsSectionContainer-InnerBox h3 {
+         font-size: 40px;
+     }
+ }
+
+ @media only screen and (max-width: 390px) {
+     .FirstEditionContainer-Text h4 {
+         font-size: 7vw;
+     }
+
+     .FirstEditionContainer-Text h5 {
+         font-size: 13.2vw;
+     }
+
+     .FirstEditionContainer-Text p {
+         font-size: 4.5vw;
+     }
+
+     .FirstEditionContainer-btn {
+         flex-direction: column;
+         justify-content: flex-start;
+         align-items: flex-start;
+     }
+
+     .mintsContainer {
+         margin-left: 0;
+     }
+
+     .FirstEditionBTN {
+         margin-bottom: 20px;
+     }
+
+     .FirstEditionTrance-text h4 {
+         font-size: 7vw;
+     }
+
+     .FirstEditionTrance-text h5 {
+         font-size: 5vw;
+     }
+
+
+
+     .FirstEditionContainer-Img img {
+         width: 100%;
+         height: 100%;
+     }
+
+     .ANewEra-txt h2 {
+         font-size: 50px;
+     }
+
+     .ANewEraContainer-img img {
+         width: 70px;
+         height: 70px;
+     }
+
+     .ClassicsSectionContainer h2 {
+         font-size: 40px;
+     }
+
+     .EcoSystem-textIcon {
+         text-align: center;
+         flex-direction: column-reverse;
+     }
+
+     .EcoSystem-textIcon img {
+         padding-bottom: 20px;
+         margin-left: 0;
+
+     }
+
+
+     .EcoSystemContainerBox h2 {
+         text-align: center;
+         font-size: 35px;
+     }
+
+     .EcoSystemContainerBox ul li {
+         text-align: right;
+     }
+
+     .EcoSystem-p {
+         text-align: center;
+         font-size: 16px;
+     }
+
+     .EcoSystemContainerBox:nth-child(1) {
+         padding: 0px 20px;
+     }
+
+     .thesoldiersNFTBox h2 {
+         font-size: 45px;
+         line-height: 50px;
+     }
+
+     .thesoldiersNFTBox p {
+         padding-top: 30px;
+     }
+
+     .RoadmapSectionContainer h2 {
+         font-size: 35px;
+     }
+ }

@@ -6,6 +6,7 @@ import Windows from "../../assets/windows.png"
 import WebBrowser from "../../assets/webbrowsericon.svg"
 import GooglePlayIcon from "../../assets/googleplayicon.svg"
 import IosComingSoonIcon from "../../assets/ioscomingsoonicon.svg"
+import AvailableInAppStore from "../../assets/availableinappstore.png"
 
 
 import "./Download.css"
@@ -38,7 +39,8 @@ const Download = () => {
             <div className='download_btns_container'>
                 <a href="https://www.worldwar0x.io/" target='_blank'><img className='landscape_images' src={WebBrowser} alt="play_in_web_browser" /></a>
                 <a href="https://play.google.com/store/apps/details?id=com.CurfluffleGames.WorldWar0x&hl=en&gl=US" target='_blank'><img className='landscape_images' src={GooglePlayIcon} alt="google_play" /></a>
-                <img className='landscape_images' src={IosComingSoonIcon} alt="iso_coming_soon" />
+
+                <a href="https://apps.apple.com/us/app/world-war-0x/id6477559681?platform=iphone" target='_blank'><img className='landscape_images' src={AvailableInAppStore} alt="iso_coming_soon" /></a>
             </div>
 
 
