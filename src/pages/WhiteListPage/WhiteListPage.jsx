@@ -88,7 +88,7 @@ import NFTType2 from "../../assets/nfttype2.png"
 import NFTType3 from "../../assets/nfttype3.png"
 
 import CountryGroupCover from "../../assets/countrygroupcover.png"
-import CountryGroupCollection from "../../assets/countrygroupcollection.png"
+import CountryGroupCollection from "../../assets/nfttypesgroup.png"
 import HeadsSlideOne from "../../assets/headsslide1.png"
 import sliderarrow from "../../assets/sliderarrow.png"
 
