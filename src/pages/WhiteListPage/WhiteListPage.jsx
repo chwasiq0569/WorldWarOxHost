@@ -108,7 +108,8 @@ import designercollection2 from "../../assets/designercollection2.png"
 import designercollection3 from "../../assets/designercollection3.png"
 
 import ReactPlayer from 'react-player'
-
+import Platforms from '../../components/Platforms/Platforms';
+import NFTHolder from '../../components/NFTHolder/NFTHolder';
 
 const WhiteListPage = () => {
     const [moveToBack, setMoveToBack] = React.useState(false);
@@ -154,7 +155,9 @@ const WhiteListPage = () => {
                 <p>THE WORLD WAR 0X SOLDIER NFT COLLECTION MINT IS FAST APPROACHING</p>
                 <img src={WhiteListSoldier} alt="white_list_soldier" />
             </div>
-            <div className='nftholderssection'>
+
+            <NFTHolder lefttext={"World War 0x is a play to earn low poly WW3 FPS. 2000 NFTS will be minted in our Soldier NFT collection. Holders use their NFTs in-game as 3D characters and gain access to betting features. "} />
+            {/* <div className='nftholderssection'>
                 <div className='leftside'>
                     <p>World War 0x is a play to earn low poly WW3 FPS. 2000 NFTS will be minted in our Soldier NFT collection. Holders use their NFTs in-game as 3D characters and gain access to betting features. </p>
                     <div className='nftholderreceiverbox'>
@@ -178,7 +181,7 @@ const WhiteListPage = () => {
                 <div className='rightside'>
                     <ReactPlayer url='https://www.youtube.com/watch?v=p191LCVjPPY' />
                 </div>
-            </div>
+            </div> */}
 
             <p className='whitelistsectionhead'>SIGN UP FOR THE ALLOWLIST</p>
             <div className='whitelistBtnContainer'>
@@ -186,21 +189,8 @@ const WhiteListPage = () => {
                     <a href='https://docs.google.com/forms/d/e/1FAIpQLSc7c1H_PDroVkPz5AztS6pLKLWjDTFerMNgHQiCO7nn1oL2Kg/viewform' target="_blank" rel="noreferrer"><span style={{ fontSize: "22px" }}>GET WHITELISTED</span></a>
                 </div>
             </div>
+            <Platforms />
 
-            <p className='whitelistsectionhead'>PLATFORMS</p>
-            <div className='platformsoutercontainer'>
-                <div className='platformscontainer'>
-                    <a href="https://www.worldwar0x.io/" target='_blank'><img src={PlayInBrowser} alt="PlayInBrowser" /></a>
-                    <a href="https://worldwar0x.io/patchsystem/ww0x01patchl1.zip" target='_blank'><img src={WindowsDownload} alt="WindowsDownload" /></a>
-                    <a href="https://apps.apple.com/us/app/world-war-0x/id6477559681?platform=iphone" target='_blank'><img src={AvailableInAppStore} alt="AvailableInAppStore" /></a>
-                    <a href="https://play.google.com/store/apps/details?id=com.CurfluffleGames.WorldWar0x&hl=en&gl=US" target='_blank'><img src={GetItOnGooglePlay} alt="GetItOnGooglePlay" /></a>
-                    <a href="https://store.steampowered.com/app/2667500/World_War_Next/?beta=1" target='_blank'><img src={AvailableInSteam} alt="AvailableInSteam" /></a>
-                </div>
-                <div className='platformscontainersites'>
-                    <p>WORLDWAR0X.IO</p>
-                    <p>WORLD WAR NEXT</p>
-                </div>
-            </div>
             <br />
             <br />
             <br />
@@ -389,20 +379,8 @@ const WhiteListPage = () => {
             <p className="lowheadline"><span>World War 0X</span> is a low poly multiplayer FPS set during a WW3 conflict, Choose from over 25 countries. Vehicles like tanks, helicopters, boats and armored cars help players get around quickly.</p>
 
 
-            <p className='whitelistsectionhead'>PLATFORMS</p>
-            <div className='platformsoutercontainer'>
-                <div className='platformscontainer'>
-                    <a href="https://www.worldwar0x.io/" target='_blank'><img src={PlayInBrowser} alt="PlayInBrowser" /></a>
-                    <a href="https://worldwar0x.io/patchsystem/ww0x01patchl1.zip" target='_blank'><img src={WindowsDownload} alt="WindowsDownload" /></a>
-                    <a href="https://apps.apple.com/us/app/world-war-0x/id6477559681?platform=iphone" target='_blank'><img src={AvailableInAppStore} alt="AvailableInAppStore" /></a>
-                    <a href="https://play.google.com/store/apps/details?id=com.CurfluffleGames.WorldWar0x&hl=en&gl=US" target='_blank'><img src={GetItOnGooglePlay} alt="GetItOnGooglePlay" /></a>
-                    <a href="https://store.steampowered.com/app/2667500/World_War_Next/?beta=1" target='_blank'><img src={AvailableInSteam} alt="AvailableInSteam" /></a>
-                </div>
-                <div className='platformscontainersites'>
-                    <p>WORLDWAR0X.IO</p>
-                    <p>WORLD WAR NEXT</p>
-                </div>
-            </div>
+            <Platforms />
+
 
             <br />
             <br />
