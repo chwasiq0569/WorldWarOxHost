@@ -1,0 +1,49 @@
+.pertners_container {
+    width: 100%;
+    height: auto;
+
+    padding: 0 200px;
+    margin: 8rem 0;
+}
+
+
+.pertners_container p {
+    font-family: Poppins, sans-serif;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.icons_container .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.icons_container .row img {
+    width: 200px;
+    object-fit: contain;
+    margin: 1.5rem 0;
+
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    .pertners_container {
+        padding: 0 100px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .pertners_container {
+        padding: 0;
+    }
+
+    .icons_container .row {
+        flex-direction: column;
+    }
+}

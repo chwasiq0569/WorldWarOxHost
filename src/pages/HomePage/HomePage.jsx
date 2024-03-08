@@ -77,6 +77,8 @@ import Platforms from '../../components/Platforms/Platforms';
 import GetWhitelisted from '../../components/GetWhitelisted/GetWhitelisted';
 import NFTHolder from '../../components/NFTHolder/NFTHolder';
 import SoldierNFTs from "../../assets/2000soldiernft.png"
+import TraitCategories from '../../components/TraitCategories/TraitCategories';
+import Partners from '../../components/Partners/Partners';
 
 const HomePage = () => {
     const [moveToBack, setMoveToBack] = React.useState(false);
@@ -144,7 +146,9 @@ const HomePage = () => {
             </div>
 
             <ThreeTypeNFT />
+            <TraitCategories />
 
+            <Partners />
             {/* <CarouselPuppet /> */}
 
             <div className="ANewEraContainer" id='NEWERA'>
