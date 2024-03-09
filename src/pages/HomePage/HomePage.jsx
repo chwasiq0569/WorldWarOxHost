@@ -258,8 +258,8 @@ const HomePage = () => {
 
             <div className="CountryReachConatiner">
                 <CountryReach img1={china} img2={sword} img3={taiwan} img4={taiwanSectionBigImg} title="TAIWAN BEACH INVASION" />
-                <CountryReach img1={russia} img2={sword} img3={ukraine} img4={ukraineSectionBigImg} title="BAKHMUT" />
-                <CountryReach img1={china} img2={sword} img3={taiwan} img4={PenghuIsland} title="PENGHU ISLANDS" />
+                <CountryReach img1={russia} img2={sword} img3={ukraine} img4={ukraineSectionBigImg} title="DONBAS WOODS" />
+                <CountryReach img1={china} img2={sword} img3={taiwan} img4={PenghuIsland} title="TAIWAN BEACH" />
                 <CountryReach img1={russia} img2={sword} img3={ukraine} img4={ukraine2SectionBigImg} title="ODESA PORT" />
                 <img src={multipleLine} className="multipleLine" alt="" />
             </div>

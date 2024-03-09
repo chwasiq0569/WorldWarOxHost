@@ -47,6 +47,7 @@
   margin: auto;
   /* left: 50%; */
   /* transform: translateX(-50%); */
+
 }
 
 .carousel__inner {
@@ -54,7 +55,6 @@
   position: relative;
   /* width: calc(100rem); */
   width: 100%;
-  /* border: 1px solid red; */
 }
 
 .carousel__container {

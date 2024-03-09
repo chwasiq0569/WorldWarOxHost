@@ -1,6 +1,6 @@
 import React from "react";
-import ClassicsImg1 from '../../assets/Containers.webp';
-import ClassicsImg2 from '../../assets/Dusted.webp';
+import ClassicsImg1 from '../../assets/Shipment.jpg';
+import ClassicsImg2 from '../../assets/dsuted.png';
 import LebanonImg from '../../assets/Lebanon.jpg';
 // import ClassicsImg3 from '../../assets/Containers 7.png';
 import './Carousel.css'
@@ -11,7 +11,21 @@ const slideWidth = 24.2;
 const _items = [
   {
     player: {
-      title: 'CONTAINERS',
+      title: "DUSTED",
+      desc: "Ronald Antonio O'Sullivan is a six-time world champion and is the most successful player in the history of snooker.",
+      image: ClassicsImg2,
+    },
+  },
+  {
+    player: {
+      title: "LEBANON",
+      desc: "Ronald Antonio O'Sullivan is a six-time world champion and is the most successful player in the history of snooker.",
+      image: ClassicsImg2,
+    },
+  },
+  {
+    player: {
+      title: 'SHIPMENT',
       desc: 'Known as "The Magician", Efren Reyes is well regarded by many professionals as the greatest all around player of all time.',
       image: ClassicsImg1,
     },
@@ -27,28 +41,14 @@ const _items = [
     player: {
       title: "LEBANON",
       desc: "Ronald Antonio O'Sullivan is a six-time world champion and is the most successful player in the history of snooker.",
-      image: LebanonImg,
-    },
-  },
-  {
-    player: {
-      title: 'CONTAINERS',
-      desc: 'Mike Sigel or "Captain Hook" as many like to call him is an American professional pool player with over 108 tournament wins.',
-      image: ClassicsImg1,
-    },
-  },
-  {
-    player: {
-      title: "DUSTED",
-      desc: "Ronald Antonio O'Sullivan is a six-time world champion and is the most successful player in the history of snooker.",
       image: ClassicsImg2,
     },
   },
   {
     player: {
-      title: "LEBANON",
-      desc: "Ronald Antonio O'Sullivan is a six-time world champion and is the most successful player in the history of snooker.",
-      image: LebanonImg,
+      title: 'SHIPMENT',
+      desc: 'Mike Sigel or "Captain Hook" as many like to call him is an American professional pool player with over 108 tournament wins.',
+      image: ClassicsImg1,
     },
   },
 ];
