@@ -1,0 +1,113 @@
+.nftholderssection {
+    /* border: 2px solid red; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 0px 200px;
+}
+
+.pagehead {
+    height: auto;
+
+}
+
+.nftholderoutercontainer {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+
+}
+
+.pagehead p {
+    width: 50%;
+    font-family: var(--font-pink-and-crimson);
+    text-align: center;
+    color: #FFF4BC;
+    font-size: 26px;
+    font-weight: 400;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    margin-bottom: 12rem;
+}
+
+.nftholderssection .leftside {
+    width: 40%;
+}
+
+.nftholderssection .rightside {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nftholderssection .leftside p {
+    color: #FFF;
+    font-family: var(--font-transducer-test);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+    padding: 1rem;
+}
+
+.nftholderssection .leftside .nftholderreceiverbox {
+    border-left: 2px solid #CE4F4F;
+    border-top: 2px solid #CE4F4F;
+    border-right: 2px solid #CE4F4F;
+    border-bottom: 8px solid #CE4F4F;
+    padding: 1rem;
+}
+
+.nftholderssection .leftside .nftholderreceiverbox .nftholdersreceiver {
+    font-family: var(--font-transducer-test);
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 1rem;
+    color: #CE4F4F !important;
+    text-align: left;
+    padding: 0;
+}
+
+.nftholderssection .leftside .nftholderreceiverbox .nftholders {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nftholderssection .leftside .nftholderreceiverbox .nftholders .nftholder {
+    text-align: center;
+}
+
+.nftholderssection .leftside .nftholderreceiverbox .nftholders .nftholder p {
+    margin: 0;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+.nftholderssection .leftside .nftholderreceiverbox .nftholders .nftholder img {
+    height: 75px;
+    object-fit: contain;
+}
+
+@media only screen and (max-width: 1100px) {
+    .nftholderssection {
+        padding: 0px 100px;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .nftholderssection {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 20px;
+
+    }
+
+    .nftholderssection .leftside,
+    .nftholderssection .rightside {
+        width: 100%;
+        margin-top: 2rem;
+    }
+}

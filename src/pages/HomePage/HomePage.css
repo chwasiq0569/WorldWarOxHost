@@ -143,7 +143,7 @@ a {
   justify-content: center;
   align-items: center;
   padding: 50px 0px;
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .FirstEditionContainerCentered {
@@ -151,6 +151,7 @@ a {
   grid-template-columns: repeat(2, 1fr);
   width: 75%;
   margin: auto;
+
 }
 
 .FirstEditionContainer-Text {
@@ -158,6 +159,7 @@ a {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+
 }
 
 .FirstEditionContainer-Text h4 {
@@ -167,6 +169,7 @@ a {
   font-weight: 300;
   margin-top: 20px;
   /* letter-spacing: -0.058px; */
+  display: none;
   visibility: hidden;
 }
 
@@ -181,10 +184,11 @@ a {
 .FirstEditionContainer-Text p {
   color: var(--color-white);
   font-family: var(--font-transducer-test);
-  font-size: 14px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 300;
   line-height: 28px;
+  line-height: 2;
   /* letter-spacing: 1px; */
   margin: 25px 0px 35px 0px;
 }
@@ -254,7 +258,6 @@ a {
 
 
 .FirstEditionTrance-text {
-  /* border: 1px solid red; */
   text-align: center;
   padding: 20px 0px 20px 10px;
 }
@@ -278,15 +281,15 @@ a {
 
 .FirstEditionContainer-Img {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+
 }
 
 .FirstEditionContainer-Img img {
   /* width: 100%; */
   /* height: 100%; */
   width: 340px;
-  height: 530px;
-
+  height: auto;
   object-fit: contain;
 }
 

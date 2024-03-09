@@ -25,7 +25,8 @@ import landsmall2 from "../../assets/land2.png";
 import landsmall4 from "../../assets/land4.png";
 import landsmall5 from "../../assets/land5.png";
 import flag from "../../assets/flag.webp";
-import flagSecureImg from "../../assets/jet2.webp";
+// import flagSecureImg from "../../assets/jet2.webp";
+import flagSecureImg from "../../assets/advanceandsecure.png";
 import china from "../../assets/China.webp";
 import sword from "../../assets/sword.webp";
 import taiwan from "../../assets/Taiwan.webp";
@@ -72,6 +73,13 @@ import Carousel from '../../components/Carousel/Carousel';
 import CarouselPuppet from '../../components/CarouselPuppet/CarouselPuppet';
 import ArrowUp from "../../assets/arrowUp.png";
 
+import Platforms from '../../components/Platforms/Platforms';
+import GetWhitelisted from '../../components/GetWhitelisted/GetWhitelisted';
+import NFTHolder from '../../components/NFTHolder/NFTHolder';
+import SoldierNFTs from "../../assets/2000soldiernft.png"
+import TraitCategories from '../../components/TraitCategories/TraitCategories';
+import Partners from '../../components/Partners/Partners';
+
 const HomePage = () => {
     const [moveToBack, setMoveToBack] = React.useState(false);
     const [isScrolled, setIsScrolled] = React.useState(false);
@@ -105,18 +113,26 @@ const HomePage = () => {
             </div>}
             <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} />
             <HeroSection moveToBack={moveToBack} />
+            <Platforms />
+            <GetWhitelisted />
+
+            <NFTHolder headtext={"THE WORLD WAR 0X SOLDIER NFT COLLECTION MINT IS FAST APPROACHING"} lefttext={"Holders use their NFTs in-game as 3D characters and gain access to betting features."} />
+
             <div className="FirstEditionContainer" id='FirstEdition'>
                 <div className="FirstEditionContainerCentered">
+                    <div className="FirstEditionContainer-Img">
+                        <img loading="lazy" src={SoldierNFTs} alt="" />
+                    </div>
                     <div className="FirstEditionContainer-Text">
                         <h4>TRANCH #1</h4>
-                        <h5>SOLDIER NFTs</h5>
+                        <h5>2000 SOLDIER NFTs</h5>
                         <p>These are the most important collectibles in our ecosystem and where the most value will accrue. These are your hero characters. Play with them, bet with them and stake them for rewards.</p>
                         <div className="FirstEditionContainer-btn">
                             <div className="GetWhiteListedBtn FirstEditionBTN">
                                 <a href='https://docs.google.com/forms/d/e/1FAIpQLSc7c1H_PDroVkPz5AztS6pLKLWjDTFerMNgHQiCO7nn1oL2Kg/viewform' target="_blank" rel="noreferrer"><span>GET WHITELISTED</span></a>
                             </div>
                             <div className='mintsContainer'>
-                                <button>MINTS FEBRUARY</button>
+                                <button>MINTS MARCH</button>
                                 <img loading="lazy" src={line} alt="" />
                             </div>
                         </div>
@@ -126,14 +142,13 @@ const HomePage = () => {
                             <img src={line} alt="" />
                         </div> */}
                     </div>
-                    <div className="FirstEditionContainer-Img">
-                        <img loading="lazy" src={NftSoldier} alt="" />
-                    </div>
                 </div>
             </div>
 
             <ThreeTypeNFT />
+            <TraitCategories />
 
+            <Partners />
             {/* <CarouselPuppet /> */}
 
             <div className="ANewEraContainer" id='NEWERA'>
@@ -337,7 +352,7 @@ const HomePage = () => {
                 <div className="TheSoldiersNFTContainerCentered">
                     <div className="thesoldiersNFTBox">
                         <h2>THE SOLDIERS</h2>
-                        <p>Tranche #1 of the Soldier NFTs will be minted February. These OG collectibles kick off the World War 0x ecosystem - boosting 3D files, in-game accessibility and integration into our betting protocol and  map creator tools.</p>
+                        <p>Tranche #1 of the Soldier NFTs will be minted March. These OG collectibles kick off the World War 0x ecosystem - boosting 3D files, in-game accessibility and integration into our betting protocol and  map creator tools.</p>
                     </div>
 
                     <div className="thesoldiersNFTBox">

@@ -1,0 +1,51 @@
+.get_whitelisted {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 200px;
+}
+
+.whitelistBtnContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+}
+
+.whitelistBtnContainer p {
+    margin-top: -0.5rem;
+}
+
+.whitelistBtnContainer .GetWhiteListedBtn {
+    margin: 0 auto;
+}
+
+.whitelistsectionhead {
+    width: 100%;
+    font-family: var(--font-transducer-test);
+    text-align: center;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 950px) {
+    .get_whitelisted {
+        padding: 0 100px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .get_whitelisted {
+        flex-direction: column;
+    }
+
+    .get_whitelisted {
+        flex-direction: column;
+    }
+
+    .get_whitelisted .whitelistBtnContainer {
+        margin: 3rem 0;
+    }
+}
