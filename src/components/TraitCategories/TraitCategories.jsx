@@ -2,6 +2,7 @@ import React from 'react'
 import TraitCategoriesLeft from "../../assets/traitcategoriesleft.png"
 import TraitCategoriesRight from "../../assets/traitcategoriesright.png"
 import "./TraitCategories.css"
+import { Link } from 'react-router-dom'
 
 export default function TraitCategories() {
     return (
@@ -11,7 +12,8 @@ export default function TraitCategories() {
             </div>
             <div className='middle_content'>
                 <p>VIEW TRAIT CATEGORIES AND ITEM EXAMPELS</p>
-                <button>LEARN MORE</button>
+                {/* <a href="http://worldwar0x.com/whitelist" target='_blank'>LEARN MORE</a> */}
+                <Link to="http://worldwar0x.com/whitelist">LEARN MORE</Link>
             </div>
             <div className='right_side'>
                 <img src={TraitCategoriesRight} alt="" />

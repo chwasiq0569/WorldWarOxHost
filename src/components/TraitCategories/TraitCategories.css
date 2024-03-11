@@ -29,17 +29,23 @@
 }
 
 
-.trait_categories_section .middle_content button {
-    width: 200px;
-    height: 60px;
+.trait_categories_section .middle_content a {
+    text-align: center;
+    /* width: 200px; */
+    /* height: 60px; */
     color: white;
     border: 4px solid white;
     border-radius: 16px;
     margin: 0 auto;
     font-size: 20px;
     font-weight: 700;
-
+    outline: none;
+    text-decoration: none;
     background-color: transparent;
+
+    padding: 1rem 1.5rem;
+
+    cursor: pointer;
 }
 
 

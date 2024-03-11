@@ -31,7 +31,7 @@ import china from "../../assets/China.webp";
 import sword from "../../assets/sword.webp";
 import taiwan from "../../assets/Taiwan.webp";
 // import taiwanSectionBigImg from "../../assets/image 1062.webp";
-import taiwanSectionBigImg from "../../assets/TaiwanBeach.jpg";
+import taiwanSectionBigImg from "../../assets/TaiwanIslands.png";
 import russia from "../../assets/Russia 3.png";
 import ukraine from "../../assets/Ukraine 3.png";
 // import ukraineSectionBigImg from "../../assets/image 1036.png";
@@ -257,9 +257,9 @@ const HomePage = () => {
             </div>
 
             <div className="CountryReachConatiner">
-                <CountryReach img1={china} img2={sword} img3={taiwan} img4={taiwanSectionBigImg} title="TAIWAN BEACH INVASION" />
+                <CountryReach img1={china} img2={sword} img3={taiwan} img4={taiwanSectionBigImg} title="PENGHU ISLAND" />
                 <CountryReach img1={russia} img2={sword} img3={ukraine} img4={ukraineSectionBigImg} title="DONBAS WOODS" />
-                <CountryReach img1={china} img2={sword} img3={taiwan} img4={PenghuIsland} title="TAIWAN BEACH" />
+                {/* <CountryReach img1={china} img2={sword} img3={taiwan} img4={PenghuIsland} title="TAIWAN BEACH" /> */}
                 <CountryReach img1={russia} img2={sword} img3={ukraine} img4={ukraine2SectionBigImg} title="ODESA PORT" />
                 <img src={multipleLine} className="multipleLine" alt="" />
             </div>
