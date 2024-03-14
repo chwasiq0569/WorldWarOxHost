@@ -6,6 +6,12 @@
     padding: 0 200px;
 }
 
+.get_whitelisted img {
+    width: 234px;
+    height: 234px;
+    object-fit: contain;
+}
+
 .whitelistBtnContainer {
     display: flex;
     flex-direction: column;

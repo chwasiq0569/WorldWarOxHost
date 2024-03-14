@@ -13,12 +13,12 @@ import cloud2 from "../../assets/cloud2.webp";
 // import soldiers from "../../assets/war-nobg 1.png";
 import soldiers2 from "../../assets/ww0x-Illustration.webp";
 import worldLine from "../../assets/Group 1.png";
-import land1 from "../../assets/groundtransport.webp";
-import land2 from "../../assets/helicopertransport.webp";
-import land3 from "../../assets/tanks.webp";
-import land4 from "../../assets/naval.webp";
-import land5 from "../../assets/fighterjet.webp";
-import land6 from "../../assets/turrets.webp";
+import land1 from "../../assets/groundtransport.png";
+import land2 from "../../assets/Helicopter.png";
+import land3 from "../../assets/Tank.png";
+import land4 from "../../assets/Boat.png";
+import land5 from "../../assets/FighterJet.png";
+import land6 from "../../assets/Turret.png";
 import landsmall1 from "../../assets/Group4.png";
 import landsmall3 from "../../assets/land3.png";
 import landsmall2 from "../../assets/land2.png";
@@ -125,7 +125,7 @@ const HomePage = () => {
                     </div>
                     <div className="FirstEditionContainer-Text">
                         <h4>TRANCH #1</h4>
-                        <h5>2000 SOLDIER NFTs</h5>
+                        <h5>2500 SOLDIER NFTs</h5>
                         <p>These are the most important collectibles in our ecosystem and where the most value will accrue. These are your hero characters. Play with them, bet with them and stake them for rewards.</p>
                         <div className="FirstEditionContainer-btn">
                             <div className="GetWhiteListedBtn FirstEditionBTN">

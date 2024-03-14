@@ -22,13 +22,22 @@ const HeroSection = ({ moveToBack }) => {
                     <div className="video-foreground">
                         <iframe
                             className="video-container no-controls"
-                            src="https://player.vimeo.com/video/863883476?autoplay=1&background=1"
+                            src="https://player.vimeo.com/video/922128389?autoplay=1&background=1"
                             allow="autoplay; fullscreen;"
                             allowFullScreen
                             title="World War 0x Gameplay"
                             loading="lazy"
                             frameBorder="0"
                         ></iframe>
+                        {/* <iframe
+                            className="video-container no-controls"
+                            src="https://player.vimeo.com/video/863883476?autoplay=1&background=1"
+                            allow="autoplay; fullscreen;"
+                            allowFullScreen
+                            title="World War 0x Gameplay"
+                            loading="lazy"
+                            frameBorder="0"
+                        ></iframe> */}
                     </div>
                 </div>
                 <div className="HeroCenteredContent">
