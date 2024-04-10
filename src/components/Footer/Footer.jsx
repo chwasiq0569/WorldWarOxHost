@@ -18,11 +18,11 @@ const Footer = () => {
                         <div className="footer-ul">
                             <ul>
                                 <li><a href="https://worldwar0x.io" rel="noreferrer" target='_blank'>PLAY</a></li>
-                                <li><a href="#FirstEdition">NFTS</a></li>
-                                <li><a href="#NEWERA">GAMEPLAY</a></li>
-                                <li><a href="#WARXECOSYSTEM">ECOSYSTEM</a></li>
-                                <li><a href='https://world-war-0x.gitbook.io/white-paper/' rel="noreferrer" target="_blank">WHITEPAPER</a></li>
                                 <Link style={{ all: "unset" }} to="/download"><li><a>DOWNLOAD</a></li> </Link>
+                                <li><a href="/mint">NFTS</a></li>
+                                {/* <li><a href="#NEWERA">GAMEPLAY</a></li> */}
+                                {/* <li><a href="#WARXECOSYSTEM">ECOSYSTEM</a></li> */}
+                                <li><a href='https://world-war-0x.gitbook.io/white-paper/' rel="noreferrer" target="_blank">WHITEPAPER</a></li>
                             </ul>
                             <ul className="footer-ul2">
                                 <li className="footer-li2"><button className="footer-a2">Curfluffle</button></li>

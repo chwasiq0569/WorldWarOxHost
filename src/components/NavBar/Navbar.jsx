@@ -55,7 +55,7 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                         <ul>
                             <li><a href="https://worldwar0x.io" rel="noreferrer" target='_blank'>PLAY</a></li>
                             <Link style={{ all: "unset" }} to="/download"><li><a>DOWNLOAD</a></li> </Link>
-                            <li><a href="/whitelist">NFTS</a></li>
+                            <li><a href="/mint">NFTS</a></li>
                             {/* <li><a href="#NEWERA">GAMEPLAY</a></li> */}
                             {/* <li><a href="#WARXECOSYSTEM">ECOSYSTEM</a></li> */}
                             <li><a href='https://world-war-0x.gitbook.io/white-paper/' rel="noreferrer" target="_blank">WHITEPAPER</a></li>
@@ -95,7 +95,7 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                         </div>
                         <ul>
                             <li onClick={toggleMenu}><a href="https://worldwar0x.io" rel="noreferrer" target='_blank'>PLAY</a></li>
-                            <li onClick={toggleMenu}><a href="/whitelist">NFTS</a></li>
+                            <li onClick={toggleMenu}><a href="/mint">NFTS</a></li>
                             {/* <li onClick={toggleMenu}><a href="#NEWERA">GAMEPLAY</a></li> */}
                             {/* <li onClick={toggleMenu}><a href="#WARXECOSYSTEM">ECOSYSTEM</a></li> */}
                             <li><a href='https://world-war-0x.gitbook.io/white-paper/' rel="noreferrer" target="_blank">WHITEPAPER</a></li>

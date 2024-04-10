@@ -152,11 +152,11 @@ const WhiteListPage = () => {
             </div>
 
             <div className='whitelistpagehead'>
-                <p>THE WORLD WAR 0X SOLDIER NFT COLLECTION MINT IS FAST APPROACHING</p>
+                <p>THE WORLD WAR 0X SOLDIER COLLECTION HAS ARRIVED</p>
                 <img src={WhiteListSoldier} alt="white_list_soldier" />
             </div>
 
-            <NFTHolder lefttext={"World War 0x is a play to earn low poly WW3 FPS. 2000 NFTS will be minted in our Soldier NFT collection. Holders use their NFTs in-game as 3D characters and gain access to betting features. "} />
+            <NFTHolder lefttext={"World War 0x is a play to earn low poly WW3 FPS. 300 NFTS will be minted in our Battlewear NFT collection. Holders use their NFTs in-game as 3D characters and gain access to betting features. "} />
             {/* <div className='nftholderssection'>
                 <div className='leftside'>
                     <p>World War 0x is a play to earn low poly WW3 FPS. 2000 NFTS will be minted in our Soldier NFT collection. Holders use their NFTs in-game as 3D characters and gain access to betting features. </p>
@@ -197,13 +197,13 @@ const WhiteListPage = () => {
             <br />
             <br />
             <div className='nfttypes'>
-                <p className="nfttypeshead"> THE 2000 NFTS are split among three different types:</p>
+                <p className="nfttypeshead"> THE 300 BATTLEWEAR NFTS WILL BE RELEASED FIRST. COUNTY AND DESIGNER UNIFORMS WILL COME LATER:</p>
                 <br />
                 <br />
 
                 <div className='nftscontainer'>
                     <div className='nft'><img src={NFTType1} alt="NFTType1" /><p>COUNTY UNIFORMS</p></div>
-                    <div className='nft'><img src={NFTType2} alt="NFTType2" /><p>TOP+PANT COMBOS</p></div>
+                    <div className='nft'><img src={NFTType2} alt="NFTType2" /><p>BATTLEWEAR</p></div>
                     <div className='nft'><img src={NFTType3} alt="NFTType3" /><p>DESIGNER UNIFORMS</p></div>
                 </div>
                 <br />
@@ -215,18 +215,33 @@ const WhiteListPage = () => {
             <div className='nftAttributesSection'>
                 <div className='nftAttributesHead'>
                     <div onClick={() => setTab(1)} className={tab == 1 ? 'tab clickedTab' : 'tab'}>
-                        COUNTRY
+                        BATTLEWEAR
                     </div>
                     <div onClick={() => setTab(2)} className={tab == 2 ? 'tab clickedTab' : 'tab'}>
-                        TOPS + PANTS
+                        COUNTRY
                     </div>
                     <div onClick={() => setTab(3)} className={tab == 3 ? 'tab clickedTab' : 'tab'}>
                         DESIGNER
                     </div>
                 </div>
                 <div className='tabContentContainer'>
+
+
                     {
                         tab == 1 ? <div className='countryTabContent'>
+                            <div className='countryTabUpper'>
+                                <div className='countryTabContentLeftSide'>
+                                    <h1>BATTLEWEAR</h1>
+                                    <p>BATTLEWEAR Combo NFTs allow for maximized customization and offer owners a chance to display their flair without any country flags. Base colors and a vast amount of country and designer camouflage </p>
+                                </div>
+                                <div className='countryTabContentRightSide'>
+                                    <img src={topspluspantscover} alt="country_group_cover" />
+                                </div>
+                            </div>
+                            <div className='countryTabLower'>
+                                <img src={topspluspantsgrid} alt="country_group_collection" />
+                            </div>
+                        </div> : tab == 2 ? <div className='countryTabContent'>
                             <div className='countryTabUpper'>
                                 <div className='countryTabContentLeftSide'>
                                     <h1>COUNTRY UNIFORMS</h1>
@@ -238,19 +253,6 @@ const WhiteListPage = () => {
                             </div>
                             <div className='countryTabLower'>
                                 <img src={CountryGroupCollection} alt="country_group_collection" />
-                            </div>
-                        </div> : tab == 2 ? <div className='countryTabContent'>
-                            <div className='countryTabUpper'>
-                                <div className='countryTabContentLeftSide'>
-                                    <h1>TOPS + PANTS</h1>
-                                    <p>Top+Pant Combo NFTs allow for maximized customization and offer owners a chance to display their flair without any country flags. Base colors and a vast amount of country and designer camouflage </p>
-                                </div>
-                                <div className='countryTabContentRightSide'>
-                                    <img src={topspluspantscover} alt="country_group_cover" />
-                                </div>
-                            </div>
-                            <div className='countryTabLower'>
-                                <img src={topspluspantsgrid} alt="country_group_collection" />
                             </div>
                         </div> : tab == 3 && <div className='countryTabContent'>
                             <div className='countryTabUpper'>
@@ -369,10 +371,10 @@ const WhiteListPage = () => {
                     }
                 </div>
             </div>
-            <p className='whitelistsectionhead'>SIGN UP FOR THE ALLOWLIST</p>
+            <p className='whitelistsectionhead'>MINT NOW ON TRUFFLE</p>
             <div className='whitelistBtnContainer'>
                 <div style={{ backgroundColor: "transparent" }} className="GetWhiteListedBtn">
-                    <a href='https://docs.google.com/forms/d/e/1FAIpQLSc7c1H_PDroVkPz5AztS6pLKLWjDTFerMNgHQiCO7nn1oL2Kg/viewform' target="_blank" rel="noreferrer"><span style={{ fontSize: "22px" }}>GET WHITELISTED</span></a>
+                    <a href='https://truffle.wtf/project/world-war-0x-battlewear' target="_blank" rel="noreferrer"><span style={{ fontSize: "22px" }}>MINT NOW</span></a>
                 </div>
             </div>
 

@@ -21,7 +21,7 @@ function App() {
           <Route exact path="/mintnfts" element={<MintNFT />} />
           <Route exact path="/testmintnfts" element={<TestMintNFTs />} />
           <Route exact path="/support" element={<Support />} />
-          <Route exact path="/whitelist" element={<WhiteListPage />} />
+          <Route exact path="/mint" element={<WhiteListPage />} />
         </Routes>
       </Router>
       {/* <HomePage /> */}

@@ -124,7 +124,7 @@ const HomePage = () => {
                         <img loading="lazy" src={SoldierNFTs} alt="" />
                     </div>
                     <div className="FirstEditionContainer-Text">
-                        <h4>TRANCH #1</h4>
+                        <h4>BATTLEWEAR</h4>
                         <h5>300 BATTLEWEAR NFTS</h5>
                         <p>These are the most important collectibles in our ecosystem and where the most value will accrue. These are your hero characters. Play with them, bet with them and stake them for rewards.</p>
                         <div className="FirstEditionContainer-btn">
