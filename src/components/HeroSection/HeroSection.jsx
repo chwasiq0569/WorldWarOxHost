@@ -46,7 +46,7 @@ const HeroSection = ({ moveToBack }) => {
                     <h3>BROWSER-BASED MULTIPLAYER FPS WITH VEHICLES</h3>
                     <div className="HeroSectionBtns">
                         <a href="https://www.worldwar0x.io/" className="svg-clip-1" target="_blank" rel="noreferrer">PLAY ALPHA</a>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7c1H_PDroVkPz5AztS6pLKLWjDTFerMNgHQiCO7nn1oL2Kg/viewform" className="svg-clip-2" target="_blank" rel="noreferrer">WHITELIST NOW</a>
+                        <a href="https://truffle.wtf/project/world-war-0x-battlewear" className="svg-clip-2" target="_blank" rel="noreferrer">&nbsp;&nbsp;&nbsp;&nbsp;MINT NOW&nbsp;&nbsp;&nbsp;&nbsp;</a>
                     </div>
                 </div>
             </div>

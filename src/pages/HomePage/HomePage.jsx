@@ -116,7 +116,7 @@ const HomePage = () => {
             <Platforms />
             <GetWhitelisted />
 
-            <NFTHolder headtext={"THE WORLD WAR 0X SOLDIER NFT COLLECTION MINT IS FAST APPROACHING"} lefttext={"Holders use their NFTs in-game as 3D characters and gain access to betting features."} />
+            <NFTHolder headtext={"THE WORLD WAR 0X SOLDIER COLLECTION HAS ARRIVED"} lefttext={"Holders use their NFTs in-game as 3D characters and gain access to betting features."} />
 
             <div className="FirstEditionContainer" id='FirstEdition'>
                 <div className="FirstEditionContainerCentered">
@@ -125,16 +125,16 @@ const HomePage = () => {
                     </div>
                     <div className="FirstEditionContainer-Text">
                         <h4>TRANCH #1</h4>
-                        <h5>2500 SOLDIER NFTs</h5>
+                        <h5>300 BATTLEWEAR NFTS</h5>
                         <p>These are the most important collectibles in our ecosystem and where the most value will accrue. These are your hero characters. Play with them, bet with them and stake them for rewards.</p>
                         <div className="FirstEditionContainer-btn">
                             <div className="GetWhiteListedBtn FirstEditionBTN">
-                                <a href='https://docs.google.com/forms/d/e/1FAIpQLSc7c1H_PDroVkPz5AztS6pLKLWjDTFerMNgHQiCO7nn1oL2Kg/viewform' target="_blank" rel="noreferrer"><span>GET WHITELISTED</span></a>
+                                <a href='https://truffle.wtf/project/world-war-0x-battlewear' target="_blank" rel="noreferrer"><span>MINT NOW</span></a>
                             </div>
-                            <div className='mintsContainer'>
+                            {/* <div className='mintsContainer'>
                                 <button>MINTS MARCH</button>
                                 <img loading="lazy" src={line} alt="" />
-                            </div>
+                            </div> */}
                         </div>
                         {/* <div className="FirstEditionTrance-text">
                             <h4>Tranche #1 </h4>
@@ -176,7 +176,7 @@ const HomePage = () => {
                         <h4>FREE-TO-PLAY FPS WHERE PLAYERS CAN SHOOT, SOCIALIZE, BET & BUILD.</h4>
                     </div>
                     <div className="TwoTypeSectionBox1">
-                        <h4>A new era for <span className='boldText'>gaming, community & ownership. Earn</span> and <span className='boldText'>bet</span> WARX TOKENS while playing <span className='boldText'>competitive matches.</span> Build maps to earn extra <span className='boldText'>$WARX</span>.</h4>
+                        <h4>A new era for <span className='boldText'>gaming, community & ownership. Earn</span> and <span className='boldText'>bet</span> WARX TOKENS while playing <span className='boldText'>competitive matches.</span> Build maps to earn extra <span className='boldText'>$WW3</span>.</h4>
                     </div>
                     <img loading="lazy" src={worldLine} className="worldLine" alt="" />
                 </div>
@@ -257,7 +257,7 @@ const HomePage = () => {
             </div>
 
             <div className="CountryReachConatiner">
-                <CountryReach img1={china} img2={sword} img3={taiwan} img4={taiwanSectionBigImg} title="PENGHU ISLAND" />
+                <CountryReach img1={china} img2={sword} img3={taiwan} img4={taiwanSectionBigImg} title="PENGHU ISLANDS" />
                 <CountryReach img1={russia} img2={sword} img3={ukraine} img4={ukraineSectionBigImg} title="DONBAS WOODS" />
                 {/* <CountryReach img1={china} img2={sword} img3={taiwan} img4={PenghuIsland} title="TAIWAN BEACH" /> */}
                 <CountryReach img1={russia} img2={sword} img3={ukraine} img4={ukraine2SectionBigImg} title="ODESA PORT" />
@@ -300,7 +300,7 @@ const HomePage = () => {
                 </div>
             </div>
 
-            <div className="MobileVersionContainer">
+            {/* <div className="MobileVersionContainer">
 
                 <div className="MobileVersionContainerBox">
                     <img loading="lazy" src={mobileVersionImg} className="mobileVersionImg" alt="" />
@@ -315,13 +315,13 @@ const HomePage = () => {
                     </div>
                 </div>
 
-            </div>
+            </div> */}
 
             <div className="EcoSystemContainer" id='WARXECOSYSTEM'>
 
                 <div className="EcoSystemContainerBox">
                     <img loading="lazy" src={ecosystemflower} alt="" />
-                    <h2>THE WARX<br /> ECOSYSTEM</h2>
+                    <h2>THE $WW3<br /> ECOSYSTEM</h2>
                     <ul>
                         <li>Community</li>
                         <li className='bulletItem'>•</li>
@@ -352,7 +352,7 @@ const HomePage = () => {
                 <div className="TheSoldiersNFTContainerCentered">
                     <div className="thesoldiersNFTBox">
                         <h2>THE SOLDIERS</h2>
-                        <p>Tranche #1 of the Soldier NFTs will be minted March. These OG collectibles kick off the World War 0x ecosystem - boosting 3D files, in-game accessibility and integration into our betting protocol and  map creator tools.</p>
+                        <p>Battlewear NFTs are now minting. These OG collectibles kick off the World War 0x ecosystem - boosting 3D files, in-game accessibility and integration into our betting protocol and  map creator tools.</p>
                     </div>
 
                     <div className="thesoldiersNFTBox">
@@ -369,8 +369,8 @@ const HomePage = () => {
                 </div>
                 <div className="WarxContainerBox-2">
                     <div className="WarxContainerInnerBox">
-                        <h2>$WARX</h2>
-                        <p>The World War 0x ecosystem and game will be powered by the $WARX token. The $WARX Token is an ERC-20 Token integral to the experience being created by Curfluffle.</p>
+                        <h2>$WW3</h2>
+                        <p>The World War 0x ecosystem and game will be powered by the $WW3 token. The $WW3 Token is an ERC-20 Token integral to the experience being created by Curfluffle.</p>
                     </div>
                     <div className="WarxContainerInnerBox">
                         <div className="WarxContainerInnerBox-img-bugs">
@@ -378,7 +378,7 @@ const HomePage = () => {
                             <img loading="lazy" src={bugs} alt="" />
                             <img loading="lazy" src={bugs} alt="" />
                         </div>
-                        <p>There is a wide variety of ways that gamers, collectors and community members will be able to use and receive $WARX in the ecosystem. Through engagement in competitive gameplay, social activities, community rewards and through contribution to the creator economy.</p>
+                        <p>There is a wide variety of ways that gamers, collectors and community members will be able to use and receive $WW3 in the ecosystem. Through engagement in competitive gameplay, social activities, community rewards and through contribution to the creator economy.</p>
                     </div>
                 </div>
 
@@ -424,21 +424,21 @@ const HomePage = () => {
                     <div className="RoadMapTextConatiner">
                         <div className="RoadMapTextConatinerCentered">
                             <div className="RoadMapTextInnerBox">
-                                <h4>Q4 <span className="orange-span">2023</span></h4>
+                                <h4>Q1 <span className="orange-span">2023</span></h4>
                                 <ul>
                                     <li>Soldier NFT Sale</li>
                                     <li>IOs & Android App</li>
                                 </ul>
                             </div>
                             <div className="RoadMapTextInnerBox">
-                                <h4>Q1 <span className="orange-span">2024</span></h4>
+                                <h4>Q2 <span className="orange-span">2024</span></h4>
                                 <ul>
                                     <li>Mumbai Testnet Beta Launch</li>
                                     <li>Audit</li>
                                 </ul>
                             </div>
                             <div className="RoadMapTextInnerBox">
-                                <h4>Q2 <span className="orange-span">2024</span></h4>
+                                <h4>Q3 <span className="orange-span">2024</span></h4>
                                 <ul>
                                     <li>Token Generation Event</li>
                                     <li>World War 0x Championships</li>
@@ -449,14 +449,14 @@ const HomePage = () => {
                 </div>
             </div>
 
-            <div className="PartnersSectionContainer">
+            {/* <div className="PartnersSectionContainer">
                 <h2>PARTNERS</h2>
                 <div className="PartnersSectionContainerCentered">
                     <img loading="lazy" src={fractal} alt="" />
                     <img loading="lazy" src={Odyn} alt="" />
                     <img loading="lazy" src={blumint} alt="" />
                 </div>
-            </div>
+            </div> */}
 
             <div className="FAQsSectionContainer" id='FAQ'>
                 <h2>FAQ</h2>

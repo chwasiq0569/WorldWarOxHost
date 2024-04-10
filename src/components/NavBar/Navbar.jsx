@@ -54,11 +54,11 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                     <div className="HeaderMenuContainer">
                         <ul>
                             <li><a href="https://worldwar0x.io" rel="noreferrer" target='_blank'>PLAY</a></li>
-                            <li><a href="#FirstEdition">NFTS</a></li>
-                            <li><a href="#NEWERA">GAMEPLAY</a></li>
-                            <li><a href="#WARXECOSYSTEM">ECOSYSTEM</a></li>
-                            <li><a href='https://world-war-0x.gitbook.io/white-paper/' rel="noreferrer" target="_blank">WHITEPAPER</a></li>
                             <Link style={{ all: "unset" }} to="/download"><li><a>DOWNLOAD</a></li> </Link>
+                            <li><a href="/whitelist">NFTS</a></li>
+                            {/* <li><a href="#NEWERA">GAMEPLAY</a></li> */}
+                            {/* <li><a href="#WARXECOSYSTEM">ECOSYSTEM</a></li> */}
+                            <li><a href='https://world-war-0x.gitbook.io/white-paper/' rel="noreferrer" target="_blank">WHITEPAPER</a></li>
                             {/* <li><a href='https://world-war-0x.gitbook.io/white-paper/' rel="noreferrer" target="_blank">DOWNLOAD</a></li> */}
                         </ul>
                     </div>
@@ -74,7 +74,7 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                         </ul>
                         {/* <button className="GetWhiteListedBtn">GET WHITELISTED</button> */}
                         <div className="GetWhiteListedBtn">
-                            <a href='https://docs.google.com/forms/d/e/1FAIpQLSc7c1H_PDroVkPz5AztS6pLKLWjDTFerMNgHQiCO7nn1oL2Kg/viewform' target="_blank" rel="noreferrer"><span>GET WHITELISTED</span></a>
+                            <a href='https://truffle.wtf/project/world-war-0x-battlewear' target="_blank" rel="noreferrer"><span>MINT NOW</span></a>
                         </div>
 
                     </div>
@@ -95,15 +95,15 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                         </div>
                         <ul>
                             <li onClick={toggleMenu}><a href="https://worldwar0x.io" rel="noreferrer" target='_blank'>PLAY</a></li>
-                            <li onClick={toggleMenu}><a href="#FirstEdition">NFTS</a></li>
-                            <li onClick={toggleMenu}><a href="#NEWERA">GAMEPLAY</a></li>
-                            <li onClick={toggleMenu}><a href="#WARXECOSYSTEM">ECOSYSTEM</a></li>
+                            <li onClick={toggleMenu}><a href="/whitelist">NFTS</a></li>
+                            {/* <li onClick={toggleMenu}><a href="#NEWERA">GAMEPLAY</a></li> */}
+                            {/* <li onClick={toggleMenu}><a href="#WARXECOSYSTEM">ECOSYSTEM</a></li> */}
                             <li><a href='https://world-war-0x.gitbook.io/white-paper/' rel="noreferrer" target="_blank">WHITEPAPER</a></li>
                             <Link style={{ all: "unset" }} to="/download"><li><a>DOWNLOAD</a></li></Link>
 
                         </ul>
                         <div className="GetWhiteListedBtn small-btn">
-                            <a href='https://docs.google.com/forms/d/e/1FAIpQLSc7c1H_PDroVkPz5AztS6pLKLWjDTFerMNgHQiCO7nn1oL2Kg/viewform' target="_blank" rel="noreferrer"><span>GET WHITELISTED</span></a>
+                            <a href='https://truffle.wtf/project/world-war-0x-battlewear' target="_blank" rel="noreferrer"><span>MINT NOW</span></a>
                         </div>
                     </div>
                 </div>

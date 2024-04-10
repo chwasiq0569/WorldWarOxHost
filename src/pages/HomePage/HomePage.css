@@ -1485,6 +1485,7 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
+
   /* display: grid; */
   /* grid-template-columns: repeat(3, 1fr); */
   /* grid-column-gap: 40px; */
@@ -1492,6 +1493,8 @@ a {
 
 .RoadMapTextInnerBox {
   padding-top: 130px;
+  margin-left: 2rem;
+
 }
 
 .RoadMapTextInnerBox h4 {
@@ -1507,7 +1510,7 @@ a {
 .RoadMapTextInnerBox ul {
   list-style-type: disc;
   padding-left: 30px;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
 }
 
