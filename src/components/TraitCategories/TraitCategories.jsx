@@ -13,7 +13,7 @@ export default function TraitCategories() {
             <div className='middle_content'>
                 <p>VIEW TRAIT CATEGORIES AND ITEM EXAMPELS</p>
                 {/* <a href="http://worldwar0x.com/whitelist" target='_blank'>LEARN MORE</a> */}
-                <Link to="http://worldwar0x.com/whitelist">LEARN MORE</Link>
+                <Link to="https://worldwar0x.com/mint">LEARN MORE</Link>
             </div>
             <div className='right_side'>
                 <img src={TraitCategoriesRight} alt="" />

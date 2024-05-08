@@ -57,7 +57,7 @@ import group65 from "../../assets/coins.webp";
 // import thesoldiersNFT from "../../assets/photo_2023-08-14_15-43-51 1.png";
 // import thesoldiersNFT from "../../assets/usasolidergif.gif";
 import thesoldiersNFT from "../../assets/GrayBeard-US.png";
-import warx from "../../assets/WARXcoin.webp";
+import warx from "../../assets/WARXcoin.png";
 import bugs from "../../assets/bug.png";
 import blueFlower from "../../assets/blueFlowers.webp";
 import fractal from "../../assets/Fractal2 3.webp";
@@ -419,6 +419,10 @@ const HomePage = () => {
                             <div className="line top-line"></div>
                             <div className="line bottom-line"></div>
                         </div>
+                        <div className="circle">
+                            <div className="line top-line"></div>
+                            <div className="line bottom-line"></div>
+                        </div>
                     </div>
 
                     <div className="RoadMapTextConatiner">
@@ -426,22 +430,55 @@ const HomePage = () => {
                             <div className="RoadMapTextInnerBox">
                                 <h4>Q1 <span className="orange-span">2023</span></h4>
                                 <ul>
-                                    <li>Soldier NFT Sale</li>
-                                    <li>IOs & Android App</li>
+                                    <li>Vehicle NFTs featuring authentic WW3 vehicles (tanks, helicopters, -boats, armored cars)</li>
+                                    <li>Land NFTs</li>
+                                    <li>Extraction Game Mode (solo, duo and squad)</li>
+                                    <li>Press Class (be a wartime photographer)</li>
                                 </ul>
                             </div>
                             <div className="RoadMapTextInnerBox">
                                 <h4>Q2 <span className="orange-span">2024</span></h4>
                                 <ul>
-                                    <li>Mumbai Testnet Beta Launch</li>
-                                    <li>Audit</li>
+                                    <li>$WW3 TGE</li>
+                                    <li>$WW3 DEX, CEX Listings</li>
+                                    <li>Rent NFTs, Stake NFTs</li>
+                                    <li>Stake $WW3 and $BDUCK</li>
+                                    <li>$BDUCK CEX Listing</li>
+                                    <li>Entirely new UI</li>
+                                    <li>Proximity Chat</li>
+                                    <li>Earning Expanded (revives, captures, etc.)</li>
+                                    <li>Initial betting alpha</li>
+                                    <li>Drag players</li>
+                                    <li>8 more maps featuring real WW3 battle locations</li>
+                                    <li>Initial Teller ATM integration</li>
+
                                 </ul>
                             </div>
                             <div className="RoadMapTextInnerBox">
                                 <h4>Q3 <span className="orange-span">2024</span></h4>
                                 <ul>
-                                    <li>Token Generation Event</li>
-                                    <li>World War 0x Championships</li>
+                                    <li>1v1, duos and squad betting</li>
+                                    <li>Viewer betting</li>
+                                    <li>Womens NFT Collection</li>
+                                    <li>Crypto Conquest Game Mode</li>
+                                    <li>Medic Class</li>
+                                    <li>Mac Download version</li>
+                                    <li>2D & 3D animated shorts featuring NFTs</li>
+                                    <li>Spotting and other class specific features</li>
+                                    <li>8 more maps featuring real WW3 battle locations</li>
+                                    <li>Complete Teller ATMs integration</li>
+                                    <li>NFT AI personalities beta</li>
+                                </ul>
+                            </div>
+                            <div className="RoadMapTextInnerBox">
+                                <h4>Q4 <span className="orange-span">2024</span></h4>
+                                <ul>
+                                    <li>All new audio including authentic gun sounds</li>
+                                    <li>Weapon NFTs featuring authentic WW3 weapons</li>
+                                    <li>New game mode Frontlines featuring dynamic spawns and capture points</li>
+                                    <li>PS5 and Xbox Series X releases</li>
+                                    <li>8 more maps featuring real WW3 battle locations</li>
+                                    <li>NFT AI personalities public launch</li>
                                 </ul>
                             </div>
                         </div>

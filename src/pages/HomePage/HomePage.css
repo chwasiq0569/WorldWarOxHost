@@ -1484,17 +1484,16 @@ a {
   width: 90%;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-
+  /* align-items: center; */
   /* display: grid; */
   /* grid-template-columns: repeat(3, 1fr); */
   /* grid-column-gap: 40px; */
 }
 
 .RoadMapTextInnerBox {
-  padding-top: 130px;
-  margin-left: 2rem;
-
+  padding-top: 100px;
+  margin-left: 1.5rem;
+  flex: 1;
 }
 
 .RoadMapTextInnerBox h4 {
