@@ -428,7 +428,7 @@ const HomePage = () => {
                     <div className="RoadMapTextConatiner">
                         <div className="RoadMapTextConatinerCentered">
                             <div className="RoadMapTextInnerBox">
-                                <h4>Q1 <span className="orange-span">2023</span></h4>
+                                <h4>Q1 <span className="orange-span">2024</span></h4>
                                 <ul>
                                     <li>Vehicle NFTs featuring authentic WW3 vehicles (tanks, helicopters, -boats, armored cars)</li>
                                     <li>Land NFTs</li>
