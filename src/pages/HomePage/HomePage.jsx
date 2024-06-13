@@ -427,18 +427,24 @@ const HomePage = () => {
 
                     <div className="RoadMapTextConatiner">
                         <div className="RoadMapTextConatinerCentered">
+
+
                             <div className="RoadMapTextInnerBox">
-                                <h4>Q1 <span className="orange-span">2024</span></h4>
+                                <h4>Q3 <span className="orange-span">2024</span></h4>
                                 <ul>
-                                    <li>Vehicle NFTs featuring authentic WW3 vehicles (tanks, helicopters, -boats, armored cars)</li>
-                                    <li>Land NFTs</li>
-                                    <li>Extraction Game Mode (solo, duo and squad)</li>
-                                    <li>Press Class (be a wartime photographer)</li>
-                                </ul>
-                            </div>
-                            <div className="RoadMapTextInnerBox">
-                                <h4>Q2 <span className="orange-span">2024</span></h4>
-                                <ul>
+                                    {/* <li>1v1, duos and squad betting</li>
+                                    <li>Viewer betting</li>
+                                    <li>Womens NFT Collection</li>
+                                    <li>Crypto Conquest Game Mode</li>
+                                    <li>Medic Class</li>
+                                    <li>Mac Download version</li>
+                                    <li>2D & 3D animated shorts featuring NFTs</li>
+                                    <li>Spotting and other class specific features</li>
+                                    <li>8 more maps featuring real WW3 battle locations</li>
+                                    <li>Complete Teller ATMs integration</li>
+                                    <li>NFT AI personalities beta</li> */}
+
+
                                     <li>$WW3 TGE</li>
                                     <li>$WW3 DEX, CEX Listings</li>
                                     <li>Rent NFTs, Stake NFTs</li>
@@ -451,12 +457,18 @@ const HomePage = () => {
                                     <li>Drag players</li>
                                     <li>8 more maps featuring real WW3 battle locations</li>
                                     <li>Initial Teller ATM integration</li>
-
                                 </ul>
                             </div>
                             <div className="RoadMapTextInnerBox">
-                                <h4>Q3 <span className="orange-span">2024</span></h4>
+                                <h4>Q4 <span className="orange-span">2024</span></h4>
                                 <ul>
+                                    {/* <li>All new audio including authentic gun sounds</li>
+                                    <li>Weapon NFTs featuring authentic WW3 weapons</li>
+                                    <li>New game mode Frontlines featuring dynamic spawns and capture points</li>
+                                    <li>PS5 and Xbox Series X releases</li>
+                                    <li>8 more maps featuring real WW3 battle locations</li>
+                                    <li>NFT AI personalities public launch</li> */}
+
                                     <li>1v1, duos and squad betting</li>
                                     <li>Viewer betting</li>
                                     <li>Womens NFT Collection</li>
@@ -471,14 +483,35 @@ const HomePage = () => {
                                 </ul>
                             </div>
                             <div className="RoadMapTextInnerBox">
-                                <h4>Q4 <span className="orange-span">2024</span></h4>
+                                <h4>Q1 <span className="orange-span">2025</span></h4>
                                 <ul>
+                                    {/* <li>$WW3 TGE</li>
+                                    <li>$WW3 DEX, CEX Listings</li>
+                                    <li>Rent NFTs, Stake NFTs</li>
+                                    <li>Stake $WW3 and $BDUCK</li>
+                                    <li>$BDUCK CEX Listing</li>
+                                    <li>Entirely new UI</li>
+                                    <li>Proximity Chat</li>
+                                    <li>Earning Expanded (revives, captures, etc.)</li>
+                                    <li>Initial betting alpha</li>
+                                    <li>Drag players</li>
+                                    <li>8 more maps featuring real WW3 battle locations</li>
+                                    <li>Initial Teller ATM integration</li> */}
                                     <li>All new audio including authentic gun sounds</li>
                                     <li>Weapon NFTs featuring authentic WW3 weapons</li>
                                     <li>New game mode Frontlines featuring dynamic spawns and capture points</li>
                                     <li>PS5 and Xbox Series X releases</li>
                                     <li>8 more maps featuring real WW3 battle locations</li>
                                     <li>NFT AI personalities public launch</li>
+                                </ul>
+                            </div>
+                            <div className="RoadMapTextInnerBox">
+                                <h4>Q2 <span className="orange-span">2025</span></h4>
+                                <ul>
+                                    <li>Vehicle NFTs featuring authentic WW3 vehicles (tanks, helicopters, -boats, armored cars)</li>
+                                    <li>Land NFTs</li>
+                                    <li>Extraction Game Mode (solo, duo and squad)</li>
+                                    <li>Press Class (be a wartime photographer)</li>
                                 </ul>
                             </div>
                         </div>
