@@ -70,9 +70,11 @@
          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
          sans-serif;
      -webkit-font-smoothing: antialiased;
-     -moz-osx-font-smoothing: grayscale;
-     background-color: var(--color-black);
+     -moz-osx-font-smoothing     /*
      color: #fff;
+     */
+     : grayscale;
+     background-color: var(--color-black);
  }
 
  code {
