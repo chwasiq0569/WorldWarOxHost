@@ -61,8 +61,8 @@ const Navbar = ({setMoveToBack, moveToBack}) => {
                             <li><a href="/mint">NFTS</a></li>
                             {/* <li><a href="#NEWERA">GAMEPLAY</a></li> */}
                             {/* <li><a href="#WARXECOSYSTEM">ECOSYSTEM</a></li> */}
-                            <li><a href='https://world-war-0x.gitbook.io/white-paper/' rel="noreferrer"
-                                   target="_blank">WHITEPAPER</a></li>
+                            {/*<li><a href='https://world-war-0x.gitbook.io/white-paper/' rel="noreferrer"*/}
+                            {/*       target="_blank">WHITEPAPER</a></li>*/}
                             {/* <li><a href='https://world-war-0x.gitbook.io/white-paper/' rel="noreferrer" target="_blank">DOWNLOAD</a></li> */}
                             <li><a href='/atm' rel="noreferrer"
                                    target="_blank">ATM</a></li>
