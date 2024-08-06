@@ -12,7 +12,7 @@ export default function Platforms() {
             <div className='platformsoutercontainer'>
                 <div className='platformscontainer'>
                     <a href="https://www.worldwar0x.io/" target='_blank'><img src={PlayInBrowser} alt="PlayInBrowser" /></a>
-                    <a href="https://worldwar0x.io/patchsystem/ww0x01patchl1.zip" target='_blank'><img src={WindowsDownload} alt="WindowsDownload" /></a>
+                    <a href="https://worldwar0x.io/patch/2024-08-08.zip" target='_blank'><img src={WindowsDownload} alt="WindowsDownload" /></a>
                     <a href="https://apps.apple.com/us/app/world-war-0x/id6477559681?platform=iphone" target='_blank'><img src={AvailableInAppStore} alt="AvailableInAppStore" /></a>
                     <a href="https://play.google.com/store/apps/details?id=com.CurfluffleGames.WorldWar0x&hl=en&gl=US" target='_blank'><img src={GetItOnGooglePlay} alt="GetItOnGooglePlay" /></a>
                     <a href="https://store.steampowered.com/app/2667500/World_War_Next/?beta=1" target='_blank'><img src={AvailableInSteam} alt="AvailableInSteam" /></a>
