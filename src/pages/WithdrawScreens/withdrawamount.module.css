@@ -11,6 +11,7 @@ body {
 }
 
 .container {
+    min-height: 100vh;
     background: linear-gradient(to bottom right, #2fab93 0%, #217a69 50%) bottom right / 50% 50% no-repeat,
         linear-gradient(to bottom left, #2fab93 0%, #217a69 50%) bottom left / 50% 50% no-repeat,
         linear-gradient(to top left, #2fab93 0%, #217a69 50%) top left / 50% 50% no-repeat,
@@ -20,12 +21,8 @@ body {
     flex-direction: column;
     text-align: center;
     position: relative;
-    margin-top: 80px;
-    /* Adjust the value as needed for the desired gap */
-
-    /* Add other styles for your container here */
+    padding: 80px;
 }
-
 
 @media (max-width: 991px) {
     .container {
@@ -92,9 +89,11 @@ body {
     font-size: 32px;
     font-weight: 600;
     color: #4CFFD8;
+
 }
 
 .amounts .leftSection {
+    /* min-width: 30%; */
     height: calc(250px - 1rem);
     border: 5px solid rgba(76, 255, 216, 0.7);
 
@@ -110,6 +109,13 @@ body {
 
     border-radius: 1rem;
     line-height: 1;
+    cursor: pointer;
+
+    transition: all 0.1s ease;
+}
+
+.amounts .leftSection:hover {
+    transform: scale(1.05);
 }
 
 .amounts .centerSection,
@@ -137,6 +143,15 @@ body {
     align-items: center;
 
     border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.1s ease;
+
+}
+
+.amounts .centerSection .amount:hover,
+.amounts .rightSection .amount:hover {
+    transform: scale(1.05);
+
 }
 
 .amounts .rightSection .amount .withdrawArrow,

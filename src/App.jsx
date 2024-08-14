@@ -29,6 +29,8 @@ function App() {
 function AppContent() {
     const location = useLocation();
 
+    const [withdrawToken, setWithdrawToken] = React.useState({})
+
     useEffect(() => {
         document.body.style.backgroundColor = getBackgroundColor(location.pathname);
     }, [location.pathname]);
@@ -43,12 +45,12 @@ function AppContent() {
             <Route exact path="/testmintnfts" element={<TestMintNFTs />} />
             <Route exact path="/support" element={<Support />} />
             <Route exact path="/mint" element={<WhiteListPage />} />
-            {/* <Route exact path="/atm" element={<TellerATM />} /> */}
-            {/* <Route exact path="/atm" element={<WithdrawAmount />} /> */}
-            {/* <Route exact path="/atm" element={<ChooseToken />} /> */}
-            <Route exact path="/atm" element={<WithdrawDone />} />
-            {/* <Route exact path="/atm" element={<WithdrawProcessing />} /> */}
-            {/* <Route exact path="/atm" element={<CustomAmount />} /> */}
+            <Route exact path="/atm" element={<TellerATM />} />
+            <Route exact path="/choosetoken" element={<ChooseToken withdrawToken={withdrawToken} setWithdrawToken={setWithdrawToken} />} />
+            <Route exact path="/withdrawamount" element={<WithdrawAmount withdrawToken={withdrawToken} />} />
+            <Route exact path="/customamount" element={<CustomAmount />} />
+            <Route exact path="/withdrawprocessing" element={<WithdrawProcessing />} />
+            <Route exact path="/withdrawdone" element={<WithdrawDone />} />
         </Routes>
     </div>);
 }

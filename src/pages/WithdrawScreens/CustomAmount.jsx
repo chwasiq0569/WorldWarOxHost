@@ -5,8 +5,10 @@ import WithdrawArrow from "../../assets/witdrawarrow.png"
 import WW3Token from "../../assets/ww3token.png"
 import loanIcon from "../../components/TellerATM/icons/teller.png";
 import RemoveBtn from '../../assets/removebtn.png'
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function CustomAmount() {
+    const navigate = useNavigate(); // Use useNavigate hook
 
     const [value, setValue] = React.useState('');
 
@@ -74,7 +76,7 @@ export default function CustomAmount() {
                         </div>
                     </div>
                 </div>
-                <div className={styles.withdrawBtn}>
+                <div onClick={() => navigate('/withdrawprocessing')} className={styles.withdrawBtn}>
                     <p>WITHDRAW</p>
                     <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow" />
                 </div>

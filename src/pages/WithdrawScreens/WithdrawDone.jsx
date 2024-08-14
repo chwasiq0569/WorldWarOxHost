@@ -5,7 +5,7 @@ import ReturnButton from '../../components/TellerATM/components/ReturnButton';
 import WW3Token from "../../assets/ww3token.png"
 import BDuckToken from "../../assets/bducktoken.png"
 import WithdrawArrow from "../../assets/witdrawarrow.png"
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
 
 export default function WithdrawDone() {
 
@@ -35,10 +35,10 @@ export default function WithdrawDone() {
                 <p className={styles.questionText}>WOULD YOU LIKE TO DO ANOTHER TRANSACTION? </p>
             </div>
             <div className={styles.buttonsContainer}>
-                <button className={styles.returnButton} onClick={() => navigate('/')}>
+                <button onClick={() => navigate('/')} className={styles.returnButton}>
                     <span className={styles.returnText}>RETURN TO GAME</span>
                 </button>
-                <button className={styles.returnButton} onClick={() => { }}>
+                <button onClick={() => navigate('/withdrawamount')} className={styles.returnButton}>
                     <span className={styles.returnText}>NEW TRANSACTION</span>
                 </button>
             </div>

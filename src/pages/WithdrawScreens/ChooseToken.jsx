@@ -5,8 +5,10 @@ import ReturnButton from '../../components/TellerATM/components/ReturnButton';
 import WW3Token from "../../assets/ww3token.png"
 import BDuckToken from "../../assets/bducktoken.png"
 import WithdrawArrow from "../../assets/witdrawarrow.png"
+import { Link } from 'react-router-dom';
 
-export default function ChooseToken() {
+export default function ChooseToken({ withdrawToken,
+    setWithdrawToken }) {
 
     const tokens = [{
         icon: WW3Token,
@@ -34,14 +36,15 @@ export default function ChooseToken() {
             <div className={styles.tokens}>
                 {
                     tokens.map(token => (
-                        <div className={styles.individualToken}>
-                            <img className={styles.tokenImg} src={token.icon} alt="token" />
-                            <div className={styles.tokenDetails}>
-                                <p className={styles.name}>{token.name}</p>
-                                <p className={styles.price}>{token.rate}</p>
-                            </div>
-                            <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow" />
-                        </div>
+                        <Link key={token.id} to='/withdrawamount'>
+                            <div className={styles.individualToken} onClick={() => setWithdrawToken(token)} >
+                                <img className={styles.tokenImg} src={token.icon} alt="token" />
+                                <div className={styles.tokenDetails}>
+                                    <p className={styles.name}>{token.name}</p>
+                                    <p className={styles.price}>{token.rate}</p>
+                                </div>
+                                <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow" />
+                            </div></Link>
                     ))
                 }
 

@@ -8,9 +8,11 @@ body {
     flex-direction: column;
     text-align: center;
     position: relative;
+
 }
 
 .container {
+    min-height: 100vh;
     background: linear-gradient(to bottom right, #2fab93 0%, #217a69 50%) bottom right / 50% 50% no-repeat,
         linear-gradient(to bottom left, #2fab93 0%, #217a69 50%) bottom left / 50% 50% no-repeat,
         linear-gradient(to top left, #2fab93 0%, #217a69 50%) top left / 50% 50% no-repeat,
@@ -20,7 +22,7 @@ body {
     flex-direction: column;
     text-align: center;
     position: relative;
-    margin-top: 80px;
+    padding: 80px;
     /* Adjust the value as needed for the desired gap */
 
     /* Add other styles for your container here */

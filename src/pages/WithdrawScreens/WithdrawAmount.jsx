@@ -4,9 +4,12 @@ import ReturnButton from '../../components/TellerATM/components/ReturnButton';
 import WithdrawArrow from "../../assets/witdrawarrow.png"
 import WW3Token from "../../assets/ww3token.png"
 import loanIcon from "../../components/TellerATM/icons/teller.png";
+import { Link, useNavigate } from 'react-router-dom';
 
-export default function WithdrawAmount() {
+export default function WithdrawAmount({ withdrawToken }) {
+    const navigate = useNavigate(); // Use useNavigate hook
 
+    console.log('withdrawToken', withdrawToken)
     const tokens = [{
         icon: WW3Token,
         name: 'WW3',
@@ -29,16 +32,19 @@ export default function WithdrawAmount() {
             </div>
 
             <div className={styles.amounts}>
-                <div className={styles.leftSection}>
-                    ANOTHER AMOUNT
-                </div>
+                <Link to="/customamount">
+                    <div className={styles.leftSection}>
+                        ANOTHER AMOUNT
+                    </div>
+                </Link>
                 <div className={styles.centerSection}>
-                    <div className={styles.amount}>1K <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow" /></div>
-                    <div className={styles.amount}>5K <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow" /></div>
+                    <div onClick={() => navigate('/withdrawprocessing')} className={styles.amount}>1K <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow" /></div>
+                    <div onClick={() => navigate('/withdrawprocessing')} className={styles.amount}>5K <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow" /></div>
                 </div>
                 <div className={styles.rightSection}>
-                    <div className={styles.amount}>2K <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow" /></div>
-                    <div className={styles.amount}>10K <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow" /></div>
+                    <div onClick={() => navigate('/withdrawprocessing')} className={styles.amount}>2K <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow" /></div>
+                    <div onClick={() => navigate('/withdrawprocessing')} className={styles.amount}>10K <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow" /></div>
+
                 </div>
             </div>
 
@@ -46,10 +52,10 @@ export default function WithdrawAmount() {
                 <><span>BALANCE</span> {
                     tokens.map(token => (
                         <div className={styles.individualToken}>
-                            <img className={styles.tokenImg} src={token.icon} alt="token" />
+                            <img className={styles.tokenImg} src={withdrawToken.icon} alt="token" />
                             <div className={styles.tokenDetails}>
-                                <p className={styles.name}>{token.name}</p>
-                                <p className={styles.price}>{token.rate}</p>
+                                <p className={styles.name}>{withdrawToken.name}</p>
+                                <p className={styles.price}>{withdrawToken.rate}</p>
                             </div>
                             <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow" />
                         </div>
