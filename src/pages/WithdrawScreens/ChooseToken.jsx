@@ -46,8 +46,5 @@ export default function ChooseToken() {
                 }
 
             </div>
-            <section className={styles.optionsWrapper}>
-
-            </section>
         </main>);
 }
