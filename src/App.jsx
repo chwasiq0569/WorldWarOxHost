@@ -13,6 +13,7 @@ import { Buffer } from 'buffer';
 import process from 'process';
 import ChooseToken from './pages/WithdrawScreens/ChooseToken';
 import WithdrawAmount from './pages/WithdrawScreens/WithdrawAmount';
+import CustomAmount from './pages/WithdrawScreens/CustomAmount';
 
 window.Buffer = Buffer;
 window.process = process;
@@ -41,8 +42,9 @@ function AppContent() {
             <Route exact path="/support" element={<Support />} />
             <Route exact path="/mint" element={<WhiteListPage />} />
             {/* <Route exact path="/atm" element={<TellerATM />} /> */}
-            <Route exact path="/atm" element={<WithdrawAmount />} />
+            {/* <Route exact path="/atm" element={<WithdrawAmount />} /> */}
             {/* <Route exact path="/atm" element={<ChooseToken />} /> */}
+            <Route exact path="/atm" element={<CustomAmount />} />
         </Routes>
     </div>);
 }
