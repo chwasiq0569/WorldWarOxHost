@@ -15,6 +15,7 @@ import ChooseToken from './pages/WithdrawScreens/ChooseToken';
 import WithdrawAmount from './pages/WithdrawScreens/WithdrawAmount';
 import CustomAmount from './pages/WithdrawScreens/CustomAmount';
 import WithdrawProcessing from './pages/WithdrawScreens/WithdrawProcessing';
+import WithdrawDone from './pages/WithdrawScreens/WithdrawDone';
 
 window.Buffer = Buffer;
 window.process = process;
@@ -45,7 +46,8 @@ function AppContent() {
             {/* <Route exact path="/atm" element={<TellerATM />} /> */}
             {/* <Route exact path="/atm" element={<WithdrawAmount />} /> */}
             {/* <Route exact path="/atm" element={<ChooseToken />} /> */}
-            <Route exact path="/atm" element={<WithdrawProcessing />} />
+            <Route exact path="/atm" element={<WithdrawDone />} />
+            {/* <Route exact path="/atm" element={<WithdrawProcessing />} /> */}
             {/* <Route exact path="/atm" element={<CustomAmount />} /> */}
         </Routes>
     </div>);
