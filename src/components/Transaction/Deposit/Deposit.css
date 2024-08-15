@@ -1,93 +1,5 @@
 
-body {
-    height: 100%;
-    margin: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    position: relative;
-}
-
-.container {
-    background: linear-gradient(to bottom right, #2fab93 0%, #217a69 50%) bottom right / 50% 50% no-repeat,
-    linear-gradient(to bottom left, #2fab93 0%, #217a69 50%) bottom left / 50% 50% no-repeat,
-    linear-gradient(to top left, #2fab93 0%, #217a69 50%) top left / 50% 50% no-repeat,
-    linear-gradient(to top right, #2fab93 0%, #217a69 50%) top right / 50% 50% no-repeat;
-    margin-top: 40px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    position: relative;
-    /* Add other styles for your container here */
-}
-
-
-
-@media (max-width: 991px) {
-    .container {
-        padding: 40px 20px 20px;
-    }
-}
-
-.logo {
-    aspect-ratio: 0.71;
-    object-fit: cover;
-    object-position: center;
-    width: 60px;
-    margin: 0 auto 20px;
-}
-
-.contentWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 100%;
-}
-
-.welcomeText {
-    color: #4cffd8;
-    font: 600 28px Poppins, sans-serif;
-    margin-bottom: 10px;
-}
-
-.questionText {
-    color: #fff;
-    font: 700 36px Poppins, sans-serif;
-    margin-bottom: 30px;
-    margin-top: 10px;
-    text-align: center;
-}
-
-.optionsWrapper {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 100%;
-    margin: 20px auto;
-}
-
-.overlapButton {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: none;
-    border: none;
-    opacity: 0;
-}
-
-.optionCardWrapper {
-    position: relative;
-    margin-bottom: 10px; /* Adjust as needed */
-}
-
-.loginButton {
+.depositLoginButton {
     position: relative;
     border-radius: 40px;
     background: linear-gradient(90deg, #14b797 0%, #129f83 100%);
@@ -100,7 +12,7 @@ body {
     cursor: pointer;
 }
 
-.loginButtonText {
+.depositLoginButtonText {
     font-family: Poppins, sans-serif;
     color: #d4fff7;
     font-size: 16px;
@@ -183,4 +95,31 @@ body {
     position: absolute;
     right: 40px; /* Adjust as needed */
     z-index: 100; /* Ensure it appears on top */
+}
+
+
+.balanceContainer {
+    display: flex;
+    gap: 20px;
+}
+
+.coinItem {
+    display: flex;
+    align-items: center;
+}
+
+.coinItem img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.coinType {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.coinAmount {
+    font-size: 24px;
+    color: #fff;
 }
