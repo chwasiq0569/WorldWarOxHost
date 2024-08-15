@@ -1,0 +1,74 @@
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+.container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #2fab93 0%, #217a69 50%) bottom right / 50% 50% no-repeat,
+        linear-gradient(to bottom left, #2fab93 0%, #217a69 50%) bottom left / 50% 50% no-repeat,
+        linear-gradient(to top left, #2fab93 0%, #217a69 50%) top left / 50% 50% no-repeat,
+        linear-gradient(to top right, #2fab93 0%, #217a69 50%) top right / 50% 50% no-repeat;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    padding: 80px;
+}
+
+
+@media (max-width: 991px) {
+    .container {
+        padding: 40px 20px 20px;
+    }
+}
+
+.logo {
+    aspect-ratio: 0.71;
+    object-fit: cover;
+    object-position: center;
+    width: 60px;
+    margin: 0 auto 20px;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+.welcomeText {
+    color: #4cffd8;
+    font: 600 28px Poppins, sans-serif;
+    margin-bottom: 10px;
+}
+
+.welcomeText span {
+    color: #F5FF81;
+}
+
+.questionText {
+    color: #fff;
+    font: 700 36px Poppins, sans-serif;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.loader img {
+    transform: rotate(135deg);
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+
+    margin-top: 4rem;
+}
