@@ -148,7 +148,8 @@ const HomePage = () => {
                     text: 'DEXSCREENER',
                     link: 'https://dexscreener.com/solana/m627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5'
                 }
-            ]
+            ],
+            link: 'https://solana.fm/address/m627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5?cluster=mainnet-alpha'
         },
         {
             id: 1,
@@ -175,8 +176,9 @@ const HomePage = () => {
                     text: 'DEXSCREENER',
                     link: 'https://dexscreener.com/solana/DSZ5kQWck86XaKgD1b2GZDNEpvtjaMKvkKBa6uY3cszd'
                 }
-            ]
-        }
+            ],
+            link: 'https://solana.fm/address/DSZ5kQWck86XaKgD1b2GZDNEpvtjaMKvkKBa6uY3cszd?cluster=mainnet-alpha'
+        },
     ]);
 
     return (
@@ -203,7 +205,7 @@ const HomePage = () => {
                                     </div>
                                     <div className='contractAddress'>
                                         <p>CONTRACT ADDRESS</p>
-                                        <p className='address'>{item.contract_address}</p>
+                                        <a href={item.link} target='_blank' className='address'>{item.contract_address}</a>
                                     </div>
                                     <div className='circulatingSupply'>
                                         <div className='row textBold'>
