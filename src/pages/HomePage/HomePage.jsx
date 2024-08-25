@@ -79,10 +79,30 @@ import NFTHolder from '../../components/NFTHolder/NFTHolder';
 import SoldierNFTs from "../../assets/2000soldiernft.png"
 import TraitCategories from '../../components/TraitCategories/TraitCategories';
 import Partners from '../../components/Partners/Partners';
+import WW3Token from '../../assets/ww3token.png'
+import BDuckToken from '../../assets/bducktoken.png'
+import RaydiumIcon from '../../assets/raydium.png'
+import OrcaIcon from '../../assets/orca.png'
+import DexScreenerIcon from '../../assets/dexscreener.png'
+import CollectionOne from '../../assets/collection1.png'
+import CollectionTwo from '../../assets/collection2.png'
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const HomePage = () => {
     const [moveToBack, setMoveToBack] = React.useState(false);
     const [isScrolled, setIsScrolled] = React.useState(false);
+
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
+
 
     const handleScroll = () => {
         if (window.scrollY > 0) {
@@ -106,6 +126,71 @@ const HomePage = () => {
         };
     }, []);
 
+    const [sliderItems, setSelected] = React.useState([
+        {
+            id: 0,
+            icon: WW3Token,
+            name: '$WW3',
+            token_name: 'World War 0x',
+            token_type: 'UTILITY TOKEN ',
+            contract_address: 'm627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5',
+            max_supply: '2700000000',
+            current_supply: '60522162',
+            lp_providers: [
+                {
+                    icon: RaydiumIcon,
+                    text: 'BUY ON RAYDIUM'
+                }, {
+                    icon: DexScreenerIcon,
+                    text: 'DEXSCREENER'
+                }
+            ]
+        },
+        {
+            id: 1,
+            icon: BDuckToken,
+            name: '$BDUCK',
+            token_name: 'Boomer DUCK',
+            token_type: 'MEME TOKEN',
+            contract_address: 'm627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5',
+            max_supply: '69420000000',
+            current_supply: '69420000000',
+            lp_providers: [
+                {
+                    icon: RaydiumIcon,
+                    text: 'BUY ON RAYDIUM'
+                },
+                {
+                    icon: OrcaIcon,
+                    text: 'BUY ON ORCA'
+                },
+                {
+                    icon: DexScreenerIcon,
+                    text: 'DEXSCREENER'
+                }
+            ]
+        },
+        {
+            id: 2,
+            icon: WW3Token,
+            name: '$WW3',
+            token_name: 'World War 0x',
+            token_type: 'UTILITY TOKEN ',
+            contract_address: 'm627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5',
+            max_supply: '2700000000',
+            current_supply: '60522162',
+            lp_providers: [
+                {
+                    icon: RaydiumIcon,
+                    text: 'BUY ON RAYDIUM'
+                }, {
+                    icon: DexScreenerIcon,
+                    text: 'DEXSCREENER'
+                }
+            ]
+        }
+    ]);
+
     return (
         <div>
             {isScrolled && <div onClick={scrollToTop} className='backToTop'>
@@ -113,6 +198,80 @@ const HomePage = () => {
             </div>}
             <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} />
             <HeroSection moveToBack={moveToBack} />
+            <div className="tokensSlider">
+                <Slider {...settings}>
+                    {
+                        sliderItems.map(item => <div key={item.id} className="sliderItem">
+                            <div className="upper">
+                                <div className="leftSide">
+                                    <img src={item.icon} alt="token" />
+                                </div>
+                                <div className="rightSide">
+                                    <div className="tokenDetails">
+                                        <p className='tokenSignature'>{item.name}</p> <div className='nameAndType'>
+                                            <p className='tokenName'>{item.token_name}</p>
+                                            <p className='tokenType'>{item.token_type}</p>
+                                        </div>
+                                    </div>
+                                    <div className='contractAddress'>
+                                        <p>CONTRACT ADDRESS</p>
+                                        <p className='address'>{item.contract_address}</p>
+                                    </div>
+                                    <div className='circulatingSupply'>
+                                        <div className='row textBold'>
+                                            <p>CIRCULATING SUPPLY</p>
+                                            <p>MAX SUPPLY</p>
+                                        </div>
+                                        <progress className="supply" value={item.current_supply} max={item.max_supply}></progress>
+                                        <div className='row textBig'>
+                                            <p>{item.max_supply}</p>
+                                            <p>{item.current_supply}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="lower">
+                                <div className='leftSide'>
+                                    <p className='providersText'>LP PROVIDERS</p>
+                                </div>
+                                <div className='rightSide'>
+                                    <div className='buttons'>
+                                        {
+                                            item.lp_providers.map(btn => <button>
+                                                <img src={btn.icon} alt="btn" />
+                                                <p>{btn.text}</p>
+                                            </button>)
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>)
+                    }
+                </Slider>
+
+                <div className='collectEarnBet'>
+                    <div className="upper">
+                        <p>Collect, earn and bet with a soldier NFT</p>
+                    </div>
+                    <div className="lower">
+                        <div className='left'>
+                            <p className='collectionhead'>BATTLEWEAR</p>
+                            <p className='mintedOut'>MINTED OUT</p>
+                            <button className='viewNftBtn'>VIEW NFTS</button>
+                        </div>
+                        <div className='middle'>
+                            <img src={CollectionOne} alt='collection' />
+                            <img src={CollectionTwo} alt='collection' />
+                        </div>
+                        <div className='right'>
+                            <p className='collectionhead'>COUNTRY</p>
+                            <p className='mint'>MINT</p>
+                            <button className='viewNftBtn'>VIEW NFTS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <Platforms />
             <GetWhitelisted />
 
