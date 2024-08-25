@@ -1797,7 +1797,7 @@ a {
   /* justify-content: space-between; */
 }
 
-.tokensSlider .sliderItem .lower .buttons button {
+.tokensSlider .sliderItem .lower .buttons a {
   padding: 0.5rem 1.5rem;
   display: flex;
   align-items: center;
@@ -1815,13 +1815,13 @@ a {
   cursor: pointer;
 }
 
-.tokensSlider .sliderItem .lower .buttons button img {
+.tokensSlider .sliderItem .lower .buttons a img {
   width: 32px;
   object-fit: contain;
   margin-right: 1rem;
 }
 
-.tokensSlider .sliderItem .lower .buttons button p {
+.tokensSlider .sliderItem .lower .buttons a p {
   font-family: CPMono_v07_Bold;
 }
 

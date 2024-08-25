@@ -90,10 +90,12 @@ import CollectionTwo from '../../assets/collection2.png'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
     const [moveToBack, setMoveToBack] = React.useState(false);
     const [isScrolled, setIsScrolled] = React.useState(false);
+    const navigate = useNavigate();
 
     var settings = {
         dots: true,
@@ -139,10 +141,12 @@ const HomePage = () => {
             lp_providers: [
                 {
                     icon: RaydiumIcon,
-                    text: 'BUY ON RAYDIUM'
+                    text: 'BUY ON RAYDIUM',
+                    link: 'https://raydium.io/swap/?inputMint=sol&outputMint=m627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5'
                 }, {
                     icon: DexScreenerIcon,
-                    text: 'DEXSCREENER'
+                    text: 'DEXSCREENER',
+                    link: 'https://dexscreener.com/solana/m627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5'
                 }
             ]
         },
@@ -152,40 +156,24 @@ const HomePage = () => {
             name: '$BDUCK',
             token_name: 'Boomer DUCK',
             token_type: 'MEME TOKEN',
-            contract_address: 'm627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5',
+            contract_address: 'DSZ5kQWck86XaKgD1b2GZDNEpvtjaMKvkKBa6uY3cszd',
             max_supply: '69420000000',
             current_supply: '69420000000',
             lp_providers: [
                 {
                     icon: RaydiumIcon,
-                    text: 'BUY ON RAYDIUM'
+                    text: 'BUY ON RAYDIUM',
+                    link: 'https://raydium.io/swap?outputCurrency=DSZ5kQWck86XaKgD1b2GZDNEpvtjaMKvkKBa6uY3cszd'
                 },
                 {
                     icon: OrcaIcon,
-                    text: 'BUY ON ORCA'
+                    text: 'BUY ON ORCA',
+                    link: 'https://v1.orca.so/liquidity/browse?tokenMint=DSZ5kQWck86XaKgD1b2GZDNEpvtjaMKvkKBa6uY3cszd'
                 },
                 {
                     icon: DexScreenerIcon,
-                    text: 'DEXSCREENER'
-                }
-            ]
-        },
-        {
-            id: 2,
-            icon: WW3Token,
-            name: '$WW3',
-            token_name: 'World War 0x',
-            token_type: 'UTILITY TOKEN ',
-            contract_address: 'm627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5',
-            max_supply: '2700000000',
-            current_supply: '60522162',
-            lp_providers: [
-                {
-                    icon: RaydiumIcon,
-                    text: 'BUY ON RAYDIUM'
-                }, {
-                    icon: DexScreenerIcon,
-                    text: 'DEXSCREENER'
+                    text: 'DEXSCREENER',
+                    link: 'https://dexscreener.com/solana/DSZ5kQWck86XaKgD1b2GZDNEpvtjaMKvkKBa6uY3cszd'
                 }
             ]
         }
@@ -237,10 +225,10 @@ const HomePage = () => {
                                 <div className='rightSide'>
                                     <div className='buttons'>
                                         {
-                                            item.lp_providers.map(btn => <button>
+                                            item.lp_providers.map(btn => <a href={btn.link} key={btn.link} target='_blank'>
                                                 <img src={btn.icon} alt="btn" />
                                                 <p>{btn.text}</p>
-                                            </button>)
+                                            </a>)
                                         }
                                     </div>
                                 </div>
@@ -283,9 +271,9 @@ const HomePage = () => {
                         <img loading="lazy" src={SoldierNFTs} alt="" />
                     </div>
                     <div className="FirstEditionContainer-Text">
-                        <h4>BATTLEWEAR</h4>
-                        <h5>300 BATTLEWEAR NFTS</h5>
-                        <p>These are the most important collectibles in our ecosystem and where the most value will accrue. These are your hero characters. Play with them, bet with them and stake them for rewards.</p>
+                        <h4>COUNTRY</h4>
+                        <h5>500 COUNTRY NFTS</h5>
+                        {/* <p>These are the most important collectibles in our ecosystem and where the most value will accrue. These are your hero characters. Play with them, bet with them and stake them for rewards.</p> */}
                         <div className="FirstEditionContainer-btn">
                             <div className="GetWhiteListedBtn FirstEditionBTN">
                                 <a href='https://truffle.wtf/project/world-war-0x-battlewear' target="_blank" rel="noreferrer"><span>MINT NOW</span></a>

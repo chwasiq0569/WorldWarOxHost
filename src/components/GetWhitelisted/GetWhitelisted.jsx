@@ -11,7 +11,7 @@ export default function GetWhitelisted() {
             <div className='whitelistBtnContainer'>
                 <p className='whitelistsectionhead'>MINT NOW ON TRUFFLE</p>
                 <div style={{ backgroundColor: "transparent" }} className="GetWhiteListedBtn">
-                    <a href='https://truffle.wtf/project/world-war-0x-battlewear' target="_blank" rel="noreferrer"><span style={{ fontSize: "22px" }}>MINT NOW</span></a>
+                    <a href='https://truffle.wtf/project/world-war-0x-country' target="_blank" rel="noreferrer"><span style={{ fontSize: "22px" }}>MINT NOW</span></a>
                 </div>
             </div>
             <img src={WhiteListRightSide} alt="soldier_image" />
