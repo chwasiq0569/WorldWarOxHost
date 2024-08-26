@@ -86,6 +86,7 @@ import OrcaIcon from '../../assets/orca.png'
 import DexScreenerIcon from '../../assets/dexscreener.png'
 import CollectionOne from '../../assets/collection1.png'
 import CollectionTwo from '../../assets/collection2.png'
+import Header1 from '../../components/layout/header/Header1'
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -181,12 +182,17 @@ const HomePage = () => {
         },
     ]);
 
+    const [isMobileMenu, setMobileMenu] = React.useState(false)
+    const handleMobileMenu = () => setMobileMenu(!isMobileMenu)
+
     return (
         <div>
             {isScrolled && <div onClick={scrollToTop} className='backToTop'>
                 <img src={ArrowUp} alt='arrow_up' />
             </div>}
-            <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} />
+            <Header1 scroll={true} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} />
+
+            {/* <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} /> */}
             <HeroSection moveToBack={moveToBack} />
             <div className="tokensSlider">
                 <Slider {...settings}>
