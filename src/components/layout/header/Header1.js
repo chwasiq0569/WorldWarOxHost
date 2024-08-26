@@ -6,6 +6,14 @@ import Discord from '../../../assets/discord.png'
 import XIcon from '../../../assets/X_icon.png'
 import Logo from "../../../assets/logo/logo.png"
 
+// import '../../../style.css'
+// import '../../../swiper-bundle.min.css'
+// import '../../../shortcodes.css'
+// import '../../../responsive.css'
+// import '../../../bootstrap.css'
+// import '../../../animation.css'
+// import '../../../animate.min.css'
+
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu }) {
     const [isSidebar, setSidebar] = useState(false)
     const handleSidebar = () => setSidebar(!isSidebar)

@@ -93,6 +93,15 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useNavigate } from "react-router-dom";
 
+// import '../../'
+// import '../../style.css'
+// import '../../swiper-bundle.min.css'
+// import '../../shortcodes.css'
+// import '../../responsive.css'
+// import '../../bootstrap.css'
+// import '../../animation.css'
+// import '../../animate.min.css'
+
 const HomePage = () => {
     const [moveToBack, setMoveToBack] = React.useState(false);
     const [isScrolled, setIsScrolled] = React.useState(false);
