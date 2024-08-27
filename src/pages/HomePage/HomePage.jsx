@@ -91,6 +91,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useNavigate } from "react-router-dom";
+import Header from '../../components/Header/Header';
 
 const HomePage = () => {
     const [moveToBack, setMoveToBack] = React.useState(false);
@@ -186,7 +187,8 @@ const HomePage = () => {
             {isScrolled && <div onClick={scrollToTop} className='backToTop'>
                 <img src={ArrowUp} alt='arrow_up' />
             </div>}
-            <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} />
+            <Header />
+            {/* <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} /> */}
             <HeroSection moveToBack={moveToBack} />
             <div className="tokensSlider">
                 <Slider {...settings}>
