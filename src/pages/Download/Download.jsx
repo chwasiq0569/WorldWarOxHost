@@ -10,6 +10,7 @@ import AvailableInAppStore from "../../assets/availableinappstore.png"
 
 
 import "./Download.css"
+import Header from '../../components/Header/Header';
 
 const Download = () => {
     const [moveToBack, setMoveToBack] = React.useState(false);
@@ -20,7 +21,9 @@ const Download = () => {
         scrollToTop()
     }, [])
     return (<>
-        <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} />
+        {/* <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} /> */}
+        <Header />
+
         <div className='main_content'>
             <p className='page_head'>DOWNLOADABLE PC VERSION</p>
             <div className='download_btns_container'>

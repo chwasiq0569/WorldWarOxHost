@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from '../../components/Footer/Footer';
 import Navbar from '../../components/NavBar/Navbar';
 import "./privacy.css"
+import Header from '../../components/Header/Header';
 
 const Privacy = () => {
     const [moveToBack, setMoveToBack] = React.useState(false);
@@ -12,7 +13,8 @@ const Privacy = () => {
         scrollToTop()
     }, [])
     return (<>
-        <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} />
+        {/* <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} /> */}
+        <Header />
 
         <div class="mainContent">
             <div class="Privacy_contentContainer mainHEAD">

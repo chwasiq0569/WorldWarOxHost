@@ -19,6 +19,8 @@
     /* width: 120px; */
     height: 80px;
     object-fit: contain;
+
+    cursor: pointer;
 }
 
 .headerContainer .leftSide .navItems {

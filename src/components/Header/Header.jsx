@@ -18,7 +18,10 @@ export default function Header() {
     return (<>
         <div className={menuOpened ? 'headerContainer' : 'headerContainer headerClosed'}>
             <div className='leftSide'>
-                <img className='logo' src={NewLogo} alt='logo' />
+                <Link style={{ all: "unset" }} to="/">
+                    <img className='logo' src={NewLogo} alt='logo' />
+                </Link>
+
                 <ul className='navItems'>
                     <Link style={{ all: "unset" }} to="/download">
                         <li><a>DOWNLOAD</a></li>

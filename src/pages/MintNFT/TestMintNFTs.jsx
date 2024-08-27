@@ -11,6 +11,7 @@ import NFT2 from "../../assets/nft2.png"
 import NFT3 from "../../assets/nft3.png"
 import NFT4 from "../../assets/nft4.png"
 import NFT5 from "../../assets/nft5.png"
+import Header from '../../components/Header/Header';
 
 function TestMintNFTs() {
     const [wallerConnected, setWalletConnected] = React.useState(false)
@@ -25,7 +26,9 @@ function TestMintNFTs() {
         scrollToTop()
     }, [])
     return (<>
-        <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} />
+        {/* <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} /> */}
+        <Header />
+
         <div className='mintnfts_container'>
             <div className='screen_cover'>
                 <img className="nft_cover_image" src={NFTCover} alt="nft_cover" />
