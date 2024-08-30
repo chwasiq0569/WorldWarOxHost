@@ -82,6 +82,7 @@ import Partners from '../../components/Partners/Partners';
 import WW3Token from '../../assets/ww3token.png'
 import BDuckToken from '../../assets/bducktoken.png'
 import RaydiumIcon from '../../assets/raydium.png'
+import RaydiumIconBlack from '../../assets/raydiumBlack.png'
 import OrcaIcon from '../../assets/orca.png'
 import DexScreenerIcon from '../../assets/dexscreener.png'
 import CollectionOne from '../../assets/collection1.png'
@@ -147,11 +148,13 @@ const HomePage = () => {
             token_name: 'World War 0x',
             token_type: 'UTILITY TOKEN ',
             contract_address: 'm627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5',
-            max_supply: '2700000000',
             current_supply: '60522162',
+            display_current_supply: '60,522,162',
+            max_supply: '490000000',
+            display_max_supply: '490,000,000',
             lp_providers: [
                 {
-                    icon: RaydiumIcon,
+                    icon: RaydiumIconBlack,
                     text: 'BUY ON RAYDIUM',
                     link: 'https://raydium.io/swap/?inputMint=sol&outputMint=m627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5'
                 }, {
@@ -170,10 +173,12 @@ const HomePage = () => {
             token_type: 'MEME TOKEN',
             contract_address: 'DSZ5kQWck86XaKgD1b2GZDNEpvtjaMKvkKBa6uY3cszd',
             max_supply: '69420000000',
+            display_current_supply: '69,420,000,000',
             current_supply: '69420000000',
+            display_max_supply: '69,420,000,000',
             lp_providers: [
                 {
-                    icon: RaydiumIcon,
+                    icon: RaydiumIconBlack,
                     text: 'BUY ON RAYDIUM',
                     link: 'https://raydium.io/swap?outputCurrency=DSZ5kQWck86XaKgD1b2GZDNEpvtjaMKvkKBa6uY3cszd'
                 },
@@ -229,8 +234,8 @@ const HomePage = () => {
                                         </div>
                                         <progress className="supply" value={item.current_supply} max={item.max_supply}></progress>
                                         <div className='row textBig'>
-                                            <p>{item.max_supply}</p>
-                                            <p>{item.current_supply}</p>
+                                            <p>{item.display_current_supply}</p>
+                                            <p>{item.display_max_supply}</p>
                                         </div>
                                     </div>
                                 </div>

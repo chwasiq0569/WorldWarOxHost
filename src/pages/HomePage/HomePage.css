@@ -1797,6 +1797,8 @@ a {
   /* justify-content: space-between; */
 }
 
+
+
 .tokensSlider .sliderItem .lower .buttons a {
   padding: 0.5rem 1.5rem;
   display: flex;
@@ -1813,6 +1815,14 @@ a {
   margin: 1rem;
 
   cursor: pointer;
+}
+
+.tokensSlider .sliderItem .lower .buttons a:nth-child(1) {
+  background-color: #F0E0CE;
+}
+
+.tokensSlider .sliderItem .lower .buttons a:nth-child(1) p {
+  color: #000 !important;
 }
 
 .tokensSlider .sliderItem .lower .buttons a img {
