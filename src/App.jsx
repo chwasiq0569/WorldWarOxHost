@@ -16,13 +16,6 @@ import WithdrawAmount from './pages/WithdrawScreens/WithdrawAmount';
 import CustomAmount from './pages/WithdrawScreens/CustomAmount';
 import WithdrawProcessing from './pages/WithdrawScreens/WithdrawProcessing';
 import WithdrawDone from './pages/WithdrawScreens/WithdrawDone';
-import './style.css'
-import './swiper-bundle.min.css'
-import './shortcodes.css'
-import './responsive.css'
-import './bootstrap.css'
-import './animation.css'
-import './animate.min.css'
 import ViewNFT from './pages/ViewNFT/ViewNFT';
 
 
