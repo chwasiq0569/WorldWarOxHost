@@ -46,7 +46,7 @@ function AppContent() {
 
     return (<div className="App">
         <Routes>
-            <Route exact path="/" element={<ViewNFT />} />
+            <Route exact path="/" element={<HomePage />} />
             <Route exact path="/privacy" element={<Privacy />} />
             <Route exact path="/terms" element={<Terms />} />
             <Route exact path="/download" element={<Download />} />

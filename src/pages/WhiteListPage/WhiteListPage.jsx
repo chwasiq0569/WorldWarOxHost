@@ -110,6 +110,7 @@ import designercollection3 from "../../assets/designercollection3.png"
 import ReactPlayer from 'react-player'
 import Platforms from '../../components/Platforms/Platforms';
 import NFTHolder from '../../components/NFTHolder/NFTHolder';
+import Header from '../../components/Header/Header';
 
 const WhiteListPage = () => {
     const [moveToBack, setMoveToBack] = React.useState(false);
@@ -145,7 +146,9 @@ const WhiteListPage = () => {
             {isScrolled && <div onClick={scrollToTop} className='backToTop'>
                 <img src={ArrowUp} alt='arrow_up' />
             </div>}
-            <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} />
+            {/* <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} /> */}
+            <Header />
+
             <div className="herocontainer">
                 <img className='whitelistbg' src={WhiteListBG} alt="white_list_img" />
                 <img className='nftprofilepic' src={NFTProfilePic} alt="nft_profile_pic" />

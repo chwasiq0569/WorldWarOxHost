@@ -86,12 +86,13 @@ import OrcaIcon from '../../assets/orca.png'
 import DexScreenerIcon from '../../assets/dexscreener.png'
 import CollectionOne from '../../assets/collection1.png'
 import CollectionTwo from '../../assets/collection2.png'
-import Header1 from '../../components/layout/header/Header1'
+// import Header1 from '../../components/layout/header/Header1'
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useNavigate } from "react-router-dom";
+import Header from '../../components/Header/Header';
 
 // import '../../'
 // import '../../style.css'
@@ -199,8 +200,7 @@ const HomePage = () => {
             {isScrolled && <div onClick={scrollToTop} className='backToTop'>
                 <img src={ArrowUp} alt='arrow_up' />
             </div>}
-            <Header1 scroll={true} isMobileMenu={isMobileMenu} handleMobileMenu={handleMobileMenu} />
-
+            <Header />
             {/* <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} /> */}
             <HeroSection moveToBack={moveToBack} />
             <div className="tokensSlider">

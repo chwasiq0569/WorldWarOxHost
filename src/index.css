@@ -60,6 +60,36 @@
     url("./fonts/Median-Regular.otf") format("woff");
 }
 
+@font-face {
+  font-family: "CPMono_v07_ExtraLight";
+  src: local("CPMono_v07_ExtraLight"),
+    url("./fonts/CPMono_v07_ExtraLight.otf") format("woff");
+}
+
+@font-face {
+  font-family: "CPMono_v07_Light";
+  src: local("CPMono_v07_Light"),
+    url("./fonts/CPMono_v07_Light.otf") format("woff");
+}
+
+@font-face {
+  font-family: "CPMono_v07_Plain";
+  src: local("CPMono_v07_Plain"),
+    url("./fonts/CPMono_v07_Plain.otf") format("woff");
+}
+
+@font-face {
+  font-family: "CPMono_v07_Bold";
+  src: local("CPMono_v07_Bold"),
+    url("./fonts/CPMono_v07_Bold.otf") format("woff");
+}
+
+@font-face {
+  font-family: "CPMono_v07_Black";
+  src: local("CPMono_v07_Black"),
+    url("./fonts/CPMono_v07_Black.otf") format("woff");
+}
+
 html {
   scroll-behavior: smooth;
 }

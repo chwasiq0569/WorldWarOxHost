@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from '../../components/Footer/Footer';
 import Navbar from '../../components/NavBar/Navbar';
 import "./terms.css"
+import Header from '../../components/Header/Header';
 
 const Terms = () => {
     const [moveToBack, setMoveToBack] = React.useState(false);
@@ -13,7 +14,8 @@ const Terms = () => {
     }, [])
 
     return (<>
-        <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} />
+        {/* <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} /> */}
+        <Header />
 
         <div class="mainContent">
             <div class="Privacy_contentContainer mainHEAD">
