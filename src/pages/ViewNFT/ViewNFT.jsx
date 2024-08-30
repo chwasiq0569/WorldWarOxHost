@@ -3,10 +3,12 @@ import NFT from "../../assets/collection/1.png"
 import SolanaIcon from "../../assets/solana.svg"
 import TellerIcon from "../../assets/teller.svg"
 import "./ViewNFT.css"
+import Header from '../../components/Header/Header'
 
 export default function ViewNFT() {
     return (
         <div className='viewnftContanier'>
+            <Header />
             <div className="nftHeader">
                 <div className='nftName'>
                     <p>World War 0x #192</p>
@@ -96,6 +98,20 @@ export default function ViewNFT() {
                         <br />
 
                         <div className='attributes'>
+                            <div className='individualAttribute'>
+                                <p>background</p>
+                                <p>Deep Ocean Blue</p>
+                                <div className='row'><p className='percentage'>12.65%</p><div className='price'>
+                                    <img src={SolanaIcon} alt="solana_icon" /><span>21.24</span>
+                                </div></div>
+                            </div>
+                            <div className='individualAttribute'>
+                                <p>background</p>
+                                <p>Deep Ocean Blue</p>
+                                <div className='row'><p className='percentage'>12.65%</p><div className='price'>
+                                    <img src={SolanaIcon} alt="solana_icon" /><span>21.24</span>
+                                </div></div>
+                            </div>
                             <div className='individualAttribute'>
                                 <p>background</p>
                                 <p>Deep Ocean Blue</p>

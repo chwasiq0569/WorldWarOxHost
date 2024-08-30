@@ -120,7 +120,7 @@
 
 .viewnftContanier .viewNFTSection .rightSide .itemDetails .buyOptions button {
     font-family: CPMono_v07_Bold;
-    padding: 1rem 6rem;
+    padding: 1rem 2rem;
     font-size: 16px;
 
     background-color: #FDEB8C;
@@ -211,7 +211,7 @@
 
 .viewnftContanier .viewNFTSection .rightSide .attributesContainer .attributes .individualAttribute {
     width: 45%;
-    /* padding: 1rem; */
+    padding: 1rem 0;
 }
 
 .viewnftContanier .viewNFTSection .rightSide .attributesContainer .attributes .individualAttribute p,
