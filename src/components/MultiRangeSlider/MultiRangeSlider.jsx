@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Slider from 'react-slider';
-// import './style.css';
+import './MultiRangeSlider.css'
 
 const MultiRangeSlider = () => {
   const [values, setValues] = useState([0, 100]);
@@ -18,7 +18,8 @@ const MultiRangeSlider = () => {
       <div className="slider-typo-input">
         <div>
           {/* <label htmlFor="minPrice">Min Price:</label> */}
-          <input
+          <input min='0'
+            max='100'
             type="number"
             id="minPrice"
             value={values[0]}
@@ -28,6 +29,8 @@ const MultiRangeSlider = () => {
         <div>
           {/* <label htmlFor="maxPrice">Max Price:</label> */}
           <input
+            min='0'
+            max='100'
             type="number"
             id="maxPrice"
             value={values[1]}

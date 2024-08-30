@@ -18,7 +18,8 @@ import WithdrawProcessing from './pages/WithdrawScreens/WithdrawProcessing';
 import WithdrawDone from './pages/WithdrawScreens/WithdrawDone';
 import ViewNFT from './pages/ViewNFT/ViewNFT';
 import Collection from './pages/Collection/Collection';
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 window.Buffer = Buffer;
 window.process = process;
