@@ -23,6 +23,7 @@ import './responsive.css'
 import './bootstrap.css'
 import './animation.css'
 import './animate.min.css'
+import ViewNFT from './pages/ViewNFT/ViewNFT';
 
 
 window.Buffer = Buffer;
@@ -45,7 +46,7 @@ function AppContent() {
 
     return (<div className="App">
         <Routes>
-            <Route exact path="/" element={<HomePage />} />
+            <Route exact path="/" element={<ViewNFT />} />
             <Route exact path="/privacy" element={<Privacy />} />
             <Route exact path="/terms" element={<Terms />} />
             <Route exact path="/download" element={<Download />} />
