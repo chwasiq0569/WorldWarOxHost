@@ -87,12 +87,22 @@ import OrcaIcon from '../../assets/orca.png'
 import DexScreenerIcon from '../../assets/dexscreener.png'
 import CollectionOne from '../../assets/collection1.png'
 import CollectionTwo from '../../assets/collection2.png'
+// import Header1 from '../../components/layout/header/Header1'
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useNavigate } from "react-router-dom";
 import Header from '../../components/Header/Header';
+
+// import '../../'
+// import '../../style.css'
+// import '../../swiper-bundle.min.css'
+// import '../../shortcodes.css'
+// import '../../responsive.css'
+// import '../../bootstrap.css'
+// import '../../animation.css'
+// import '../../animate.min.css'
 
 const HomePage = () => {
     const [moveToBack, setMoveToBack] = React.useState(false);
@@ -186,6 +196,9 @@ const HomePage = () => {
             link: 'https://solana.fm/address/DSZ5kQWck86XaKgD1b2GZDNEpvtjaMKvkKBa6uY3cszd?cluster=mainnet-alpha'
         },
     ]);
+
+    const [isMobileMenu, setMobileMenu] = React.useState(false)
+    const handleMobileMenu = () => setMobileMenu(!isMobileMenu)
 
     return (
         <div>

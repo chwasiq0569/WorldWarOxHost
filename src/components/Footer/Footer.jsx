@@ -18,7 +18,7 @@ const Footer = () => {
                         <div className="footer-ul">
                             <ul>
                                 <li><a href="https://worldwar0x.io" rel="noreferrer" target='_blank'>PLAY</a></li>
-                                <Link style={{ all: "unset" }} to="/download"><li><a>DOWNLOAD</a></li> </Link>
+                                <li> <Link to="/download">DOWNLOAD</Link></li>
                                 <li><a href="/mint">NFTS</a></li>
                                 {/* <li><a href="#NEWERA">GAMEPLAY</a></li> */}
                                 {/* <li><a href="#WARXECOSYSTEM">ECOSYSTEM</a></li> */}

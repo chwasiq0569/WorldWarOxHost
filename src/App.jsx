@@ -16,6 +16,10 @@ import WithdrawAmount from './pages/WithdrawScreens/WithdrawAmount';
 import CustomAmount from './pages/WithdrawScreens/CustomAmount';
 import WithdrawProcessing from './pages/WithdrawScreens/WithdrawProcessing';
 import WithdrawDone from './pages/WithdrawScreens/WithdrawDone';
+import ViewNFT from './pages/ViewNFT/ViewNFT';
+import Collection from './pages/Collection/Collection';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 window.Buffer = Buffer;
 window.process = process;
@@ -37,7 +41,7 @@ function AppContent() {
 
     return (<div className="App">
         <Routes>
-            <Route exact path="/" element={<HomePage />} />
+            <Route exact path="/" element={<Collection />} />
             <Route exact path="/privacy" element={<Privacy />} />
             <Route exact path="/terms" element={<Terms />} />
             <Route exact path="/download" element={<Download />} />

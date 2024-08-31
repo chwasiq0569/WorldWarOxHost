@@ -1,0 +1,249 @@
+.viewnftContanier {
+    width: 100%;
+    height: auto;
+
+}
+
+.viewnftContanier .nftHeader {
+    padding: 20px 100px;
+}
+
+.viewnftContanier .nftHeader .nftName {
+    display: flex;
+    align-items: center;
+    font-family: CPMono_v07_Bold;
+}
+
+.viewnftContanier .nftHeader .nftName p {
+    font-size: 32px;
+}
+
+.viewnftContanier .nftHeader .nftName .badge {
+    display: flex;
+    align-items: center;
+    background-color: #BFC4CA;
+    padding: 4px 8px;
+    border-radius: 16px;
+    color: #000;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+.viewnftContanier .nftHeader .nftName .badge span {
+    margin-left: 0.25rem;
+    font-size: 16px;
+}
+
+.viewnftContanier .nftHeader .nftDetails {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-family: CPMono_v07_Plain;
+    font-size: 16px;
+    margin-top: 1rem;
+}
+
+.viewnftContanier .nftHeader .nftDetails img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+
+    border-radius: 50%;
+}
+
+.viewnftContanier .nftHeader .nftDetails span {
+
+    /* margin: 0 1rem; */
+    margin-right: 4rem;
+    margin-left: 0.5rem;
+}
+
+.viewnftContanier .viewNFTSection {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
+
+}
+
+.viewnftContanier .viewNFTSection .leftSide img {
+    width: 100%;
+    object-fit: contain;
+    margin-right: auto;
+}
+
+.viewnftContanier .viewNFTSection .leftSide,
+.viewnftContanier .viewNFTSection .rightSide {
+    width: 48%;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .itemDetails {
+    border: 2px solid #FDD38C;
+
+    border-bottom: 12px solid #FDD38C;
+    padding: 2rem 4rem;
+
+    border-radius: 8px;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .itemDetails .listedFor {
+    font-size: 16px;
+    color: #FDD38C !important;
+    font-family: CPMono_v07_Plain;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .itemDetails .price {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 2rem;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .itemDetails .buyOptions {}
+
+.viewnftContanier .viewNFTSection .rightSide .itemDetails span {
+    color: #BFC4CA;
+    font-family: CPMono_v07_Plain;
+    font-size: 22px !important;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .itemDetails .price .itemPrice {
+    font-size: 36px !important;
+    color: #FDEB8C;
+    font-family: CPMono_v07_Bold;
+
+    margin: 0 1rem;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .itemDetails .buyOptions {
+    display: flex;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .itemDetails .buyOptions button {
+    font-family: CPMono_v07_Bold;
+    padding: 1rem 2rem;
+    font-size: 16px;
+
+    background-color: #FDEB8C;
+
+    border-radius: 4px !important;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .itemDetails .buyOptions button:hover {
+    background-color: #000;
+    color: #FDEB8C;
+
+    border: 2px solid #FDEB8C;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .itemDetails .buyOptions .tellerOption {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .itemDetails .buyOptions .tellerOption img {
+    margin: 0 1rem;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .itemDetails .buyOptions .tellerOption span {
+    font-size: 16px !important;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .otherOptions .row {
+    display: flex;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .otherOptions .row:nth-child(1) * {
+    color: #BFC4CA;
+    font-size: 16px;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .otherOptions .row:nth-child(1) .col div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .otherOptions .row:nth-child(1) .col div span {
+    font-size: 16px;
+    font-family: CPMono_v07_Bold;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .otherOptions .row p,
+.viewnftContanier .viewNFTSection .rightSide .otherOptions .head {
+    font-family: CPMono_v07_Bold;
+    color: #E1E1E2;
+    font-size: 16px
+}
+
+.viewnftContanier .viewNFTSection .rightSide .otherOptions .head {
+    margin-top: 1rem;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .otherOptions .row .col:nth-child(2) {
+    margin-left: auto;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .otherOptions .row .col:nth-child(2) p {
+    text-align: right;
+    color: #73B3FF !important;
+}
+
+.timeStamp {
+    color: #E1E1E2 !important;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .attributesContainer {}
+
+.viewnftContanier .viewNFTSection .rightSide .attributesContainer .head {
+    font-size: 18px;
+    font-family: CPMono_v07_Bold;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .attributesContainer .attributes {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .attributesContainer .attributes .individualAttribute {
+    width: 45%;
+    padding: 1rem 0;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .attributesContainer .attributes .individualAttribute p,
+.viewnftContanier .viewNFTSection .rightSide .attributesContainer .attributes .individualAttribute .row .price span {
+    color: #BFC4CA !important;
+    font-family: CPMono_v07_Plain;
+    font-size: 16px;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .attributesContainer .attributes .individualAttribute p:nth-child(2) {
+    color: #fff !important;
+    font-size: 18px;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .attributesContainer .attributes .individualAttribute .row {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    margin: 0;
+    justify-content: space-between;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .attributesContainer .attributes .individualAttribute .row .percentage {
+    color: #9F5CFF !important;
+    margin-top: 0.5rem;
+}
+
+.viewnftContanier .viewNFTSection .rightSide .attributesContainer .attributes .individualAttribute .row .price {
+    display: flex;
+    align-items: center;
+}
+
+/* .viewnftContanier .viewNFTSection .rightSide .attributesContainer .attributes .individualAttribute .row .price span { */
+/* font-size: 16px;
+} */
