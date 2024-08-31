@@ -27,6 +27,7 @@ export default function Header() {
                         <li><a>DOWNLOAD</a></li>
                     </Link>
                     <li><a style={{ all: "unset" }} href="https://worldwar0x.io" rel="noreferrer" target='_blank'>PLAY</a></li>
+                    <li><a style={{ all: "unset" }} href="https://truffle.wtf/project/world-war-0x-country" rel="noreferrer" target='_blank'>MINT</a></li>
 
                     {/* <li>DOWNLOAD</li> */}
                     {/* <li>PLAY</li> */}

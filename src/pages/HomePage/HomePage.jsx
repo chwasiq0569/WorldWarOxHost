@@ -138,10 +138,10 @@ const HomePage = () => {
             token_name: 'World War 0x',
             token_type: 'UTILITY TOKEN ',
             contract_address: 'm627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5',
-            current_supply: '60522162',
-            display_current_supply: '60,522,162',
-            max_supply: '490000000',
-            display_max_supply: '490,000,000',
+            current_supply: '284952013',
+            display_current_supply: '284,952,013',
+            max_supply: '1500000000',
+            display_max_supply: '1,500,000,000',
             lp_providers: [
                 {
                     icon: RaydiumIconBlack,
