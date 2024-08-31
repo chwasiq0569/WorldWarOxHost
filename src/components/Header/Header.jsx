@@ -31,7 +31,10 @@ export default function Header() {
 
                     {/* <li>DOWNLOAD</li> */}
                     {/* <li>PLAY</li> */}
-                    <li>COLLECTIONS</li>
+                    <Link style={{ all: "unset" }} to="/collection">
+                        <li><a>COLLECTIONS</a></li>
+                    </Link>
+                    {/* <li>COLLECTIONS</li> */}
                     <li>MARKETPLACE</li>
                     <li><a style={{ all: "unset" }} href='/atm' rel="noreferrer"
                         target="_blank">ATM</a></li>

@@ -41,13 +41,14 @@ function AppContent() {
 
     return (<div className="App">
         <Routes>
-            <Route exact path="/" element={<Collection />} />
+            <Route exact path="/" element={<HomePage />} />
             <Route exact path="/privacy" element={<Privacy />} />
             <Route exact path="/terms" element={<Terms />} />
             <Route exact path="/download" element={<Download />} />
             <Route exact path="/mintnfts" element={<MintNFT />} />
             <Route exact path="/testmintnfts" element={<TestMintNFTs />} />
             <Route exact path="/support" element={<Support />} />
+            <Route exact path="/collection" element={<Collection />} />
             <Route exact path="/mint" element={<WhiteListPage />} />
             <Route exact path="/atm" element={<TellerATM />} />
             <Route exact path="/choosetoken" element={<ChooseToken withdrawToken={withdrawToken} setWithdrawToken={setWithdrawToken} />} />
