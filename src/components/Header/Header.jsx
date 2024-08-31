@@ -42,8 +42,12 @@ export default function Header() {
             </div>
             <div className='rightSide'>
                 <div className='socialIcons'>
-                    <img src={DiscordIcon} alt='DiscordIcon' />
-                    <img src={XIcon} alt='XIcon' />
+                    <a style={{ all: "unset" }} href="https://discord.com/invite/worldwar0x" rel="noreferrer" target='_blank'>
+                        <img src={DiscordIcon} alt='DiscordIcon' />
+                    </a>
+                    <a style={{ all: "unset" }} href="https://www.instagram.com/worldwar0x/" rel="noreferrer" target='_blank'>
+                        <img src={XIcon} alt='XIcon' />
+                    </a>
                 </div>
                 <button className='connectWalletBtn'>CONNECT WALLET</button>
             </div>
