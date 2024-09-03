@@ -28,14 +28,10 @@ export default function Header() {
                     </Link>
                     <li><a style={{ all: "unset" }} href="https://worldwar0x.io" rel="noreferrer" target='_blank'>PLAY</a></li>
                     <li><a style={{ all: "unset" }} href="https://truffle.wtf/project/world-war-0x-country" rel="noreferrer" target='_blank'>MINT</a></li>
-
                     {/* <li>DOWNLOAD</li> */}
                     {/* <li>PLAY</li> */}
-                    <Link style={{ all: "unset" }} to="/collection">
-                        <li><a>COLLECTIONS</a></li>
-                    </Link>
                     {/* <li>COLLECTIONS</li> */}
-                    <li>MARKETPLACE</li>
+                    {/* <li>MARKETPLACE</li> */}
                     <li><a style={{ all: "unset" }} href='/atm' rel="noreferrer"
                         target="_blank">ATM</a></li>
                 </ul>
@@ -45,13 +41,12 @@ export default function Header() {
                     <a style={{ all: "unset" }} href="https://discord.com/invite/worldwar0x" rel="noreferrer" target='_blank'>
                         <img src={DiscordIcon} alt='DiscordIcon' />
                     </a>
-                    <a style={{ all: "unset" }} href="https://www.instagram.com/worldwar0x/" rel="noreferrer" target='_blank'>
+                    <a style={{ all: "unset" }} href="https://x.com/worldwar0x" rel="noreferrer" target='_blank'>
                         <img src={XIcon} alt='XIcon' />
                     </a>
                 </div>
-                <button className='connectWalletBtn'>CONNECT WALLET</button>
+                {/* <button className='connectWalletBtn'>CONNECT WALLET</button> */}
             </div>
-
             {menuOpened && <img onClick={() => setMenuOpened(false)} className='close_icon' src={CloseIcon} alt='mobile_menu_icon' />}
         </div>
         {
