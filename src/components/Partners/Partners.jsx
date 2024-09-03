@@ -14,14 +14,16 @@ export default function Partners() {
             <div className='icons_container'>
                 <div className='row'>
                     <img src={Icon1} alt="icon" />
-                    <img src={Icon2} alt="icon" />
+                    {/* <img src={Icon2} alt="icon" /> */}
+                    <img src={Icon4} alt="icon" />
+
                     <img src={Icon3} alt="icon" />
                 </div>
-                <div className='row'>
-                    <img src={Icon4} alt="icon" />
-                    <img src={Icon5} alt="icon" />
-                    <img src={Icon6} alt="icon" />
-                </div>
+                {/* <div className='row'> */}
+                {/* <img src={Icon4} alt="icon" /> */}
+                {/* <img src={Icon5} alt="icon" /> */}
+                {/* <img src={Icon6} alt="icon" /> */}
+                {/* </div> */}
 
             </div>
         </div>

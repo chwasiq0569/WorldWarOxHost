@@ -3,7 +3,7 @@ import headTwitter from "../../assets/twitter.webp";
 import headYoutube from "../../assets/youtube.webp";
 import headSoo from "../../assets/so.webp";
 import headDiscord from "../../assets/discord.webp";
-import bitmap from "../../assets/Bitmap Copy 5.webp";
+import bitmap from "../../assets/CurfluffleLogo.png";
 import tikTok from "../../assets/tiktok.webp";
 import './Footer.css';
 import { Link } from 'react-router-dom';
@@ -14,7 +14,7 @@ const Footer = () => {
             <footer className="Footer">
                 <div className="FooterCentered">
                     <div className="FooterLeftContainer">
-                        <img loading="lazy" src={bitmap} alt="" />
+                        <img className='footerLogp' loading="lazy" src={bitmap} alt="" />
                         <div className="footer-ul">
                             <ul>
                                 <li><a href="https://worldwar0x.io" rel="noreferrer" target='_blank'>PLAY</a></li>

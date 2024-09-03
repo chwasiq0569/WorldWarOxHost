@@ -36,6 +36,12 @@ import russia from "../../assets/Russia 3.png";
 import ukraine from "../../assets/Ukraine 3.png";
 // import ukraineSectionBigImg from "../../assets/image 1036.png";
 import ukraineSectionBigImg from "../../assets/Bakhmut.jpg";
+import KoreanDayBigImg from "../../assets/KoreaDay.png";
+import KoreanNightBigImg from "../../assets/KoreaNight.png";
+import GuyanaBigImg from "../../assets/Guyana.png";
+import OdesaBigImg from "../../assets/Odesa.png";
+import PenghuBigImg from "../../assets/Penghu.png";
+import DonbasBigImg from "../../assets/Donbas.png";
 // import ukraine2SectionBigImg from "../../assets/image 1088.png";
 // import ukraine2SectionBigImg from "../../assets/Odesa.webp";
 import ukraine2SectionBigImg from "../../assets/OdesaPort.jpg";
@@ -267,7 +273,7 @@ const HomePage = () => {
                         <div className='left'>
                             <p className='collectionhead'>BATTLEWEAR</p>
                             <p className='mintedOut'>MINTED OUT</p>
-                            <button className='viewNftBtn'>VIEW NFTS</button>
+                            <a href='https://raritysniper.com/world-war-0x-battlewear' rel="noreferrer" target='_blank' className='viewNftBtn'>RARITY SNIPER</a>
                         </div>
                         <div className='middle'>
                             <img src={CollectionOne} alt='collection' />
@@ -275,8 +281,8 @@ const HomePage = () => {
                         </div>
                         <div className='right'>
                             <p className='collectionhead'>COUNTRY</p>
-                            <p className='mint'>MINT</p>
-                            <button className='viewNftBtn'>VIEW NFTS</button>
+                            <a href='https://truffle.wtf/project/world-war-0x-country' rel="noreferrer" target='_blank' className='mint'>MINT</a>
+                            <a href='https://raritysniper.com/world-war-0x-country' rel="noreferrer" target='_blank' className='viewNftBtn'>RARITY SNIPER</a>
                         </div>
                     </div>
                 </div>
@@ -298,7 +304,7 @@ const HomePage = () => {
                         {/* <p>These are the most important collectibles in our ecosystem and where the most value will accrue. These are your hero characters. Play with them, bet with them and stake them for rewards.</p> */}
                         <div className="FirstEditionContainer-btn">
                             <div className="GetWhiteListedBtn FirstEditionBTN">
-                                <a href='https://truffle.wtf/project/world-war-0x-battlewear' target="_blank" rel="noreferrer"><span>MINT NOW</span></a>
+                                <a href='https://truffle.wtf/project/world-war-0x-country' target="_blank" rel="noreferrer"><span>MINT NOW</span></a>
                             </div>
                             {/* <div className='mintsContainer'>
                                 <button>MINTS MARCH</button>
@@ -331,7 +337,9 @@ const HomePage = () => {
                         <h2>A NEW ERA</h2>
                         <img loading="lazy" src={cloud2} alt="" />
                     </div>
-                    <p>World War 0x brings a <span className="red-span">fully-featured</span> FPS to the <span className="red-span">browser</span>, allowing anyone to play completely free.</p>
+                    <p>
+                        World War 0x brings a <span className="red-span">fully-featured</span> FPS to <span className="red-span">5 platforms (Windows, iOS, Android, browser, Steam),</span> allowing anyone to play completely free.</p>
+                    {/* <p>  World War 0x brings a <span className="red-span">fully-featured</span> FPS to the <span className="red-span">browser</span>, allowing anyone to play completely free.</p> */}
                 </div>
                 <div className="ANewEra-img">
                     <img loading="lazy" src={soldiers2} alt="" />
@@ -364,7 +372,7 @@ const HomePage = () => {
                 </div>
             </div>
 
-            <div className="ABCDE-Container">
+            {/* <div className="ABCDE-Container">
                 <div className="ABCDE-ContainerCentered">
                     <div className="ABCDE-ContainerBox">
                         <span>A</span>
@@ -398,9 +406,9 @@ const HomePage = () => {
                         <span>E</span>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
-            <div className="FlagContainer">
+            {/* <div className="FlagContainer">
                 <div className="FlagCentered">
                     <div className="FlagBox">
                         <h2><span className="green-span">ADVANCE</span><br />&<span className="lightred-span">SECURE</span><br /><span className="white-span">GAME MODE</span></h2>
@@ -423,13 +431,15 @@ const HomePage = () => {
                         <img loading="lazy" src={flagSecureImg} alt="" />
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className="CountryReachConatiner">
-                <CountryReach img1={china} img2={sword} img3={taiwan} img4={taiwanSectionBigImg} title="PENGHU ISLANDS" />
-                <CountryReach img1={russia} img2={sword} img3={ukraine} img4={ukraineSectionBigImg} title="DONBAS WOODS" />
-                {/* <CountryReach img1={china} img2={sword} img3={taiwan} img4={PenghuIsland} title="TAIWAN BEACH" /> */}
-                <CountryReach img1={russia} img2={sword} img3={ukraine} img4={ukraine2SectionBigImg} title="ODESA PORT" />
+                <CountryReach img1={china} img2={sword} img3={taiwan} img4={KoreanDayBigImg} title="Korean Border Day" />
+                <CountryReach img1={russia} img2={sword} img3={ukraine} img4={KoreanNightBigImg} title="Korean Border Night" />
+                <CountryReach img1={russia} img2={sword} img3={ukraine} img4={GuyanaBigImg} title="Guyana Jungle" />
+                <CountryReach img1={russia} img2={sword} img3={ukraine} img4={OdesaBigImg} title="Odesa Port Night" />
+                <CountryReach img1={russia} img2={sword} img3={ukraine} img4={PenghuBigImg} title="Penghu Islands" />
+                <CountryReach img1={russia} img2={sword} img3={ukraine} img4={DonbasBigImg} title="Donbas Woods" />
                 <img src={multipleLine} className="multipleLine" alt="" />
             </div>
 
@@ -498,9 +508,9 @@ const HomePage = () => {
                         <li className='bulletItem'>•</li>
                         <li>Ownership</li>
                     </ul>
-                    <p className="EcoSystem-p"><a href="https://worldwar0x.io" target="_blank" rel="noreferrer">World War 0x</a> is both free-to-play and play-to-earn. Anyone can play for free at WorldWar0x.io; however to access the play-to-earn competitive betting ecosystem players must have a Soldier NFT in their wallet —  either by owning or renting it.</p>
+                    <p className="EcoSystem-p"><a href="https://worldwar0x.io" target="_blank" rel="noreferrer">World War 0x</a> is both free-to-play and play-to-earn. Anyone can play for free on 5 platforms (Windows, iOS, Android, Browser and Steam), however to access the play-to-earn competitive betting ecosystem players must have a Soldier NFT in their wallet — either by owning or renting it.</p>
                     <div className="EcoSystem-textIcon">
-                        <p>WARX will offer a robust renting system to allow owners to rent their NFTs out by the hour, day or week.</p>
+                        <p>$WW3  will offer a robust renting system to allow owners to rent their NFTs out by the hour, day or week.</p>
                         <img loading="lazy" src={hand} alt="" />
                     </div>
                     <div className="EcoSystem-textIcon">
@@ -521,7 +531,7 @@ const HomePage = () => {
                 <div className="TheSoldiersNFTContainerCentered">
                     <div className="thesoldiersNFTBox">
                         <h2>THE SOLDIERS</h2>
-                        <p>Battlewear NFTs are now minting. These OG collectibles kick off the World War 0x ecosystem - boosting 3D files, in-game accessibility and integration into our betting protocol and  map creator tools.</p>
+                        <p>Country NFTs are now minting. These OG collectibles kick off the World War 0x ecosystem - boosting in-game accessibility and integration into our betting protocol and map creator tools.</p>
                     </div>
 
                     <div className="thesoldiersNFTBox">
@@ -539,7 +549,7 @@ const HomePage = () => {
                 <div className="WarxContainerBox-2">
                     <div className="WarxContainerInnerBox">
                         <h2>$WW3</h2>
-                        <p>The World War 0x ecosystem and game will be powered by the $WW3 token. The $WW3 Token is an ERC-20 Token integral to the experience being created by Curfluffle.</p>
+                        <p>The World War 0x ecosystem and game will be powered by the $WW3 token. The $WW3 Token is an SPL Token integral to the experience being created by Curfluffle.</p>
                     </div>
                     <div className="WarxContainerInnerBox">
                         <div className="WarxContainerInnerBox-img-bugs">

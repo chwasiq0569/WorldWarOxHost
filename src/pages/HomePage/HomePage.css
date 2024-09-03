@@ -173,8 +173,9 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 0px;
-  min-height: 80vh;
+  /* padding: 50px 0px; */
+  /* min-height: 80vh; */
+  margin: 100px 0;
 }
 
 .FirstEditionContainerCentered {
@@ -1926,6 +1927,8 @@ a {
 
 .collectEarnBet .lower .left .viewNftBtn,
 .collectEarnBet .lower .right .viewNftBtn {
+  all: unset;
+
   outline: none;
   background-color: transparent;
 
@@ -1935,6 +1938,12 @@ a {
   height: 35px;
   border-radius: 3px;
   color: #FDD38C;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
 }
 
 
