@@ -30,18 +30,22 @@ export default function Header() {
 
                     {/* <li>DOWNLOAD</li> */}
                     {/* <li>PLAY</li> */}
-                    <li>COLLECTIONS</li>
-                    <li>MARKETPLACE</li>
+                    {/* <li>COLLECTIONS</li> */}
+                    {/* <li>MARKETPLACE</li> */}
                     <li><a style={{ all: "unset" }} href='/atm' rel="noreferrer"
                         target="_blank">ATM</a></li>
                 </ul>
             </div>
             <div className='rightSide'>
                 <div className='socialIcons'>
-                    <img src={DiscordIcon} alt='DiscordIcon' />
-                    <img src={XIcon} alt='XIcon' />
+                    <a style={{ all: "unset" }} href="https://discord.com/invite/worldwar0x" rel="noreferrer" target='_blank'>
+                        <img src={DiscordIcon} alt='DiscordIcon' />
+                    </a>
+                    <a style={{ all: "unset" }} href="https://x.com/worldwar0x" rel="noreferrer" target='_blank'>
+                        <img src={XIcon} alt='XIcon' />
+                    </a>
                 </div>
-                <button className='connectWalletBtn'>CONNECT WALLET</button>
+                {/* <button className='connectWalletBtn'>CONNECT WALLET</button> */}
             </div>
 
             {menuOpened && <img onClick={() => setMenuOpened(false)} className='close_icon' src={CloseIcon} alt='mobile_menu_icon' />}
