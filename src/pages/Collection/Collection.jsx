@@ -95,6 +95,10 @@ export default function Collection() {
         setTraitSlider(event.target.value);
     }
 
+    // React.useEffect(() => {
+    //     fetch('https://worldwar0x.quicknode-ipfs.com/ipfs/QmfXygVtHfK9BuZsvhhMvLFQqcNpAwoKyMJ8oKC56Mh952').then(data => console.log('data', data.json()))
+    // }, [])
+
     return (
         <div className='collectionScreenContainer'>
             <Header />
