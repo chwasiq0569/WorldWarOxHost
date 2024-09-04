@@ -711,11 +711,11 @@ const HomePage = () => {
                 <div className='FaqsSectionCentered'>
                     <Accordion
                         title="Is the game free?"
-                        content={<><span>Yes, World War 0x is completely free and can be played on 5 platforms: Windows, iOS, Android, Browser and Stream (World War Next).</span> <a href='https://worldwar0x.com//download'>Download now</a><span> or</span>  <a href='https://worldwar0x.io/'>play online</a>.</>}
+                        content={<><span>Yes, World War 0x is completely free and can be played on 5 platforms: Windows, iOS, Android, Browser and Stream (World War Next).</span> <a href='https://worldwar0x.com//download' target="_blank">Download now</a><span> or</span>  <a href='https://worldwar0x.io/' target="_blank">play online</a>.</>}
                     />
                     <Accordion
                         title="Do you have an app?"
-                        content={<><span>We are currently launched on both iOS and Android.</span><a href='https://play.google.com/store/apps/details?id=com.CurfluffleGames.WorldWar0x&hl=en&gl=US'>Android</a><span> | </span><a href='https://apps.apple.com/us/app/world-war-0x/id6477559681?platform=iphone'>iOS</a></>}
+                        content={<><span>We are currently launched on both iOS and Android.</span><a href='https://play.google.com/store/apps/details?id=com.CurfluffleGames.WorldWar0x&hl=en&gl=US' target="_blank">Android</a><span> | </span><a href='https://apps.apple.com/us/app/world-war-0x/id6477559681?platform=iphone' target="_blank">iOS</a></>}
                     />
                     <Accordion
                         title="HOW TO MINT?"
