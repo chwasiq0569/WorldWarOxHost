@@ -1546,7 +1546,9 @@ a {
 }
 
 .RoadMapTextInnerBox ul li {
+  list-style-type: none;
   line-height: 30px;
+  color: #fff;
   font-family: var(--font-transducer-test);
 }
 

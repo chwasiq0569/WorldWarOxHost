@@ -206,12 +206,15 @@ const HomePage = () => {
     const [isMobileMenu, setMobileMenu] = React.useState(false)
     const handleMobileMenu = () => setMobileMenu(!isMobileMenu)
 
+    const [outerRef, setOuterRef] = React.useState(null)
+
+    console.log('outerRef', outerRef)
     return (
         <div>
             {isScrolled && <div onClick={scrollToTop} className='backToTop'>
                 <img src={ArrowUp} alt='arrow_up' />
             </div>}
-            <Header />
+            <Header outerRef={outerRef} />
             {/* <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} /> */}
             <HeroSection moveToBack={moveToBack} />
             <div className="tokensSlider">
@@ -606,8 +609,6 @@ const HomePage = () => {
 
                     <div className="RoadMapTextConatiner">
                         <div className="RoadMapTextConatinerCentered">
-
-
                             <div className="RoadMapTextInnerBox">
                                 <h4>Q3 <span className="orange-span">2024</span></h4>
                                 <ul>
@@ -622,8 +623,6 @@ const HomePage = () => {
                                     <li>8 more maps featuring real WW3 battle locations</li>
                                     <li>Complete Teller ATMs integration</li>
                                     <li>NFT AI personalities beta</li> */}
-
-
                                     <li>$WW3 TGE</li>
                                     <li>$WW3 DEX, CEX Listings</li>
                                     <li>Rent NFTs, Stake NFTs</li>
@@ -712,19 +711,21 @@ const HomePage = () => {
                 <div className='FaqsSectionCentered'>
                     <Accordion
                         title="Is the game free?"
-                        content="Yes, World War 0x is completely free and can be played at WorldWar0x.io!"
+                        content={<><span>Yes, World War 0x is completely free and can be played on 5 platforms: Windows, iOS, Android, Browser and Stream (World War Next).</span> <a href='https://worldwar0x.com//download'>Download now</a><span> or</span>  <a href='https://worldwar0x.io/'>play online</a>.</>}
                     />
                     <Accordion
                         title="Do you have an app?"
-                        content="We don’t currently have an app however we anticipate the launch of an iOS and Android app in Q1 2024!"
+                        content={<><span>We are currently launched on both iOS and Android.</span><a href='https://play.google.com/store/apps/details?id=com.CurfluffleGames.WorldWar0x&hl=en&gl=US'>Android</a><span> | </span><a href='https://apps.apple.com/us/app/world-war-0x/id6477559681?platform=iphone'>iOS</a></>}
                     />
                     <Accordion
-                        title="How To Whitelist?"
-                        content={<p>To whitelist please sign up here: <a href='https://forms.gle/LuqgvZu8H6iu34KA7' className='yellowLink' rel="noreferrer" target="_blank">https://forms.gle/LuqgvZu8H6iu34KA7</a></p>}
+                        title="HOW TO MINT?"
+                        content={<p>Mint a Country Soldier NFT on Truffle: <a href='https://truffle.wtf/project/world-war-0x-country' className='yellowLink' rel="noreferrer" target="_blank">MINT</a></p>}
                     />
                     <Accordion
-                        title="Is the World War 0x token live?"
-                        content="The World War 0x token generation event will be Q1/Q2 2024."
+                        title="IS THE WORLD WAR 0X TOKEN LIVE"
+                        content={<><span>$WW3 is the World War 0x utility token.<br />
+                            Contract Address: m627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5. </span>
+                            <a href='https://raydium.io/swap/?inputMint=sol&outputMint=m627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5' className='yellowLink' rel="noreferrer" target="_blank">Buy on Radium</a> | <a href='https://dexscreener.com/solana/m627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5' className='yellowLink' rel="noreferrer" target="_blank">Dexscreener</a></>}
                     />
                 </div>
 

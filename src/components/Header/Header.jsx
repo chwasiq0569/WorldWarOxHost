@@ -14,7 +14,6 @@ export default function Header() {
     })
     const [menuOpened, setMenuOpened] = React.useState(false)
 
-
     return (<>
         <div className={menuOpened ? 'headerContainer' : 'headerContainer headerClosed'}>
             <div className='leftSide'>
@@ -58,7 +57,6 @@ export default function Header() {
                 }} className='burger_icon' src={BurgerIcon} alt='mobile_menu_icon' />}
             </div>
         }
-
     </>
     )
 }

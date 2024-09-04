@@ -41,6 +41,14 @@
     font-family: var(--font-transducer-test);
 }
 
+.accordion-content a {
+    color: #FFF4BC;
+}
+
+.accordion-content a:hover {
+    text-decoration: underline;
+}
+
 .FaqsSectionCentered {
     width: 60%;
     margin: auto;
