@@ -123,8 +123,8 @@ export default function Collection() {
     const filterTraits = (val) => {
         setLoading(true)
         // console.log("VALL", typeof (parseInt(val)))
-        console.log(`SLIDER|${val}`, nfts.filter(nft => nft.attributes.length == val))
-        setFilteredNFTs(nfts.filter(nft => nft.attributes.length == val))
+        console.log(`SLIDER|${val}`, nfts.filter(nft => nft?.attributes.length == val))
+        setFilteredNFTs(nfts.filter(nft => nft?.attributes.length == val))
         setLoading(false)
         // const filteredObject = {};
         // for (const key in nfts) {
