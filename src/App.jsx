@@ -41,7 +41,7 @@ function AppContent() {
 
     return (<div className="App">
         <Routes>
-            <Route exact path="/" element={<Collection />} />
+            <Route exact path="/" element={<HomePage />} />
             <Route exact path="/privacy" element={<Privacy />} />
             <Route exact path="/terms" element={<Terms />} />
             <Route exact path="/download" element={<Download />} />
@@ -56,6 +56,7 @@ function AppContent() {
             <Route exact path="/withdrawprocessing" element={<WithdrawProcessing />} />
             <Route exact path="/withdrawdone" element={<WithdrawDone />} />
             <Route exact path="/viewnft" element={<ViewNFT />} />
+            <Route exact path="/collection" element={<ViewNFT />} />
         </Routes>
     </div>);
 }
