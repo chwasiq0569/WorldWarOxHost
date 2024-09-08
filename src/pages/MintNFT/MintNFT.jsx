@@ -25,7 +25,7 @@ function MintNFT() {
     React.useEffect(() => {
         scrollToTop()
     }, [])
-    return (<>
+    return (<div style={{ position: 'relative', overflowX: 'hidden' }}>
         {/* <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} /> */}
         <Header />
 
@@ -95,7 +95,7 @@ function MintNFT() {
             <br />
         </div>
         <Footer />
-    </>
+    </div>
     )
 }
 

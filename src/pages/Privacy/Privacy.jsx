@@ -12,7 +12,7 @@ const Privacy = () => {
     React.useEffect(() => {
         scrollToTop()
     }, [])
-    return (<>
+    return (<div style={{ position: 'relative', overflowX: 'hidden' }}>
         {/* <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} /> */}
         <Header />
 
@@ -221,7 +221,7 @@ const Privacy = () => {
 
         </div>
         <Footer />
-    </>);
+    </div>);
 }
 
 export default Privacy;

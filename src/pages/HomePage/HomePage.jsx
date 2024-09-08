@@ -210,7 +210,7 @@ const HomePage = () => {
 
     console.log('outerRef', outerRef)
     return (
-        <div>
+        <div className='homePageContainer'>
             {isScrolled && <div onClick={scrollToTop} className='backToTop'>
                 <img src={ArrowUp} alt='arrow_up' />
             </div>}

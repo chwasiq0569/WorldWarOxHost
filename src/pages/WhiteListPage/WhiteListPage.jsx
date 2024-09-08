@@ -142,7 +142,7 @@ const WhiteListPage = () => {
     }, []);
 
     return (
-        <div>
+        <div style={{ position: 'relative', overflowX: 'hidden' }}>
             {isScrolled && <div onClick={scrollToTop} className='backToTop'>
                 <img src={ArrowUp} alt='arrow_up' />
             </div>}

@@ -13,7 +13,7 @@ const Terms = () => {
         scrollToTop()
     }, [])
 
-    return (<>
+    return (<div style={{ position: 'relative', overflowX: 'hidden' }}>
         {/* <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} /> */}
         <Header />
 
@@ -193,7 +193,7 @@ const Terms = () => {
             </div>
         </div>
         <Footer />
-    </>);
+    </div>);
 }
 
 export default Terms;

@@ -24,7 +24,7 @@ const Support = () => {
     React.useEffect(() => {
         scrollToTop()
     }, [])
-    return (<>
+    return (<div style={{ position: 'relative', overflowX: 'hidden' }}>
         {/* <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} /> */}
 
         <Header />
@@ -127,7 +127,7 @@ const Support = () => {
             </div> */}
         </div>
         <Footer />
-    </>);
+    </div>);
 }
 
 export default Support;

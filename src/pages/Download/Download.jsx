@@ -20,7 +20,7 @@ const Download = () => {
     React.useEffect(() => {
         scrollToTop()
     }, [])
-    return (<>
+    return (<div style={{ position: 'relative', overflowX: 'hidden' }}>
         {/* <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} /> */}
         <Header />
 
@@ -117,7 +117,7 @@ const Download = () => {
             </div>
         </div>
         <Footer />
-    </>);
+    </div>);
 }
 
 export default Download;
