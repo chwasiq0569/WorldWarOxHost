@@ -1,3 +1,8 @@
+.collectionScreenContainer {
+    overflow-x: hidden;
+    position: relative;
+}
+
 .fade {
     opacity: 0.8;
 }
@@ -53,8 +58,8 @@
 }
 
 .collection-cover {
-    width: 100%;
-
+    width: 70%;
+    margin: 0 auto;
 }
 
 .collection-cover .row {
@@ -254,6 +259,10 @@
     color: #fff;
 }
 
+.trait-slider-values span {
+    cursor: pointer;
+}
+
 .collectionsContainer .rightSide .nftsCollection {
     display: flex;
     flex-wrap: wrap;
@@ -264,6 +273,8 @@
 
     padding: 0.30rem;
     margin-bottom: 1rem;
+
+    cursor: pointer;
 }
 
 .collectionsContainer .rightSide .nftsCollection .individualNFT .nftImage {
@@ -314,4 +325,103 @@
     background-color: #FDD38C;
 
     cursor: pointer;
+}
+
+.traitsContainer {
+    width: 100%;
+}
+
+.traitsContainer .traitHeader {
+    font-family: CPMono_v07_Bold;
+}
+
+.traitsContainer .traits {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.traitsContainer .traits .individualTrait {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.traitsContainer .traits .individualTrait .leftSide {
+    width: 150px;
+    height: 100px;
+}
+
+.traitsContainer .traits .individualTrait .rightSide {}
+
+.traitsContainer .traits .individualTrait .rightSide .name {
+    color: #FDD38C !important;
+    font-family: CPMono_v07_Plain;
+}
+
+.traitsContainer .traits .individualTrait .rightSide .value {
+    color: #FFFFFF;
+    font-family: CPMono_v07_Plain;
+}
+
+.traitsContainer .traits .individualTrait .rightSide .fade_value {
+    color: #AAAEB3 !important;
+    font-family: CPMono_v07_Plain;
+    font-size: 14px;
+}
+
+.traitsContainer .traits .individualTrait .rightSide .percentage {
+    color: #AAAEB3;
+    font-family: CPMono_v07_Bold;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 960px) {
+    .collection-slider {
+        margin-top: 5rem;
+    }
+
+    .collectionsContainer .rightSide .nftsCollection .individualNFT {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .collectionsContainer .rightSide .nftsCollection .individualNFT {
+        width: 33%;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .collectionsContainer {
+        flex-direction: column;
+    }
+
+    .collection-slider {
+        width: 90%;
+    }
+
+    .collection-cover {
+        width: 100%;
+    }
+
+    .collection-cover .row {
+        margin: 1rem 1rem;
+    }
+
+    .collectionsContainer .leftSide,
+    .collectionsContainer .rightSide {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .collectionsContainer .rightSide .nftsCollection .individualNFT {
+        width: 100%;
+    }
+
+    .collection-cover .row:nth-child(1) .nft-rates {
+        flex-direction: column;
+    }
 }

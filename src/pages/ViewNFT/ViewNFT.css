@@ -1,7 +1,7 @@
 .viewnftContanier {
     width: 100%;
     height: auto;
-
+    overflow-x: hidden;
 }
 
 .viewnftContanier .nftHeader {
@@ -247,3 +247,34 @@
 /* .viewnftContanier .viewNFTSection .rightSide .attributesContainer .attributes .individualAttribute .row .price span { */
 /* font-size: 16px;
 } */
+
+@media only screen and (max-width: 860px) {
+
+    .viewnftContanier .nftHeader {
+        padding: 20px 30px;
+    }
+
+    .viewnftContanier .nftName {
+        margin-top: 4rem;
+        padding: 0;
+    }
+}
+
+
+@media only screen and (max-width: 860px) {
+    .viewnftContanier .viewNFTSection {
+        flex-direction: column;
+    }
+
+    .viewnftContanier .viewNFTSection .leftSide,
+    .viewnftContanier .viewNFTSection .rightSide {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .viewnftContanier .viewNFTSection {
+        padding: 20px 30px;
+    }
+
+}
