@@ -20,11 +20,20 @@ import ViewNFT from './pages/ViewNFT/ViewNFT';
 import Collection from './pages/Collection/Collection';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ReactGA from 'react-ga';
 
 window.Buffer = Buffer;
 window.process = process;
 
+const TRACKING_ID = ReactGA.initialize('AW-11124789446');
+ReactGA.initialize(TRACKING_ID)
+
 function App() {
+
+    React.useEffect(() => {
+        ReactGA.pageview(window.location.pathname)
+    }, [])
+
     return (<Router>
         <AppContent />
     </Router>);
