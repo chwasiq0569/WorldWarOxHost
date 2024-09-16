@@ -1620,6 +1620,13 @@ a {
 
 }
 
+.tokensSlider .pie-chart {
+  width: 70%;
+  object-fit: contain;
+
+  margin-bottom: 8rem;
+}
+
 
 .tokensSlider .sliderItem {
   /* border: 3px solid red; */

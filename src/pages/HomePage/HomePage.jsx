@@ -100,7 +100,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useNavigate } from "react-router-dom";
 import Header from '../../components/Header/Header';
-
+import Pie from '../../assets/Pie.svg'
 // import '../../'
 // import '../../style.css'
 // import '../../swiper-bundle.min.css'
@@ -209,6 +209,9 @@ const HomePage = () => {
     const [outerRef, setOuterRef] = React.useState(null)
 
     console.log('outerRef', outerRef)
+
+
+
     return (
         <div>
             {isScrolled && <div onClick={scrollToTop} className='backToTop'>
@@ -267,6 +270,8 @@ const HomePage = () => {
                         </div>)
                     }
                 </Slider>
+
+                <img className='pie-chart' src={Pie} alt='pie-chart' />
 
                 <div className='collectEarnBet'>
                     <div className="upper">
