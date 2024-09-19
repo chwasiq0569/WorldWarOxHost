@@ -1,6 +1,6 @@
 import React from 'react'
 import BattlewearIcon from "../../assets/collection-icons/battlewear.png"
-import CountryIcon from "../../assets/collection-icons/country.png"
+import CountryIcon from "../../assets/collection-icons/country.jpg"
 import oldIcon from "../../assets/collection-icons/old.png"
 import WomenIcon from "../../assets/collection-icons/women.png"
 import { useMediaQuery } from 'react-responsive'
@@ -21,6 +21,7 @@ import DiamondIcon from '../../assets/diamond.svg'
 import SolanaIcon from '../../assets/solana.svg'
 import { Link, useNavigate } from 'react-router-dom'
 import ClipLoader from "react-spinners/ClipLoader";
+import CustomDropdown from '../../components/CustomDropdown/CustomDropdown'
 
 export default function Collection() {
 
@@ -35,6 +36,9 @@ export default function Collection() {
     const [forSale, setForSale] = React.useState(false)
     const [favourites, setFavourites] = React.useState(false)
 
+
+    // 
+
     const [sliderItems, setSliderItems] = React.useState([
         {
             id: 0,
@@ -47,34 +51,12 @@ export default function Collection() {
             img: CountryIcon,
             text: "country",
             selected: true
-        },
-        {
-            id: 2,
-            img: oldIcon,
-            text: "GOLDHEADS",
-            selected: false
-        },
-        {
-            id: 3,
-            img: WomenIcon,
-            text: "women",
-            selected: false
-        },
-        {
-            id: 4,
-            img: BattlewearIcon,
-            text: "battlewear",
-            selected: false
-        },
-        {
-            id: 5,
-            img: CountryIcon,
-            text: "country",
-            selected: false
         }
     ]);
 
     const [selected, setSelected] = React.useState(sliderItems[1]);
+
+    const [openedSwitch, setOpenedSwitch] = React.useState([]);
 
     const selectionFunctions = (id) => {
         let items = [...sliderItems]
@@ -91,7 +73,8 @@ export default function Collection() {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: isSmallScreen ? 1 : isTabletOrMobile ? 3 : 4,
+        slidesToShow: isSmallScreen ? 1 : isTabletOrMobile ? 2 : 2,
+        // slidesToShow: isSmallScreen ? 1 : isTabletOrMobile ? 3 : 4,
         slidesToScroll: 1,
     };
 
@@ -136,6 +119,8 @@ export default function Collection() {
         // setLoading(false)
         // console.log('filteredObject', filteredObject)
         // console.log('traitSlideCaned')
+        // new Set(array)
+        // console.log()
     }
     console.log('filteredObject', filteredNFTs)
     // React.useEffect(() => {
@@ -143,7 +128,44 @@ export default function Collection() {
     //     console.log('traitSlideCaned')
     // }, [traitSlider])
 
+    // let newArr = [...nfts.map(nft => nft?.attributes)]
+    // let myArr = [...newArr.map(item => item.filter(i => i['trait_type'] === 'Background')[0]?.value)]
+    // console.log('2122', nfts.map(nft => nft?.attributes).map(item => item.filter(i => i['trait_type'] === 'Background')[0]?.value))
+    // console.log('2122', new Set(nfts.map(nft => nft?.attributes.filter(i => i['trait_type'] === 'Background')[0]?.value)))
+    // console.log('2122', new Set(myArr.map(item => item?.value)))
     // console.log('traitSlider', traitSlider)
+
+    const getTraitCount = (trait) => {
+        // console.log('NFTS', nfts)
+        // console.log("FILTERED", nfts.filter(nft => nft.attributes.filter(item => item.value == "Red")))
+        // nfts.forEach(nft => nft.attributes.forEach(item => {
+        //     item.value == 'Red' && tempArr.push(nft)
+        // }))
+
+        // nfts.filter(nft => nft.attributes.forEach(item => item.value == 'red'))
+
+        // nfts.forEach(nft => nft.attributes.filter(item => item.value == 'Red')))
+
+
+        // console.log('TraitS', nfts.filter(nft => nft.attributes.forEach(item => item.value == 'red')))
+        // nfts.map(nft => nft?.attributes.filter(i => i['trait_type'] === trait)[0]?.value)
+        return new Set(nfts.map(nft => nft?.attributes.filter(i => i['trait_type'] === trait)[0]?.value))
+    }
+
+    const switchControl = (openedSwitch) => {
+        let tempArr = []
+
+        nfts.forEach(nft => {
+            nft.attributes.forEach(item => {
+                item.value == 'Red' && tempArr.push(nft)
+            })
+        })
+        // setOpenedSwitch((prevState) => [...prevState].push(openedSwitch))
+        // setFilteredNFTs(tempArr)
+        console.log('tempArr', tempArr, openedSwitch)
+    }
+
+
     return (
         <div className='collectionScreenContainer'>
             <Header />
@@ -256,6 +278,27 @@ export default function Collection() {
                             <span>8</span>
                             <span>9</span>
                         </div>
+                        {
+                            loading ? <ClipLoader
+                                color='#ffffff'
+                                loading={true}
+                                size={75}
+                                aria-label="Loading Spinner"
+                                data-testid="loader"
+                            /> : <div className='traitsCategories'>
+                                <br />
+                                <br />
+                                <CustomDropdown openedSwitch={openedSwitch} setOpenedSwitch={setOpenedSwitch} head='Armour' list={getTraitCount('Armour')} switchControl={switchControl} />
+                                <CustomDropdown openedSwitch={openedSwitch} setOpenedSwitch={setOpenedSwitch} head='Background' list={getTraitCount('Background')} switchControl={switchControl} />
+                                <CustomDropdown openedSwitch={openedSwitch} setOpenedSwitch={setOpenedSwitch} head='Bags' list={getTraitCount('Bags')} switchControl={switchControl} />
+                                <CustomDropdown openedSwitch={openedSwitch} setOpenedSwitch={setOpenedSwitch} head='FacialHair' list={getTraitCount('FacialHair')} switchControl={switchControl} />
+                                <CustomDropdown openedSwitch={openedSwitch} setOpenedSwitch={setOpenedSwitch} head='Heads' list={getTraitCount('Heads')} switchControl={switchControl} />
+                                <CustomDropdown openedSwitch={openedSwitch} setOpenedSwitch={setOpenedSwitch} head='Headwear' list={getTraitCount('Headwear')} switchControl={switchControl} />
+                                <CustomDropdown openedSwitch={openedSwitch} setOpenedSwitch={setOpenedSwitch} head='Pants' list={getTraitCount('Pants')} switchControl={switchControl} />
+                                <CustomDropdown openedSwitch={openedSwitch} setOpenedSwitch={setOpenedSwitch} head='Tops' list={getTraitCount('Tops')} switchControl={switchControl} />
+                            </div>
+                        }
+
                     </div>
                 </div>
                 <div className='rightSide'>
@@ -278,13 +321,13 @@ export default function Collection() {
                                             </div>
                                             <p>#424</p>
                                         </div>
-                                        <div className='priceAndAction'>
+                                        {/* <div className='priceAndAction'>
                                             <div className='currency'>
                                                 <img src={SolanaIcon} alt='solana_icon' />
                                                 <span className='price'>0.25</span>
                                             </div>
                                             <button>BUY</button>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 )
                             }
