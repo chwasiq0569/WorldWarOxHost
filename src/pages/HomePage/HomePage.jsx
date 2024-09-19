@@ -281,6 +281,10 @@ const HomePage = () => {
                         <div className='left'>
                             <p className='collectionhead'>BATTLEWEAR</p>
                             <p className='mintedOut'>MINTED OUT</p>
+                            <a href='https://magiceden.io/marketplace/ww3b' rel="noreferrer" target='_blank' className='viewNftBtn'>MAGIC EDEN</a>
+                            <br />
+                            <a href='hhttps://www.tensor.trade/trade/worldwar0x_battlewear' rel="noreferrer" target='_blank' className='viewNftBtn'>TENSOR</a>
+                            <br />
                             <a href='https://raritysniper.com/world-war-0x-battlewear' rel="noreferrer" target='_blank' className='viewNftBtn'>RARITY SNIPER</a>
                         </div>
                         <div className='middle'>
@@ -290,6 +294,10 @@ const HomePage = () => {
                         <div className='right'>
                             <p className='collectionhead'>COUNTRY</p>
                             <a href='https://truffle.wtf/project/world-war-0x-country' rel="noreferrer" target='_blank' className='mint'>MINT</a>
+                            <a href='https://magiceden.io/marketplace/ww3c' rel="noreferrer" target='_blank' className='viewNftBtn'>MAGIC EDEN</a>
+                            <br />
+                            <a href='https://www.tensor.trade/trade/worldwar0x_country' rel="noreferrer" target='_blank' className='viewNftBtn'>TENSOR</a>
+                            <br />
                             <a href='https://raritysniper.com/world-war-0x-country' rel="noreferrer" target='_blank' className='viewNftBtn'>RARITY SNIPER</a>
                         </div>
                     </div>
