@@ -1,0 +1,12 @@
+.loginBtnGoogle {
+    width: calc(100% - 20px);
+    background-color: #db4437;
+    color: #fff;
+
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

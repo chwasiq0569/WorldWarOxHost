@@ -8,19 +8,20 @@ import MintNFT from "./pages/MintNFT/MintNFT";
 import TestMintNFTs from "./pages/MintNFT/TestMintNFTs";
 import Support from "./pages/Support/Support";
 import WhiteListPage from "./pages/WhiteListPage/WhiteListPage";
-import TellerATM from "./components/TellerATM/components/TellerATM";
+import TellerATM from "./components/Game&Web3/TellerATM/components/TellerATM";
 import {Buffer} from 'buffer';
 import process from 'process';
-import Login from "./components/Game/Login/Login";
-import Deposit from "./components/Transaction/Deposit/Deposit";
-import Withdraw from "./components/Transaction/Withdraw/Withdraw";
-import {Get, Delete} from "./components/Game/Function/Database";
+import Login from "./components/Game&Web3/Login/Login";
+import Test from "./components/Game&Web3/Test/Test";
+import WithdrawDone from "./components/Game&Web3/WithdrawScreens/WithdrawDone";
+import WithdrawProcessing from "./components/Game&Web3/WithdrawScreens/WithdrawProcessing";
+import CustomAmount from "./components/Game&Web3/WithdrawScreens/CustomAmount";
+import WithdrawAmount from "./components/Game&Web3/WithdrawScreens/WithdrawAmount";
+import ChooseToken from "./components/Game&Web3/WithdrawScreens/ChooseToken";
 
 
 window.Buffer = Buffer;
 window.process = process;
-
-const INACTIVITY_TIME_LIMIT = 5 * 60 * 1000; // 5 minutes in milliseconds
 
 
 function App() {
@@ -31,53 +32,11 @@ function App() {
 
 function AppContent() {
     const location = useLocation();
-   /* const [user, setUser] = useState(Get());
-
-    let inactivityTimer;*/
+    const [withdrawToken, setWithdrawToken] = React.useState({})
 
     useEffect(() => {
-        // Set the initial background color
         document.body.style.backgroundColor = getBackgroundColor(location.pathname);
-
-     /*   // Set up event listeners for inactivity and tab close
-        window.addEventListener('beforeunload', handleLogout);
-        resetInactivityTimer();
-
-        return () => {
-            window.removeEventListener('beforeunload', handleLogout);
-            clearTimeout(inactivityTimer);
-        };*/
     }, [location.pathname]);
-
-    /*    const resetInactivityTimer = () => {
-          clearTimeout(inactivityTimer);
-          inactivityTimer = setTimeout(handleRefreshLogout, INACTIVITY_TIME_LIMIT);
-      };
-
-    const handleLogout = () => {
-          if (Get() != null) {
-              Delete(); // Clear user data from sessionStorage
-              window.location.reload();// Set user to null to trigger re-render
-          }
-      };
-
-      const handleRefreshLogout = () => {
-          if (Get() != null) {
-              Delete(); // Clear user data from sessionStorage
-              setUser(null);// Set user to null to trigger re-render
-          }
-      };
-
-      useEffect(() => {
-          // Reset inactivity timer on user activity
-          window.addEventListener('mousemove', resetInactivityTimer);
-          window.addEventListener('keypress', resetInactivityTimer);
-
-          return () => {
-              window.removeEventListener('mousemove', resetInactivityTimer);
-              window.removeEventListener('keypress', resetInactivityTimer);
-          };
-      }, [location.pathname]);*/
 
     return (<div className="App">
         <Routes>
@@ -91,8 +50,14 @@ function AppContent() {
             <Route exact path="/mint" element={<WhiteListPage/>}/>
             <Route exact path="/atm" element={<TellerATM/>}/>
             <Route exact path="/login" element={<Login/>}/>
-            <Route exact path="/withdraw" element={<Withdraw/>}/>
-            <Route exact path="/deposit" element={<Deposit/>}/>
+            <Route exact path="/choosetoken"
+                   element={<ChooseToken withdrawToken={withdrawToken} setWithdrawToken={setWithdrawToken}/>}/>
+            <Route exact path="/withdrawamount"
+                   element={<WithdrawAmount withdrawToken={withdrawToken} setWithdrawToken={setWithdrawToken}/>}/>
+            <Route exact path="/customamount" element={<CustomAmount token={withdrawToken}/>}/>
+            <Route exact path="/withdrawprocessing" element={<WithdrawProcessing/>}/>
+            <Route exact path="/withdrawdone" element={<WithdrawDone/>}/>
+            <Route exact path="/test" element={<Test/>}/>
         </Routes>
     </div>);
 }
@@ -100,7 +65,11 @@ function AppContent() {
 function getBackgroundColor(pathname) {
     switch (pathname) {
         case '/atm':
-        case '/login':
+        case '/choosetoken':
+        case '/withdrawamount':
+        case '/customamount':
+        case '/withdrawdone':
+        case '/withdrawprocessing':
             return '#217a69'; // Color for TellerATM
         case '/withdraw':
         case '/deposit':

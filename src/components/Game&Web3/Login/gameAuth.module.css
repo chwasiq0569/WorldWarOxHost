@@ -1,0 +1,59 @@
+.loginForm .inputField {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.passwordInput {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+
+
+}
+
+
+.loginBtn {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    width: calc(100% - 20px);
+}
+
+.eyeIcon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #666;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.passwordWrapper {
+    position: relative; /* Establishes a positioning context for the icon */
+    display: flex;
+    align-items: center;
+}
+
+
+.eyeIcon {
+    position: absolute;
+    right: 20px; /* Adjust as needed */
+    cursor: pointer;
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 10px;
+    z-index: 1; /* Ensure it appears above the input */
+}

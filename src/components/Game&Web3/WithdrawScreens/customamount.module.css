@@ -1,0 +1,258 @@
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+
+}
+
+.container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #2fab93 0%, #217a69 50%) bottom right / 50% 50% no-repeat,
+        linear-gradient(to bottom left, #2fab93 0%, #217a69 50%) bottom left / 50% 50% no-repeat,
+        linear-gradient(to top left, #2fab93 0%, #217a69 50%) top left / 50% 50% no-repeat,
+        linear-gradient(to top right, #2fab93 0%, #217a69 50%) top right / 50% 50% no-repeat;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    padding: 40px;
+    /* Adjust the value as needed for the desired gap */
+
+    /* Add other styles for your container here */
+}
+
+
+@media (max-width: 991px) {
+    .container {
+        padding: 40px 20px 20px;
+    }
+}
+
+.logo {
+    aspect-ratio: 0.71;
+    object-fit: cover;
+    object-position: center;
+    width: 60px;
+    margin: 0 auto 20px;
+}
+
+.contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+.welcomeText {
+    color: #4cffd8;
+    font: 600 28px Poppins, sans-serif;
+    margin-bottom: 10px;
+}
+
+.questionText {
+    color: #fff;
+    font: 700 36px Poppins, sans-serif;
+    margin-bottom: 15px;
+    /* margin-top: 10px; */
+    text-align: center;
+}
+
+.secondaryText {
+    font-family: Poppins, sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+}
+
+.secondaryText span {
+    font-weight: 600;
+}
+
+
+.tokens {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 1.5rem 0;
+}
+
+.tokens span {
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-size: 22px;
+    margin-right: 2rem;
+}
+
+.tokens .individualToken {
+    width: 275px;
+    /* max-width: 400px; */
+    display: flex;
+    align-items: center;
+    border: 3px solid rgba(0, 255, 202, 50);
+
+    border-radius: 4rem;
+    padding: 0.5rem;
+
+    background: rgb(51, 182, 157);
+    background: -moz-linear-gradient(90deg, rgba(51, 182, 157, 1) 0%, rgba(22, 75, 65, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(51, 182, 157, 1) 0%, rgba(22, 75, 65, 1) 100%);
+    background: linear-gradient(90deg, rgba(51, 182, 157, 1) 0%, rgba(22, 75, 65, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#33b69d", endColorstr="#164b41", GradientType=1);
+
+    /* margin: 1.5rem auto; */
+    cursor: pointer;
+}
+
+.tokens .tokenDetails {
+    margin-left: 1.5rem;
+    font-family: Poppins, sans-serif;
+}
+
+.tokens .tokenDetails .name {
+    font-size: 20px;
+}
+
+.tokens .tokenDetails .price {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.tokens .individualToken .tokenImg {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.tokens .individualToken .withdrawArrow {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-left: auto;
+}
+
+.customAmount {
+    width: 700px;
+    min-height: 200px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    margin-top: 1.5rem;
+}
+
+.customAmount .customInput {
+    width: 65%;
+}
+
+.customAmount .customInput .customCounter {
+    width: 100%;
+}
+
+.customAmount .customInput .customCounter .screen {
+    min-height: 50px;
+
+    background-color: #DBFFF7;
+    border: 10px solid rgba(76, 255, 216, 0.7);
+    border-radius: 8px;
+}
+
+.customAmount .customInput .customCounter .screen p {
+    text-align: center;
+    font-family: Poppins, sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: #000 !important;
+}
+
+.customAmount .customInput .customCounter .buttons {
+    width: 100%;
+}
+
+.customAmount .customInput .customCounter .buttons .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.customAmount .customInput .customCounter .buttons .row button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    background-color: #DBFFF7;
+
+    outline: none;
+    border: 0;
+
+    font-family: Poppins, sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    transition: all 0.1s ease;
+
+}
+
+.customAmount .customInput .customCounter .buttons .row button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.customAmount .customInput .customCounter .buttons .row .removeBtn {
+    /* flex: 1; */
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customAmount .customInput .customCounter .buttons .row .removeBtn img {
+    width: 30px;
+    object-fit: contain;
+}
+
+.customAmount .withdrawBtn {
+    width: 30%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 5px solid rgba(76, 255, 216, 0.7);
+    background: rgb(89, 111, 53);
+    background: -moz-radial-gradient(circle, rgba(89, 111, 53, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+    background: -webkit-radial-gradient(circle, rgba(89, 111, 53, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+    background: radial-gradient(circle, rgba(89, 111, 53, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#596f35", endColorstr="#000000", GradientType=1);
+
+    cursor: pointer;
+
+    transition: all 0.1s ease;
+}
+
+.customAmount .withdrawBtn:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.customAmount .withdrawBtn p {
+    color: #fff;
+    font: 700 28px Poppins, sans-serif;
+    text-align: center;
+}
+
+.customAmount .withdrawBtn .withdrawArrow {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}

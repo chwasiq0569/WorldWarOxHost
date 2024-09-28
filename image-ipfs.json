@@ -1,0 +1,22 @@
+{
+  "nft-images": [
+    {
+      "name" : 0,
+      "sid": "Qmf6GWPAbcdngEpSJdsU21JULcSCVQUUiAvr2P2p9zG4V4"
+    },
+    {
+      "name" : 1,
+      "sid": "Qmeo2rMNeGzF2UmAJTipPfYQDAHNaBeCgsxP75JAiBAvE9"
+    },
+    {
+      "name" : 2,
+      "sid": "QmWWkQ2yF6qHenPPAy1E3q8KeoUXoU3BDyigvK4CTF93JL"
+    },
+    {
+      "name": 3,
+      "sid": "QmdLC4bvfHrkrFMmhyyZsm2FgmG36KPTaFQaKWPwjsV2Yc"
+    }
+
+  ]
+
+}
