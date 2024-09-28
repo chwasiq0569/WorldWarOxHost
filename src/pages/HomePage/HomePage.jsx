@@ -36,6 +36,12 @@ import russia from "../../assets/Russia 3.png";
 import ukraine from "../../assets/Ukraine 3.png";
 // import ukraineSectionBigImg from "../../assets/image 1036.png";
 import ukraineSectionBigImg from "../../assets/Bakhmut.jpg";
+import KoreanDayBigImg from "../../assets/KoreaDay.png";
+import KoreanNightBigImg from "../../assets/KoreaNight.png";
+import GuyanaBigImg from "../../assets/Guyana.png";
+import OdesaBigImg from "../../assets/Odesa.png";
+import PenghuBigImg from "../../assets/Penghu.png";
+import DonbasBigImg from "../../assets/Donbas.png";
 // import ukraine2SectionBigImg from "../../assets/image 1088.png";
 // import ukraine2SectionBigImg from "../../assets/Odesa.webp";
 import ukraine2SectionBigImg from "../../assets/OdesaPort.jpg";
@@ -79,10 +85,44 @@ import NFTHolder from '../../components/NFTHolder/NFTHolder';
 import SoldierNFTs from "../../assets/2000soldiernft.png"
 import TraitCategories from '../../components/TraitCategories/TraitCategories';
 import Partners from '../../components/Partners/Partners';
+import WW3Token from '../../assets/ww3token.png'
+import BDuckToken from '../../assets/bducktoken.png'
+import RaydiumIcon from '../../assets/raydium.png'
+import RaydiumIconBlack from '../../assets/raydiumBlack.png'
+import OrcaIcon from '../../assets/orca.png'
+import DexScreenerIcon from '../../assets/dexscreener.png'
+import CollectionOne from '../../assets/collection1.png'
+import CollectionTwo from '../../assets/collection2.png'
+// import Header1 from '../../components/layout/header/Header1'
+
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { useNavigate } from "react-router-dom";
+import Header from '../../components/Header/Header';
+import Pie from '../../assets/Pie.svg'
+// import '../../'
+// import '../../style.css'
+// import '../../swiper-bundle.min.css'
+// import '../../shortcodes.css'
+// import '../../responsive.css'
+// import '../../bootstrap.css'
+// import '../../animation.css'
+// import '../../animate.min.css'
 
 const HomePage = () => {
     const [moveToBack, setMoveToBack] = React.useState(false);
     const [isScrolled, setIsScrolled] = React.useState(false);
+    const navigate = useNavigate();
+
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
+
 
     const handleScroll = () => {
         if (window.scrollY > 0) {
@@ -106,13 +146,164 @@ const HomePage = () => {
         };
     }, []);
 
+    const [sliderItems, setSelected] = React.useState([
+        {
+            id: 0,
+            icon: WW3Token,
+            name: '$WW3',
+            token_name: 'World War 0x',
+            token_type: 'UTILITY TOKEN ',
+            contract_address: 'm627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5',
+            current_supply: '284952013',
+            display_current_supply: '284,952,013',
+            max_supply: '1500000000',
+            display_max_supply: '1,500,000,000',
+            lp_providers: [
+                {
+                    icon: RaydiumIconBlack,
+                    text: 'BUY ON RAYDIUM',
+                    link: 'https://raydium.io/swap/?inputMint=sol&outputMint=m627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5'
+                }, {
+                    icon: DexScreenerIcon,
+                    text: 'DEXSCREENER',
+                    link: 'https://dexscreener.com/solana/m627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5'
+                }
+            ],
+            link: 'https://solana.fm/address/m627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5?cluster=mainnet-alpha'
+        },
+        {
+            id: 1,
+            icon: BDuckToken,
+            name: '$BDUCK',
+            token_name: 'Boomer DUCK',
+            token_type: 'MEME TOKEN',
+            contract_address: 'DSZ5kQWck86XaKgD1b2GZDNEpvtjaMKvkKBa6uY3cszd',
+            max_supply: '69420000000',
+            display_current_supply: '69,420,000,000',
+            current_supply: '69420000000',
+            display_max_supply: '69,420,000,000',
+            lp_providers: [
+                {
+                    icon: RaydiumIconBlack,
+                    text: 'BUY ON RAYDIUM',
+                    link: 'https://raydium.io/swap?outputCurrency=DSZ5kQWck86XaKgD1b2GZDNEpvtjaMKvkKBa6uY3cszd'
+                },
+                {
+                    icon: OrcaIcon,
+                    text: 'BUY ON ORCA',
+                    link: 'https://v1.orca.so/liquidity/browse?tokenMint=DSZ5kQWck86XaKgD1b2GZDNEpvtjaMKvkKBa6uY3cszd'
+                },
+                {
+                    icon: DexScreenerIcon,
+                    text: 'DEXSCREENER',
+                    link: 'https://dexscreener.com/solana/DSZ5kQWck86XaKgD1b2GZDNEpvtjaMKvkKBa6uY3cszd'
+                }
+            ],
+            link: 'https://solana.fm/address/DSZ5kQWck86XaKgD1b2GZDNEpvtjaMKvkKBa6uY3cszd?cluster=mainnet-alpha'
+        },
+    ]);
+
+    const [isMobileMenu, setMobileMenu] = React.useState(false)
+    const handleMobileMenu = () => setMobileMenu(!isMobileMenu)
+
+    const [outerRef, setOuterRef] = React.useState(null)
+
+    console.log('outerRef', outerRef)
+
+
+
     return (
-        <div>
+        <div className='homePageContainer'>
             {isScrolled && <div onClick={scrollToTop} className='backToTop'>
                 <img src={ArrowUp} alt='arrow_up' />
             </div>}
-            <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} />
+            <Header outerRef={outerRef} />
+            {/* <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} /> */}
             <HeroSection moveToBack={moveToBack} />
+            <div className="tokensSlider">
+                <Slider {...settings}>
+                    {
+                        sliderItems.map(item => <div key={item.id} className="sliderItem">
+                            <div className="upper">
+                                <div className="leftSide">
+                                    <img src={item.icon} alt="token" />
+                                </div>
+                                <div className="rightSide">
+                                    <div className="tokenDetails">
+                                        <p className='tokenSignature'>{item.name}</p> <div className='nameAndType'>
+                                            <p className='tokenName'>{item.token_name}</p>
+                                            <p className='tokenType'>{item.token_type}</p>
+                                        </div>
+                                    </div>
+                                    <div className='contractAddress'>
+                                        <p>CONTRACT ADDRESS</p>
+                                        <a href={item.link} target='_blank' className='address'>{item.contract_address}</a>
+                                    </div>
+                                    <div className='circulatingSupply'>
+                                        <div className='row textBold'>
+                                            <p>CIRCULATING SUPPLY</p>
+                                            <p>MAX SUPPLY</p>
+                                        </div>
+                                        <progress className="supply" value={item.current_supply} max={item.max_supply}></progress>
+                                        <div className='row textBig'>
+                                            <p>{item.display_current_supply}</p>
+                                            <p>{item.display_max_supply}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="lower">
+                                <div className='leftSide'>
+                                    <p className='providersText'>LP PROVIDERS</p>
+                                </div>
+                                <div className='rightSide'>
+                                    <div className='buttons'>
+                                        {
+                                            item.lp_providers.map(btn => <a href={btn.link} key={btn.link} target='_blank'>
+                                                <img src={btn.icon} alt="btn" />
+                                                <p>{btn.text}</p>
+                                            </a>)
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>)
+                    }
+                </Slider>
+
+                <img className='pie-chart' src={Pie} alt='pie-chart' />
+
+                <div className='collectEarnBet'>
+                    <div className="upper">
+                        <p>Collect, earn and bet with a soldier NFT</p>
+                    </div>
+                    <div className="lower">
+                        <div className='left'>
+                            <p className='collectionhead'>BATTLEWEAR</p>
+                            <p className='mintedOut'>MINTED OUT</p>
+                            <a href='https://magiceden.io/marketplace/ww3b' rel="noreferrer" target='_blank' className='viewNftBtn'>MAGIC EDEN</a>
+                            <br />
+                            <a href='hhttps://www.tensor.trade/trade/worldwar0x_battlewear' rel="noreferrer" target='_blank' className='viewNftBtn'>TENSOR</a>
+                            <br />
+                            <a href='https://raritysniper.com/world-war-0x-battlewear' rel="noreferrer" target='_blank' className='viewNftBtn'>RARITY SNIPER</a>
+                        </div>
+                        <div className='middle'>
+                            <img src={CollectionOne} alt='collection' />
+                            <img src={CollectionTwo} alt='collection' />
+                        </div>
+                        <div className='right'>
+                            <p className='collectionhead'>COUNTRY</p>
+                            <a href='https://truffle.wtf/project/world-war-0x-country' rel="noreferrer" target='_blank' className='mint'>MINT</a>
+                            <a href='https://magiceden.io/marketplace/ww3c' rel="noreferrer" target='_blank' className='viewNftBtn'>MAGIC EDEN</a>
+                            <br />
+                            <a href='https://www.tensor.trade/trade/worldwar0x_country' rel="noreferrer" target='_blank' className='viewNftBtn'>TENSOR</a>
+                            <br />
+                            <a href='https://raritysniper.com/world-war-0x-country' rel="noreferrer" target='_blank' className='viewNftBtn'>RARITY SNIPER</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <Platforms />
             <GetWhitelisted />
 
@@ -124,12 +315,12 @@ const HomePage = () => {
                         <img loading="lazy" src={SoldierNFTs} alt="" />
                     </div>
                     <div className="FirstEditionContainer-Text">
-                        <h4>BATTLEWEAR</h4>
-                        <h5>300 BATTLEWEAR NFTS</h5>
-                        <p>These are the most important collectibles in our ecosystem and where the most value will accrue. These are your hero characters. Play with them, bet with them and stake them for rewards.</p>
+                        <h4>COUNTRY</h4>
+                        <h5>500 COUNTRY NFTS</h5>
+                        {/* <p>These are the most important collectibles in our ecosystem and where the most value will accrue. These are your hero characters. Play with them, bet with them and stake them for rewards.</p> */}
                         <div className="FirstEditionContainer-btn">
                             <div className="GetWhiteListedBtn FirstEditionBTN">
-                                <a href='https://truffle.wtf/project/world-war-0x-battlewear' target="_blank" rel="noreferrer"><span>MINT NOW</span></a>
+                                <a href='https://truffle.wtf/project/world-war-0x-country' target="_blank" rel="noreferrer"><span>MINT NOW</span></a>
                             </div>
                             {/* <div className='mintsContainer'>
                                 <button>MINTS MARCH</button>
@@ -162,7 +353,9 @@ const HomePage = () => {
                         <h2>A NEW ERA</h2>
                         <img loading="lazy" src={cloud2} alt="" />
                     </div>
-                    <p>World War 0x brings a <span className="red-span">fully-featured</span> FPS to the <span className="red-span">browser</span>, allowing anyone to play completely free.</p>
+                    <p>
+                        World War 0x brings a <span className="red-span">fully-featured</span> FPS to <span className="red-span">5 platforms (Windows, iOS, Android, browser, Steam),</span> allowing anyone to play completely free.</p>
+                    {/* <p>  World War 0x brings a <span className="red-span">fully-featured</span> FPS to the <span className="red-span">browser</span>, allowing anyone to play completely free.</p> */}
                 </div>
                 <div className="ANewEra-img">
                     <img loading="lazy" src={soldiers2} alt="" />
@@ -195,7 +388,7 @@ const HomePage = () => {
                 </div>
             </div>
 
-            <div className="ABCDE-Container">
+            {/* <div className="ABCDE-Container">
                 <div className="ABCDE-ContainerCentered">
                     <div className="ABCDE-ContainerBox">
                         <span>A</span>
@@ -229,9 +422,9 @@ const HomePage = () => {
                         <span>E</span>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
-            <div className="FlagContainer">
+            {/* <div className="FlagContainer">
                 <div className="FlagCentered">
                     <div className="FlagBox">
                         <h2><span className="green-span">ADVANCE</span><br />&<span className="lightred-span">SECURE</span><br /><span className="white-span">GAME MODE</span></h2>
@@ -254,13 +447,15 @@ const HomePage = () => {
                         <img loading="lazy" src={flagSecureImg} alt="" />
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className="CountryReachConatiner">
-                <CountryReach img1={china} img2={sword} img3={taiwan} img4={taiwanSectionBigImg} title="PENGHU ISLANDS" />
-                <CountryReach img1={russia} img2={sword} img3={ukraine} img4={ukraineSectionBigImg} title="DONBAS WOODS" />
-                {/* <CountryReach img1={china} img2={sword} img3={taiwan} img4={PenghuIsland} title="TAIWAN BEACH" /> */}
-                <CountryReach img1={russia} img2={sword} img3={ukraine} img4={ukraine2SectionBigImg} title="ODESA PORT" />
+                <CountryReach img1={china} img2={sword} img3={taiwan} img4={KoreanDayBigImg} title="Korean Border Day" />
+                <CountryReach img1={russia} img2={sword} img3={ukraine} img4={KoreanNightBigImg} title="Korean Border Night" />
+                <CountryReach img1={russia} img2={sword} img3={ukraine} img4={GuyanaBigImg} title="Guyana Jungle" />
+                <CountryReach img1={russia} img2={sword} img3={ukraine} img4={OdesaBigImg} title="Odesa Port Night" />
+                <CountryReach img1={russia} img2={sword} img3={ukraine} img4={PenghuBigImg} title="Penghu Islands" />
+                <CountryReach img1={russia} img2={sword} img3={ukraine} img4={DonbasBigImg} title="Donbas Woods" />
                 <img src={multipleLine} className="multipleLine" alt="" />
             </div>
 
@@ -329,9 +524,9 @@ const HomePage = () => {
                         <li className='bulletItem'>•</li>
                         <li>Ownership</li>
                     </ul>
-                    <p className="EcoSystem-p"><a href="https://worldwar0x.io" target="_blank" rel="noreferrer">World War 0x</a> is both free-to-play and play-to-earn. Anyone can play for free at WorldWar0x.io; however to access the play-to-earn competitive betting ecosystem players must have a Soldier NFT in their wallet —  either by owning or renting it.</p>
+                    <p className="EcoSystem-p"><a href="https://worldwar0x.io" target="_blank" rel="noreferrer">World War 0x</a> is both free-to-play and play-to-earn. Anyone can play for free on 5 platforms (Windows, iOS, Android, Browser and Steam), however to access the play-to-earn competitive betting ecosystem players must have a Soldier NFT in their wallet — either by owning or renting it.</p>
                     <div className="EcoSystem-textIcon">
-                        <p>WARX will offer a robust renting system to allow owners to rent their NFTs out by the hour, day or week.</p>
+                        <p>$WW3  will offer a robust renting system to allow owners to rent their NFTs out by the hour, day or week.</p>
                         <img loading="lazy" src={hand} alt="" />
                     </div>
                     <div className="EcoSystem-textIcon">
@@ -352,7 +547,7 @@ const HomePage = () => {
                 <div className="TheSoldiersNFTContainerCentered">
                     <div className="thesoldiersNFTBox">
                         <h2>THE SOLDIERS</h2>
-                        <p>Battlewear NFTs are now minting. These OG collectibles kick off the World War 0x ecosystem - boosting 3D files, in-game accessibility and integration into our betting protocol and  map creator tools.</p>
+                        <p>Country NFTs are now minting. These OG collectibles kick off the World War 0x ecosystem - boosting in-game accessibility and integration into our betting protocol and map creator tools.</p>
                     </div>
 
                     <div className="thesoldiersNFTBox">
@@ -370,7 +565,7 @@ const HomePage = () => {
                 <div className="WarxContainerBox-2">
                     <div className="WarxContainerInnerBox">
                         <h2>$WW3</h2>
-                        <p>The World War 0x ecosystem and game will be powered by the $WW3 token. The $WW3 Token is an ERC-20 Token integral to the experience being created by Curfluffle.</p>
+                        <p>The World War 0x ecosystem and game will be powered by the $WW3 token. The $WW3 Token is an SPL Token integral to the experience being created by Curfluffle.</p>
                     </div>
                     <div className="WarxContainerInnerBox">
                         <div className="WarxContainerInnerBox-img-bugs">
@@ -427,8 +622,6 @@ const HomePage = () => {
 
                     <div className="RoadMapTextConatiner">
                         <div className="RoadMapTextConatinerCentered">
-
-
                             <div className="RoadMapTextInnerBox">
                                 <h4>Q3 <span className="orange-span">2024</span></h4>
                                 <ul>
@@ -443,8 +636,6 @@ const HomePage = () => {
                                     <li>8 more maps featuring real WW3 battle locations</li>
                                     <li>Complete Teller ATMs integration</li>
                                     <li>NFT AI personalities beta</li> */}
-
-
                                     <li>$WW3 TGE</li>
                                     <li>$WW3 DEX, CEX Listings</li>
                                     <li>Rent NFTs, Stake NFTs</li>
@@ -533,19 +724,21 @@ const HomePage = () => {
                 <div className='FaqsSectionCentered'>
                     <Accordion
                         title="Is the game free?"
-                        content="Yes, World War 0x is completely free and can be played at WorldWar0x.io!"
+                        content={<><span>Yes, World War 0x is completely free and can be played on 5 platforms: Windows, iOS, Android, Browser and Stream (World War Next).</span> <a href='https://worldwar0x.com//download' target="_blank">Download now</a><span> or</span>  <a href='https://worldwar0x.io/' target="_blank">play online</a>.</>}
                     />
                     <Accordion
                         title="Do you have an app?"
-                        content="We don’t currently have an app however we anticipate the launch of an iOS and Android app in Q1 2024!"
+                        content={<><span>We are currently launched on both iOS and Android.</span><a href='https://play.google.com/store/apps/details?id=com.CurfluffleGames.WorldWar0x&hl=en&gl=US' target="_blank">Android</a><span> | </span><a href='https://apps.apple.com/us/app/world-war-0x/id6477559681?platform=iphone' target="_blank">iOS</a></>}
                     />
                     <Accordion
-                        title="How To Whitelist?"
-                        content={<p>To whitelist please sign up here: <a href='https://forms.gle/LuqgvZu8H6iu34KA7' className='yellowLink' rel="noreferrer" target="_blank">https://forms.gle/LuqgvZu8H6iu34KA7</a></p>}
+                        title="HOW TO MINT?"
+                        content={<p>Mint a Country Soldier NFT on Truffle: <a href='https://truffle.wtf/project/world-war-0x-country' className='yellowLink' rel="noreferrer" target="_blank">MINT</a></p>}
                     />
                     <Accordion
-                        title="Is the World War 0x token live?"
-                        content="The World War 0x token generation event will be Q1/Q2 2024."
+                        title="IS THE WORLD WAR 0X TOKEN LIVE"
+                        content={<><span>$WW3 is the World War 0x utility token.<br />
+                            Contract Address: m627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5. </span>
+                            <a href='https://raydium.io/swap/?inputMint=sol&outputMint=m627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5' className='yellowLink' rel="noreferrer" target="_blank">Buy on Radium</a> | <a href='https://dexscreener.com/solana/m627ycv849McoA1G6taMDu2MVBXxkwJG5P9VTmtNXV5' className='yellowLink' rel="noreferrer" target="_blank">Dexscreener</a></>}
                     />
                 </div>
 

@@ -13,12 +13,12 @@ const ThreeTypeNFT = () => {
                     <div className="ThreeTypeSectionBox">
                         <img loading="lazy" src={NFTDriven} alt="" />
                         <h5>NFT Driven<br />Shooter</h5>
-                        <p>Equip an NFT skin to earn <span className="dollar-span">$</span><span className="warx-span">WARX</span> tokens for your performance and time spent in game.</p>
+                        <p>Equip an NFT skin to earn <span className="dollar-span">$</span><span className="warx-span">$WW3</span> tokens for your performance and time spent in game.</p>
                     </div>
                     <div className="ThreeTypeSectionBox">
                         <img loading="lazy" src={CryptoPowered} alt="" />
                         <h5>Crypto Powered<br /> P2E Ecosystem</h5>
-                        <p>Earn as you kill and capture objectives in our pay-to-spawn Advance & Secure game mode.</p>
+                        <p>Earn as you kill and collect tokens in our pay-to-spawn Free For All game mode.</p>
                     </div>
                     <div className="ThreeTypeSectionBox">
                         <img loading="lazy" src={PlayEarnBet} alt="" />

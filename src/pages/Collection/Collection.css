@@ -1,0 +1,317 @@
+.fade {
+    opacity: 0.8;
+}
+
+.collection-slider {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.collection-slider .slider-item {
+    width: auto;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: all 0.5s ease;
+    padding: 1rem 0;
+}
+
+.collection-slider .slider-item p {
+    text-transform: uppercase;
+    margin: 0 2rem;
+    transition: all 0.5s ease;
+    font-family: CPMono_v07_Plain;
+
+}
+
+.collection-slider .slider-item img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+/* 
+.collection-slider .slider-item:hover {
+    background-color: #2e2e2e;
+}
+
+.collection-slider .slider-item:hover>p {
+    color: white;
+} */
+
+.collection-slider .selected-slider {
+    background-color: white;
+}
+
+.collection-slider .selected-slider p {
+    color: #000 !important;
+    font-family: CPMono_v07_Bold;
+}
+
+.collection-cover {
+    width: 100%;
+
+}
+
+.collection-cover .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 5rem 0;
+
+}
+
+
+.collection-cover .row .nftdetails {
+    display: flex;
+    align-items: center;
+}
+
+.collection-cover .row .nftdetails .collection-avatar {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.collection-cover .row .nftdetails .details {
+    margin-left: 2rem;
+}
+
+.collection-cover .row .nftdetails .details .collection-name {
+    font-size: 50px;
+    font-family: CPMono_v07_Black;
+
+    text-transform: uppercase;
+    color: #fff;
+
+    /* margin-bottom: 1.5rem; */
+}
+
+.collection-cover .row .nftdetails .details .collection {
+    display: flex;
+    align-items: center;
+}
+
+.collection-cover .row .nftdetails .details .collection p {
+    color: rgba(255, 230, 0, 0.8) !important;
+    margin-left: 1rem;
+    font-family: CPMono_v07_Plain;
+}
+
+.collection-cover .row .nft-rates {
+    display: flex;
+    margin: 2rem 0;
+}
+
+.collection-cover .row .nft-rates div:nth-child(1) {
+    margin-right: 4rem;
+}
+
+.collection-cover .row .nft-rates div .price,
+.collection-cover .row .value {
+    font-family: CPMono_v07_Bold;
+    font-size: 21px;
+    color: #FFFF;
+}
+
+.collection-cover .row .nft-rates div .action-text,
+.collection-cover .row .label {
+    font-family: CPMono_v07_Plain;
+    font-size: 16px;
+    color: #CCB800 !important;
+}
+
+.collectionsContainer {
+    display: flex;
+    padding: 0 1rem;
+}
+
+.collectionsContainer .leftSide {
+    width: 20%;
+}
+
+.collectionsContainer .rightSide {
+    width: 80%;
+    padding-left: 1rem;
+}
+
+.collectionsContainer .leftSide .filter .filterHead {
+    font-family: CPMono_v07_Plain;
+}
+
+.collectionsContainer .leftSide .filter .filterByChoice .selection {
+    display: flex;
+    align-items: center;
+    margin: 0.75rem 0;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.collectionsContainer .leftSide .filter .filterByChoice .selection {
+    font-family: CPMono_v07_Plain;
+}
+
+.collectionsContainer .leftSide .filter .filterByChoice .selected {
+    opacity: 1;
+}
+
+.collectionsContainer .leftSide .filter .filterByChoice .selected p {
+    color: #fff;
+}
+
+.collectionsContainer .leftSide .filter .filterByChoice .selection img {
+    width: 16px;
+    object-fit: contain;
+}
+
+.collectionsContainer .leftSide .filter .filterByChoice .selection p {
+    font-size: 16px;
+    margin-left: 1rem;
+}
+
+.collectionsContainer .leftSide .filter .rarity-tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.collectionsContainer .leftSide .filter .rarity-tags span {
+    font-size: 16px;
+    margin: 0.25rem 0.25rem;
+    font-family: CPMono_v07_Plain;
+}
+
+.collectionsContainer .leftSide .filter .rarity-tags .tag-BA8AFF {
+    color: #BA8AFF;
+}
+
+.collectionsContainer .leftSide .filter .rarity-tags .tag-FF8AAD {
+    color: #FF8AAD;
+}
+
+.collectionsContainer .leftSide .filter .rarity-tags .tag-8EE3FB {
+    color: #8EE3FB;
+}
+
+.collectionsContainer .leftSide .filter .rarity-tags .tag-BFC4CA {
+    color: #BFC4CA;
+}
+
+.trait-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 40px;
+    background: inherit;
+    outline: none;
+
+    margin-top: 1rem;
+}
+
+.trait-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #E03E3E;
+    border-radius: 50%;
+    cursor: pointer;
+
+    margin-top: -0.75rem;
+}
+
+/* Chrome, Safari, and Edge */
+.trait-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: #E03E3E;
+    border-radius: 5px;
+}
+
+/* Firefox */
+.trait-slider::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: #E03E3E;
+    border-radius: 5px;
+}
+
+.trait-slider-values {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 16px;
+    /* padding: 0 0.75rem; */
+    padding-right: 0.75rem;
+    padding-left: 0.5rem;
+    font-family: CPMono_v07_Plain;
+    color: #fff;
+}
+
+.collectionsContainer .rightSide .nftsCollection {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.collectionsContainer .rightSide .nftsCollection .individualNFT {
+    width: 20%;
+
+    padding: 0.30rem;
+    margin-bottom: 1rem;
+}
+
+.collectionsContainer .rightSide .nftsCollection .individualNFT .nftImage {
+    width: 100%;
+    object-fit: contain;
+}
+
+.collectionsContainer .rightSide .nftsCollection .individualNFT .nftFeatures,
+.collectionsContainer .rightSide .nftsCollection .individualNFT .priceAndAction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0.25rem 0;
+}
+
+.collectionsContainer .rightSide .nftsCollection .individualNFT .nftFeatures .diamondValue {
+    display: flex;
+    align-items: center;
+    background-color: #8EE3FB;
+    border-radius: 12px;
+    padding: 3px 5px;
+}
+
+.collectionsContainer .rightSide .nftsCollection .individualNFT .nftFeatures span {
+    margin-left: 5px;
+    font-family: CPMono_v07_Plain;
+
+    font-size: 12px;
+}
+
+.collectionsContainer .rightSide .nftsCollection .individualNFT .priceAndAction .currency {
+    display: flex;
+    align-items: center;
+}
+
+.collectionsContainer .rightSide .nftsCollection .individualNFT .priceAndAction .currency span {
+    font-family: CPMono_v07_Plain;
+    color: #fff;
+}
+
+.collectionsContainer .rightSide .nftsCollection .individualNFT .priceAndAction button {
+    border-radius: 8px;
+    padding: 6px 16px;
+    font-family: CPMono_v07_Bold;
+    font-size: 16px;
+
+    background-color: #FDD38C;
+
+    cursor: pointer;
+}

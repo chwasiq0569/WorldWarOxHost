@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from '../../components/Footer/Footer';
 import Navbar from '../../components/NavBar/Navbar';
 import "./terms.css"
+import Header from '../../components/Header/Header';
 
 const Terms = () => {
     const [moveToBack, setMoveToBack] = React.useState(false);
@@ -12,8 +13,9 @@ const Terms = () => {
         scrollToTop()
     }, [])
 
-    return (<>
-        <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} />
+    return (<div style={{ position: 'relative', overflowX: 'hidden' }}>
+        {/* <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} /> */}
+        <Header />
 
         <div class="mainContent">
             <div class="Privacy_contentContainer mainHEAD">
@@ -191,7 +193,7 @@ const Terms = () => {
             </div>
         </div>
         <Footer />
-    </>);
+    </div>);
 }
 
 export default Terms;

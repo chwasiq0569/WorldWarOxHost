@@ -14,6 +14,7 @@ import headDiscord from "../../assets/discord.webp";
 import tikTok from "../../assets/tiktok.webp";
 
 import "./Support.css"
+import Header from '../../components/Header/Header';
 
 const Support = () => {
     const [moveToBack, setMoveToBack] = React.useState(false);
@@ -23,8 +24,11 @@ const Support = () => {
     React.useEffect(() => {
         scrollToTop()
     }, [])
-    return (<>
-        <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} />
+    return (<div style={{ position: 'relative', overflowX: 'hidden' }}>
+        {/* <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} /> */}
+
+        <Header />
+
         <div className='main_content'>
             <p className='page_head'>SUPPORT</p>
             {/* <div className='download_btns_container'>
@@ -123,7 +127,7 @@ const Support = () => {
             </div> */}
         </div>
         <Footer />
-    </>);
+    </div>);
 }
 
 export default Support;

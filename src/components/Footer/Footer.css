@@ -17,6 +17,11 @@
     align-items: center;
 }
 
+.FooterLeftContainer .footerLogp {
+    width: 70px;
+    object-fit: contain;
+}
+
 .footer-ul ul {
     display: flex;
     padding-left: 40px;

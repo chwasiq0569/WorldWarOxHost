@@ -10,6 +10,7 @@ import AvailableInAppStore from "../../assets/availableinappstore.png"
 
 
 import "./Download.css"
+import Header from '../../components/Header/Header';
 
 const Download = () => {
     const [moveToBack, setMoveToBack] = React.useState(false);
@@ -19,12 +20,14 @@ const Download = () => {
     React.useEffect(() => {
         scrollToTop()
     }, [])
-    return (<>
-        <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} />
+    return (<div style={{ position: 'relative', overflowX: 'hidden' }}>
+        {/* <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} /> */}
+        <Header />
+
         <div className='main_content'>
             <p className='page_head'>DOWNLOADABLE PC VERSION</p>
             <div className='download_btns_container'>
-                <a href="https://worldwar0x.io/patch/2024-08-08.zip">
+                <a href="https://worldwar0x.io/patchsystem/ww0xLauncher.zip">
                     <button className='white_btn'>
                         <img src={Windows} alt="windows_icon" />
                         <p>WINDOWS DOWNLOAD</p>
@@ -114,7 +117,7 @@ const Download = () => {
             </div>
         </div>
         <Footer />
-    </>);
+    </div>);
 }
 
 export default Download;

@@ -11,6 +11,7 @@ import NFT2 from "../../assets/nft2.png"
 import NFT3 from "../../assets/nft3.png"
 import NFT4 from "../../assets/nft4.png"
 import NFT5 from "../../assets/nft5.png"
+import Header from '../../components/Header/Header';
 
 function MintNFT() {
     const [wallerConnected, setWalletConnected] = React.useState(false)
@@ -24,8 +25,10 @@ function MintNFT() {
     React.useEffect(() => {
         scrollToTop()
     }, [])
-    return (<>
-        <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} />
+    return (<div style={{ position: 'relative', overflowX: 'hidden' }}>
+        {/* <Navbar moveToBack={moveToBack} setMoveToBack={setMoveToBack} /> */}
+        <Header />
+
         <div className='mintnfts_container'>
             <div className='screen_cover'>
                 <img className="nft_cover_image" src={NFTCover} alt="nft_cover" />
@@ -92,7 +95,7 @@ function MintNFT() {
             <br />
         </div>
         <Footer />
-    </>
+    </div>
     )
 }
 

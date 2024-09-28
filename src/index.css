@@ -11,6 +11,7 @@
   box-sizing: border-box;
 }
 
+
 @font-face {
   font-family: "Pink and Crimson";
   src: local("Pink and Crimson"),
@@ -57,6 +58,36 @@
   font-family: "Median";
   src: local("Median"),
     url("./fonts/Median-Regular.otf") format("woff");
+}
+
+@font-face {
+  font-family: "CPMono_v07_ExtraLight";
+  src: local("CPMono_v07_ExtraLight"),
+    url("./fonts/CPMono_v07_ExtraLight.otf") format("woff");
+}
+
+@font-face {
+  font-family: "CPMono_v07_Light";
+  src: local("CPMono_v07_Light"),
+    url("./fonts/CPMono_v07_Light.otf") format("woff");
+}
+
+@font-face {
+  font-family: "CPMono_v07_Plain";
+  src: local("CPMono_v07_Plain"),
+    url("./fonts/CPMono_v07_Plain.otf") format("woff");
+}
+
+@font-face {
+  font-family: "CPMono_v07_Bold";
+  src: local("CPMono_v07_Bold"),
+    url("./fonts/CPMono_v07_Bold.otf") format("woff");
+}
+
+@font-face {
+  font-family: "CPMono_v07_Black";
+  src: local("CPMono_v07_Black"),
+    url("./fonts/CPMono_v07_Black.otf") format("woff");
 }
 
 html {
@@ -122,4 +153,38 @@ a {
 
 .invisibleContent {
   visibility: hidden;
+}
+
+.slider {
+  height: 5px;
+  width: 100%;
+  background-color: #E03E3E;
+  border-radius: 5px;
+  /* margin-top: 10px; */
+
+  margin: 2rem 0;
+}
+
+/* Styles for the slider thumb */
+.slider .thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #E03E3E;
+  cursor: grab;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-top: -5px;
+}
+
+/* Styles for the slider active state */
+.slider .thumb.active {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.slider-typo-input {
+  display: flex;
+}
+
+.slider-typo-input input {
+  color: #fff;
 }
