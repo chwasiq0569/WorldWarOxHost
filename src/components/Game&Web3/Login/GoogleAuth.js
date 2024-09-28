@@ -4,18 +4,19 @@ import Authenticate from "../Function/authenticate";
 import {useNavigate} from "react-router-dom";
 import LoadingOverlay from "./LoadingOveraly";
 import CustomAlert from "./CustomAlert";
-const GoogleAuth = ({ onLoginSuccess }) => {
+
+const GoogleAuth = ({onLoginSuccess}) => {
     const [isWaiting, setIsWaiting] = useState(false);
     const [oauthPass, setOauthPass] = useState('');
     const [checkingCode, setCheckingCode] = useState(false);
     const [alertMessage, setAlertMessage] = useState(''); // State to manage the alert message
 
 
-    const API_ENDPOINT = `https://oauth2.googleapis.com/token`;
-    const REDIRECT_URI = 'https://www.worldwar0x.io/play/php/g-oauth.php'; // Replace with your redirect URI
-    const clientID = "363712459833-7q0upmb6q1reicbq8qoe5n3mvag30mtk.apps.googleusercontent.com";
-    const clientSecret = "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";
-    const url = 'https://www.worldwar0x.io/play/php/bl_OAuth.php'; // Replace with your server endpoint
+    const API_ENDPOINT = process.env.REACT_APP_GOOGLE_API_ENDPOINT;
+    const REDIRECT_URI = process.env.REACT_APP_GOOGLE_REDIRECT_URI; // Replace with your redirect URI
+    const clientID = process.env.REACT_APP_GOOGLE_CLIENTID;
+    const clientSecret = process.env.REACT_APP_GOOGLE_CLIENTSECRET;
+    const url = process.env.REACT_APP_GOOGLE_URL; // Replace with your server endpoint
 
     useEffect(() => {
         if (isWaiting && !checkingCode) {
@@ -115,7 +116,6 @@ const GoogleAuth = ({ onLoginSuccess }) => {
     };
 
 
-
     const GeneratePassword = (UniqueID) => {
         const charArray = UniqueID.split(''); // Convert string to array
         charArray.reverse(); // Reverse the array
@@ -148,8 +148,8 @@ const GoogleAuth = ({ onLoginSuccess }) => {
             onClick={requestOauth}
             disabled={isWaiting}>Login with Google
         </button>
-        {isWaiting &&  <LoadingOverlay/>}
-        {alertMessage && <CustomAlert message={alertMessage} onClose={closeAlert} />} {/* Render the custom alert */}
+        {isWaiting && <LoadingOverlay/>}
+        {alertMessage && <CustomAlert message={alertMessage} onClose={closeAlert}/>} {/* Render the custom alert */}
     </div>);
 };
 

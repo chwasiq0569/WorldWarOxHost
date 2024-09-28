@@ -14,11 +14,11 @@ const DiscordAuth = ({onLoginSuccess}) => {
     const [alertMessage, setAlertMessage] = useState(''); // State to manage the alert message
 
 
-    const API_ENDPOINT = 'https://discord.com/api/v8';
-    const REDIRECT_URI = 'https://www.worldwar0x.io/play/php/discord-oauth.php'; // Replace with your redirect URI
-    const clientID = "1058688786436988948";
-    const clientSecret = "5BxA6ZHe4Nl3KHMsNhvpdLfIJOD6XViI";
-    const url = 'https://www.worldwar0x.io/play/php/bl_OAuth.php'; // Replace with your server endpoint
+    const API_ENDPOINT = process.env.REACT_APP_DISCORD_API_ENDPOINT;
+    const REDIRECT_URI = process.env.REACT_APP_DISCORD_REDIRECT_URI; // Replace with your redirect URI
+    const clientID = process.env.REACT_APP_DISCORD_CLIENTID;
+    const clientSecret = process.env.REACT_APP_DISCORD_CLIENTSECRET;
+    const url = process.env.REACT_APP_DISCORD_URL; // Replace with your server endpoint
 
     useEffect(() => {
         window.addEventListener('focus', onApplicationFocus);
@@ -165,7 +165,7 @@ const DiscordAuth = ({onLoginSuccess}) => {
         <button className={styles.loginBtnDiscord} onClick={requestOauth} disabled={isWaiting}>Login with Discord
         </button>
         {isWaiting && <LoadingOverlay/>}
-        {alertMessage && <CustomAlert message={alertMessage} onClose={closeAlert} />} {/* Render the custom alert */}
+        {alertMessage && <CustomAlert message={alertMessage} onClose={closeAlert}/>} {/* Render the custom alert */}
     </div>);
 };
 

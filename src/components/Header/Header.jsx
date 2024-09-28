@@ -2,7 +2,7 @@ import React from 'react'
 import './Header.css'
 import NewLogo from '../../assets/newlogo.png'
 import DiscordIcon from '../../assets/discord.png'
-import XIcon from '../../assets/X_Icon.png'
+import XIcon from '../../assets/X_icon.png'
 import BurgerIcon from "../../assets/burger-menu.svg"
 import CloseIcon from "../../assets/close_icon.png"
 import { useMediaQuery } from 'react-responsive'

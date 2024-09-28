@@ -13,16 +13,16 @@ module.exports = function override(config) {
         "http": require.resolve("stream-http"),
         "https": require.resolve("https-browserify"),
         "url": require.resolve("url/"),
-        "fs": false,
+        "fs": false,  // Disable fs polyfill
         "worker_threads": false,
-        "module": false,
+        "module": false,  // Disable module polyfill
     });
     config.resolve.fallback = fallback;
 
     config.plugins = (config.plugins || []).concat([
         new webpack.ProvidePlugin({
             process: 'process/browser',
-            Buffer: ['buffer', 'Buffer'],
+            Buffer: ['buffer', 'Buffer'],  // Ensure Buffer is polyfilled
         }),
     ]);
 
