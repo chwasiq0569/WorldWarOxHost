@@ -65,6 +65,8 @@ function AppContent() {
             <Route exact path="/customamount" element={<CustomAmount />} />
             <Route exact path="/withdrawprocessing" element={<WithdrawProcessing />} />
             <Route exact path="/withdrawdone" element={<WithdrawDone />} />
+            <Route exact path="/viewnft" element={<ViewNFT />} />
+            <Route exact path="/collection" element={<Collection />} />
         </Routes>
     </div>);
 }

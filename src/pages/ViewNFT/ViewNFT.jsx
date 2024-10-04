@@ -4,19 +4,34 @@ import SolanaIcon from "../../assets/solana.svg"
 import TellerIcon from "../../assets/teller.svg"
 import "./ViewNFT.css"
 import Header from '../../components/Header/Header'
+import { useLocation } from 'react-router-dom';
 
 export default function ViewNFT() {
+    const location = useLocation();
+
+    const [nft, setNFT] = React.useState({});
+    const [outerRef, setOuterRef] = React.useState(null)
+
+
+    React.useEffect(() => {
+        console.log('location', location)
+        setNFT(location?.state?.data)
+    }, [])
+    // console.log('nft|nft', Object.keys(nft.attributes).length)
+    console.log('nft|nft', nft?.attributes?.length)
+
+
     return (
         <div className='viewnftContanier'>
-            <Header />
+            <Header outerRef={outerRef} />
             <div className="nftHeader">
                 <div className='nftName'>
-                    <p>World War 0x #192</p>
-                    <div className="badge"><svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <p>{nft?.name}</p>
+                    {/* <div className="badge"><svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M2.46328 0.811279L0 3.19857C2.1667 6.69856 4.3334 10.1986 6.5001 13.6985L13 3.19857L10.5369 0.811279H2.46328Z" fill="black" />
                     </svg>
                         <span>4124</span>
-                    </div>
+                    </div> */}
                 </div>
                 <div className='nftDetails'>
                     <img src={NFT} alt='nft_img' />
@@ -28,7 +43,7 @@ export default function ViewNFT() {
 
             <div className='viewNFTSection'>
                 <div className='leftSide'>
-                    <img src={NFT} alt='nft_img' />
+                    <img src={nft?.image} alt='nft_img' />
                 </div>
                 <div className='rightSide'>
                     <div className='itemDetails'>
@@ -74,7 +89,7 @@ export default function ViewNFT() {
                         </div>
                         <div className='row'>
                             <div className='col'>
-                                <p>Mint</p>
+                                <p>Owner</p>
                             </div>
                             <div className='col'>
                                 <p>4rge3a</p>
@@ -94,11 +109,20 @@ export default function ViewNFT() {
                     <br />
                     <br />
                     <div className='attributesContainer'>
-                        <p className='head'>ATTRIBUTES (10)</p>
+                        <p className='head'>ATTRIBUTES {nft?.attributes?.length}</p>
                         <br />
 
                         <div className='attributes'>
-                            <div className='individualAttribute'>
+                            {
+                                nft.attributes != undefined && nft?.attributes.map(attribute => <div className='individualAttribute'>
+                                    <p>{attribute?.trait_type}</p>
+                                    <p>{attribute?.value}</p>
+                                    <div className='row'><p className='percentage'>12.65%</p><div className='price'>
+                                        <img src={SolanaIcon} alt="solana_icon" /><span>21.24</span>
+                                    </div></div>
+                                </div>)
+                            }
+                            {/* <div className='individualAttribute'>
                                 <p>background</p>
                                 <p>Deep Ocean Blue</p>
                                 <div className='row'><p className='percentage'>12.65%</p><div className='price'>
@@ -160,14 +184,7 @@ export default function ViewNFT() {
                                 <div className='row'><p className='percentage'>12.65%</p><div className='price'>
                                     <img src={SolanaIcon} alt="solana_icon" /><span>21.24</span>
                                 </div></div>
-                            </div>
-                            <div className='individualAttribute'>
-                                <p>background</p>
-                                <p>Deep Ocean Blue</p>
-                                <div className='row'><p className='percentage'>12.65%</p><div className='price'>
-                                    <img src={SolanaIcon} alt="solana_icon" /><span>21.24</span>
-                                </div></div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
