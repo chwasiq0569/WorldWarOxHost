@@ -22,6 +22,7 @@ import SolanaIcon from '../../assets/solana.svg'
 import { Link, useNavigate } from 'react-router-dom'
 import ClipLoader from "react-spinners/ClipLoader";
 import CustomDropdown from '../../components/CustomDropdown/CustomDropdown'
+import TraitsFilter from '../../components/TraitsFilter/TraitsFilter'
 
 export default function Collection() {
 
@@ -36,8 +37,13 @@ export default function Collection() {
     const [forSale, setForSale] = React.useState(false)
     const [favourites, setFavourites] = React.useState(false)
 
-
+    const [selectedFilter, setSelectedFilter] = React.useState([])
     // 
+    // Dropdown States
+    const [filteredList, setFilteredList] = React.useState(false);
+
+    const [switcheStatus, setSwitcheStatus] = React.useState([]);
+    // ended
 
     const [sliderItems, setSliderItems] = React.useState([
         {
@@ -55,8 +61,6 @@ export default function Collection() {
     ]);
 
     const [selected, setSelected] = React.useState(sliderItems[1]);
-
-    const [openedSwitch, setOpenedSwitch] = React.useState([]);
 
     const selectionFunctions = (id) => {
         let items = [...sliderItems]
@@ -146,23 +150,11 @@ export default function Collection() {
 
         // nfts.forEach(nft => nft.attributes.filter(item => item.value == 'Red')))
 
-
         // console.log('TraitS', nfts.filter(nft => nft.attributes.forEach(item => item.value == 'red')))
         // nfts.map(nft => nft?.attributes.filter(i => i['trait_type'] === trait)[0]?.value)
+
+        console.log('XWS', nfts.map(nft => nft?.attributes.filter(i => i['trait_type'] === trait)[0]?.value))
         return new Set(nfts.map(nft => nft?.attributes.filter(i => i['trait_type'] === trait)[0]?.value))
-    }
-
-    const switchControl = (openedSwitch) => {
-        let tempArr = []
-
-        nfts.forEach(nft => {
-            nft.attributes.forEach(item => {
-                item.value == 'Red' && tempArr.push(nft)
-            })
-        })
-        // setOpenedSwitch((prevState) => [...prevState].push(openedSwitch))
-        // setFilteredNFTs(tempArr)
-        console.log('tempArr', tempArr, openedSwitch)
     }
 
 
@@ -194,35 +186,35 @@ export default function Collection() {
                     </div>
                     <div className="nft-rates">
                         <div>
-                            <p className="price">2.00</p>
-                            <p className="action-text">BUY NOW</p>
+                            {/* <p className="price">2.00</p> */}
+                            {/* <p className="action-text">BUY NOW</p> */}
                         </div>
                         <div>
-                            <p className="price">1.50</p>
-                            <p className="action-text">SELL NOW</p>
+                            {/* <p className="price">1.50</p> */}
+                            {/* <p className="action-text">SELL NOW</p> */}
                         </div>
                     </div>
                 </div>
                 <div className="row">
                     <div>
-                        <p className="value">350/4,418 (7.83%)</p>
-                        <p className="label">LISTED/SUPPLY</p>
+                        {/* <p className="value">350/4,418 (7.83%)</p> */}
+                        {/* <p className="label">LISTED/SUPPLY</p> */}
                     </div>
                     <div>
-                        <p className="value">32</p>
-                        <p className="label">VOLUME (24H)</p>
+                        {/* <p className="value">32</p> */}
+                        {/* <p className="label">VOLUME (24H)</p> */}
                     </div>
                     <div>
-                        <p className="value">163,942</p>
-                        <p className="label">VOLUME (ALL)</p>
+                        {/* <p className="value">163,942</p> */}
+                        {/* <p className="label">VOLUME (ALL)</p> */}
                     </div>
                     <div>
-                        <p className="value">6</p>
-                        <p className="label">SALES (24H)</p>
+                        {/* <p className="value">6</p> */}
+                        {/* <p className="label">SALES (24H)</p> */}
                     </div>
                     <div>
-                        <p className="value">-19.25%</p>
-                        <p className="label">PRICE Δ (24H)</p>
+                        {/* <p className="value">-19.25%</p> */}
+                        {/* <p className="label">PRICE Δ (24H)</p> */}
                     </div>
                 </div>
             </div>
@@ -288,14 +280,47 @@ export default function Collection() {
                             /> : <div className='traitsCategories'>
                                 <br />
                                 <br />
-                                <CustomDropdown openedSwitch={openedSwitch} setOpenedSwitch={setOpenedSwitch} head='Armour' list={getTraitCount('Armour')} switchControl={switchControl} />
-                                <CustomDropdown openedSwitch={openedSwitch} setOpenedSwitch={setOpenedSwitch} head='Background' list={getTraitCount('Background')} switchControl={switchControl} />
-                                <CustomDropdown openedSwitch={openedSwitch} setOpenedSwitch={setOpenedSwitch} head='Bags' list={getTraitCount('Bags')} switchControl={switchControl} />
-                                <CustomDropdown openedSwitch={openedSwitch} setOpenedSwitch={setOpenedSwitch} head='FacialHair' list={getTraitCount('FacialHair')} switchControl={switchControl} />
-                                <CustomDropdown openedSwitch={openedSwitch} setOpenedSwitch={setOpenedSwitch} head='Heads' list={getTraitCount('Heads')} switchControl={switchControl} />
-                                <CustomDropdown openedSwitch={openedSwitch} setOpenedSwitch={setOpenedSwitch} head='Headwear' list={getTraitCount('Headwear')} switchControl={switchControl} />
-                                <CustomDropdown openedSwitch={openedSwitch} setOpenedSwitch={setOpenedSwitch} head='Pants' list={getTraitCount('Pants')} switchControl={switchControl} />
-                                <CustomDropdown openedSwitch={openedSwitch} setOpenedSwitch={setOpenedSwitch} head='Tops' list={getTraitCount('Tops')} switchControl={switchControl} />
+                                {/* <CustomDropdown head='Armour' list={getTraitCount('Armour')} setSelectedFilter={setSelectedFilter}
+                                    filteredList={filteredList}
+                                    setFilteredList={setFilteredList}
+                                    switcheStatus={switcheStatus}
+                                    setSwitcheStatus={setSwitcheStatus} />
+                                <CustomDropdown head='Background' list={getTraitCount('Background')} setSelectedFilter={setSelectedFilter}
+                                    filteredList={filteredList}
+                                    setFilteredList={setFilteredList}
+                                    switcheStatus={switcheStatus}
+                                    setSwitcheStatus={setSwitcheStatus} />
+                                <CustomDropdown head='Bags' list={getTraitCount('Bags')} setSelectedFilter={setSelectedFilter}
+                                    filteredList={filteredList}
+                                    setFilteredList={setFilteredList}
+                                    switcheStatus={switcheStatus}
+                                    setSwitcheStatus={setSwitcheStatus} />
+                                <CustomDropdown head='FacialHair' list={getTraitCount('FacialHair')} setSelectedFilter={setSelectedFilter}
+                                    filteredList={filteredList}
+                                    setFilteredList={setFilteredList}
+                                    switcheStatus={switcheStatus}
+                                    setSwitcheStatus={setSwitcheStatus} />
+                                <CustomDropdown head='Heads' list={getTraitCount('Heads')} setSelectedFilter={setSelectedFilter}
+                                    filteredList={filteredList}
+                                    setFilteredList={setFilteredList}
+                                    switcheStatus={switcheStatus}
+                                    setSwitcheStatus={setSwitcheStatus} />
+                                <CustomDropdown head='Headwear' list={getTraitCount('Headwear')} setSelectedFilter={setSelectedFilter}
+                                    filteredList={filteredList}
+                                    setFilteredList={setFilteredList}
+                                    switcheStatus={switcheStatus}
+                                    setSwitcheStatus={setSwitcheStatus} />
+                                <CustomDropdown head='Pants' list={getTraitCount('Pants')} setSelectedFilter={setSelectedFilter}
+                                    filteredList={filteredList}
+                                    setFilteredList={setFilteredList}
+                                    switcheStatus={switcheStatus}
+                                    setSwitcheStatus={setSwitcheStatus} />
+                                <CustomDropdown head='Tops' list={getTraitCount('Tops')} setSelectedFilter={setSelectedFilter}
+                                    filteredList={filteredList}
+                                    setFilteredList={setFilteredList}
+                                    switcheStatus={switcheStatus}
+                                    setSwitcheStatus={setSwitcheStatus} /> */}
+                                <TraitsFilter nfts={nfts} setFilteredNFTs={setFilteredNFTs} />
                             </div>
                         }
 
