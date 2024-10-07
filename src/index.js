@@ -6,6 +6,7 @@ import {Web3ReactProvider} from '@web3-react/core';
 import App from './App';
 import {Web3Provider} from '@ethersproject/providers';
 import {metaMask, metaMaskHooks} from './web3/components/metamask';
+import dotenv from  'dotenv'
 
 function getLibrary(provider) {
     return new Web3Provider(provider);

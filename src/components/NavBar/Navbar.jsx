@@ -64,10 +64,9 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                             {/*<li><a href='https://world-war-0x.gitbook.io/white-paper/' rel="noreferrer"*/}
                             {/*       target="_blank">WHITEPAPER</a></li>*/}
                             {/* <li><a href='https://world-war-0x.gitbook.io/white-paper/' rel="noreferrer" target="_blank">DOWNLOAD</a></li> */}
-                            <li><a href='/atm' rel="noreferrer"
-                                target="_blank">ATM</a></li>
+                            <li><a href='/atm' rel="noreferrer">ATM</a></li>
                             <li><a href='https://stake.smithii.io/worldwar0x' rel="noreferrer"
-                                target="_blank">STAKE</a></li>
+                                   target="_blank">STAKE</a></li>
                         </ul>
                     </div>
                 </div>
@@ -79,7 +78,7 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                             <li><a href="https://twitter.com/WorldWar0x" target="_blank" rel="noreferrer"><img
                                 className="image-1156-icon" alt="" src={headTwitter} /></a></li>
                             <li><a href="https://www.youtube.com/channel/UC4mQ9cT7wDV6aqOuoMaX3vA" target="_blank"
-                                rel="noreferrer"><img className="image-1156-icon" alt="" src={headYoutube} /></a></li>
+                                   rel="noreferrer"><img className="image-1156-icon" alt="" src={headYoutube} /></a></li>
                             <li><a href="https://instagram.com/worldwar0x" target="_blank" rel="noreferrer"><img
                                 className="image-1156-icon" alt="" src={headSoo} /></a></li>
                             <li><a href="https://www.tiktok.com/@worldwar0x" target="_blank" rel="noreferrer"><img
@@ -88,7 +87,7 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                         {/* <button className="GetWhiteListedBtn">GET WHITELISTED</button> */}
                         <div className="GetWhiteListedBtn">
                             <a href='https://truffle.wtf/project/world-war-0x-battlewear' target="_blank"
-                                rel="noreferrer"><span>MINT NOW</span></a>
+                               rel="noreferrer"><span>MINT NOW</span></a>
                         </div>
 
                     </div>
@@ -109,7 +108,7 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                         </div>
                         <ul>
                             <li onClick={toggleMenu}><a href="https://worldwar0x.io" rel="noreferrer"
-                                target='_blank'>PLAY</a></li>
+                                                        target='_blank'>PLAY</a></li>
                             {/* <li onClick={toggleMenu}><a href="#NEWERA">GAMEPLAY</a></li> */}
                             {/* <li onClick={toggleMenu}><a href="#WARXECOSYSTEM">ECOSYSTEM</a></li> */}
                             {/* <li><a href='https://world-war-0x.gitbook.io/white-paper/' rel="noreferrer"
@@ -124,7 +123,7 @@ const Navbar = ({ setMoveToBack, moveToBack }) => {
                         </ul>
                         <div className="GetWhiteListedBtn small-btn">
                             <a href='https://truffle.wtf/project/world-war-0x-battlewear' target="_blank"
-                                rel="noreferrer"><span>MINT NOW</span></a>
+                               rel="noreferrer"><span>MINT NOW</span></a>
                         </div>
                     </div>
                 </div>

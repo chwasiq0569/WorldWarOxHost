@@ -1,3 +1,14 @@
+[build]
+  publish = "build"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Content-Security-Policy = "frame-ancestors 'self';"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

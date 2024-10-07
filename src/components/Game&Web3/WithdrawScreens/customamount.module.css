@@ -22,7 +22,7 @@ body {
     flex-direction: column;
     text-align: center;
     position: relative;
-    padding: 80px;
+    padding: 40px;
     /* Adjust the value as needed for the desired gap */
 
     /* Add other styles for your container here */
@@ -91,7 +91,7 @@ body {
 }
 
 .tokens .individualToken {
-    width: 375px;
+    width: 275px;
     /* max-width: 400px; */
     display: flex;
     align-items: center;

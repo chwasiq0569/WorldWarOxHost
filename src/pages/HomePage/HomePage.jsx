@@ -628,7 +628,7 @@ const HomePage = () => {
                                     {/* <li>1v1, duos and squad betting</li>
                                     <li>Viewer betting</li>
                                     <li>Womens NFT Collection</li>
-                                    <li>Crypto Conquest Game Mode</li>
+                                    <li>Crypto Conquest Game&Web3 Mode</li>
                                     <li>Medic Class</li>
                                     <li>Mac Download version</li>
                                     <li>2D & 3D animated shorts featuring NFTs</li>

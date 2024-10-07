@@ -22,11 +22,18 @@ body {
     flex-direction: column;
     text-align: center;
     position: relative;
-    padding: 80px;
+    padding: 40px;
     /* Adjust the value as needed for the desired gap */
 
     /* Add other styles for your container here */
 }
+
+.topRightContainer {
+    position: absolute;
+    right: 40px; /* Adjust as needed */
+    z-index: 100; /* Ensure it appears on top */
+}
+
 
 
 @media (max-width: 991px) {

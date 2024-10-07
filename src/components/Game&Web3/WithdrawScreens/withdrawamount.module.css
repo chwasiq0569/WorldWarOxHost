@@ -21,7 +21,7 @@ body {
     flex-direction: column;
     text-align: center;
     position: relative;
-    padding: 80px;
+    padding: 40px;
 }
 
 @media (max-width: 991px) {
@@ -110,7 +110,6 @@ body {
     border-radius: 1rem;
     line-height: 1;
     cursor: pointer;
-
     transition: all 0.1s ease;
 }
 
@@ -179,7 +178,7 @@ body {
 }
 
 .tokens .individualToken {
-    width: 375px;
+    width: 275px;
     /* max-width: 400px; */
     display: flex;
     align-items: center;

@@ -1,4 +1,3 @@
-
 body {
     height: 100%;
     margin: 0;
@@ -12,18 +11,17 @@ body {
 }
 
 .container {
+    min-height: 100vh;
     background: linear-gradient(to bottom right, #2fab93 0%, #217a69 50%) bottom right / 50% 50% no-repeat,
-    linear-gradient(to bottom left, #2fab93 0%, #217a69 50%) bottom left / 50% 50% no-repeat,
-    linear-gradient(to top left, #2fab93 0%, #217a69 50%) top left / 50% 50% no-repeat,
-    linear-gradient(to top right, #2fab93 0%, #217a69 50%) top right / 50% 50% no-repeat;
+        linear-gradient(to bottom left, #2fab93 0%, #217a69 50%) bottom left / 50% 50% no-repeat,
+        linear-gradient(to top left, #2fab93 0%, #217a69 50%) top left / 50% 50% no-repeat,
+        linear-gradient(to top right, #2fab93 0%, #217a69 50%) top right / 50% 50% no-repeat;
     flex: 1;
     display: flex;
     flex-direction: column;
     text-align: center;
     position: relative;
-    margin-top: 80px; /* Adjust the value as needed for the desired gap */
-
-    /* Add other styles for your container here */
+    padding: 40px;
 }
 
 
@@ -54,6 +52,10 @@ body {
     margin-bottom: 10px;
 }
 
+.welcomeText span {
+    color: #F5FF81;
+}
+
 .questionText {
     color: #fff;
     font: 700 36px Poppins, sans-serif;
@@ -62,27 +64,28 @@ body {
     text-align: center;
 }
 
-.optionsWrapper {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 100%;
-    margin: 20px auto;
+.noteText {
+    color: #f5ff81;
+    font: 700 26px Poppins, sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-.overlapButton {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: none;
-    border: none;
-    opacity: 0;
+.loader img {
+    transform: rotate(135deg);
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    animation: spin 0.5s linear infinite; /* Spin animation */
+    margin-top: 4rem;
 }
 
-.optionCardWrapper {
-    position: relative;
-    margin-bottom: 10px; /* Adjust as needed */
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
