@@ -47,12 +47,9 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.2",
     "react-slider": "^2.0.6",
-<<<<<<< HEAD
     "react-spinners": "^0.14.1",
     "react-switch": "^7.0.0",
     "react-transition-group": "^4.4.5",
-=======
->>>>>>> 16a2a06f97a74c9ab6daf431e7db2e1a04894715
     "slick-carousel": "^1.8.1",
     "react-transition-group": "^4.4.5",
     "stream-browserify": "^3.0.0",

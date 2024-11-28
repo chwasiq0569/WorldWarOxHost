@@ -31,7 +31,7 @@ const TellerManager = () => {
     const options = [{
         id: 0, title: "WITHDRAW", icon: withdrawIcon, status: "COMING SOON", isSpecial: false,
     }, {
-        id: 1, title: "DEPOSIT", icon: depositIcon, status: "COMING SOON", isSpecial: false,
+        id: 1, title: "DEPOSIT", icon: depositIcon, status: "COMING SOON", isSpecial: true,
     }, {
         id: 2, title: "GET LOAN", icon: loanIcon, status: "BY TELLER", isSpecial: true,
     }, {
@@ -82,7 +82,7 @@ const TellerManager = () => {
                 </TellerWidget>)}
             </div>)}
         </section>
-       {/* <div>
+        <div>
             <button className={styles.loginButton} onClick={() => navigate('/login', {
                 replace: true
             })}>
@@ -90,7 +90,7 @@ const TellerManager = () => {
                     className={styles.loginButtonText}>{user === null ? "LOGIN" : "Logged in as " + user.nick}</span>
             </button>
         </div>
-        <LoginOverlay user={user}/>*/}
+        <LoginOverlay user={user}/>
     </main>;
 };
 
