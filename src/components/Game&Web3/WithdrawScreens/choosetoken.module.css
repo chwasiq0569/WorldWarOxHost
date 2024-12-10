@@ -121,3 +121,17 @@ body {
     object-fit: contain;
     margin-left: auto;
 }
+
+.timeLeft {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff; /* White text for better contrast */
+    text-align: center;
+    padding: 10px 15px;
+    background-color: #000000; /* A darker, visually pleasing green */
+    border-radius: 20px; /* Softer rounded corners */
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto; /* Center the element */
+}

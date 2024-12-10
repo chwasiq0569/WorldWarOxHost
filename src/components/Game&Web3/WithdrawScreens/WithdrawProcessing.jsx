@@ -13,7 +13,7 @@ import {
 import {createTransferInstruction, getOrCreateAssociatedTokenAccount, TOKEN_PROGRAM_ID} from "@solana/spl-token";
 import {getAddress, getDecimal} from "../Function/getTokenBalance";
 import CustomAlert from "../Login/CustomAlert";
-import {addTransaction, updateUserCoin} from "../Function/api";
+import {addTransaction, updateUserCoin, updateUserRow} from "../Function/api";
 import {extractCoin, updateCoinValue} from "../Function/parseCoin";
 
 
@@ -124,6 +124,19 @@ const WithdrawProcessingManager = () => {
         }
     }, [publicKey, sendTransaction]);
 
+    function getDepositUpdateLimits(amount, isBDUCK) {
+        const dapp = state.dapp;
+
+        if (isBDUCK) {
+            dapp.deposit.bduck -= amount;
+        } else {
+            dapp.deposit.ww3 -= amount;
+        }
+
+        return JSON.stringify(dapp);
+
+    }
+
     const processTransaction = useCallback(async () => {
         if (!publicKey) return;
 
@@ -155,6 +168,18 @@ const WithdrawProcessingManager = () => {
                 });
 
                 console.log(transaction_result);
+
+
+                const update_limit = await updateUserRow({
+                    name: user.name,
+                    id: user.id,
+                    typ: "8",
+                    key: 'dapp',
+                    data: getDepositUpdateLimits(coin_result.success ? amount.toString() : '0', isBDUCK),
+                });
+
+                console.log(update_limit);
+
 
             } catch (e) {
                 coin_update_success = false;

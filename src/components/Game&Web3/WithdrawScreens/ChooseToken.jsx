@@ -1,4 +1,4 @@
-import React, {useMemo, useState, useEffect} from 'react';
+import React, {useMemo, useState, useEffect, useRef} from 'react';
 import styles from './choosetoken.module.css';
 import loanIcon from "../TellerATM/icons/teller.png";
 import ReturnButton from '../TellerATM/components/ReturnButton';
@@ -14,6 +14,9 @@ import {WalletModalProvider, WalletMultiButton} from "@solana/wallet-adapter-rea
 import {coinFormatter} from "../Function/coinFormatter";
 import ParseCoin from "../Function/parseCoin";
 import {useDepositManager} from "../Function/getTokenBalance";
+import {getDailyLimit, getUserDapp, updateUserRow} from "../Function/api";
+import LoadingOverlay from "../Login/LoadingOveraly";
+
 
 const ChooseToken = ({withdrawToken, setWithdrawToken}) => {
     const network = process.env.REACT_APP_MAIN_RPC; // Use 'mainnet-beta' for production
@@ -37,40 +40,120 @@ const ChooseTokenManager = ({withdrawToken, setWithdrawToken}) => {
     const {publicKey, connected} = useWallet(); // Access wallet status
     const [tokens, setTokens] = useState([]);
     const {fetchTokenBalance} = useDepositManager();
+    const apiCalled = useRef(false); // Ref to track if the API call has been made
+    const [loading, setLoading] = useState(false); // Loading state
+    const [dapp, setDapp] = useState(null);
+    const [timeLeft, setTimeLeft] = useState(null); // State for time difference
 
-    // Fetch tokens when the wallet connects/disconnects
+    const updateDailyLimit = (parsedData, coinLimit) => {
+        const coindata = JSON.parse(coinLimit.message);
+        const metadata = JSON.parse(coindata.metadata);
+        let data = parsedData;
+
+        data.date = new Date().toISOString();
+        data.withdrawal.ww3 = metadata.WithdrawalWW3;
+        data.withdrawal.bduck = metadata.WithdrawalBDUCK;
+        data.deposit.ww3 = metadata.DepositWW3;
+        data.deposit.bduck = metadata.DepositBDUCK;
+
+        return data; // Or handle server updates here
+    };
+    const TimeDifference = (date) => {
+        const currentDate = new Date().toISOString();
+        const previousTimestamp = new Date(date).getTime();
+        const currentTimestamp = new Date(currentDate).getTime();
+        const diffInHours = (currentTimestamp - previousTimestamp) / (1000 * 60 * 60);
+        return diffInHours >= 24;
+    }
+
+    const StoreData = (parsedData) => {
+        setDapp(parsedData);
+
+        if (parsedData.date) {
+            const timeDiff = GetTimeDifferenceForReset(parsedData.date);
+            if (timeDiff) {
+                setTimeLeft(timeDiff);
+            } else {
+                setTimeLeft(null); // Reset if no time difference is left
+            }
+        }
+    };
+
+    const GetTimeDifferenceForReset = (date) => {
+        const currentTime = new Date().getTime();
+        const targetTime = new Date(date).getTime() + 24 * 60 * 60 * 1000; // Add 24 hours to the last reset time
+        const diff = targetTime - currentTime;
+
+        if (diff > 0) {
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            return { hours, minutes };
+        }
+        return null;
+    };
+
     useEffect(() => {
-        const fetchTokens = async () => {
-            const bduckBalance = await fetchTokenBalance("BDUCK");
-            const ww3Balance = await fetchTokenBalance("WW3");
+        if (apiCalled.current) return;
 
-            const bduck = state.isWithdraw ? ParseCoin(user.coins, true) : bduckBalance / 1e6;
-            const ww0x = state.isWithdraw ? ParseCoin(user.coins, false) : ww3Balance / 1e9;
+        const fetchUserData = async () => {
+            try {
+                apiCalled.current = true; // Prevent multiple calls
+                setLoading(true); // Show loading overlay
 
-            const tokensData = [{
-                icon: WW3Token, name: 'WW3', rate: ww0x, displayRate: coinFormatter(ww0x), id: 0
-            }, {
-                icon: BDuckToken, name: 'BDUCK', rate: bduck, displayRate: coinFormatter(bduck), id: 1
-            }];
+                const userDapp = await getUserDapp({id: user.id, name: user.name});
 
-            setTokens(tokensData);
+                let parsedData = JSON.parse(userDapp.message);
+                parsedData = JSON.parse(parsedData);
+
+                if (parsedData.date === '' || TimeDifference(parsedData.date)) {
+                    const coinLimit = await getDailyLimit();
+
+                    if (coinLimit.success) {
+                        parsedData = updateDailyLimit(parsedData, coinLimit);
+                        parsedData = JSON.stringify(parsedData);
+
+                        const result = await updateUserRow({
+                            name: user.name, id: user.id, typ: "8", key: "dapp", data: parsedData,
+                        });
+
+                        if (!result) {
+                            navigate('/atm');
+                        } else {
+                            StoreData(parsedData);
+                        }
+                    }
+                } else {
+                    StoreData(parsedData);
+                }
+
+                if (connected) {
+                    const bduckBalance = await fetchTokenBalance("BDUCK");
+                    const ww3Balance = await fetchTokenBalance("WW3");
+
+                    const bduck = state.isWithdraw ? ParseCoin(user.coins, true) : bduckBalance / 1e6;
+                    const ww0x = state.isWithdraw ? ParseCoin(user.coins, false) : ww3Balance / 1e9;
+
+                    const tokensData = [{
+                        icon: WW3Token, name: 'WW3', rate: ww0x, displayRate: coinFormatter(ww0x), id: 0,
+                    }, {
+                        icon: BDuckToken, name: 'BDUCK', rate: bduck, displayRate: coinFormatter(bduck), id: 1,
+                    },];
+                    setTokens(tokensData);
+                }
+            } catch (err) {
+                console.error("Error fetching user data:", err);
+            } finally {
+                setLoading(false); // Hide loading overlay
+            }
         };
 
         if (connected) {
-            fetchTokens();
-        } else {
-            setTokens([{
-                icon: WW3Token, name: 'WW3', rate: 0, displayRate: 0, id: 1
-            }, {
-                icon: BDuckToken, name: 'BDUCK', rate: 0, displayRate: 0, id: 2
-            }]); // Clear tokens on disconnect
+            fetchUserData();
         }
-    }, [connected]); // Re-run effect if wallet connection status changes
-
+    }, [connected, user, fetchTokenBalance, state]);
     return (<main className={styles.container}>
-        <ReturnButton to='/atm' btnName='RETURN TO ATM' value={{
-            replace: true,
-        }}/>
+        {loading && <LoadingOverlay/>}
+        <ReturnButton to='/atm' btnName='RETURN TO ATM' value={{replace: true}}/>
         <div className={styles.topRightContainer}>
             <WalletMultiButton
                 style={{
@@ -81,44 +164,39 @@ const ChooseTokenManager = ({withdrawToken, setWithdrawToken}) => {
                 }}
             />
         </div>
-        <img
-            loading="lazy"
-            src={loanIcon}
-            alt="Teller ATM Logo"
-            className={styles.logo}
-        />
         <div className={styles.contentWrapper}>
             <h1 className={styles.welcomeText}>{state.isWithdraw ? "WITHDRAW" : "DEPOSIT"}</h1>
-            <p className={styles.questionText}>CHOOSE WHICH TOKEN TO {state.isWithdraw ? "WITHDRAW" : "DEPOSIT"}</p>
+            <p className={styles.questionText}>
+                CHOOSE WHICH TOKEN TO {state.isWithdraw ? "WITHDRAW" : "DEPOSIT"}
+            </p>
+            {timeLeft && (
+                <p className={styles.timeLeft}>
+                    LIMIT RESET IN: {timeLeft.hours} HOURS {timeLeft.minutes} MINUTES
+                </p>
+            )}
         </div>
         <div className={styles.tokens}>
-            {tokens.map(token => (token.rate > 0 ? (<div
+            {tokens.map(token => (<div
                 key={token.id}
-                className={styles.individualToken} onClick={() => {
-                setWithdrawToken(token);
-                navigate('/withdrawamount', {
-                    replace:true,
-                    state: {
-                        isWithdraw: state.isWithdraw, isBDUCK: token.id === 1
-                    }
-                });
-            }}>
+                className={styles.individualToken}
+                onClick={() => {
+                    setWithdrawToken(token);
+                    navigate('/withdrawamount', {
+                        replace: true, state: {
+                            isWithdraw: state.isWithdraw, isBDUCK: token.id === 1, // Pass updated state
+                            dapp: dapp
+                        },
+                    });
+                }}
+            >
                 <img className={styles.tokenImg} src={token.icon} alt="token"/>
                 <div className={styles.tokenDetails}>
                     <p className={styles.name}>{token.name}</p>
                     <p className={styles.price}>{token.displayRate}</p>
                 </div>
-                <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow"/>
-            </div>) : (<div key={token.id} className={styles.individualToken}>
-                <img className={styles.tokenImg} src={token.icon} alt="token"/>
-                <div className={styles.tokenDetails}>
-                    <p className={styles.name}>{token.name}</p>
-                    <p className={styles.price}>{token.displayRate}</p>
-                </div>
-                <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow"/>
-            </div>)))}
+                <img className={styles.withdrawArrow} src={WithdrawArrow} alt="Withdraw Arrow"/>
+            </div>))}
         </div>
-
         <LoginOverlay user={user}/>
     </main>);
 };

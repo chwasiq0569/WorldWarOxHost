@@ -24,6 +24,16 @@ const PlayerInfo = ({player}) => {
         <p>
             <strong>BDUCK: </strong>{ParseCoin(player.coins, true)}
         </p>
+        {/*<p>
+            <><br/></>
+            <strong>WITHDRAWAL LIMIT </strong><><br/></>
+            <strong>WW3 </strong>{JSON.parse(player.dapp)?.withdrawal.ww3}<><br/></>
+            <strong>BDUCK </strong>{JSON.parse(player.dapp)?.withdrawal.bduck}<><br/><br/></>
+            <strong>DEPOSIT LIMIT </strong><><br/></>
+            <strong>WW3 </strong>{JSON.parse(player.dapp)?.deposit.ww3}<><br/></>
+            <strong>BDUCK </strong>{JSON.parse(player.dapp)?.deposit.bduck}<><br/></>
+
+        </p>*/}
         {/*
             <p><strong>Coins:</strong> {player.coins}</p>
 */}

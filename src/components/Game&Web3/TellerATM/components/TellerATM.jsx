@@ -31,7 +31,7 @@ const TellerManager = () => {
     const options = [{
         id: 0, title: "WITHDRAW", icon: withdrawIcon, status: "COMING SOON", isSpecial: false,
     }, {
-        id: 1, title: "DEPOSIT", icon: depositIcon, status: "COMING SOON", isSpecial: true,
+        id: 1, title: "DEPOSIT", icon: depositIcon, status: "ALPHA", isSpecial: true,
     }, {
         id: 2, title: "GET LOAN", icon: loanIcon, status: "BY TELLER", isSpecial: true,
     }, {

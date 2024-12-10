@@ -21,6 +21,44 @@ export const updateUserStatus = async ({name, status, type}) => {
     return response.ok;
 
 }
+
+export const updateUserRow = async ({name, id, typ, key, data}) => {
+
+    const hash = get_secret_hash(name);
+    const sid = get_ssid();
+
+    const response = await fetch(process.env.REACT_APP_API_URL + '/api/update-user-row', {
+        method: 'POST', body: JSON.stringify({
+            "name": name, "id": id, "typ": typ, "key": key, "data": data, "hash": hash, "sid": sid
+        }), headers: {
+            'Content-Type': 'application/json', 'x-api-key': process.env.REACT_APP_API_KEY,
+        }
+    });
+    console.log(response)
+    return response.ok;
+
+}
+
+export const getDailyLimit = async () => {
+    const params = new URLSearchParams();
+    params.append("type", "1");
+
+    try {
+        const response = await fetch("https://www.worldwar0x.io/play/php/sp_dapp_limits.php", {
+            method: "POST", body: params, headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+        });
+        return {
+            success: response.ok, message: await response.text()
+        }      // Read the response as plain text
+
+    } catch (e) {
+        return {
+            success: false, message: null
+        }
+    }
+}
 // Get Coins
 export const getUserCoin = async ({id, name}) => {
 
@@ -29,6 +67,32 @@ export const getUserCoin = async ({id, name}) => {
 
     try {
         const response = await fetch(process.env.REACT_APP_API_URL + '/api/get-coin', {
+            method: 'POST', body: JSON.stringify({
+                "id": id, "name": name, "hash": hash, "sid": sid
+            }), headers: {
+                'Content-Type': 'application/json', 'x-api-key': process.env.REACT_APP_API_KEY,
+            }
+        });
+
+        const responseText = await response.text(); // Await the response text
+
+        return {
+            success: response.ok, message: responseText
+        }
+    } catch (e) {
+        return {
+            success: false, message: null
+        }
+    }
+}
+
+export const getUserDapp = async ({id, name}) => {
+
+    const hash = get_secret_hash(name);
+    const sid = get_ssid();
+
+    try {
+        const response = await fetch(process.env.REACT_APP_API_URL + '/api/get-dapp-coin', {
             method: 'POST', body: JSON.stringify({
                 "id": id, "name": name, "hash": hash, "sid": sid
             }), headers: {

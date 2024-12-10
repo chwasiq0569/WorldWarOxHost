@@ -6,7 +6,7 @@ import {
     getAccount,
     getOrCreateAssociatedTokenAccount,
 } from "@solana/spl-token";
-import { useWallet } from "@solana/wallet-adapter-react";
+import {useWallet} from "@solana/wallet-adapter-react";
 
 
 export const getAddress = (type) => {
@@ -27,19 +27,20 @@ export const getDecimal = (type) => {
 }
 
 export const useDepositManager = () => {
-    const { publicKey } = useWallet();  // useWallet must be used within a hook or component
+    const {publicKey} = useWallet(); // useWallet must be used within a hook or component
     const connection = new Connection(process.env.REACT_APP_MAIN_RPC, 'confirmed');
 
-
     const getConnectedWalletAddress = () => {
-        return publicKey.toString(); // Convert the public key to a string
+        return publicKey?.toString(); // Convert the public key to a string
     };
 
     const fetchTokenBalance = async (type) => {
-
         const walletAddress = getConnectedWalletAddress();
-        const tokenAddress = getAddress(type);
+        if (!walletAddress) {
+            throw new Error('Wallet not connected');
+        }
 
+        const tokenAddress = getAddress(type);
         const tokenMintAddress = new PublicKey(tokenAddress); // Replace with your token mint address
 
         try {
@@ -50,17 +51,20 @@ export const useDepositManager = () => {
                 new PublicKey(walletAddress) // owner address
             );
 
+            // Check if the account exists and has a balance
             const accountInfo = await getAccount(connection, associatedTokenAccount.address);
-            return accountInfo.amount.toString(); // Return balance as a string
+
+            // If no tokens, return 0
+            return accountInfo.amount?.toString() || '0';
         } catch (error) {
-            throw new Error('Error fetching token balance: ' + error.message);
+            // Handle case where the associated token account does not exist
+            return '0'; // Return 0 if account does not exist
+
         }
     };
 
-    // Other functions like sendToken and sendSol would be defined similarly, using getConnectedWalletAddress()
-
     return {
         fetchTokenBalance,
-        // sendToken, sendSol, etc.
+        // Other functions like sendToken, sendSol, etc.
     };
 };

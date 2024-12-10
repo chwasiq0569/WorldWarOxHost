@@ -7,6 +7,7 @@ import {useNavigate, useLocation} from 'react-router-dom';
 import LoginOverlay from "../Login/LoginOverlay";
 import {Get} from "../Function/database";
 import CustomAlert from "../Login/CustomAlert";
+import {getAmount} from "../Function/coinFormatter";
 
 export default function WithdrawAmount({withdrawToken, setWithdrawToken}) {
 
@@ -15,6 +16,7 @@ export default function WithdrawAmount({withdrawToken, setWithdrawToken}) {
     const location = useLocation();
     const state = location.state;
     const user = Get();
+    const {isWithdraw, isBDUCK, dapp} = state;
 
     useEffect(() => {
         // Redirect if state or isWithdraw is missing
@@ -32,10 +34,11 @@ export default function WithdrawAmount({withdrawToken, setWithdrawToken}) {
         setAlertMessage(''); // Clear the alert message to close the alert
     };
 
+
     // Function to handle the click event
     const handleClick = (amount) => {
         // Convert displayRate to numeric value for comparison
-        const displayRateValue = withdrawToken.rate;
+        const displayRateValue = getAmount(state);
         // Define amounts to compare with
         const amounts = {"1K": 1000, "2K": 2000, "5K": 5000, "10K": 10000};
 
@@ -44,14 +47,12 @@ export default function WithdrawAmount({withdrawToken, setWithdrawToken}) {
             setAlertMessage("You don't have enough token");
         } else {
             navigate('/withdrawprocessing', {
-                replace:true,
-                state: {
-                    isWithdraw: state.isWithdraw, isBDUCK: state.isBDUCK, amount: amounts[amount]
+                replace: true, state: {
+                    isWithdraw: state.isWithdraw, isBDUCK: state.isBDUCK, amount: amounts[amount], dapp: state.dapp
                 }
             });
         }
     };
-
 
     return (<main className={styles.container}>
         {alertMessage && <CustomAlert message={alertMessage} onClose={closeAlert}/>} {/* Render the custom alert */}
@@ -59,8 +60,10 @@ export default function WithdrawAmount({withdrawToken, setWithdrawToken}) {
             to='/choosetoken'
             btnName='BACK'
             value={{
-                replace : true,
-                state: {isWithdraw: state.isWithdraw}}}
+                replace: true, state: {
+                    isWithdraw: state.isWithdraw, dapp: state.dapp
+                }
+            }}
         />
         <img
             loading="lazy"
@@ -77,7 +80,7 @@ export default function WithdrawAmount({withdrawToken, setWithdrawToken}) {
             </p>
             <p className={styles.secondaryText}>
                 DAILY {state.isWithdraw ? "WITHDRAW" : "DEPOSIT"} LIMIT
-                <span> 100,000 {state.isBDUCK ? "$BDUCK" : "$WW3"}</span>
+                <span> {getAmount(state)} {state.isBDUCK ? "$BDUCK" : "$WW3"}</span>
             </p>
         </div>
 
@@ -85,9 +88,8 @@ export default function WithdrawAmount({withdrawToken, setWithdrawToken}) {
             <div className={styles.leftSection} onClick={() => {
                 setWithdrawToken(withdrawToken);
                 navigate('/customamount', {
-                    replace:true,
-                    state: {
-                        isWithdraw: state.isWithdraw, isBDUCK: state.isBDUCK
+                    replace: true, state: {
+                        isWithdraw: state.isWithdraw, isBDUCK: state.isBDUCK, dapp: state.dapp
                     }
                 });
             }}>

@@ -3,8 +3,6 @@ import {updateUserStatus} from "./api"
 
 
 const authenticate = async (name, password, auth) => {
-
-    // Create URLSearchParams object to encode form data
     const params = new URLSearchParams();
     params.append("name", name);
     params.append("password", password);
@@ -12,32 +10,29 @@ const authenticate = async (name, password, auth) => {
 
     try {
         const response = await fetch("https://www.worldwar0x.io/play/php/bl_Login.php", {
-            method: "POST", body: params, headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-            },
+            method: "POST", body: params, headers: {"Content-Type": "application/x-www-form-urlencoded"},
         });
-
 
         if (response.status === 401) {
             return {status: response.status, result: null};
         }
 
-        const data = await response.text(); // Read the response as plain text
+        const data = await response.text();
         const parsedData = parseResponse(data);
 
-        if (parsedData) {
-            const result = await updateUserStatus({name: parsedData.name, status: "1", type: "2"});
+        if (!parsedData) return {status: -1, result: null};
 
-            if (result) {
-                Set(parsedData);
-                return {status: response.status, result: parsedData};
-            }else{
-                Set(null);
-                return {status: -1, result: null};
-            }
+        const result = await updateUserStatus({name: parsedData.name, status: "1", type: "2"});
+        if (!result) {
+            Set(null);
+            return {status: -1, result: null};
         }
 
+        Set(parsedData);
+        return {status: response.status, result: parsedData};
+
     } catch (error) {
+        console.error("Authentication Error:", error);
         return {status: -1, result: null};
     }
 };
@@ -61,6 +56,7 @@ const parseResponse = (data) => {
 
     if (result.meta) {
         try {
+            console.log(result);
             result.meta = JSON.parse(result.meta);
         } catch (error) {
             console.error("Failed to parse 'meta' JSON:", error);
