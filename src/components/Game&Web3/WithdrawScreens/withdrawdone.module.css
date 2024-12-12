@@ -120,3 +120,67 @@ body {
     font-size: 22px;
     font-weight: 600;
 }
+
+/* Header row styling */
+.tableHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #ffffff; /* White text */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3); /* Subtle border for header */
+}
+
+/* Individual column styles */
+.column {
+    flex: 1;
+    text-align: center;
+}
+
+/* Transactions container */
+.transactionBar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Individual transaction rows */
+.transactionItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle separator between rows */
+}
+
+/* Individual columns in each row */
+.transactionItem span {
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Truncate long text with ellipsis */
+}
+
+/* Remove container background */
+.container {
+    background-color: transparent; /* No background color */
+}
+
+/* No data text */
+.noData {
+    text-align: center;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.transactionContainer{
+    margin-bottom:50px;
+    margin-left:50px;
+    margin-right:50px;
+
+}

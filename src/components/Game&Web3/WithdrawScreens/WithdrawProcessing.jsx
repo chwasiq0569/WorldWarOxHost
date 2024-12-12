@@ -38,7 +38,7 @@ const WithdrawProcessingManager = () => {
 
     const user = Get();
     const location = useLocation();
-    const state = location.state;
+    const state = location.state || {};
 
     const {amount, isBDUCK, isWithdraw} = state;
 

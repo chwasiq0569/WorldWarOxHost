@@ -7,7 +7,7 @@ import {useNavigate, useLocation} from 'react-router-dom';
 import LoginOverlay from "../Login/LoginOverlay";
 import {Get} from "../Function/database";
 import CustomAlert from "../Login/CustomAlert";
-import {getAmount} from "../Function/coinFormatter";
+import {addCommaToNumber, getAmount} from "../Function/coinFormatter";
 
 export default function WithdrawAmount({withdrawToken, setWithdrawToken}) {
 
@@ -38,12 +38,13 @@ export default function WithdrawAmount({withdrawToken, setWithdrawToken}) {
     // Function to handle the click event
     const handleClick = (amount) => {
         // Convert displayRate to numeric value for comparison
-        const displayRateValue = getAmount(state);
+        const displayRateValue = withdrawToken.rate;
+        const displayRate = getAmount(state);
         // Define amounts to compare with
         const amounts = {"1K": 1000, "2K": 2000, "5K": 5000, "10K": 10000};
 
         // Check if the amount is valid and compare
-        if (displayRateValue < amounts[amount]) {
+        if (displayRateValue < amounts[amount] || displayRate < amounts[amount]) {
             setAlertMessage("You don't have enough token");
         } else {
             navigate('/withdrawprocessing', {
@@ -80,7 +81,7 @@ export default function WithdrawAmount({withdrawToken, setWithdrawToken}) {
             </p>
             <p className={styles.secondaryText}>
                 DAILY {state.isWithdraw ? "WITHDRAW" : "DEPOSIT"} LIMIT
-                <span> {getAmount(state)} {state.isBDUCK ? "$BDUCK" : "$WW3"}</span>
+                <span> {addCommaToNumber(getAmount(state))} {state.isBDUCK ? "$BDUCK" : "$WW3"}</span>
             </p>
         </div>
 

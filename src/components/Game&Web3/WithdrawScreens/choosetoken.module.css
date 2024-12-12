@@ -123,15 +123,53 @@ body {
 }
 
 .timeLeft {
-    margin-top: 15px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #ffffff; /* White text for better contrast */
+    position: relative; /* Keeps it flexible for different placements */
+    margin-top: 20px; /* Add more spacing for visual separation */
+    font-size: 16px; /* Slightly smaller for better balance */
+    font-weight: 500; /* Softer font weight for a clean look */
+    color: #ffffff; /* White text for contrast */
     text-align: center;
-    padding: 10px 15px;
-    background-color: #000000; /* A darker, visually pleasing green */
-    border-radius: 20px; /* Softer rounded corners */
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto; /* Center the element */
+    padding: 12px 20px; /* Adjust padding for proportional spacing */
+    background: linear-gradient(145deg, #1a1a1a, #333333); /* Subtle gradient for depth */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for a 3D effect */
+    border-radius: 25px; /* More rounded corners for modern aesthetics */
+    max-width: 350px; /* Slightly narrower for compactness */
+    margin: 20px auto; /* Center it horizontally */
+    z-index: 1000; /* Ensure it overlays appropriately */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.timeLeft span {
+    display: block; /* Ensure each span appears on a new line */
+    margin-top: 8px; /* Add spacing between lines */
+    font-size: 14px; /* Slightly smaller for secondary text */
+    color: #d3d3d3; /* Lighter gray for contrast */
+}
+
+
+.coinLimit {
+    position: absolute; /* Position at a fixed point */
+    bottom: 20px; /* Slightly higher for better spacing */
+    right: 20px; /* Keep it aligned to the right */
+    font-size: 16px; /* Adjust font size for balance */
+    font-weight: 500; /* Softer font weight for a modern look */
+    color: #ffffff; /* White text for readability */
+    text-align: center;
+    padding: 12px 20px; /* Adjust padding for more breathing room */
+    background: linear-gradient(145deg, #1a1a1a, #333333); /* Subtle gradient for depth */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    border-radius: 25px; /* More rounded corners for a friendly look */
+    max-width: 300px; /* Keep it concise */
+    word-wrap: break-word; /* Ensure text wraps if too long */
+    z-index: 1000; /* Ensure it stays above other elements */
+    transition: all 0.3s ease; /* Add smooth hover animations */
+}
+
+.space {
+    margin-top: 20px;
+}
+
+.coinLimit .p {
+    display: block;
+    margin-top: 10px;
 }

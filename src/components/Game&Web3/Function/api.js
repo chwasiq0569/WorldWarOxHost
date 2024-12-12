@@ -59,6 +59,25 @@ export const getDailyLimit = async () => {
         }
     }
 }
+
+export const getAllTransaction = async () => {
+    try {
+        const response = await fetch("https://www.worldwar0x.io/play/php/sp_TransactionDetails.php", {
+            method: "POST",  headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+        });
+        return {
+            success: response.ok, message: await response.text()
+        }      // Read the response as plain text
+
+    } catch (e) {
+        return {
+            success: false, message: null
+        }
+    }
+}
+
 // Get Coins
 export const getUserCoin = async ({id, name}) => {
 

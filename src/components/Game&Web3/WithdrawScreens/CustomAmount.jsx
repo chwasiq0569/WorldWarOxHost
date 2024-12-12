@@ -8,7 +8,7 @@ import {useNavigate, useLocation} from 'react-router-dom';
 import LoginOverlay from "../Login/LoginOverlay";
 import {Get} from "../Function/database";
 import CustomAlert from "../Login/CustomAlert";
-import {getAmount} from "../Function/coinFormatter";
+import {addCommaToNumber, getAmount} from "../Function/coinFormatter";
 
 
 export default function CustomAmount({token}) {
@@ -90,7 +90,7 @@ export default function CustomAmount({token}) {
             <p className={styles.questionText}>CHOOSE THE AMOUNT
                 OF {state.isBDUCK ? "$BDUCK" : "$WW3"} TO {state.isWithdraw ? "WITHDRAW" : "DEPOSIT"}</p>
             <p className={styles.secondaryText}>DAILY {state.isWithdraw ? "WITHDRAW" : "DEPOSIT"} LIMIT
-                <span> {getAmount(state)} {state.isBDUCK ? "$BDUCK" : "$WW3"}</span></p>
+                <span> {addCommaToNumber(getAmount(state))} {state.isBDUCK ? "$BDUCK" : "$WW3"}</span></p>
         </div>
 
         <div className={styles.customAmount}>

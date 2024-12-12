@@ -10,6 +10,11 @@ export function coinFormatter(value) {
     }
 }
 
+export function addCommaToNumber(value) {
+    return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+}
+
+
 export function getAmount(state) {
     const isWithdraw = state.isWithdraw;
     const isBDUCK = state.isBDUCK;
