@@ -80,10 +80,11 @@ body {
 }
 
 .buttonsContainer {
-    width: 800px;
+    width: auto;
     display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+    justify-content: center; /* Align buttons in the center */
+    gap: 40px; /* Add space between buttons */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 .returnButton {

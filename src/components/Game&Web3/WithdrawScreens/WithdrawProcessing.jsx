@@ -13,7 +13,7 @@ import {
 import {createTransferInstruction, getOrCreateAssociatedTokenAccount, TOKEN_PROGRAM_ID} from "@solana/spl-token";
 import {getAddress, getDecimal} from "../Function/getTokenBalance";
 import CustomAlert from "../Login/CustomAlert";
-import {addTransaction, updateUserCoin, updateUserRow} from "../Function/api";
+import {addTransaction, updateUserCoin, updateUserRow, withdrawToken} from "../Function/api";
 import {extractCoin, updateCoinValue} from "../Function/parseCoin";
 
 
@@ -124,13 +124,23 @@ const WithdrawProcessingManager = () => {
         }
     }, [publicKey, sendTransaction]);
 
-    function getDepositUpdateLimits(amount, isBDUCK) {
+    function getUpdateLimits(amount, isBDUCK, isWithdraw) {
         const dapp = state.dapp;
 
         if (isBDUCK) {
-            dapp.deposit.bduck -= amount;
+            if (isWithdraw) {
+                dapp.withdrawal.bduck -= amount;
+
+            } else {
+                dapp.deposit.bduck -= amount;
+            }
         } else {
-            dapp.deposit.ww3 -= amount;
+            if (isWithdraw) {
+                dapp.withdrawal.ww3 -= amount;
+            } else {
+                dapp.deposit.ww3 -= amount;
+
+            }
         }
 
         return JSON.stringify(dapp);
@@ -140,14 +150,30 @@ const WithdrawProcessingManager = () => {
     const processTransaction = useCallback(async () => {
         if (!publicKey) return;
 
-        const result = await handleSendToken();
+        let result = {success: false, message: 'Something went wrong!', signature: null};
+
+        if (isWithdraw) {
+            const finalAmount = Math.round((amount * 97) / 100);
+            result = await withdrawToken({
+                recipientPublicKey: publicKey.toBase58(),
+                amount: finalAmount,
+                name: user.name,
+                type: isBDUCK ? "BDUCK" : "WW3"
+            })
+        } else {
+            result = await handleSendToken();
+        }
 
         if (result.success) {
             let coin_update_success = false;
             // call API
             try {
                 const coin_result = await updateUserCoin({
-                    id: user.id, name: user.name, values: amount, param: isBDUCK ? '1' : '0', key: 1 // add
+                    id: user.id,
+                    name: user.name,
+                    values: amount,
+                    param: isBDUCK ? '1' : '0',
+                    key: isWithdraw ? '0' : '1' // 1 add 0 withdraw
                 });
 
                 // Update coin locally
@@ -159,33 +185,27 @@ const WithdrawProcessingManager = () => {
 
                 coin_update_success = coin_result.success;
 
-                const transaction_result = await addTransaction({
+                const transaction_response = await addTransaction({
                     name: user.name,
-                    operation: 'deposit',
+                    operation: isWithdraw ? 'withdraw' : 'deposit',
                     signature: result.signature,
                     amount: coin_result.success ? amount.toString() : '0',
                     token: isBDUCK ? "$BDUCK" : "$WW3"
                 });
 
-                console.log(transaction_result);
-
-
-                const update_limit = await updateUserRow({
+                const response = await updateUserRow({
                     name: user.name,
                     id: user.id,
                     typ: "8",
                     key: 'dapp',
-                    data: getDepositUpdateLimits(coin_result.success ? amount.toString() : '0', isBDUCK),
+                    data: getUpdateLimits(coin_result.success ? amount.toString() : '0', isBDUCK, isWithdraw),
                 });
-
-                console.log(update_limit);
-
 
             } catch (e) {
                 coin_update_success = false;
                 await addTransaction({
                     name: user.name,
-                    operation: 'deposit',
+                    operation: isWithdraw ? 'withdraw' : 'deposit',
                     signature: result.signature,
                     amount: null,
                     token: isBDUCK ? "$BDUCK" : "$WW3"
@@ -196,7 +216,7 @@ const WithdrawProcessingManager = () => {
                 state: {signature: result.signature, amount, isBDUCK, isWithdraw, success: coin_update_success}
             });
         } else {
-            setAlertMessage(result.message || 'Test failed.');
+            setAlertMessage(result.message || 'Transaction Failed.');
         }
     }, [publicKey, amount, isBDUCK, isWithdraw, navigator, handleSendToken]);
 

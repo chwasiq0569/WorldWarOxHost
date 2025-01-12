@@ -114,14 +114,17 @@ export default function WithdrawDone() {
             </div>
 
             <div className={styles.buttonsContainer}>
-                <button onClick={() => navigate('/', { replace: true })} className={styles.returnButton}>
+                <button onClick={() => navigate('/', {replace: true})} className={styles.returnButton}>
                     <span className={styles.returnText}>RETURN TO HOME</span>
                 </button>
-                <button onClick={() => navigate('/atm', { replace: true })} className={styles.returnButton}>
+                <button onClick={() => navigate('/atm', {replace: true})} className={styles.returnButton}>
                     <span className={styles.returnText}>RETURN TO ATM</span>
                 </button>
+                <button onClick={() => navigate('/login', {replace: true})} className={styles.returnButton}>
+                    <span className={styles.returnText}>LOGOUT</span>
+                </button>
             </div>
-            <LoginOverlay user={user} />
+            <LoginOverlay user={user}/>
         </main>
     );
 }

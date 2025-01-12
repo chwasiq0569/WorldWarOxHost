@@ -1,8 +1,4 @@
 import {get_secret_hash, get_ssid} from "./hash";
-import {ComputeBudgetProgram, Connection, PublicKey, Transaction} from "@solana/web3.js";
-import {createTransferInstruction, getOrCreateAssociatedTokenAccount, TOKEN_PROGRAM_ID} from "@solana/spl-token";
-import {getAddress, getDecimal} from "./getTokenBalance";
-import {useWallet} from "@solana/wallet-adapter-react";
 
 // User status
 export const updateUserStatus = async ({name, status, type}) => {
@@ -34,7 +30,6 @@ export const updateUserRow = async ({name, id, typ, key, data}) => {
             'Content-Type': 'application/json', 'x-api-key': process.env.REACT_APP_API_KEY,
         }
     });
-    console.log(response)
     return response.ok;
 
 }
@@ -186,20 +181,35 @@ const getDateAndTime = () => {
 }
 
 // Token Test
-export const withdrawToken = async ({recipientPublicKey, amount, name, type}) => {
-
+export const withdrawToken = async ({ recipientPublicKey, amount, name, type }) => {
     const hash = get_secret_hash(name);
 
     try {
         const response = await fetch(process.env.REACT_APP_API_URL + '/api/withdraw-token', {
-            method: 'POST', body: JSON.stringify({
-                "recipientPublicKey": recipientPublicKey, "amount": amount, "type": type, "name": name, "hash": hash
-            }), headers: {
-                'Content-Type': 'application/json', 'x-api-key': process.env.REACT_APP_API_KEY,
-            }
+            method: 'POST',
+            body: JSON.stringify({
+                recipientPublicKey: recipientPublicKey,
+                amount: amount,
+                type: type,
+                name: name,
+                hash: hash,
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+                'x-api-key': process.env.REACT_APP_API_KEY,
+            },
         });
-        return response.ok;
-    } catch (e) {
-        return false;
+
+        // Parse the JSON response
+        const result = await response.json();
+
+        // Check for errors
+        if (response.ok && result.success) {
+            return result; // Return the parsed result
+        } else {
+            return { success: false, message: result.message || "Transaction failed", signature: null };
+        }
+    } catch (error) {
+        return { success: false, message: error.message || "Transaction failed", signature: null };
     }
-}
+};
