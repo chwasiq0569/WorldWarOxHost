@@ -17,6 +17,9 @@ export const getAddress = (type) => {
     }
 }
 
+export const WithdrawalWW3Limit = 1000;
+export const WithdrawalBDUCKLimit = 50000;
+
 export const getDecimal = (type) => {
 
     if (type === 'WW3') {

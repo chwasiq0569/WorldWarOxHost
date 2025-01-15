@@ -26,5 +26,8 @@ module.exports = function override(config) {
         }),
     ]);
 
+    config.mode = 'production';
+    config.devtool = false;
+
     return config;
 };

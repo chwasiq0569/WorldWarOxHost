@@ -9,6 +9,7 @@ import LoginOverlay from "../Login/LoginOverlay";
 import {Get} from "../Function/database";
 import CustomAlert from "../Login/CustomAlert";
 import {addCommaToNumber, getAmount} from "../Function/coinFormatter";
+import {WithdrawalBDUCKLimit, WithdrawalWW3Limit} from "../Function/getTokenBalance";
 
 
 export default function CustomAmount({token}) {
@@ -16,6 +17,7 @@ export default function CustomAmount({token}) {
     const navigate = useNavigate(); // Use useNavigate hook
     const location = useLocation();
     const state = location.state;
+    const {isWithdraw, isBDUCK, dapp} = state;
     const user = Get();
 
     const [value, setValue] = React.useState('');
@@ -54,6 +56,21 @@ export default function CustomAmount({token}) {
 
         if (value === '') {
             setAlertMessage("Please enter a valid amount.");
+            return;
+        }
+
+        let limit = 0;
+
+        if (isWithdraw) {
+            if (isBDUCK) {
+                limit = WithdrawalBDUCKLimit;
+            } else {
+                limit = WithdrawalWW3Limit;
+            }
+        }
+
+        if (value < limit) {
+            setAlertMessage(`Minimum Withdrawal amount is ${addCommaToNumber(limit)} ${state.isBDUCK ? "$BDUCK" : "$WW3"}`);
             return;
         }
 

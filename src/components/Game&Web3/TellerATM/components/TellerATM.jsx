@@ -29,7 +29,7 @@ const TellerManager = () => {
     const user = Get();
 
     const options = [{
-        id: 0, title: "WITHDRAW", icon: withdrawIcon, status: "COMING SOON", isSpecial: false,
+        id: 0, title: "WITHDRAW", icon: withdrawIcon, status: "ALPHA", isSpecial: true,
     }, {
         id: 1, title: "DEPOSIT", icon: depositIcon, status: "ALPHA", isSpecial: true,
     }, {

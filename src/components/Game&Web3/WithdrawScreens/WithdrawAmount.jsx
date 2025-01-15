@@ -8,6 +8,7 @@ import LoginOverlay from "../Login/LoginOverlay";
 import {Get} from "../Function/database";
 import CustomAlert from "../Login/CustomAlert";
 import {addCommaToNumber, getAmount} from "../Function/coinFormatter";
+import {WithdrawalBDUCKLimit, WithdrawalWW3Limit} from "../Function/getTokenBalance";
 
 export default function WithdrawAmount({withdrawToken, setWithdrawToken}) {
 
@@ -42,6 +43,21 @@ export default function WithdrawAmount({withdrawToken, setWithdrawToken}) {
         const displayRate = getAmount(state);
         // Define amounts to compare with
         const amounts = {"1K": 1000, "2K": 2000, "5K": 5000, "10K": 10000};
+
+        let limit = 0;
+
+        if (isWithdraw) {
+            if (isBDUCK) {
+                limit = WithdrawalBDUCKLimit;
+            } else {
+                limit = WithdrawalWW3Limit;
+            }
+        }
+
+        if (amounts[amount] < limit) {
+            setAlertMessage(`Minimum Withdrawal amount is ${addCommaToNumber(limit)} ${state.isBDUCK ? "$BDUCK" : "$WW3"}`);
+            return;
+        }
 
         // Check if the amount is valid and compare
         if (displayRateValue < amounts[amount] || displayRate < amounts[amount]) {
