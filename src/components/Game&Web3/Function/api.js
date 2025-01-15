@@ -13,7 +13,6 @@ export const updateUserStatus = async ({name, status, type}) => {
             'Content-Type': 'application/json', 'x-api-key': process.env.REACT_APP_API_KEY,
         }
     });
-    console.log(response)
     return response.ok;
 
 }

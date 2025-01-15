@@ -1,6 +1,6 @@
 const md5 = require("md5");
 const get_secret_hash = (name) =>
-    md5(name + process.env.REACT_APP_SECRET_KEY).toString();
+    md5(name + process.env.REACT_APP_SECRET_KEY).toString().toLowerCase();
 
 const get_ssid = () => crypto.randomUUID();
 
