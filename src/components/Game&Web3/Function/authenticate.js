@@ -56,7 +56,6 @@ const parseResponse = (data) => {
 
     if (result.meta) {
         try {
-            console.log(result);
             result.meta = JSON.parse(result.meta);
         } catch (error) {
             console.error("Failed to parse 'meta' JSON:", error);

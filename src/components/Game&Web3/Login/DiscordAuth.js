@@ -132,7 +132,6 @@ const DiscordAuth = ({onLoginSuccess}) => {
         })
             .then(response => response.json())
             .then(async data => {
-                console.log('User authenticated:', data);
                 const result = await Authenticate(data.id, GeneratePassword(data.id), "Discord");
                 CheckResponseCode(result)
 

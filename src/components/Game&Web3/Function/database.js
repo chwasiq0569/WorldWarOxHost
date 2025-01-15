@@ -11,7 +11,6 @@ export function Get() {
         }
         return null; // Return null if no data is found
     } catch (e) {
-        console.error('Error parsing JSON from sessionStorage:', e);
         return null; // Return null if parsing fails
     }
 }
