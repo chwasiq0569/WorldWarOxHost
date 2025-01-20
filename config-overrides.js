@@ -19,12 +19,9 @@ module.exports = function override(config) {
     });
     config.resolve.fallback = fallback;
 
-    config.plugins = (config.plugins || []).concat([
-        new webpack.ProvidePlugin({
-            process: 'process/browser',
-            Buffer: ['buffer', 'Buffer'],  // Ensure Buffer is polyfilled
-        }),
-    ]);
+    config.plugins = (config.plugins || []).concat([new webpack.ProvidePlugin({
+        process: 'process/browser', Buffer: ['buffer', 'Buffer'],  // Ensure Buffer is polyfilled
+    }),]);
 
     config.mode = 'production';
     config.devtool = false;

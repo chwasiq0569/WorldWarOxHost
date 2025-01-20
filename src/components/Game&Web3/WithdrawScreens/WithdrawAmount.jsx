@@ -42,7 +42,16 @@ export default function WithdrawAmount({withdrawToken, setWithdrawToken}) {
         const displayRateValue = withdrawToken.rate;
         const displayRate = getAmount(state);
         // Define amounts to compare with
-        const amounts = {"1K": 1000, "2K": 2000, "5K": 5000, "10K": 10000};
+        const amounts = {
+            "1K": 1000,
+            "2K": 2000,
+            "5K": 5000,
+            "10K": 10000,
+            "50K": 50000,
+            "100K": 100000,
+            "200K": 200000,
+            "500K": 500000
+        };
 
         let limit = 0;
 
@@ -112,23 +121,43 @@ export default function WithdrawAmount({withdrawToken, setWithdrawToken}) {
             }}>
                 ANOTHER AMOUNT
             </div>
-            <div className={styles.centerSection}>
-                <div onClick={() => handleClick("1K")} className={styles.amount}
-                >
-                    1K <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow"/>
-                </div>
-                <div onClick={() => handleClick("5K")} className={styles.amount}>
-                    5K <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow"/>
-                </div>
-            </div>
-            <div className={styles.rightSection}>
-                <div onClick={() => handleClick("2K")} className={styles.amount}>
-                    2K <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow"/>
-                </div>
-                <div onClick={() => handleClick("10K")} className={styles.amount}>
-                    10K <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow"/>
-                </div>
-            </div>
+            {isWithdraw && isBDUCK ? (// Render options specific to $BDUCK withdrawals
+                <>
+                    <div className={styles.centerSection}>
+                        <div onClick={() => handleClick("50K")} className={styles.amount}>
+                            50K <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow"/>
+                        </div>
+                        <div onClick={() => handleClick("100K")} className={styles.amount}>
+                            100K <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow"/>
+                        </div>
+                    </div>
+                    <div className={styles.rightSection}>
+                        <div onClick={() => handleClick("200K")} className={styles.amount}>
+                            200K <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow"/>
+                        </div>
+                        <div onClick={() => handleClick("500K")} className={styles.amount}>
+                            500K <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow"/>
+                        </div>
+                    </div>
+                </>) : (// Default options for other cases
+                <>
+                    <div className={styles.centerSection}>
+                        <div onClick={() => handleClick("1K")} className={styles.amount}>
+                            1K <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow"/>
+                        </div>
+                        <div onClick={() => handleClick("5K")} className={styles.amount}>
+                            5K <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow"/>
+                        </div>
+                    </div>
+                    <div className={styles.rightSection}>
+                        <div onClick={() => handleClick("2K")} className={styles.amount}>
+                            2K <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow"/>
+                        </div>
+                        <div onClick={() => handleClick("10K")} className={styles.amount}>
+                            10K <img className={styles.withdrawArrow} src={WithdrawArrow} alt="WithdrawArrow"/>
+                        </div>
+                    </div>
+                </>)}
         </div>
 
         <div className={styles.tokens}>

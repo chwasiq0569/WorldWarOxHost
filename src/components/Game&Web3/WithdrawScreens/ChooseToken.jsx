@@ -206,19 +206,19 @@ const ChooseTokenManager = ({withdrawToken, setWithdrawToken}) => {
                             <b>DEPOSIT LIMIT REMAINING:</b>
                         </p>
                     <p>
-                            WW3$ {addCommaToNumber(dapp.deposit.ww3)}
+                            $WW3 {addCommaToNumber(dapp.deposit.ww3)}
                         </p>
                     <p>
-                            BDUCK$ {addCommaToNumber(dapp.deposit.bduck)}
+                            $BDUCK {addCommaToNumber(dapp.deposit.bduck)}
                         </p>
                     <p className={styles.space}>
                         <b>WITHDRAWAL LIMIT REMAINING:</b>
                         </p>
                     <p>
-                            WW3$ {addCommaToNumber(dapp.withdrawal.ww3)}
+                            $WW3 {addCommaToNumber(dapp.withdrawal.ww3)}
                         </p>
                     <p>
-                            BDUCK$ {addCommaToNumber(dapp.withdrawal.bduck)}
+                            $BDUCK {addCommaToNumber(dapp.withdrawal.bduck)}
                         </p>
                 </p>
             </div>)}
