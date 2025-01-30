@@ -1,5 +1,7 @@
 import {Set} from "./database";
-import {updateUserStatus} from "./api"
+import {getUserTimestamp, updateUserStatus} from "./api"
+import {json} from "react-router-dom";
+import {isLoginBlocked} from "./IsLoginBlocked";
 
 
 const authenticate = async (name, password, auth) => {
@@ -22,10 +24,16 @@ const authenticate = async (name, password, auth) => {
 
         if (!parsedData) return {status: -1, result: null};
 
-        const result = await updateUserStatus({name: parsedData.name, status: "1", type: "2"});
+        const result = await getUserTimestamp({name: parsedData.name, type: "1"});
+
         if (!result) {
             Set(null);
             return {status: -1, result: null};
+        }
+
+        if (isLoginBlocked(result)) {
+            Set(null);
+            return {status: 1000, result: null};
         }
 
         Set(parsedData);
@@ -65,6 +73,10 @@ const parseResponse = (data) => {
 
     return result;
 };
+
+// Example usage:
+// const response = '{"result": "2025-01-30T14:30:00.000Z"}';
+// console.log(isLoginBlocked(response));
 
 
 export default authenticate;

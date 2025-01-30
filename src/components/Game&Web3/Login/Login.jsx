@@ -6,8 +6,9 @@ import GameAuth from "./GameAuth";
 import ReturnButton from "../TellerATM/components/ReturnButton";
 import {Get, Delete} from '../Function/database';
 import PlayerInfo from "./PlayerInfo";
-import {updateUserStatus} from "../Function/api";
+import {getUserTimestamp, updateUserStatus} from "../Function/api";
 import LoadingOverlay from "./LoadingOveraly";
+import authenticate from "../Function/authenticate";
 
 function Login() {
     const [user, setUser] = useState(null);
@@ -21,7 +22,6 @@ function Login() {
 
     const handleLogout = async () => {
         setLoading(true)
-        await updateUserStatus({name: user.name, status: "0", type: "2"});
         Delete(); // Clear user data from sessionStorage
         setUser(null); // Set user to null to trigger re-render
         setLoading(false)

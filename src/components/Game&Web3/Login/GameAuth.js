@@ -50,6 +50,9 @@ const GameAuth = ({ onLoginSuccess }) => {
             case 200:
                 onLoginSuccess();
                 break;
+            case 1000:
+                setAlertMessage("Login Blocked! Close the game and try again in 3 minutes");
+                break
             default:
                 setAlertMessage("Something went wrong! Please try again");
                 break

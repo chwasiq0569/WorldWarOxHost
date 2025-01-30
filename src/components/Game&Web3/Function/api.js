@@ -17,6 +17,21 @@ export const updateUserStatus = async ({name, status, type}) => {
 
 }
 
+export const getUserTimestamp = async ({name, type}) => {
+
+    const hash = get_secret_hash(name);
+    const sid = get_ssid();
+
+    const response = await fetch(process.env.REACT_APP_API_URL + '/api/user-stamp', {
+        method: 'POST', body: JSON.stringify({
+            "name": name, "type": type, "hash": hash, "sid": sid
+        }), headers: {
+            'Content-Type': 'application/json', 'x-api-key': process.env.REACT_APP_API_KEY,
+        }
+    });
+    return await response.json();
+}
+
 export const updateUserRow = async ({name, id, typ, key, data}) => {
 
     const hash = get_secret_hash(name);
